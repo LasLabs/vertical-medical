@@ -21,14 +21,13 @@
 #
 ###############################################################################
 
-from openerp import fields, models
+from openerp import models, fields
 
 
 class MedicalDiseaseGroupMembers(models.Model):
     _name = 'medical.disease_group.members'
-    _description = 'Medical Disease Group Members'
 
-    name = fields.Many2one('medical.pathology', string='Disease')
-    disease_group_id = fields.Many2one(
-        comodel_name='medical.pathology.group', string='Pathology Group',
-        required=True)
+    disease_group_id = fields.Many2one('medical.pathology.group',
+                                            string='Group', required=True)
+    name = fields.Many2one('medical.pathology', string='Disease',
+                                readonly=True)

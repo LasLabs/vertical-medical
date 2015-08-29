@@ -9,7 +9,7 @@
 				<tree string="Medical Family_Member">
 					<field name="family_id" />
 					<field name="role" />
-					<field name="member" />
+					<field name="member_id" />
 				</tree>
 			</field>
 		</record>
@@ -22,7 +22,7 @@
 				<form string="Medical Family_Member">
 					<field name="family_id" colspan="4"/>
 					<field name="role" colspan="4"/>
-					<field name="member" colspan="4"/>
+					<field name="member_id" colspan="4"/>
 				</form>
 			</field>
 		</record>
@@ -34,11 +34,11 @@
 			<field name="arch" type="xml">
 				<search string="Medical Family_Member">
 					<field name="role" />
-					<field name="member" />
+					<field name="member_id" />
 					<field name="family_id" />
 					<newline />
 					<group expand="0" string="Group By...">
-						<filter string="Party" domain="[]" context="{'group_by':'member'}" />
+						<filter string="Party" domain="[]" context="{'group_by':'member_id'}" />
 						<filter string="Role" domain="[]" context="{'group_by':'role'}" />
 						<filter string="Family" domain="[]" context="{'group_by':'family_id'}" />
 					</group>
