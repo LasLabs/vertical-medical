@@ -28,7 +28,7 @@ class MedicalDrugRoute(models.Model):
 
     code = fields.Char(size=256, string='Code'),
     name = fields.Char(size=256, string='Unit', required=True,
-                            translate=True),
+                       translate=True),
 
     _sql_constraints = [
         ('name_uniq', 'UNIQUE(name)', 'Drug Route name must be unique!'),

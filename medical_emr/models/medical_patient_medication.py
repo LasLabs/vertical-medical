@@ -46,7 +46,7 @@ class MedicalPatientMedication(orm.Model):
         ),
         'is_course_complete': fields.boolean(string='Course Completed'),
         'template_id': fields.many2one('medical.medication.template',
-                                    string='Medication Template', ),
+                                       string='Medication Template', ),
         'discontinued_reason': fields.char(
             size=256, string='Reason for discontinuation',
             help='Short description for discontinuing the treatment'

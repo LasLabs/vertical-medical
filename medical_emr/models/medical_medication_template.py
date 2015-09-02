@@ -49,10 +49,10 @@ class MedicalMedicationTemplate(orm.Model):
         'end_treatment': fields.datetime(string='End',
                                          help='Date of start of Treatment'),
         'drug_form_id': fields.many2one('medical.drug.form', string='Form',
-                                help='Drug form, such as tablet or gel'),
+                                        help='Drug form, such as tablet or gel'),
         'drug_route_id': fields.many2one('medical.drug.route',
-                                 string='Administration Route',
-                                 help='Drug administration route code.'),
+                                         string='Administration Route',
+                                         help='Drug administration route code.'),
         'duration_period': fields.selection([
             ('minutes', 'minutes'),
             ('hours', 'hours'),
@@ -89,9 +89,9 @@ class MedicalMedicationTemplate(orm.Model):
                                          'each 8 hours, put here 8 and select '
                                          '\"hours\" in the unit field'),
         'common_dosage_id': fields.many2one('medical.medication.dosage',
-                                         string='Frequency',
-                                         help='Common / standard dosage '
-                                              'frequency for this medicament'),
+                                            string='Frequency',
+                                            help='Common / standard dosage '
+                                            'frequency for this medicament'),
         'admin_times': fields.char(size=256, string='Admin hours',
                                    help='Suggested administration hours. '
                                         'For example, at 08:00, 13:00 and '

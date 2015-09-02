@@ -28,7 +28,7 @@ class MedicalFamily(models.Model):
     info = fields.Text(string='Extra Information')
     name = fields.Char(string='Family', required=True)
     member_ids = fields.One2many('medical.family_member', 'family_id',
-                               string='Family Members', )
+                                 string='Family Members', )
     _sql_constraints = [
         ('name_uniq', 'UNIQUE(name)', 'Family Code must be unique!'),
     ]

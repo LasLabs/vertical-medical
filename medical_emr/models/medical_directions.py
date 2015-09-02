@@ -28,7 +28,7 @@ class MedicalDirections(models.Model):
     _name = 'medical.directions'
 
     procedure_id = fields.Many2one('medical.procedure',
-                                    string='Procedure', required=True)
+                                   string='Procedure', required=True)
     evaluation_id = fields.Many2one('medical.patient.evaluation',
                                     string='Evaluation', readonly=True)
     comments = fields.Char(size=256, string='Comments')

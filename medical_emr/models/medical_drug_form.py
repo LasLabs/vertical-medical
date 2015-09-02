@@ -28,7 +28,7 @@ class MedicalDrugForm(models.Model):
 
     code = fields.Char(size=256, string='Code')
     name = fields.Char(size=256, string='Form', required=True,
-                            translate=True)
+                       translate=True)
     _sql_constraints = [
         ('name_uniq', 'UNIQUE(name)', 'Drug name must be unique!'),
     ]

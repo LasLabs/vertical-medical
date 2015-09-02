@@ -59,8 +59,8 @@ class MedicalPatientEvaluation(orm.Model):
             ' protein-energy malnutrition, E44.0 in ICD-10 encoding'
         ),
         'action_ids': fields.one2many('medical.directions',
-                                   'evaluation_id', string='Procedures',
-                                   help='Procedures / Actions to take'),
+                                      'evaluation_id', string='Procedures',
+                                      help='Procedures / Actions to take'),
         'height': fields.float(string='Height',
                                help='Height in centimeters, eg 175'),
         'is_dehydrated': fields.boolean(
@@ -99,13 +99,13 @@ class MedicalPatientEvaluation(orm.Model):
             ('fl', 'Flat'),
         ], string='Mood'),
         'doctor_id': fields.many2one('medical.physician', string='Doctor',
-                                  readonly=True),
+                                     readonly=True),
         'is_incognizant': fields.boolean(
             string='Knowledge of Current Events',
             help='Check this box if the patient can not respond to public'
             ' notorious events'),
         'next_evaluation_id': fields.many2one('medical.appointment',
-                                           string='Next Appointment',),
+                                              string='Next Appointment',),
         'signs_and_symptoms_ids': fields.one2many(
             'medical.signs_and_symptoms', 'evaluation_id',
             string='Signs and Symptoms',
@@ -150,10 +150,10 @@ class MedicalPatientEvaluation(orm.Model):
             ' abstract reasoning'
         ),
         'derived_from_id': fields.many2one('medical.physician',
-                                        string='Derived from',
-                                        help='Physician who derived the case'),
+                                           string='Derived from',
+                                           help='Physician who derived the case'),
         'specialty_id': fields.many2one('medical.specialty',
-                                     string='Specialty',),
+                                        string='Specialty',),
         'loc_verbal': fields.selection([
             ('1', 'Makes no sounds'),
             ('2', 'Incomprehensible sounds'),
@@ -231,7 +231,7 @@ class MedicalPatientEvaluation(orm.Model):
             ' gnosia disorders, such as agnosia, prosopagnosia ...'
         ),
         'diagnosis_id': fields.many2one('medical.pathology',
-                                     string='Presumptive Diagnosis',),
+                                        string='Presumptive Diagnosis',),
         'whr': fields.float(string='WHR', help='Waist to hip ratio'),
         'ldl': fields.integer(
             string='Last LDL',

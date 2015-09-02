@@ -27,10 +27,10 @@ from openerp import models, fields, api
 class MedicalMedicamentCategory(models.Model):
     _name = 'medical.medicament.category'
     child_ids = fields.One2many('medical.medicament.category',
-                              'parent_id', string='Children', ),
+                                'parent_id', string='Children', ),
     name = fields.Char(size=256, string='Name', required=True),
     parent_id = fields.Many2one('medical.medicament.category',
-                                 string='Parent', select=True),
+                                string='Parent', select=True),
     _constraints = [
         (orm.Model._check_recursion, 'Error ! You cannot create recursive \n'
          'Category.', ['parent_id'])

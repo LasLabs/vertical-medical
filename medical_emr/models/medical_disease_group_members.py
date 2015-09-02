@@ -28,6 +28,6 @@ class MedicalDiseaseGroupMembers(models.Model):
     _name = 'medical.disease_group.members'
 
     disease_group_id = fields.Many2one('medical.pathology.group',
-                                            string='Group', required=True)
+                                       string='Group', required=True)
     name = fields.Many2one('medical.pathology', string='Disease',
-                                readonly=True)
+                           readonly=True)

@@ -30,3 +30,4 @@ class MedicalFamilyMember(models.Model):
     role = fields.Char(size=256, string='Role', required=True),
     family_id = fields.Many2one('medical.family', string='Family',
                                 help='Family code'),
+    
