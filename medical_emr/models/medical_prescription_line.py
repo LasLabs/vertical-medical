@@ -49,17 +49,17 @@ class MedicalPrescriptionLine(orm.Model):
         return res
 
     _columns = {
-        'name': fields.many2one('medical.prescription.order',
+        'rx_id': fields.many2one('medical.prescription.order',
                                 string='Prescription ID', ),
-        'template': fields.many2one('medical.medication.template',
+        'template_id': fields.many2one('medical.medication.template',
                                     string='Medication', ),
-        'indication': fields.many2one('medical.pathology', string='Indication',
+        'indication_id': fields.many2one('medical.pathology', string='Indication',
                                       help='Choose a disease for this '
                                            'medicament from the disease list. '
                                            'It can be an existing disease of '
                                            'the patient or a prophylactic.'),
-        'allow_substitution': fields.boolean(string='Allow substitution'),
-        'prnt': fields.boolean(string='Print',
+        'is_substitutable': fields.boolean(string='Allow substitution'),
+        'is_print': fields.boolean(string='Print',
                                help='Check this box to print this line of the '
                                     'prescription.'),
         'quantity': fields.integer(string='Units',
@@ -71,15 +71,15 @@ class MedicalPrescriptionLine(orm.Model):
         'end_treatment': fields.datetime(string='End'),
         'dose': fields.float('Dose', digits=(16, 2),
                              help='Amount of medication (eg, 20 mg) per dose'),
-        'dose_unit': fields.many2one('product.uom', string='Dose Unit',
+        'dose_unit_id': fields.many2one('product.uom', string='Dose Unit',
                                      help='Amount of medication (eg, 250 mg) '
                                           'per dose'),
         'qty': fields.integer('x'),
-        'form': fields.many2one('medical.drug.form', string='Form',
+        'drug_form_id': fields.many2one('medical.drug.form', string='Form',
                                 help='Drug form, such as tablet or gel'),
-        'route': fields.many2one('medical.drug.route', string='Route',
+        'drug_route_id': fields.many2one('medical.drug.route', string='Route',
                                  help='Drug form, such as tablet or gel'),
-        'common_dosage': fields.many2one('medical.medication.dosage',
+        'common_dosage_id': fields.many2one('medical.medication.dosage',
                                          string='Frequency',
                                          help='Drug form, such as pill or '
                                               'gel'),

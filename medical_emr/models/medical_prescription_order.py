@@ -31,13 +31,13 @@ class MedicalPrescriptionOrder(orm.Model):
     _columns = {
         'patient_id': fields.many2one('medical.patient', string='Patient',
                                       required=True),
-        'pregnancy_warning': fields.boolean(string='Pregancy Warning',
+        'is_pregnant': fields.boolean(string='Pregancy Warning',
                                             readonly=True),
         'notes': fields.text(string='Prescription Notes'),
-        'prescription_line': fields.one2many('medical.prescription.line',
+        'prescription_line_id': fields.one2many('medical.prescription.line',
                                              'name',
                                              string='Prescription line', ),
-        'pharmacy': fields.many2one('res.partner', string='Pharmacy', ),
+        'pharmacy_id': fields.many2one('res.partner', string='Pharmacy', ),
         'prescription_date': fields.datetime(string='Prescription Date'),
         'prescription_warning_ack': fields.boolean(string='Prescription '
                                                           'verified'),
