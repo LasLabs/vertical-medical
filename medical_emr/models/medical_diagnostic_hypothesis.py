@@ -28,7 +28,7 @@ class MedicalDiagnosticHypothesis(models.Model):
     _name = 'medical.diagnostic_hypothesis'
 
     pathology_id = fields.Many2one('medical.pathology', 'Pathology',
-                                        required=True),
+                                   required=True),
     evaluation_id = fields.Many2one('medical.patient.evaluation',
-                                         'Evaluation', readonly=True)
+                                    'Evaluation', readonly=True)
     comments = fields.Char(size=256, string='Comments')

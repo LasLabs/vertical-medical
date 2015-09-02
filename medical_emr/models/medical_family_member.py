@@ -20,13 +20,13 @@
 #
 # #############################################################################
 
-from openerp import models, fields, api
+from openerp import models, fields
 
 
 class MedicalFamilyMember(models.Model):
     _name = 'medical.family_member'
     member_id = fields.Many2one('res.partner', string='Member',
-                              help='Family Member Name'),
+                                help='Family Member Name'),
     role = fields.Char(size=256, string='Role', required=True),
     family_id = fields.Many2one('medical.family', string='Family',
-                                 help='Family code'),
+                                help='Family code'),
