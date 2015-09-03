@@ -151,7 +151,8 @@ class MedicalPatientEvaluation(orm.Model):
         ),
         'derived_from_id': fields.many2one('medical.physician',
                                            string='Derived from',
-                                           help='Physician who derived the case'),
+                                           help='Physician who ' +
+                                           'derived the case'),
         'specialty_id': fields.many2one('medical.specialty',
                                         string='Specialty',),
         'loc_verbal': fields.selection([
