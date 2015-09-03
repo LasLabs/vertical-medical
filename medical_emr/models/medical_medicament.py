@@ -37,7 +37,7 @@ class MedicalMedicament(orm.Model):
                                       required=True, help='Product Name'),
         'name': fields.function(_get_name, type='char', string='Medicament',
                                 help="", multi=False),
-        'category_id': fields.many2one('medical.medicament.category', 
+        'category_id': fields.many2one('medical.medicament.category',
                                        'Category', select=True),
         'active_component': fields.char(size=256, string='Active component',
                                         help='Active Component'),
