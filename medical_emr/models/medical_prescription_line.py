@@ -61,7 +61,8 @@ class MedicalPrescriptionLine(orm.Model):
                                          'the patient or a prophylactic.'),
         'is_substitutable': fields.boolean(string='Allow substitution'),
         'is_print': fields.boolean(string='Print',
-                                   help='Check this box to print this line of the '
+                                   help='Check this box to ' +
+                                   'print this line of the '
                                    'prescription.'),
         'quantity': fields.integer(string='Units',
                                    help='Number of units of the medicament. '
@@ -72,14 +73,17 @@ class MedicalPrescriptionLine(orm.Model):
         'end_treatment': fields.datetime(string='End'),
         'dose': fields.float('Dose', digits=(16, 2),
                              help='Amount of medication (eg, 20 mg) per dose'),
-        'dose_unit_id': fields.many2one('product.uom', string='Dose Unit',
+        'dose_unit_id': fields.many2one('product.uom',
+                                        string='Dose Unit',
                                         help='Amount of medication (eg, 250 mg) '
                                         'per dose'),
         'qty': fields.integer('x'),
         'drug_form_id': fields.many2one('medical.drug.form', string='Form',
-                                        help='Drug form, such as tablet or gel'),
+                                        help='Drug form, ' =
+                                        'such as tablet or gel'),
         'drug_route_id': fields.many2one('medical.drug.route', string='Route',
-                                         help='Drug form, such as tablet or gel'),
+                                         help='Drug form, ' +
+                                         'such as tablet or gel'),
         'common_dosage_id': fields.many2one('medical.medication.dosage',
                                             string='Frequency',
                                             help='Drug form, such as pill or '

@@ -49,10 +49,13 @@ class MedicalMedicationTemplate(orm.Model):
         'end_treatment': fields.datetime(string='End',
                                          help='Date of start of Treatment'),
         'drug_form_id': fields.many2one('medical.drug.form', string='Form',
-                                        help='Drug form, such as tablet or gel'),
+                                        help='Drug form, ' +
+                                        'such as tablet or gel'),
         'drug_route_id': fields.many2one('medical.drug.route',
-                                         string='Administration Route',
-                                         help='Drug administration route code.'),
+                                         string='Administration ' +
+                                         'Route',
+                                         help='Drug administration ' +
+                                         'route code.'),
         'duration_period': fields.selection([
             ('minutes', 'minutes'),
             ('hours', 'hours'),
