@@ -75,7 +75,8 @@ class MedicalPrescriptionLine(orm.Model):
                              help='Amount of medication (eg, 20 mg) per dose'),
         'dose_unit_id': fields.many2one('product.uom',
                                         string='Dose Unit',
-                                        help='Amount of medication ' +'(eg, 250 mg) '
+                                        help='Amount of ' +
+                                        'medication (eg, 250 mg) '
                                         'per dose'),
         'qty': fields.integer('x'),
         'drug_form_id': fields.many2one('medical.drug.form', string='Form',
