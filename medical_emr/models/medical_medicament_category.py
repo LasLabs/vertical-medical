@@ -21,7 +21,7 @@
 #
 ###############################################################################
 
-from openerp import models, fields
+from openerp import models, fields, orm
 
 
 class MedicalMedicamentCategory(models.Model):
@@ -32,6 +32,6 @@ class MedicalMedicamentCategory(models.Model):
     parent_id = fields.Many2one('medical.medicament.category',
                                 string='Parent', select=True),
     _constraints = [
-        (orm.Model._check_recursion, 'Error ! You cannot create recursive \n')
+        (orm.Model._check_recursion, 'Error ! You cannot create recursive \n'
          'Category.', ['parent_id'])
     ]
