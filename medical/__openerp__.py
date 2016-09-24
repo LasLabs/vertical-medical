@@ -8,7 +8,7 @@
     "summary": "Extends Odoo with medical patients and centers.",
     "version": "9.0.1.0.0",
     "category": "Medical",
-    "website": "https://odoo-community.org/",
+    "website": "https://laslabs.com",
     "author": "LasLabs, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "application": True,
