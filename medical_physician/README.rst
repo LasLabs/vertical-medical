@@ -2,16 +2,14 @@
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 
-============
-Odoo Medical
-============
+=================
+Medical Physician
+=================
 
-This module extends Odoo with the base functionality of medical patients and centers.
+This module extends Odoo Medical with functionality for medical physicians and physician appointments.
 
 Usage
 =====
-
-No additional configuration is needed to enable features for this module after installation.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
@@ -22,10 +20,6 @@ No additional configuration is needed to enable features for this module after i
 
 Known issues / Roadmap
 ======================
-
-* Separation of patient/res_partner name into first and last names.
-* (Odoo v10) Remove all is_* fields (e.g. is_school, is_work, etc.) from res.partner and move to res.partner.type.
-* Remove medical_constants in favor of existing solution in Odoo.
 
 Bug Tracker
 ===========
@@ -46,13 +40,8 @@ Images
 Contributors
 ------------
 
-* Jonathan Nemry <jonathan.nemry@acsone.eu>
-* Dave Lasley <dave@laslabs.com>
+* Ken Mak <kmak@laslabs.com>
 * Brett Wood <bwood@laslabs.com>
-* Parthiv Patel <parthiv@techreceptives.com>
-* Ruchir Shukla <ruchir@techreceptives.com>
-* Parthiv Patel <parthiv@techreceptives.com>
-* Nhomar Hernandéz <nhomar@vauxoo.com>
 
 Maintainer
 ----------
