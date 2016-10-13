@@ -1,0 +1,19 @@
+# -*- coding: utf-8 -*-
+# Copyright 2016 LasLabs Inc.
+# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
+
+from openerp import fields, models
+
+
+class MedicalMedicamentStorage(models.Model):
+    _name = 'medical.medicament.storage'
+    _description = 'Medical Medicament - Storage Instructions'
+
+    name = fields.Char(
+        string='Code',
+        help='Short code for this set of storage instructions',
+        required=True,
+    )
+    instructions = fields.Text(
+        required=True,
+    )
