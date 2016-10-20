@@ -70,6 +70,12 @@ class TestMedicalNpiAbstract(MedicalNpiAbstractTestMixer):
                 'Npi validity check on str %s did not fail for invalid' % i,
             )
 
+    def test_false(self):
+        self.assertFalse(
+            self.model_obj._npi_is_valid(False),
+            'Npi validity check on False did not fail gracefully',
+        )
+
     def test_constrain_valid_us(self):
         self.assertTrue(
             self.env['medical.test.npi'].create({
