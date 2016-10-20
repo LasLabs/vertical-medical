@@ -2,18 +2,18 @@
 
 <!--
     Copyright 2016 LasLabs Inc.
-    License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 -->
 
 <odoo>
     <record id="medical_medicament.medical_medicament_advil_1" model="medical.medicament">
-        <field name="storage" eval="[(6, 0, [
+        <field name="storage_ids" eval="[(6, 0, [
             ref('medical_medicament_storage.keep_dry'),
             ref('medical_medicament_storage.keep_cool'),
         ])]"/>
     </record>
 
     <record id="medical_medicament.medical_medicament_advil_2" model="medical.medicament">
-        <field name="storage" eval="[(6, 0, [ref('medical_medicament_storage.keep_dry')])]"/>
+        <field name="storage_ids" eval="[(6, 0, [ref('medical_medicament_storage.keep_dry')])]"/>
     </record>
 </odoo>

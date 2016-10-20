@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # Copyright 2016 LasLabs Inc.
-# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 {
     'name': 'Medical Medicament - Reusable Storage Instructions',
@@ -9,13 +9,14 @@
     'category': 'Medical',
     'website': 'https://laslabs.com/',
     'author': 'LasLabs, Odoo Community Association (OCA)',
-    'license': 'LGPL-3',
+    'license': 'AGPL-3',
     'application': False,
     'installable': True,
     'depends': [
         'medical_medicament',
     ],
     'data': [
+        'security/ir.model.access.csv',
         'views/medical_medicament.xml',
         'views/medical_medicament_storage.xml',
     ],
