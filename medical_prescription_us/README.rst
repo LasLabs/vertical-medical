@@ -22,7 +22,7 @@ For further information, please visit:
 Known issues / Roadmap
 ======================
 
-
+* (v10) Move automatic end date logic to medical_prescription when abstracted
 
 
 Bug Tracker
