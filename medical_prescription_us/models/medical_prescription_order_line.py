@@ -2,7 +2,20 @@
 # © 2016 LasLabs Inc.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-from openerp import fields, models
+from dateutil.relativedelta import relativedelta
+
+from openerp import fields, models, api
+
+
+# @TODO: Abstract control codes into core, add months till expire
+DELTA_MAP = {
+    '0': 12,
+    '1': 1,
+    '2': 1,
+    '3': 6,
+    '4': 6,
+    '5': 6,
+}
 
 
 class MedicalPrescriptionOrderLine(models.Model):
@@ -23,3 +36,23 @@ class MedicalPrescriptionOrderLine(models.Model):
         string='GCN',
         comodel_name='medical.medicament.gcn',
     )
+
+    @api.model
+    def create(self, vals):
+        if not vals.get('date_stop_treatment'):
+            try:
+                date_start = fields.Datetime.from_string(
+                    vals['date_start_treatment']
+                )
+                medicament = self.env['medical.medicament'].browse(
+                    vals['medicament_id']
+                )
+                delta = relativedelta(
+                    months=DELTA_MAP[medicament.control_code]
+                )
+                vals['date_stop_treatment'] = fields.Datetime.to_string(
+                    date_start + delta
+                )
+            except KeyError:
+                pass
+        return super(MedicalPrescriptionOrderLine, self).create(vals)
