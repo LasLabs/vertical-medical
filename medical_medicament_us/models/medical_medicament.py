@@ -52,7 +52,7 @@ class MedicalMedicament(models.Model):
     @api.multi
     def _compute_brand_ids(self):
         for record in self:
-            record.brand_ids = self.env['medical.medicament'].search([
+            record.brand_ids = self.search([
                 ('gcn_id.id', '=', record.gcn_id.id),
                 ('gpi', '=', '2'),
             ])
@@ -60,7 +60,7 @@ class MedicalMedicament(models.Model):
     @api.multi
     def _compute_generic_ids(self):
         for record in self:
-            record.generic_ids = self.env['medical.medicament'].search([
+            record.generic_ids = self.search([
                 ('gcn_id.id', '=', record.gcn_id.id),
                 ('gpi', '=', '1'),
             ])

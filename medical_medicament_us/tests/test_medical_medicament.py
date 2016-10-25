@@ -13,7 +13,7 @@ class TestMedicalMedicament(TransactionCase):
         self.test_gcn = self.env['medical.medicament.gcn'].create({})
         self.test_drug_form = self.env.ref('medical_medicament.AEM')
 
-    def _new_medicament(self, extra_values={}):
+    def _new_medicament(self, extra_values):
         base_values = {
             'drug_form_id': self.test_drug_form.id,
             'name': 'Test Medicament',
