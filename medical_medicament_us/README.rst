@@ -22,8 +22,8 @@ Known issues / Roadmap
 ======================
 
 * Improve and provide a full description for this module into the README.rst
-* Break this into individual modules once everything is settled
-
+* (v10) Control codes should be abstracted to a model in the core medical.medicament
+  & used for things like automatic prescription expiration dates
 
 Bug Tracker
 ===========
