@@ -29,6 +29,9 @@ class MedicalAbstractLuhn(models.AbstractModel):
         def digits_of(n):
             return [int(d) for d in str(n)]
 
+        if not num:
+            return False
+
         digits = digits_of(num)
         odd_digits = digits[-1::-2]
         even_digits = digits[-2::-2]
@@ -51,15 +54,14 @@ class MedicalAbstractLuhn(models.AbstractModel):
 
         for rec_id in self:
             if getattr(rec_id, country_col).code == 'US':
-                if not self._luhn_is_valid(
-                    getattr(rec_id, col_name, 0)
-                ):
-                    col_obj = self.env['ir.model.fields'].search([
-                        ('name', '=', col_name),
-                        ('model', '=', rec_id._name),
-                    ],
-                        limit=1,
-                    )
-                    raise ValidationError(_(
-                        'Invalid %s was supplied.' % col_obj.display_name
-                    ))
+                if self._luhn_is_valid(rec_id[col_name]):
+                    return
+                col_obj = self.env['ir.model.fields'].search([
+                    ('name', '=', col_name),
+                    ('model', '=', rec_id._name),
+                ],
+                    limit=1,
+                )
+                raise ValidationError(
+                    _('Invalid %s was supplied.') % col_obj.display_name,
+                )

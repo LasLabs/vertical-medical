@@ -43,15 +43,21 @@ class TestMedicalDeaAbstract(MedicalDeaAbstractTestMixer):
         for i in self.valid:
             self.assertTrue(
                 self.model_obj._dea_is_valid(i),
-                'Luhn validity check on str %s did not pass for valid' % i,
+                'DEA validity check on str %s did not pass for valid' % i,
             )
 
     def test_invalid(self):
         for i in self.invalid:
             self.assertFalse(
                 self.model_obj._dea_is_valid(i),
-                'Luhn validity check on str %s did not fail for invalid' % i,
+                'DEA validity check on str %s did not fail for invalid' % i,
             )
+
+    def test_false(self):
+        self.assertFalse(
+            self.model_obj._dea_is_valid(False),
+            'DEA validity check on False did not fail gracefully',
+        )
 
     def test_constrain_valid_us(self):
         self.assertTrue(

@@ -26,6 +26,8 @@ class MedicalAbstractNpi(models.AbstractModel):
         Returns:
             :type:``bool``
         """
+        if not num:
+            return False
         num = '80840%s' % num
         return self._luhn_is_valid(num)
 
@@ -42,15 +44,14 @@ class MedicalAbstractNpi(models.AbstractModel):
 
         for rec_id in self:
             if getattr(rec_id, country_col).code == 'US':
-                if not self._npi_is_valid(
-                    getattr(rec_id, col_name, 0)
-                ):
-                    col_obj = self.env['ir.model.fields'].search([
-                        ('name', '=', col_name),
-                        ('model', '=', rec_id._name),
-                    ],
-                        limit=1,
-                    )
-                    raise ValidationError(_(
-                        'Invalid %s was supplied.' % col_obj.display_name
-                    ))
+                if self._npi_is_valid(rec_id[col_name]):
+                    return
+                col_obj = self.env['ir.model.fields'].search([
+                    ('name', '=', col_name),
+                    ('model', '=', rec_id._name),
+                ],
+                    limit=1,
+                )
+                raise ValidationError(
+                    _('Invalid %s was supplied.') % col_obj.display_name,
+                )

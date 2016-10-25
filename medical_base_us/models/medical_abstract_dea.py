@@ -2,7 +2,7 @@
 # © 2016 LasLabs Inc.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-from openerp import models, api
+from openerp import models, api, _
 from openerp.exceptions import ValidationError
 import re
 
@@ -43,7 +43,7 @@ class MedicalAbstractDea(models.AbstractModel):
             bool
         """
 
-        if len(dea_num) != 9:
+        if not dea_num or len(dea_num) != 9:
             return False
 
         def digits_of(n):
@@ -75,15 +75,14 @@ class MedicalAbstractDea(models.AbstractModel):
 
         for rec_id in self:
             if getattr(rec_id, country_col).code == 'US':
-                if not self._dea_is_valid(
-                    getattr(rec_id, col_name, 0)
-                ):
-                    col_obj = self.env['ir.model.fields'].search([
-                        ('name', '=', col_name),
-                        ('model', '=', rec_id._name),
-                    ],
-                        limit=1,
-                    )
-                    raise ValidationError(
-                        'Invalid %s was supplied.' % col_obj.display_name
-                    )
+                if self._dea_is_valid(rec_id[col_name]):
+                    return
+                col_obj = self.env['ir.model.fields'].search([
+                    ('name', '=', col_name),
+                    ('model', '=', rec_id._name),
+                ],
+                    limit=1,
+                )
+                raise ValidationError(
+                    _('Invalid %s was supplied.') % col_obj.display_name,
+                )

@@ -64,6 +64,12 @@ class TestMedicalLuhnAbstract(MedicalLuhnAbstractTestMixer):
                 'Luhn validity check on int %s did not fail for invalid' % i,
             )
 
+    def test_false(self):
+        self.assertFalse(
+            self.model_obj._luhn_is_valid(False),
+            'Luhn validity check on False did not fail gracefully',
+        )
+
     def test_invalid_str(self):
         for i in self.invalid:
             self.assertFalse(
