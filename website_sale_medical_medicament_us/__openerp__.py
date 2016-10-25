@@ -12,12 +12,14 @@
     'license': 'AGPL-3',
     'application': False,
     'installable': True,
+    'auto_install': True,
     'depends': [
         'medical_medicament_us',
         'website_sale_medical_medicament',
     ],
     'data': [
         'views/website_sale_medical_medicament_us.xml',
+        'security/ir.model.access.csv',
     ],
     'demo': [
         'demo/medical_medicament_gcn.xml',

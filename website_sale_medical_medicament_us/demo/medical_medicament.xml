@@ -6,7 +6,7 @@
 -->
 
 <odoo>
-    <record id="tylenol_brand_1" model="medical.medicament">
+    <record id="acetaminophen_brand_1" model="medical.medicament">
         <field name="name">Tylenol</field>
         <field name="drug_form_id" ref="medical_medicament.TAB"/>
         <field name="gcn_id" ref="acetaminophen_gcn"/>
@@ -16,17 +16,17 @@
         <field name="website_published" eval="True"/>
     </record>
 
-    <record id="tylenol_brand_2" model="medical.medicament">
-        <field name="name">Tylenol</field>
+    <record id="acetaminophen_brand_2" model="medical.medicament">
+        <field name="name">Panadol</field>
         <field name="drug_form_id" ref="medical_medicament.TAB"/>
         <field name="gcn_id" ref="acetaminophen_gcn"/>
         <field name="gpi">2</field>
-        <field name="strength">600</field>
+        <field name="strength">300</field>
         <field name="strength_uom_id" ref="medical_medication.product_uom_mg"/>
         <field name="website_published" eval="True"/>
     </record>
 
-    <record id="tylenol_generic" model="medical.medicament">
+    <record id="acetaminophen_generic" model="medical.medicament">
         <field name="name">Acetaminophen</field>
         <field name="drug_form_id" ref="medical_medicament.TAB"/>
         <field name="gcn_id" ref="acetaminophen_gcn"/>
