@@ -141,7 +141,7 @@ class MedicalPrescriptionOrderLine(models.Model):
 
             refill_threshold = rec_id.prescription_order_id.partner_id \
                 .company_id.medical_prescription_refill_threshold
-            if refill_threshold is not False:
+            if refill_threshold:
                 if pending_and_unused > refill_threshold * rec_id.qty:
                     rec_id.can_dispense = False
                     rec_id.can_dispense_qty = 0
