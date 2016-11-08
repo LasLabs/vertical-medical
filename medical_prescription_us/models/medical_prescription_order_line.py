@@ -3,8 +3,8 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from dateutil.relativedelta import relativedelta
-
-from openerp import fields, models, api
+from openerp.exceptions import ValidationError
+from openerp import fields, models, api, _
 
 
 # @TODO: Abstract control codes into core, add months till expire
@@ -56,3 +56,12 @@ class MedicalPrescriptionOrderLine(models.Model):
             except KeyError:
                 pass
         return super(MedicalPrescriptionOrderLine, self).create(vals)
+
+    @api.multi
+    @api.constrains('refill_qty_original')
+    def _check_refill_qty_original(self):
+        for rec_id in self:
+            if rec_id.refill_qty_original < 0:
+                raise ValidationError(_(
+                    'Refill quantity cannot be less than 0.'
+                ))
