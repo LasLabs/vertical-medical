@@ -24,7 +24,7 @@ class MedicalPrescriptionOrderMerge(models.TransientModel):
              ' (its info will take precedence when there are conflicts)',
         required=True,
         default=lambda s: s._compute_default_dest_order(),
-        # domain='[("id", "in", merge_order_ids[0][2])]',
+        domain=lambda s: s._domain_dest_order(),
     )
     skip_validation = fields.Boolean(
         help='Check this box to allow prescription orders issued by different'
@@ -32,6 +32,7 @@ class MedicalPrescriptionOrderMerge(models.TransientModel):
         string='Skip Validation?',
     )
 
+    @api.model
     def _compute_default_merge_orders(self):
         if self.env.context.get('active_model') \
                 == 'medical.prescription.order':
@@ -41,12 +42,22 @@ class MedicalPrescriptionOrderMerge(models.TransientModel):
         else:
             return self.env['medical.prescription.order']
 
+    @api.model
     def _compute_default_dest_order(self):
         merge_order_ids = self._compute_default_merge_orders()
         if merge_order_ids:
             return merge_order_ids[0]
         else:
             return merge_order_ids
+
+    @api.multi
+    def _domain_dest_order(self):
+        try:
+            self.ensure_one()
+            merge_ids = self.merge_order_ids.ids
+        except ValueError:
+            merge_ids = self._compute_default_merge_orders().ids
+        return [('id', 'in', merge_ids)]
 
     @api.multi
     def action_merge(self):
@@ -82,6 +93,7 @@ class MedicalPrescriptionOrderMerge(models.TransientModel):
 
         return {'type': 'ir.actions.act_window_close'}
 
+    @api.multi
     def _perform_merge(self, source_orders, dest_order):
         merge_data = {}
 

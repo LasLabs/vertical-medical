@@ -7,6 +7,7 @@ from openerp.tests.common import TransactionCase
 
 
 class TestMedicalPrescriptionOrderMerge(TransactionCase):
+
     def _new_rx_order(self, extra_values=None):
         base_values = {
             'patient_id': self.env.ref('medical.medical_patient_patient_1').id,
@@ -87,6 +88,34 @@ class TestMedicalPrescriptionOrderMerge(TransactionCase):
         self.assertEqual(
             test_wiz._compute_default_dest_order(),
             test_rx_order_1,
+        )
+
+    def test_domain_dest_order_existing(self):
+        """ It should return existing merge_orders in domain if record """
+        test_rx_order_1 = self._new_rx_order()
+        test_rx_order_2 = self._new_rx_order()
+        test_wiz = self.env['medical.prescription.order.merge'].with_context(
+            active_model='medical.prescription.order',
+            active_ids=[test_rx_order_1.id, test_rx_order_2.id],
+        ).create({})
+
+        self.assertEqual(
+            test_wiz._domain_dest_order()[0][2],
+            test_wiz.merge_order_ids.ids,
+        )
+
+    def test_domain_dest_order_new(self):
+        """ It should return existing merge_orders in domain if no record """
+        test_rx_order_1 = self._new_rx_order()
+        test_rx_order_2 = self._new_rx_order()
+        test_wiz = self.env['medical.prescription.order.merge'].with_context(
+            active_model='medical.prescription.order',
+            active_ids=[test_rx_order_1.id, test_rx_order_2.id],
+        )
+
+        self.assertEqual(
+            test_wiz._domain_dest_order()[0][2],
+            test_wiz._compute_default_merge_orders().ids,
         )
 
     def test_action_merge_not_enough_orders(self):
