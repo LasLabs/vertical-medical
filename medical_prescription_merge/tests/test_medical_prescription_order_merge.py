@@ -7,7 +7,6 @@ from openerp.tests.common import TransactionCase
 
 
 class TestMedicalPrescriptionOrderMerge(TransactionCase):
-
     def _new_rx_order(self, extra_values=None):
         base_values = {
             'patient_id': self.env.ref('medical.medical_patient_patient_1').id,
@@ -21,32 +20,32 @@ class TestMedicalPrescriptionOrderMerge(TransactionCase):
 
         return self.env['medical.prescription.order'].create(base_values)
 
-    def test_compute_default_merge_orders_wrong_active_model(self):
+    def test_default_merge_orders_wrong_active_model(self):
         '''It should return empty order recordset when active model is wrong'''
         test_wiz = self.env['medical.prescription.order.merge'].with_context(
             active_model=None,
         )
 
-        self.assertFalse(test_wiz._compute_default_merge_orders())
+        self.assertFalse(test_wiz._default_merge_orders())
         self.assertEqual(
-            test_wiz._compute_default_merge_orders()._name,
+            test_wiz._default_merge_orders()._name,
             'medical.prescription.order',
         )
 
-    def test_compute_default_merge_orders_no_active_ids(self):
+    def test_default_merge_orders_no_active_ids(self):
         '''It should return empty order recordset if there are no active IDs'''
         test_wiz = self.env['medical.prescription.order.merge'].with_context(
             active_model='medical.prescription.order',
             active_ids=None,
         )
 
-        self.assertFalse(test_wiz._compute_default_merge_orders())
+        self.assertFalse(test_wiz._default_merge_orders())
         self.assertEqual(
-            test_wiz._compute_default_merge_orders()._name,
+            test_wiz._default_merge_orders()._name,
             'medical.prescription.order',
         )
 
-    def test_compute_default_merge_orders_correct_context(self):
+    def test_default_merge_orders_correct_context(self):
         '''It should return order recordset matching the active IDs'''
         test_rx_order_1 = self._new_rx_order()
         test_rx_order_2 = self._new_rx_order()
@@ -56,27 +55,27 @@ class TestMedicalPrescriptionOrderMerge(TransactionCase):
         ).create({})
 
         self.assertEqual(
-            test_wiz._compute_default_merge_orders().ids,
+            test_wiz._default_merge_orders().ids,
             [test_rx_order_1.id, test_rx_order_2.id],
         )
         self.assertEqual(
-            test_wiz._compute_default_merge_orders()._name,
+            test_wiz._default_merge_orders()._name,
             'medical.prescription.order',
         )
 
-    def test_compute_default_dest_order_wrong_context(self):
+    def test_default_dest_order_wrong_context(self):
         '''It should return empty order recordset if merge default is empty'''
         test_wiz = self.env['medical.prescription.order.merge'].with_context(
             active_model=None,
         )
 
-        self.assertFalse(test_wiz._compute_default_dest_order())
+        self.assertFalse(test_wiz._default_dest_order())
         self.assertEqual(
-            test_wiz._compute_default_dest_order()._name,
+            test_wiz._default_dest_order()._name,
             'medical.prescription.order',
         )
 
-    def test_compute_default_dest_order_correct_context(self):
+    def test_default_dest_order_correct_context(self):
         '''It should return first record in merge order default if not empty'''
         test_rx_order_1 = self._new_rx_order()
         test_rx_order_2 = self._new_rx_order()
@@ -86,12 +85,12 @@ class TestMedicalPrescriptionOrderMerge(TransactionCase):
         ).create({})
 
         self.assertEqual(
-            test_wiz._compute_default_dest_order(),
+            test_wiz._default_dest_order(),
             test_rx_order_1,
         )
 
-    def test_domain_dest_order_existing(self):
-        """ It should return existing merge_orders in domain if record """
+    def test_onchange_merge_order_ids_dest_still_valid(self):
+        '''It should return dest order domain that reflects new merge orders'''
         test_rx_order_1 = self._new_rx_order()
         test_rx_order_2 = self._new_rx_order()
         test_wiz = self.env['medical.prescription.order.merge'].with_context(
@@ -100,23 +99,22 @@ class TestMedicalPrescriptionOrderMerge(TransactionCase):
         ).create({})
 
         self.assertEqual(
-            test_wiz._domain_dest_order()[0][2],
-            test_wiz.merge_order_ids.ids,
+            test_wiz._onchange_merge_order_ids()['domain']['dest_order_id'],
+            [('id', 'in', [test_rx_order_1.id, test_rx_order_2.id])],
         )
 
-    def test_domain_dest_order_new(self):
-        """ It should return existing merge_orders in domain if no record """
+    def test_onchange_merge_order_ids_dest_no_longer_valid(self):
+        '''It should clear dest order if it is no longer in merge orders'''
         test_rx_order_1 = self._new_rx_order()
         test_rx_order_2 = self._new_rx_order()
         test_wiz = self.env['medical.prescription.order.merge'].with_context(
             active_model='medical.prescription.order',
             active_ids=[test_rx_order_1.id, test_rx_order_2.id],
-        )
+        ).new({})
+        test_wiz.merge_order_ids = [(3, test_rx_order_1.id, 0)]
+        test_wiz._onchange_merge_order_ids()
 
-        self.assertEqual(
-            test_wiz._domain_dest_order()[0][2],
-            test_wiz._compute_default_merge_orders().ids,
-        )
+        self.assertFalse(test_wiz.dest_order_id)
 
     def test_action_merge_not_enough_orders(self):
         '''It should throw correct error when there are too few merge orders'''

@@ -15,16 +15,16 @@ class MedicalPrescriptionOrderMerge(models.TransientModel):
         string='Orders to be Merged',
         help='List of prescription orders to be merged',
         required=True,
-        default=lambda s: s._compute_default_merge_orders(),
+        default=lambda s: s._default_merge_orders(),
     )
     dest_order_id = fields.Many2one(
         comodel_name='medical.prescription.order',
         string='Destination Order',
         help='This prescription order will serve as the baseline for the merge'
-             ' (its info will take precedence when there are conflicts)',
+             ' (its info will take precedence when there are conflicts). It'
+             ' must be in the list of orders that will be merged.',
         required=True,
-        default=lambda s: s._compute_default_dest_order(),
-        domain=lambda s: s._domain_dest_order(),
+        default=lambda s: s._default_dest_order(),
     )
     skip_validation = fields.Boolean(
         help='Check this box to allow prescription orders issued by different'
@@ -33,36 +33,43 @@ class MedicalPrescriptionOrderMerge(models.TransientModel):
     )
 
     @api.model
-    def _compute_default_merge_orders(self):
-        if self.env.context.get('active_model') \
-                == 'medical.prescription.order':
-            return self.env['medical.prescription.order'].browse(
-                self.env.context.get('active_ids')
-            )
+    def _default_merge_orders(self):
+        merge_model = 'medical.prescription.order'
+        if self.env.context.get('active_model') == merge_model:
+            active_ids = self.env.context.get('active_ids')
+            return self.env[merge_model].browse(active_ids)
         else:
-            return self.env['medical.prescription.order']
+            return self.env[merge_model]
 
     @api.model
-    def _compute_default_dest_order(self):
-        merge_order_ids = self._compute_default_merge_orders()
-        if merge_order_ids:
+    def _default_dest_order(self):
+        merge_order_ids = self._default_merge_orders()
+        try:
             return merge_order_ids[0]
-        else:
+        except IndexError:
             return merge_order_ids
 
-    @api.multi
-    def _domain_dest_order(self):
-        try:
-            self.ensure_one()
-            merge_ids = self.merge_order_ids.ids
-        except ValueError:
-            merge_ids = self._compute_default_merge_orders().ids
-        return [('id', 'in', merge_ids)]
+    @api.onchange('merge_order_ids')
+    def _onchange_merge_order_ids(self):
+        if self.dest_order_id not in self.merge_order_ids:
+            self.dest_order_id = self.env['medical.prescription.order']
+
+        return {'domain': {
+            'dest_order_id': [('id', 'in', self.merge_order_ids.ids)],
+        }}
 
     @api.multi
     def action_merge(self):
         self.ensure_one()
+        self._perform_validations()
 
+        source_orders = self.merge_order_ids - self.dest_order_id
+        self._perform_merge(source_orders, self.dest_order_id)
+
+        return {'type': 'ir.actions.act_window_close'}
+
+    @api.multi
+    def _perform_validations(self):
         if len(self.merge_order_ids) < 2:
             raise ValidationError(_(
                 'You must select at least two orders to start a merge.'
@@ -87,11 +94,6 @@ class MedicalPrescriptionOrderMerge(models.TransientModel):
                     ' this, please select the "Skip Validation?" checkbox and'
                     ' try again.'
                 ))
-
-        source_orders = self.merge_order_ids - self.dest_order_id
-        self._perform_merge(source_orders, self.dest_order_id)
-
-        return {'type': 'ir.actions.act_window_close'}
 
     @api.multi
     def _perform_merge(self, source_orders, dest_order):
