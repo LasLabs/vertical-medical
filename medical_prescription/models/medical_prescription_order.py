@@ -64,6 +64,9 @@ class MedicalPrescriptionOrder(models.Model):
                  )
     def _compute_active(self):
         for rec_id in self:
+            if not rec_id.prescription_order_line_ids:
+                rec_id.active = True
+                continue
             rec_id.active = any(
                 rec_id.prescription_order_line_ids.mapped('active')
             )
