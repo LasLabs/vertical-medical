@@ -1,2 +1,3 @@
 partner-contact
+product-attribute https://github.com/laslabs/product-attribute.git origin/feature/10.0/product_service_duration
 website https://github.com/laslabs/website.git release/10.0/website_field_autocomplete_related

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-    Copyright (C) 2014-2016 LasLabs [https://laslabs.com]
-    @author Ken Mak <kmak@laslabs.com>
-    @license AGPL-3
+    Copyright 2016 LasLabs Inc.
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 -->
 
 <openerp>
@@ -42,7 +41,7 @@
                             <field name="ref" string="Legal ID"/>
                             <field name="code" string="Internal ID"/>
                             <field name="specialty_id"/>
-                            <field name="info" colspan="4"/>
+                            <field name="calendar_id" />
                         </group>
                         <notebook>
                             <page string="General Information">

@@ -4,6 +4,4 @@
 
 from . import medical_physician
 from . import medical_specialty
-from . import medical_physician_schedule_template
-from . import medical_physician_service
 from . import res_partner
