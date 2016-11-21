@@ -29,7 +29,16 @@ class TestMedicalPrescriptionOrder(TransactionCase):
         )
 
     def test_compute_active_no_line_ids(self):
-        """ Test active is False if no rx line_ids """
-        self.assertFalse(
+        """ Test active is True if no rx line_ids """
+        self.assertTrue(
             self.rx_6.active,
+        )
+
+    def test_compute_active_false(self):
+        """ It should set active to false when lines are deactivated """
+        self.rx_1.prescription_order_line_ids.write({
+            'active': False,
+        })
+        self.assertFalse(
+            self.rx_1.active,
         )
