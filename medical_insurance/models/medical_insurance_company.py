@@ -21,3 +21,7 @@ class MedicalInsuranceCompany(models.Model):
     def create(self, vals):
         vals['is_insurance_company'] = True
         return super(MedicalInsuranceCompany, self).create(vals)
+
+    @api.multi
+    def onchange_state(self, state_id):
+        return self.partner_id.onchange_state(state_id)
