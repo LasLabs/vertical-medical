@@ -6,7 +6,7 @@
     "name": "Medical Pathology Import",
     "summary": "This module provides a data import interface for Medical"
                "Pathologies.",
-    "version": "9.0.1.0.0",
+    "version": "10.0.1.0.0",
     "category": "Hidden",
     "website": "https://laslabs.com/",
     "author": "LasLabs, Odoo Community Association (OCA)",

@@ -4,11 +4,11 @@
 
 import mock
 
-from openerp.tests.common import TransactionCase
+from odoo.tests.common import TransactionCase
 
 
 MODULE_PATH = '.'.join((
-    'openerp.addons.medical_pathology_import',
+    'odoo.addons.medical_pathology_import',
     'wizards.medical_pathology_import',
 ))
 
