@@ -8,7 +8,7 @@
     'author': "LasLabs, Odoo Community Association (OCA)",
     'category': 'Medical',
     'depends': [
-        'medical_base_kanban',
+        'base_kanban_stage',
         'medical_prescription',
     ],
     'website': 'http://github.com/oca/vertical-medical',
