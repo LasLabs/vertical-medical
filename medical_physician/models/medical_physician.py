@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# © 2016 LasLabs Inc.
+# Copyright 2016 LasLabs Inc.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from odoo import fields, models, api
@@ -7,13 +7,16 @@ from odoo import fields, models, api
 
 class MedicalPhysician(models.Model):
     _name = 'medical.physician'
-    _inherits = {'res.partner': 'partner_id'}
+    _inherits = {'res.users': 'user_id'}
     _description = 'Medical Physicians'
+    _sql_constraints = [
+        ('user_id_uniq', 'UNIQUE(user_id)',
+         'Cannot relate two physicians to the same user.'),
+    ]
 
-    partner_id = fields.Many2one(
-        string='Related Partner',
-        help='Partner related data of the physician',
-        comodel_name='res.partner',
+    user_id = fields.Many2one(
+        string='Related User',
+        comodel_name='res.users',
         required=True,
         ondelete='cascade',
     )
@@ -29,20 +32,11 @@ class MedicalPhysician(models.Model):
         ),
         required=True,
     )
-    info = fields.Text(
-        string='Extra info',
-        help='Extra Info',
+    medical_center_primary_id = fields.Many2one(
+        string='Primary Medical Center',
     )
-    active = fields.Boolean(
-        help='If unchecked, it will allow you to hide the physician without '
-             'removing it.',
-        default=True,
-    )
-    schedule_template_ids = fields.One2many(
-        string='Related schedules',
-        help='Schedule template of the physician',
-        comodel_name='medical.physician.schedule.template',
-        inverse_name='physician_id',
+    medical_center_secondary_ids = fields.Many2many(
+        string='Secondary Medical Centers',
     )
 
     @api.model
@@ -57,3 +51,8 @@ class MedicalPhysician(models.Model):
             )
             vals['code'] = sequence
         return super(MedicalPhysician, self).create(vals)
+
+    @api.model_cr_context
+    def get_by_user(self, user):
+        """ It returns the physician that is bound to user, if any """
+        return self.search([('user_id', '=', user.id)])

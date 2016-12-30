@@ -9,6 +9,7 @@ class TestMedicalPhysician(TransactionCase):
 
     def setUp(self):
         super(TestMedicalPhysician, self).setUp()
+        self.Model = self.env['medical.physician']
         self.physician_id = self.env.ref(
             'medical_physician.medical_physician_physician_1'
         )
@@ -30,4 +31,11 @@ class TestMedicalPhysician(TransactionCase):
         """ Test customer set to False when creating physician """
         self.assertFalse(
             self.physician_id.customer,
+        )
+
+    def test_get_by_user(self):
+        """ It should return the physician related to user """
+        self.assertEqual(
+            self.Model.get_by_user(self.physician_id.user_id),
+            self.physician_id,
         )
