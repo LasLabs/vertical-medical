@@ -1,24 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2015-TODAY
+	     LasLabs [https://laslabs.com]
+	     Komit [komit-consulting.com]
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 
-<!--
-    Copyright (C) 2015-TODAY LasLabs [https://laslabs.com]
-    @author Dave Lasley <dave@laslabs.com>
-    @license AGPL-3
--->
-
-<openerp>
+<odoo>
     
-    <data noupdate="0">
         <record model="medical.history.type" id="history_audit_create">
             <field name="name">Stage Changed</field>
             <field name="code">STAGE</field>
             <field name="new_cols_to_save">changed</field>
             <field name="old_cols_to_save">changed</field>
         </record>
-    </data>
     
-    <data noupdate="0">
-
         <!-- Medical Appointment stages -->
         <record model="medical.appointment.stage" id="stage_appointment_in_review">
             <field name="name">Pending Review</field>
@@ -57,9 +51,7 @@
             <field name="sequence">60</field>
             <field name="fold">True</field>
         </record>
-    </data>
     
-    <data noupdate="0">
         <!--Email template -->
         <record id="email_template_appointment_confirmation" model="mail.template">
             <field name="name">Appointment Confirmation - Email</field>
@@ -101,6 +93,5 @@
             ]]></field>
         </record>
         
-    </data>
 
-</openerp>
+</odoo>

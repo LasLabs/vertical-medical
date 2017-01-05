@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
-# © 2016 LasLabs Inc.
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+# Copyright 2016 LasLabs Inc., Komit
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+
+from datetime import timedelta
 
 from odoo import fields, models, exceptions, api, _
-from datetime import timedelta
 
 
 class MedicalAppointment(models.Model):
@@ -40,6 +41,7 @@ class MedicalAppointment(models.Model):
     )
     appointment_date = fields.Datetime(
         string='Date and Time',
+        required=True,
         index=True,
         help='Date and Time of Scheduled Appointment'
     )
@@ -88,7 +90,7 @@ class MedicalAppointment(models.Model):
         string='Medical Center',
         help='Medical center that appointment is located at',
         comodel_name='res.partner',
-        domain="[('is_institution', '=', True)]",
+        domain="[('type', '=', 'medical.center')]",
     )
     consultation_ids = fields.Many2one(
         string='Consultation Services',
