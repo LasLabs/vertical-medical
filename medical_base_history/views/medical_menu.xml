@@ -6,8 +6,7 @@
     @license AGPL-3
 -->
 
-<openerp>
-    <data>
+<odoo>
 
         <!-- History Config [Config/History] -->
 
@@ -33,5 +32,4 @@
                   sequence="100"
                   action="medical_history_type_action" />
 
-    </data>
-</openerp>
+</odoo>
