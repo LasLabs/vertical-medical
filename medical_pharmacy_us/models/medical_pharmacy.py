@@ -17,7 +17,7 @@ class MedicalPharmacy(models.Model):
         inverse=lambda s: s._inverse_identification(
             'napb_num', 'NAPB',
         ),
-        help='National Boards of Pharmacy Id #',
+        help='National Boards of Pharmacy Id # - seven-digit number',
     )
     medicaid_num = fields.Char(
         string='Medicaid #',
@@ -28,7 +28,7 @@ class MedicalPharmacy(models.Model):
         inverse=lambda s: s._inverse_identification(
             'medicaid_num', 'MEDICAID',
         ),
-        help='Medicaid Id #',
+        help='Medicaid Id # - nine digits and one alpha character',
     )
     npi_num = fields.Char(
         string='NPI #',
@@ -39,5 +39,5 @@ class MedicalPharmacy(models.Model):
         inverse=lambda s: s._inverse_identification(
             'npi_num', 'NPI',
         ),
-        help="National Provider Identifier",
+        help="National Provider Identifier - 10-digit number",
     )

@@ -11,7 +11,7 @@ class MedicalMedicamentNdc(models.Model):
 
     name = fields.Char(
         string='NDC',
-        help='National Drug Code',
+        help='National Drug Code - 10-digit number',
     )
     manufacturer_id = fields.Many2one(
         string='Manufacturer',
