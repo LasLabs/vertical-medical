@@ -7,7 +7,7 @@
     <record id="medical_medication_template_template_1" model="medical.medication.template">
         <field name="medicament_id" ref="medical_medicament.medical_medicament_advil_1" />
         <field name="quantity">2</field>
-        <field name="dose_uom_id" ref="medical_medication.product_uom_mg" />
+        <field name="dose_uom_id" ref="product.product_uom_unit" />
         <field name="frequency">2</field>
         <field name="frequency_uom_id" ref="medical_medication.product_uom_hour" />
         <field name="duration">1</field>
@@ -25,7 +25,7 @@
     <record id="medical_medication_template_template_2" model="medical.medication.template">
         <field name="medicament_id" ref="medical_medicament.medical_medicament_advil_2" />
         <field name="quantity">1</field>
-        <field name="dose_uom_id" ref="medical_medication.product_uom_mg" />
+        <field name="dose_uom_id" ref="product.product_uom_unit" />
         <field name="pathology_id" ref="medical_medication.medical_pathology_pathology_4" />
         <field name="duration">1</field>
         <field name="duration_uom_id" ref="medical_medication.product_uom_day" />
@@ -42,7 +42,7 @@
     <record id="medical_medication_template_template_3" model="medical.medication.template">
         <field name="medicament_id" ref="medical_medicament.medical_medicament_advil_1" />
         <field name="quantity">2</field>
-        <field name="dose_uom_id" ref="medical_medication.product_uom_mg" />
+        <field name="dose_uom_id" ref="product.product_uom_unit" />
         <field name="duration">1</field>
         <field name="duration_uom_id" ref="medical_medication.product_uom_hour" />
     </record>
@@ -61,7 +61,7 @@
         <field name="frequency_prn">True</field>
         <field name="medication_dosage_id" ref="medical_medication.420449005" />
         <field name="quantity">200</field>
-        <field name="dose_uom_id" ref="medical_medication.product_uom_mg" />
+        <field name="dose_uom_id" ref="product.product_uom_unit" />
         <field name="suggested_administration_hours">10</field>
         <field name="duration">1</field>
         <field name="duration_uom_id" ref="medical_medication.product_uom_day" />
@@ -84,7 +84,7 @@
         <field name="frequency_uom_id" ref="medical_medication.product_uom_hour" />
         <field name="medication_dosage_id" ref="medical_medication.307470009" />
         <field name="quantity">1</field>
-        <field name="dose_uom_id" ref="medical_medication.product_uom_mg" />
+        <field name="dose_uom_id" ref="product.product_uom_unit" />
         <field name="suggested_administration_hours">12</field>
     </record>
 
@@ -105,7 +105,7 @@
         <field name="frequency_uom_id" ref="medical_medication.product_uom_hour" />
         <field name="medication_dosage_id" ref="medical_medication.420449005" />
         <field name="quantity">1</field>
-        <field name="dose_uom_id" ref="medical_medication.product_uom_mg" />
+        <field name="dose_uom_id" ref="product.product_uom_unit" />
         <field name="suggested_administration_hours">8</field>
     </record>
 
@@ -116,5 +116,5 @@
         <field name="physician_id" ref="medical_physician.medical_physician_physician_1" />
         <field name="date_start_treatment">2016-12-02</field>
     </record>
-        
+
 </odoo>

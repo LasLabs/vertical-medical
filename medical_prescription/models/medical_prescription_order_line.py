@@ -7,6 +7,7 @@ from odoo import api, fields, models
 
 class MedicalPrescriptionOrderLine(models.Model):
     _name = 'medical.prescription.order.line'
+    _description = 'Medical Prescription Order Line'
     _inherit = ['abstract.medical.medication']
     _inherits = {'medical.patient.medication': 'medical_medication_id'}
     _rec_name = 'medical_medication_id'

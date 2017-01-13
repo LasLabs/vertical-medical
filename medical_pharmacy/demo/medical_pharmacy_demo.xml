@@ -12,7 +12,7 @@
         <field name="country_id" ref="base.us" />
         <field name="phone">+1-888-888-8888</field>
         <field name="email">email@example.com</field>
-        <field name="state_id" ref="base.state_us_3" />
+        <field name="state_id" ref="base.state_us_23" />
     </record>
 
     <record id="medical_pharmacy_1" model="medical.pharmacy">
