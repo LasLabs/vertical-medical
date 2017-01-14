@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright 2016 LasLabs Inc.
+<!-- Copyright 2016-2017 LasLabs Inc.
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 
 <odoo>
@@ -48,6 +48,16 @@
             <xpath expr="//group[@name='main_data']/group[@name='right']" position="inside">
                 <field name="gender" />
                 <field name="employee" />
+                <field name="calendar_id"
+                       options="{'invisible': [('employee', '=', False)]}"
+                       />
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page string="Services">
+                    <field name="service_ids"
+                           nolabel="1"
+                           />
+                </page>
             </xpath>
             <xpath expr="//img[@name='kanban_image_default_person']" position="replace">
                 <t t-if="record.is_company.raw_value === false">

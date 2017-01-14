@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# © 2016 LasLabs Inc.
+# Copyright 2016-2017 LasLabs Inc.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from odoo import api, fields, models
@@ -27,16 +27,15 @@ class MedicalPhysician(models.Model):
         string='Extra info',
         help='Extra Info',
     )
-    active = fields.Boolean(
-        help='If unchecked, it will allow you to hide the physician without '
-             'removing it.',
-        default=True,
+    calendar_id = fields.Many2one(
+        string='Calendar',
+        comodel_name='resource.calendar',
+        help='Schedule for this physician.',
     )
-    schedule_template_ids = fields.One2many(
-        string='Related schedules',
-        help='Schedule template of the physician',
-        comodel_name='medical.physician.schedule.template',
-        inverse_name='physician_id',
+    service_ids = fields.Many2many(
+        string='Services',
+        comodel_name='medical.physician.service',
+        help='Services offered by this physician.',
     )
 
     @api.model

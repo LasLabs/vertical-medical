@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!--
-    Copyright 2014-2017 LasLabs [https://laslabs.com]
-    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
--->
+<!-- Copyright 2014-2017 LasLabs Inc.
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 
 <odoo>
 
@@ -27,10 +25,17 @@
               parent="medical.medical_root_sub"
               />
 
-    <menuitem id="medical_specialty"
-              name="Medical Specialties"
+    <menuitem id="medical_physician_service_menu"
+              name="Physician Services"
               parent="health_professionals_menu_conf"
               sequence="10"
+              action="medical_physician_service_action"
+              />
+
+    <menuitem id="medical_specialty"
+              name="Specialties"
+              parent="health_professionals_menu_conf"
+              sequence="20"
               action="medical_specialty_action"
               />
 
