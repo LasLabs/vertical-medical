@@ -7,24 +7,24 @@
 
 <odoo>
 
-	<record model="ir.rule" id="medical_pharmacy_rule_public">
-		<field name="name">medical.pharmacy.rule.public</field>
-		<field name="model_id" ref="medical_pharmacy.model_medical_pharmacy"/>
-		<field name="groups" eval="[(4, ref('base.group_public'))]"/>
-		<field name="domain_force">['|',
-			('is_verified', '=', True),
-			('create_uid', '=', user.id),
-		]</field>
-	</record>
+    <record model="ir.rule" id="medical_pharmacy_rule_public">
+        <field name="name">medical.pharmacy.rule.public</field>
+        <field name="model_id" ref="medical_pharmacy.model_medical_pharmacy"/>
+        <field name="groups" eval="[(4, ref('base.group_public'))]"/>
+        <field name="domain_force">['|',
+            ('is_verified', '=', True),
+            ('create_uid', '=', user.id),
+        ]</field>
+    </record>
 
-	<record model="ir.rule" id="medical_pharmacy_rule_portal">
-		<field name="name">medical.pharmacy.rule.portal</field>
-		<field name="model_id" ref="medical_pharmacy.model_medical_pharmacy"/>
-		<field name="groups" eval="[(4, ref('base.group_portal'))]"/>
-		<field name="domain_force">['|',
-			('is_verified', '=', True),
-			('create_uid', '=', user.id),
-		]</field>
-	</record>
-	
+    <record model="ir.rule" id="medical_pharmacy_rule_portal">
+        <field name="name">medical.pharmacy.rule.portal</field>
+        <field name="model_id" ref="medical_pharmacy.model_medical_pharmacy"/>
+        <field name="groups" eval="[(4, ref('base.group_portal'))]"/>
+        <field name="domain_force">['|',
+            ('is_verified', '=', True),
+            ('create_uid', '=', user.id),
+        ]</field>
+    </record>
+    
 </odoo>

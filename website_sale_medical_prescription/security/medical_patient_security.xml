@@ -6,12 +6,12 @@
 -->
 
 <odoo>
-	<record model="ir.rule" id="medical_patient_portal_rule">
-		<field name="name">medical.patient.portal.rule</field>
-		<field name="model_id" ref="medical.model_medical_patient"/>
-		<field name="groups" eval="[(4, ref('base.group_public'))]"/>
-		<field name="domain_force">[
-			('partner_id', 'child_of', [user.commercial_partner_id.id]),
-		]</field>
-	</record>
+    <record model="ir.rule" id="medical_patient_portal_rule">
+        <field name="name">medical.patient.portal.rule</field>
+        <field name="model_id" ref="medical.model_medical_patient"/>
+        <field name="groups" eval="[(4, ref('base.group_public'))]"/>
+        <field name="domain_force">[
+            ('partner_id', 'child_of', [user.commercial_partner_id.id]),
+        ]</field>
+    </record>
 </odoo>

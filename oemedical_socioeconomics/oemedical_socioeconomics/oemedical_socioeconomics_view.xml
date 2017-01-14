@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openerp>
-	<data>
+    <data>
 
         <record model="ir.ui.view" id="view_oemedical_patient_form_socio_economics">
             <field name="name">oemedical.patient.view.inherit.socio_economics</field>
@@ -76,5 +76,5 @@
             </field>
         </record>
 
-	</data>
+    </data>
 </openerp>
