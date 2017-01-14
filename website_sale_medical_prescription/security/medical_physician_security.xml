@@ -6,25 +6,25 @@
 -->
 
 <odoo>
-	
-	<record model="ir.rule" id="medical_physician_rule_public">
-		<field name="name">medical.physician.rule.public</field>
-		<field name="model_id" ref="medical_physician.model_medical_physician"/>
-		<field name="groups" eval="[(4, ref('base.group_public'))]"/>
-		<field name="domain_force">['|',
-			('is_verified', '=', True),
-			('create_uid', '=', user.id),
-		]</field>
-	</record>
+    
+    <record model="ir.rule" id="medical_physician_rule_public">
+        <field name="name">medical.physician.rule.public</field>
+        <field name="model_id" ref="medical_physician.model_medical_physician"/>
+        <field name="groups" eval="[(4, ref('base.group_public'))]"/>
+        <field name="domain_force">['|',
+            ('is_verified', '=', True),
+            ('create_uid', '=', user.id),
+        ]</field>
+    </record>
 
-	<record model="ir.rule" id="medical_physician_rule_portal">
-		<field name="name">medical.physician.rule.portal</field>
-		<field name="model_id" ref="medical_physician.model_medical_physician"/>
-		<field name="groups" eval="[(4, ref('base.group_portal'))]"/>
-		<field name="domain_force">['|',
-			('is_verified', '=', True),
-			('create_uid', '=', user.id),
-		]</field>
-	</record>
-	
+    <record model="ir.rule" id="medical_physician_rule_portal">
+        <field name="name">medical.physician.rule.portal</field>
+        <field name="model_id" ref="medical_physician.model_medical_physician"/>
+        <field name="groups" eval="[(4, ref('base.group_portal'))]"/>
+        <field name="domain_force">['|',
+            ('is_verified', '=', True),
+            ('create_uid', '=', user.id),
+        ]</field>
+    </record>
+    
 </odoo>

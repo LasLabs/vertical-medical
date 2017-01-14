@@ -6,25 +6,25 @@
 -->
 
 <odoo>
-	
-	<record model="ir.rule" id="ir_sequence_rule_portal">
-		<field name="name">Ir Sequence Rule Portal Prescription</field>
-		<field name="model_id" ref="base.model_ir_sequence"/>
-		<field name="groups" eval="[(4, ref('base.group_portal'))]"/>
-		<field name="domain_force">['|',
-			('code', '=', 'medical.prescription.order'),
-			('code', '=', 'medical.prescription.order.line'),
-		]</field>
-	</record>
+    
+    <record model="ir.rule" id="ir_sequence_rule_portal">
+        <field name="name">Ir Sequence Rule Portal Prescription</field>
+        <field name="model_id" ref="base.model_ir_sequence"/>
+        <field name="groups" eval="[(4, ref('base.group_portal'))]"/>
+        <field name="domain_force">['|',
+            ('code', '=', 'medical.prescription.order'),
+            ('code', '=', 'medical.prescription.order.line'),
+        ]</field>
+    </record>
 
-	<record model="ir.rule" id="ir_sequence_rule_public">
-		<field name="name">Ir Sequence Rule Public Prescription</field>
-		<field name="model_id" ref="base.model_ir_sequence"/>
-		<field name="groups" eval="[(4, ref('base.group_public'))]"/>
-		<field name="domain_force">['|',
-			('code', '=', 'medical.prescription.order'),
-			('code', '=', 'medical.prescription.order.line'),
-		]</field>
-	</record>
-	
+    <record model="ir.rule" id="ir_sequence_rule_public">
+        <field name="name">Ir Sequence Rule Public Prescription</field>
+        <field name="model_id" ref="base.model_ir_sequence"/>
+        <field name="groups" eval="[(4, ref('base.group_public'))]"/>
+        <field name="domain_force">['|',
+            ('code', '=', 'medical.prescription.order'),
+            ('code', '=', 'medical.prescription.order.line'),
+        ]</field>
+    </record>
+    
 </odoo>

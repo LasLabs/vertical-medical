@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openerp>
-	<data>
+    <data>
 
         <record model="ir.ui.view" id="view_oemedical_patient_form_lifestyle">
             <field name="name">oemedical.patient.view.inherit.lifestyle</field>
@@ -213,5 +213,5 @@
                 </data>
             </field>
         </record>
-	</data>
+    </data>
 </openerp>

@@ -8,6 +8,6 @@
             <field name="prefix">PRO</field>
             <field name="padding">4</field>
         </record>
-		
+        
     </data>
 </openerp>
