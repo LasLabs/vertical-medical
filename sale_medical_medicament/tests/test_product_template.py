@@ -13,14 +13,11 @@ class TestProductTemplate(TransactionCase):
             ('name', '=', 'Advil')
         ])
         self.advil_ids = advil_ids.filtered(
-            lambda r: r.display_name == 'Advil 3  - BAR'
+            lambda r: r.display_name == 'Advil 0.2 g - CAP'
         )
 
     def test_name_get(self):
         self.assertEqual(
             self.advil_ids[0].display_name,
-            'Advil 3  - BAR',
-            'Display name was not Advil 3  - BAR, it was %s' % (
-                self.advil_ids[0].display_name
-            )
+            'Advil 0.2 g - CAP',
         )

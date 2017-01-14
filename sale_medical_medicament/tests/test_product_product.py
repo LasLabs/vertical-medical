@@ -16,8 +16,5 @@ class TestProductProduct(TransactionCase):
     def test_name_get(self):
         self.assertEqual(
             self.advil.display_name,
-            'Advil 3  - BAR',
-            'Display name was not Advil 3  - BAR, it was %s' % (
-                self.advil.display_name
-            )
+            'Advil 0.2 g - CAP,
         )
