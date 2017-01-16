@@ -9,7 +9,7 @@
                 <tree string="Medical Patient Evaluation">
                     <field name="evaluation_date" />
                     <field name="patient_id" />
-                    <field name="doctor_id" />
+                    <field name="physician_id" />
                     <field name="chief_complaint" />
                     <field name="diagnosis_id" />
                     <field name="info_diagnosis" />
@@ -35,7 +35,7 @@
                              </h1>
                         </div>
                         <div>
-                            <field name="doctor_id" />
+                            <field name="physician_id" />
                             <field name="evaluation_type"/>
                             <field name="specialty_id" />
                         </div>
@@ -56,7 +56,7 @@
                     <field name="is_dehydrated" />
                     <field name="tag" />
                     <field name="is_tremor" />
-                    <field name="evaluation_start" />
+                    <field name="date_start" />
                     <field name="loc" />
                     <field name="user_id" />
                     <!--field name="mood"/ -->
@@ -71,7 +71,7 @@
                     <field name="is_catatonic" />
                     <field name="hip" />
                     <field name="is_forgetful" />
-                    <field name="is_abstracting" />
+                    <field name="is_abnormal_reasoning" />
                     <field name="referred_from_id" />
                     <!--field name="loc_verbal"/ -->
                     <field name="glycemia" />
@@ -83,18 +83,18 @@
                     <field name="is_violent" />
                     <field name="directions" />
                     <field name="cholesterol_total" />
-                    <!--field name="diagnostic_hypothesis_id"/ -->
+                    <!--field name="hypothesis_ids"/ -->
                     <field name="judgment" />
                     <field name="temperature" />
                     <field name="osat" />
                     <field name="secondary_condition_ids"/>
-                    <field name="evaluation_endtime" />
+                    <field name="date_end" />
                     <field name="notes" />
                     <field name="calculation_ability" />
                     <field name="bpm" />
                     <!--field name="loc_eyes"/ -->
-                    <field name="abdominal_circ" />
-                    <field name="not_perceiving" />
+                    <field name="abdominal_circumference" />
+                    <field name="no_recognition" />
                     <field name="whr" />
                     <field name="ldl" />
                     <field name="notes_complaint" />
@@ -122,10 +122,10 @@
                     <field name="is_tremor" />
                     <field name="present_illness" />
                     <field name="evaluation_date" />
-                    <field name="evaluation_start" />
+                    <field name="date_start" />
                     <field name="loc" />
                     <field name="user_id" />
-                    <field name="doctor_id" />
+                    <field name="physician_id" />
                     <field name="is_incognizant" />
                     <field name="next_evaluation_id" />
                     <field name="is_reliable_info" />
@@ -134,7 +134,7 @@
                     <field name="is_catatonic" />
                     <field name="hip" />
                     <field name="is_forgetful" />
-                    <field name="is_abstracting" />
+                    <field name="is_abnormal_reasoning" />
                     <field name="referred_from_id" />
                     <field name="specialty_id" />
                     <field name="glycemia" />
@@ -150,13 +150,13 @@
                     <field name="judgment" />
                     <field name="temperature" />
                     <field name="osat" />
-                    <field name="evaluation_endtime" />
+                    <field name="date_end" />
                     <field name="notes" />
                     <field name="calculation_ability" />
                     <field name="bpm" />
                     <field name="chief_complaint" />
-                    <field name="abdominal_circ" />
-                    <field name="not_perceiving" />
+                    <field name="abdominal_circumference" />
+                    <field name="no_recognition" />
                     <field name="diagnosis_id" />
                     <field name="whr" />
                     <field name="ldl" />
@@ -184,12 +184,12 @@
                         <filter string="Appointment" domain="[]"
                             context="{'group_by':'evaluation_date'}" />
                         <filter string="Start" domain="[]"
-                            context="{'group_by':'evaluation_start'}" />
+                            context="{'group_by':'date_start'}" />
                         <filter string="Level of Consciousness" domain="[]"
                             context="{'group_by':'loc'}" />
                         <filter string="Last Changed by" domain="[]"
                             context="{'group_by':'user_id'}" />
-                        <filter string="Physician" domain="[]" context="{'group_by':'doctor_id'}" />
+                        <filter string="Physician" domain="[]" context="{'group_by':'physician_id'}" />
                         <filter string="Knowledge of Current Events" domain="[]"
                             context="{'group_by':'is_incognizant'}" />
                         <filter string="Next Appointment" domain="[]"
@@ -204,7 +204,7 @@
                         <filter string="Hip" domain="[]" context="{'group_by':'hip'}" />
                         <filter string="Memory" domain="[]" context="{'group_by':'is_forgetful'}" />
                         <filter string="Abstraction" domain="[]"
-                            context="{'group_by':'is_abstracting'}" />
+                            context="{'group_by':'is_abnormal_reasoning'}" />
                         <filter string="Patient" domain="[]" context="{'group_by':'patient_id'}" />
                         <filter string="Derived from" domain="[]"
                             context="{'group_by':'referred_from_id'}" />
@@ -234,7 +234,7 @@
                         <filter string="Oxygen Saturation" domain="[]"
                             context="{'group_by':'osat'}" />
                         <filter string="End" domain="[]"
-                            context="{'group_by':'evaluation_endtime'}" />
+                            context="{'group_by':'date_end'}" />
                         <filter string="Notes" domain="[]" context="{'group_by':'notes'}" />
                         <filter string="Calculation Ability" domain="[]"
                             context="{'group_by':'calculation_ability'}" />
@@ -242,9 +242,9 @@
                         <filter string="Chief Complaint" domain="[]"
                             context="{'group_by':'chief_complaint'}" />
                         <filter string="Waist" domain="[]"
-                            context="{'group_by':'abdominal_circ'}" />
+                            context="{'group_by':'abdominal_circumference'}" />
                         <filter string="Object Recognition" domain="[]"
-                            context="{'group_by':'not_perceiving'}" />
+                            context="{'group_by':'no_recognition'}" />
                         <filter string="Presumptive Diagnosis" domain="[]"
                             context="{'group_by':'diagnosis_id'}" />
                         <filter string="WHR" domain="[]" context="{'group_by':'whr'}" />

@@ -1,11 +1,13 @@
-About Medical EMR
--------------------
+.. image:: https://img.shields.io/badge/license-AGPL--3-blue.svg
+    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
+    :alt: License: AGPL-3
 
-Odoo Medical: Electronic Medical Record (EMR)
-=============================================
+==================
+Medical Evaluation
+==================
 
-This module provides extensions of medical in order to include a
-"Centralized Electronic Medical" concept into Odoo.
+This module extends the functionality of Odoo medical to provide procedures and
+evaluations for patients.
 
 Usage
 =====
@@ -20,8 +22,6 @@ For further information, please visit:
 
 Known issues / Roadmap
 ======================
-
-* Improve and provide a full description for this module into the README.rst
 
 
 Bug Tracker
@@ -39,12 +39,12 @@ Credits
 Contributors
 ------------
 
+* Dave Lasley <dave@laslabs.com>
 * Jonathan Nemry <jonathan.nemry@acsone.eu>
 * Parthiv Patel <parthiv@techreceptives.com>
 * Ruchir Shukla <ruchir@techreceptives.com>
 * Parthiv Patel <parthiv@techreceptives.com>
 * Nhomar Hernandéz <nhomar@vauxoo.com>
-* Dave Lasley <dave@laslabs.com>
 
 Maintainer
 ----------
