@@ -16,12 +16,12 @@
         "medical",
     ],
     "data": [
-        "views/medical_center.xml",
-        "views/medical_patient.xml",
-        "views/medical_menu.xml",
+        "views/medical_center_view.xml",
+        "views/medical_patient_view.xml",
+        "views/medical_menu_view.xml",
         "security/ir.model.access.csv",
     ],
     "demo": [
-        "demo/medical_center.xml",
+        "demo/medical_center_demo.xml",
     ],
 }

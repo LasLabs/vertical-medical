@@ -34,3 +34,9 @@ class TestMedicalCenter(TransactionCase):
         self.assertFalse(
             self.partner_center_1.customer,
         )
+
+    def test_get_default_image(self):
+        """ It should return the default image for the entity """
+        self.assertTrue(
+            self.medical_center_1._get_default_image({})
+        )
