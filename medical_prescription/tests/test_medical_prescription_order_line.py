@@ -20,47 +20,85 @@ class TestMedicalPrescriptionOrderLine(TransactionCase):
     def test_name_search_medicament_name(self):
         """ Test returns line_ids matching medicament name """
         res = self.line_model.name_search(self.advil_1.name)
-        res_len = len(res)
+        exp = self.line_model.search([(
+            'medicament_id.product_id.name',
+            'ilike',
+            self.advil_1.name,
+        )]).name_get()
+
+        res = sorted(set(res))
+        exp = sorted(set(exp))
         self.assertEquals(
-            res_len, 4,
+            res, exp,
         )
 
     def test_name_search_medicament_strength(self):
         """ Test returns line_ids matching medicament strength """
         res = self.line_model.name_search(self.advil_1.strength)
-        res_len = len(res)
+        exp = self.line_model.search([(
+            'medicament_id.strength',
+            'ilike',
+            self.advil_1.strength,
+        )]).name_get()
+
+        res = sorted(set(res))
+        exp = sorted(set(exp))
         self.assertEquals(
-            res_len, 4,
+            res, exp,
         )
 
     def test_name_search_medicament_uom_name(self):
         """ Test returns line_ids matching medicament strength uom """
         res = self.line_model.name_search(self.advil_1.strength_uom_id.name)
-        res_len = len(res)
+        exp = self.line_model.search([(
+            'medicament_id.strength_uom_id.name',
+            'ilike',
+            self.advil_1.strength_uom_id.name,
+        )]).name_get()
+
+        res = sorted(set(res))
+        exp = sorted(set(exp))
         self.assertEquals(
-            res_len, 6,
+            res, exp,
         )
 
     def test_name_search_medicament_drug_form_code(self):
         """ Test returns line_ids matching medicament drug form code """
         res = self.line_model.name_search(self.advil_1.drug_form_id.code)
-        res_len = len(res)
+        exp = self.line_model.search([(
+            'medicament_id.drug_form_id.code',
+            'ilike',
+            self.advil_1.drug_form_id.code,
+        )]).name_get()
+
+        res = sorted(set(res))
+        exp = sorted(set(exp))
         self.assertEquals(
-            res_len, 4,
+            res, exp,
         )
 
     def test_name_search_patient_name(self):
         """ Test returns line_ids belonging to specified patient """
         res = self.line_model.name_search(self.patient_1.name)
-        res_len = len(res)
+        exp = self.line_model.search([(
+            'patient_id.name',
+            'ilike',
+            self.patient_1.name,
+        )]).name_get()
+
+        res = sorted(set(res))
+        exp = sorted(set(exp))
         self.assertEquals(
-            res_len, 2,
+            res, exp,
         )
 
-    def test_name_search_none(self):
+    def test_name_search_no_params(self):
         """ Test returns all line_ids if blank search params """
         res = self.line_model.name_search()
-        res_len = len(res)
+        exp = self.line_model.search([]).name_get()
+
+        res = sorted(set(res))
+        exp = sorted(set(exp))
         self.assertEquals(
-            res_len, 6,
+            res, exp,
         )
