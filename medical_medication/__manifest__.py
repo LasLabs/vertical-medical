@@ -13,6 +13,7 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
+    "post_init_hook": "_inherit_medication_template_vals",
     "depends": [
         "medical_patient_disease",
         "medical_medicament",
