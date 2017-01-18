@@ -20,10 +20,12 @@ class WebsiteSale(website_sale):
             'website_sale_medical_prescription.prescription_info_option',
             raise_if_not_found=True
         )
+        # Always call super() to play nice with other modules
+        res = super(WebsiteSale, self).payment(**post)
         if rx_step.active and not post.get('__rx_pass__'):
             return request.redirect('/shop/checkout/medical/prescription')
         else:
-            return super(WebsiteSale, self).payment(**post)
+            return res
 
     @http.route(
         ['/shop/checkout/medical/prescription'],
