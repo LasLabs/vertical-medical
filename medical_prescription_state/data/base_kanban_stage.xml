@@ -13,7 +13,6 @@
         <field name="sequence" eval="1" />
         <field name="fold" eval="False" />
         <field name="res_model_id" ref="medical_prescription.model_medical_prescription_order" />
-        <field name="state">draft</field>
     </record>
 
     <record id="prescription_order_state_started" model="base.kanban.stage">
@@ -22,7 +21,6 @@
         <field name="sequence" eval="2" />
         <field name="fold" eval="False" />
         <field name="res_model_id" ref="medical_prescription.model_medical_prescription_order" />
-        <field name="state">open</field>
     </record>
 
     <record id="prescription_order_state_pv1" model="base.kanban.stage">
@@ -31,7 +29,6 @@
         <field name="sequence" eval="3" />
         <field name="fold" eval="False" />
         <field name="res_model_id" ref="medical_prescription.model_medical_prescription_order" />
-        <field name="state">pending</field>
     </record>
 
     <record id="prescription_order_state_verified" model="base.kanban.stage">
@@ -40,7 +37,6 @@
         <field name="sequence" eval="4" />
         <field name="fold" eval="True" />
         <field name="res_model_id" ref="medical_prescription.model_medical_prescription_order" />
-        <field name="state">done</field>
     </record>
 
     <record id="prescription_order_state_cancelled" model="base.kanban.stage">
@@ -49,7 +45,6 @@
         <field name="sequence" eval="5" />
         <field name="fold" eval="True" />
         <field name="res_model_id" ref="medical_prescription.model_medical_prescription_order" />
-        <field name="state">cancelled</field>
     </record>
 
     <!-- Prescription Order Line State -->
@@ -60,7 +55,6 @@
         <field name="sequence" eval="1" />
         <field name="fold" eval="True" />
         <field name="res_model_id" ref="medical_prescription.model_medical_prescription_order_line" />
-        <field name="state">draft</field>
     </record>
 
     <record id="prescription_order_line_state_hold" model="base.kanban.stage">
@@ -69,7 +63,6 @@
         <field name="sequence" eval="2" />
         <field name="fold" eval="True" />
         <field name="res_model_id" ref="medical_prescription.model_medical_prescription_order_line" />
-        <field name="state">draft</field>
     </record>
 
     <record id="prescription_order_line_state_ordered" model="base.kanban.stage">
@@ -78,7 +71,6 @@
         <field name="sequence" eval="3" />
         <field name="fold" eval="False" />
         <field name="res_model_id" ref="medical_prescription.model_medical_prescription_order_line" />
-        <field name="state">open</field>
     </record>
 
     <record id="prescription_order_line_state_pv2" model="base.kanban.stage">
@@ -87,7 +79,6 @@
         <field name="sequence" eval="4" />
         <field name="fold" eval="False" />
         <field name="res_model_id" ref="medical_prescription.model_medical_prescription_order_line" />
-        <field name="state">pending</field>
     </record>
 
     <record id="prescription_order_line_state_dur" model="base.kanban.stage">
@@ -96,7 +87,6 @@
         <field name="sequence" eval="5" />
         <field name="fold" eval="False" />
         <field name="res_model_id" ref="medical_prescription.model_medical_prescription_order_line" />
-        <field name="state">pending</field>
     </record>
 
     <record id="prescription_order_line_state_complete" model="base.kanban.stage">
@@ -105,7 +95,6 @@
         <field name="sequence" eval="6" />
         <field name="fold" eval="False" />
         <field name="res_model_id" ref="medical_prescription.model_medical_prescription_order_line" />
-        <field name="state">done</field>
     </record>
 
 </odoo>

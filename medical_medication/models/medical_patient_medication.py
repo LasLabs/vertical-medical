@@ -47,6 +47,7 @@ class MedicalPatientMedication(models.Model):
              ' discontinued',
     )
     date_start_treatment = fields.Datetime(
+        default=lambda s: fields.Datetime.now(),
         help='When the patient began taking this medication',
     )
     date_stop_treatment = fields.Datetime(
