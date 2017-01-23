@@ -17,7 +17,7 @@ class MedicalPatient(models.Model):
         inverse=lambda s: s._inverse_identification(
             'social_security', 'SSN',
         ),
-        help='Social Security Number - nine digits',
+        help='Social Security Number - 9 digits',
     )
     driver_license_us = fields.Char(
         string='US License',
@@ -28,7 +28,7 @@ class MedicalPatient(models.Model):
         inverse=lambda s: s._inverse_identification(
             'drivers_license_us', 'DL-US',
         ),
-        help='US Driver\s License - varies by state',
+        help='US Driver\'s License - varies by state',
     )
     passport_us = fields.Char(
         string='US Passport',
@@ -39,5 +39,5 @@ class MedicalPatient(models.Model):
         inverse=lambda s: s._inverse_identification(
             'passport_us', 'PSPRT-US',
         ),
-        help='US Passport - nine digits',
+        help='US Passport - 9 digits',
     )

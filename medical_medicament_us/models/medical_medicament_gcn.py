@@ -11,7 +11,7 @@ class MedicalMedicamentGcn(models.Model):
 
     name = fields.Char(
         string='GCN',
-        help='Generic Code Number - five-digit number',
+        help='Generic Code Number - 5 digits',
     )
     medicament_ids = fields.One2many(
         string='Medicament',

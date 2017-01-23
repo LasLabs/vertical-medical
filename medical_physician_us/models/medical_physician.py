@@ -28,8 +28,8 @@ class MedicalPhysician(models.Model):
         inverse=lambda s: s._inverse_identification(
             'dea_num', 'DEA',
         ),
-        help='''Drug Enforcement Agency # - \
-            two alpha characters and seven digits''',
+        help='Drug Enforcement Agency # - '
+             '2 alpha characters and 7 digits',
     )
     npi_num = fields.Char(
         string='NPI #',
@@ -40,5 +40,5 @@ class MedicalPhysician(models.Model):
         inverse=lambda s: s._inverse_identification(
             'npi_num', 'NPI',
         ),
-        help="National Provider Identifier - 10-digit number",
+        help="National Provider Identifier - 10 digits",
     )

@@ -9,10 +9,10 @@ class MedicalInsuranceTemplate(models.Model):
     _inherit = 'medical.insurance.template'
     group_number = fields.Char()
     rx_bin = fields.Char(
-        help='RX BIN Number - six-digit number',
+        help='RX BIN Number - 6 digits',
     )
     rx_pcn = fields.Char(
-        help='RX Processor Control Number (PCN) - up to 10 chars',
+        help='RX Processor Control Number (PCN) - up to 10 characters',
     )
     rx_group = fields.Char(
         help='RX Group Number',
