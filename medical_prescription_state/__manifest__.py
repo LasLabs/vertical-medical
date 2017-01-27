@@ -9,6 +9,7 @@
     "category": "Medical",
     "website": "https://laslabs.com",
     "license": "AGPL-3",
+    "post_init_hook": "post_init_hook",
     "depends": [
         "base_kanban_stage",
         "medical_prescription",
