@@ -11,7 +11,7 @@
         <field name="name">Prescription Order Lines</field>
         <field name="model">medical.prescription.order.line</field>
         <field name="inherit_id" ref="base_kanban_stage.base_kanban_abstract_view_kanban" />
-        <field name="priority" eval="99" />
+        <field name="mode">primary</field>
         <field name="arch" type="xml">
             <xpath expr="//div[@name='card_header']" position="replace">
                 <strong>
