@@ -114,8 +114,9 @@ class TestMedicalPrescriptionOrderLine(TransactionCase):
         )
 
     def test_onchange_medical_medication_id(self):
+        '''The medical medicament changes when the medication changes'''
         rx_line2 = self.env.ref(
-            'medical_prescription.medical_prescription_order_order_line_2'
+            'medical_prescription.medical_prescription_order_order_line_5'
         )
         self.rx_line_1.medical_medication_id = rx_line2.medical_medication_id
         self.rx_line_1._onchange_medical_medication_id()
