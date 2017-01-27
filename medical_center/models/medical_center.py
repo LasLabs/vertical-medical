@@ -22,7 +22,7 @@ class MedicalCenter(models.Model):
     @api.model
     def _get_default_image(self, vals):
         res = super(MedicalCenter, self)._get_default_image(vals)
-        if not res:
+        if res:
             return res
         img_path = get_module_resource(
             'medical_center', 'static/src/img', 'medical-center-avatar.png',
