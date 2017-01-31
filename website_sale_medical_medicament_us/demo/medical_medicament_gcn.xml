@@ -7,6 +7,6 @@
 
 <odoo>
     <record id="acetaminophen_gcn" model="medical.medicament.gcn">
-        <field name="name">ACET</field>
+        <field name="name">18456</field>
     </record>
 </odoo>
