@@ -9,7 +9,7 @@ class MedicalMedicamentGcn(models.Model):
     _name = 'medical.medicament.gcn'
     _description = 'Medical Medicament GCN'
 
-    name = fields.Char(
+    name = fields.Integer(
         string='GCN',
         help='Generic Code Number - 6 digits',
     )
@@ -22,4 +22,4 @@ class MedicalMedicamentGcn(models.Model):
     @api.multi
     def name_get(self):
         """ Override method to properly display the GCN """
-        return [(r.id, '%06d' % int(r.name)) for r in self]
+        return [(r.id, '%06d' % r.name) for r in self]
