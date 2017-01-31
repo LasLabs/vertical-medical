@@ -14,6 +14,7 @@ Usage
 * Create a product that is Prescription Only ``medical.medicament.is_prescription``
 * Add it to cart in website
 * Note, prescriptions with medicaments that are not in the current pricelist cannot be added to the cart.
+* Refactor around requirement for pre-existing Sale Order for Add to Cart button.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot

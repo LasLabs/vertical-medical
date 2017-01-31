@@ -26,21 +26,14 @@
                                 <span t-field="line.patient_id.name" /> - <span t-field="line.medicament_id.display_name" />
                             </div>
                             <div class="panel-body">
-                                <label class="label label-info">Rx Number</label>
-                                <span t-field="line.name" /><br/>
-
-                                <label class="label label-info">Remain</label>
-                                <span t-field="line.can_dispense_qty" /><br/>
-
-                                <t t-if="line.last_dispense_id.date_planned">
-                                    <label class="label label-info">Last Disp</label><br/>
-                                    <span t-field="line.last_dispense_id.date_planned" t-field-options='{"widget": "date"}' />
-                                </t>
-
-                                <t t-if="line.date_stop_treatment">
-                                    <label class="label label-info">Expiration</label><br/>
-                                    <span t-field="line.date_stop_treatment" t-field-options='{"widget": "date"}' />
-                                </t>
+                                <p>
+                                    <label class="label label-info">Rx Number</label>
+                                    <span t-field="line.name" />
+                                </p>
+                                <p>
+                                    <label class="label label-info">Remain</label>
+                                    <span t-field="line.can_dispense_qty" />
+                                </p>
 
                                 <t t-if="line.can_dispense_qty">
                                     <t t-set="product" t-value="line.medicament_id.product_id" />
