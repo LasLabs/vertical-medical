@@ -19,6 +19,7 @@
                 button to add to cart.
             </h5>
             <div class="container">
+                <div class="row">
                 <t t-foreach="prescription_order_lines" t-as="line">
                     <div class="col-xs-12 col-sm-6">
                         <div class="panel panel-default">
@@ -64,6 +65,7 @@
                         </div>
                     </div>
                 </t>
+                </div>
             </div>
         </t>
     </template>
