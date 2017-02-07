@@ -1,5 +1,4 @@
 partner-contact
 # Waiting on merge of OCA/website#270
 website https://github.com/laslabs/website.git release/10.0/website_field_autocomplete_related
-# Waiting on merge of OCA/server-tools#681
-server-tools https://github.com/laslabs/server-tools feature/10.0/LABS-134-create-medical_base_stage-object
+server-tools
