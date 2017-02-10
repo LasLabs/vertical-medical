@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openerp>
-    <data>
 
         <record id="medical_patient_view_form" model="ir.ui.view">
             <field name="name">medical.patient.form</field>
@@ -112,5 +111,4 @@
             </field>
         </record>
 
-    </data>
 </openerp>
