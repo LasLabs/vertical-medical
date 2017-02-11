@@ -162,7 +162,7 @@
                             </group>
                         </group>
                     </group>
-                    <group name="state" attrs="{'invisible': [('id','=',False)]}">
+                    <group name="state">
                         <group name="group_validity">
                             <group>
                                 <field name="create_date" />
