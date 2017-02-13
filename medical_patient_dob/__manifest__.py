@@ -15,7 +15,4 @@
     "depends": [
         "medical",
     ],
-    "data": [
-        "views/medical_patient_dob_view.xml",
-    ]
 }

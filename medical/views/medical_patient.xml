@@ -112,7 +112,7 @@
                 <attribute name="string">Patients</attribute>
             </xpath>
             <xpath expr="//field[@name='category_id']" position="after">
-                <field name="birthdate_date" />
+                <field name="birthdate" />
                 <field name="age" />
                 <field name="identification_code" />
             </xpath>
