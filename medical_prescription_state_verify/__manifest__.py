@@ -8,14 +8,14 @@
     'author': "LasLabs, Odoo Medical Team, Odoo Community Association (OCA)",
     'category': 'Medical',
     'depends': [
+        'base_kanban_stage',
         'medical_prescription_state',
     ],
     'website': "https://laslabs.com",
     'licence': "AGPL-3",
     'data': [
-        'views/medical_prescription_order_state_view.xml',
         'data/medical_prescription_order_state_data.xml',
     ],
-    'installable': False,
+    'installable': True,
     'auto_install': False,
 }

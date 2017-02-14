@@ -29,6 +29,7 @@ class TestMedicalPrescriptionOrderLine(TransactionCase):
         })
         drug_form_id = self.env['medical.drug.form'].create({
             'name': 'Test Drug Form',
+            'code': '1',
         })
         medicament_id = self.env['medical.medicament'].create({
             'name': 'Test Medicament',
@@ -47,13 +48,13 @@ class TestMedicalPrescriptionOrderLine(TransactionCase):
 
     def test_write_not_allowed_when_verified(self):
         record_id = self._new_record()
-        self.order_id.state_type = 'verified'
+        self.order_id.stage_id = 4  # verified
         with self.assertRaises(ValidationError):
             record_id.write({'qty': 1, })
 
     def test_write_allowed_when_not_verified(self):
         record_id = self._new_record()
-        self.order_id.state_type = 'cancel'
+        self.order_id.stage_id = 5  # cancelled
         record_id.write({'qty': 1, })
         record_id.refresh()
         self.assertEquals(1, record_id.qty)

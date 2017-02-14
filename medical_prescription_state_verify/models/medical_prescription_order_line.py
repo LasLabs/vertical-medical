@@ -2,7 +2,7 @@
 # © 2016 LasLabs Inc.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-from odoo import models, fields, exceptions, api, _
+from odoo import api, exceptions, models, _
 
 
 class MedicalPrescriptionOrderLine(models.Model):
@@ -13,12 +13,8 @@ class MedicalPrescriptionOrderLine(models.Model):
     `prescription_order_id` is in a `verified` state.
     """
 
-    _inherit = 'medical.prescription.order.line'
-
-    state_type = fields.Selection(
-        related='prescription_order_id.state_type',
-        help="The state type for the order"
-    )
+    _inherit = ['medical.prescription.order.line', 'base.kanban.abstract']
+    _name = 'medical.prescription.order.line'
 
     @api.multi
     def write(self, vals, ):
@@ -29,13 +25,12 @@ class MedicalPrescriptionOrderLine(models.Model):
             ValidationError: When a write is not allowed due to being in a
                 protected state
         """
-        for rec_id in self:
-            if rec_id.state_type == 'verified':
-                raise exceptions.ValidationError(_(
-                    'You cannot edit this value after its parent Rx has'
-                    ' been verified. Please either cancel it, or mark it as'
-                    ' an exception if manual reversals are required. [%s]' %
-                    rec_id.prescription_order_id.name
-                ))
+        if self.prescription_order_id.stage_id.name == 'Verified':
+            raise exceptions.ValidationError(_(
+                'You cannot edit this value after its parent Rx has'
+                ' been verified. Please either cancel it, or mark it as'
+                ' an exception if manual reversals are required. [%s]' %
+                self.prescription_order_id.name
+            ))
 
-            return super(MedicalPrescriptionOrderLine, self).write(vals)
+        return super(MedicalPrescriptionOrderLine, self).write(vals)

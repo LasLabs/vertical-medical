@@ -2,7 +2,7 @@
 # © 2016 LasLabs Inc.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-from odoo import fields, models, exceptions, api, _
+from odoo import api, exceptions, models, _
 
 
 class MedicalPrescriptionOrder(models.Model):
@@ -18,29 +18,16 @@ class MedicalPrescriptionOrder(models.Model):
             that has been defined in `_ALLOWED_CHANGE_STATES`)
         _ALLOWED_CHANGE_STATES: `list` of keys defining status types in which
             an RX can be moved to after being verified
+            4 - Verified
+            5 - Cancelled
+            6 - Exception
     """
 
-    _inherit = 'medical.prescription.order'
+    _inherit = ['medical.prescription.order', 'base.kanban.abstract']
+    _name = 'medical.prescription.order'
 
     _ALLOWED_CHANGE_KEYS = ['stage_id', ]
-    _ALLOWED_CHANGE_STATES = ['verified', 'cancel', 'exception', ]
-
-    stage_id = fields.Many2one(
-        'medical.prescription.order.state',
-        'State',
-        track_visibility='onchange',
-        index=True,
-        copy=False,
-        help="The state in Kanban view",
-        default=lambda self: self.env.ref(
-            'medical_prescription_state_verify.state_verification'
-        ),
-    )
-
-    state_type = fields.Selection(
-        related='stage_id.type',
-        help="The state type for the order",
-    )
+    _ALLOWED_CHANGE_STATES = [4, 5, 6, ]
 
     @api.multi
     def write(self, vals, ):
@@ -51,33 +38,30 @@ class MedicalPrescriptionOrder(models.Model):
             ValidationError: When a write is not allowed due to being in a
                 protected state
         """
-        for rec_id in self:
-            if rec_id.state_type == 'verified':
+        if self.stage_id.name == 'Verified':
 
-                # Only allow changes for keys in self._ALLOWED_CHANGE_KEYS
-                keys = vals.keys()
-                for allowed_key in self._ALLOWED_CHANGE_KEYS:
-                    try:
-                        del keys[keys.index(allowed_key)]
-                    except ValueError:
-                        pass
-                if len(keys) > 0:
+            # Only allow changes for keys in self._ALLOWED_CHANGE_KEYS
+            keys = vals.keys()
+            for allowed_key in self._ALLOWED_CHANGE_KEYS:
+                try:
+                    del keys[keys.index(allowed_key)]
+                except ValueError:
+                    pass
+            if len(keys) > 0:
+                raise exceptions.ValidationError(_(
+                    'You cannot edit this value after an Rx has been'
+                    ' verified. Please either cancel it, or mark it as an'
+                    ' exception if manual reversals are required. [%s]' %
+                    self.name
+                ))
+
+            # Only allow stage changes from self._ALLOWED_CHANGE_STATES
+            if vals.get('stage_id'):
+                stage_id = vals.get('stage_id')
+                if stage_id not in self._ALLOWED_CHANGE_STATES:
                     raise exceptions.ValidationError(_(
-                        'You cannot edit this value after an Rx has been'
-                        ' verified. Please either cancel it, or mark it as an'
-                        ' exception if manual reversals are required. [%s]' %
-                        rec_id.name
+                        'You cannot move an Rx into this state after it'
+                        ' has been verified. [%s]' % self.name
                     ))
 
-                # Only allow state changes from self._ALLOWED_CHANGE_STATES
-                if vals.get('stage_id'):
-                    stage_id = self.env['%s.state' % self._name].browse(
-                        vals['stage_id']
-                    )
-                    if stage_id.type not in self._ALLOWED_CHANGE_STATES:
-                        raise exceptions.ValidationError(_(
-                            'You cannot move an Rx into this state after it'
-                            ' has been verified. [%s]' % rec_id.name
-                        ))
-
-            return super(MedicalPrescriptionOrder, self).write(vals)
+        return super(MedicalPrescriptionOrder, self).write(vals)

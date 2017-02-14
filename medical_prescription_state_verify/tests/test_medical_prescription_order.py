@@ -24,6 +24,7 @@ class TestMedicalPrescriptionOrder(TransactionCase):
         self.vals = {
             'patient_id': patient_id.id,
             'physician_id': physician_id.id,
+            'stage_id': 1,
         }
 
     def _new_record(self):
@@ -41,36 +42,26 @@ class TestMedicalPrescriptionOrder(TransactionCase):
 
     def test_write_attrs_not_allowed_when_verified(self):
         record_id = self._new_record()
-        record_id.state_type = 'verified'
+        record_id.stage_id = 4  # verified
         with self.assertRaises(ValidationError):
             record_id.write({'name': 'Not Happening.. Hopefully', })
 
     def test_write_state_not_allowed_when_verified(self):
         record_id = self._new_record()
-        record_id.state_type = 'verified'
-        stage_id = self.env['medical.prescription.order.state'].create({
-            'name': 'Testing123',
-        })
+        record_id.stage_id = 4   # verified
         with self.assertRaises(ValidationError):
-            record_id.write({'stage_id': stage_id.id, })
+            record_id.write({'stage_id': 2, })  # not verified
 
     def test_write_state_is_allowed_when_allowed(self):
         record_id = self._new_record()
-        record_id.state_type = 'verified'
-        stage_id = self.env['medical.prescription.order.state'].create({
-            'name': 'Testing123',
-            'type': 'cancel',
-        })
-        record_id.write({'stage_id': stage_id.id, })
+        record_id.stage_id = 4  # verified
+        record_id.write({'stage_id': 5, })  # cancelled (allowed)
         record_id.refresh()
-        self.assertEquals('Testing123', record_id.stage_id.name)
+        self.assertEquals(5, record_id.stage_id.id)
 
     def test_write_is_allowed_when_not_verified(self):
         record_id = self._new_record()
-        stage_id = self.env['medical.prescription.order.state'].create({
-            'name': 'Testing123',
-            'type': 'cancel',
-        })
-        record_id.write({'stage_id': stage_id.id, })
+        record_id.stage_id = 2   # not verified
+        record_id.write({'stage_id': 4, })  # verified
         record_id.refresh()
-        self.assertEquals('Testing123', record_id.stage_id.name)
+        self.assertEquals(4, record_id.stage_id.id)
