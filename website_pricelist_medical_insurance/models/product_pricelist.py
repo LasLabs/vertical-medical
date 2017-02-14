@@ -16,7 +16,6 @@ class ProductPricelist(models.Model):
     @api.multi
     def _compute_medical_insurance_template_ids(self):
         ins_obj = self.env['medical.insurance.template']
-        for rec_id in self:
-            rec_id.medical_insurance_template_ids = ('probability', '=', 0).search([
-                ('pricelist_id', '=', rec_id.pricelist_id.id),
-            ])
+        template_ids = ins_obj.search([('pricelist_id', '=', self.id)])
+        for template_id in template_ids:
+            self.medical_insurance_template_ids += template_id
