@@ -14,7 +14,7 @@ class MedicalPrescriptionOrderLine(models.Model):
     `prescription_order_id` is in a `verified` state.
     """
 
-    _inherit = 'medical.prescription.order.line'
+    _inherit = ['medical.prescription.order.line', 'base.kanban.abstract']
     _name = 'medical.prescription.order.line'
 
     @api.multi
@@ -26,7 +26,7 @@ class MedicalPrescriptionOrderLine(models.Model):
             ValidationError: When a write is not allowed due to being in a
                 protected state
         """
-        if self.prescription_order_id.stage_id.is_verified:
+        if self.prescription_order_id.stage_id.name == 'Verified':
             raise ValidationError(_(
                 'You cannot edit this value after its parent Rx has'
                 ' been verified. Please either cancel it, or mark it as'
