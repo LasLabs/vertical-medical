@@ -7,14 +7,14 @@
 -->
 
 <odoo>
-        <record id="website_pricelist_form_view" model="ir.ui.view">
-            <field name="name">website.pricelist.form.view</field>
-            <field name="model">product.pricelist</field>
-            <field name="inherit_id" ref="website_sale.website_sale_pricelist_form_view" />
-            <field name="arch" type="xml">
-                <xpath expr="//field[@name='currency_id']" position="after">
-                    <field name="medical_insurance_template_ids" />
-                </xpath>
-            </field>
-        </record>
+    <record id="website_pricelist_form_view" model="ir.ui.view">
+        <field name="name">website.pricelist.form.view</field>
+        <field name="model">product.pricelist</field>
+        <field name="inherit_id" ref="website_sale.website_sale_pricelist_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='currency_id']" position="after">
+                <field name="medical_insurance_template_ids" />
+            </xpath>
+        </field>
+    </record>
 </odoo>
