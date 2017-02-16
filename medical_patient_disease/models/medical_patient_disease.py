@@ -9,8 +9,12 @@ class MedicalPatientDisease(models.Model):
     _name = 'medical.patient.disease'
     _description = 'Medical Patient Disease'
 
-    treatment_description = fields.Char()
-    short_comment = fields.Char()
+    treatment_description = fields.Char(
+        string='Treatment Description',
+    )
+    short_comment = fields.Char(
+        string='Short Comment',
+    )
     name = fields.Char(
         compute='_compute_name',
         store=True,
@@ -103,10 +107,12 @@ class MedicalPatientDisease(models.Model):
              ' receiving treatment for this disease.',
     )
     date_treatment_start = fields.Date(
+        string='Date of Treatment Start',
         help='If the patient is receiving treatment'
              ' state the start date here.',
     )
     date_treatment_end = fields.Date(
+        string='Date of Treatment End',
         help='If the patient is/was receiving treament'
              ' state the end date here.',
     )
