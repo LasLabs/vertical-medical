@@ -15,8 +15,6 @@ class MedicalPatient(models.Model):
         return self.write({'active': False})
 
     @api.multi
-    def _website_url(self, field_name, arg):
-        res = super(MedicalPatient, self)._website_url(field_name, arg)
-        for rec_id in self:
-            res[rec_id.id] = "/medical/patients/%s" % rec_id.id
-        return res
+    def _compute_website_url(self):
+        for record in self:
+            record.website_url = "/medical/patients/%s" % (record.id)

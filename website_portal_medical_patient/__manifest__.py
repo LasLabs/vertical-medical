@@ -24,4 +24,7 @@
         "security/ir_sequence_security.xml",
         "security/medical_patient_security.xml",
     ],
+    "demo": [
+        "demo/medical_patient_demo.xml",
+    ],
 }

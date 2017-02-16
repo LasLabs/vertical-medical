@@ -22,17 +22,17 @@
         display: inline-block;
         transition: width 0.15s ease 0s, height 0.15s ease 0s;
     }
+    a {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+    }
     &:hover {
         img {
             width: 85px;
             height: 85px;
         }
-        a {
-            text-decoration: none;
-        }
-    }
-    &:active {
-        a, h5 {
+        a:hover, a:active {
             text-decoration: none;
         }
     }
