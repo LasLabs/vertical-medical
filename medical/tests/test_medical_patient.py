@@ -3,7 +3,7 @@
 # Copyright 2016 LasLabs Inc.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-from datetime import datetime, timedelta
+from datetime import date, datetime, timedelta
 from dateutil.relativedelta import relativedelta
 
 from odoo import fields
@@ -139,3 +139,19 @@ class TestMedicalPatient(TransactionCase):
                     now + timedelta(days=20),
                 )
             })
+
+    def test_search_age(self):
+        """
+        When patients are searched by age,
+        it should return patients with the corresponding birth dates
+        """
+        now = date.today()
+        birthdate_date = fields.Date.from_string(
+            self.patient_1.birthdate_date,
+        )
+        years = relativedelta(now, birthdate_date).years
+        result = self.patient_1._search_age('=', years)
+        possible_birthdates = result[0][2]
+        self.assertTrue(
+            birthdate_date in possible_birthdates
+        )

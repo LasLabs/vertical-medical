@@ -3,7 +3,7 @@
 # Copyright 2016 LasLabs Inc.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-from datetime import datetime
+from datetime import date, datetime
 from dateutil.relativedelta import relativedelta
 
 from odoo import _, api, fields, models
@@ -21,6 +21,7 @@ class MedicalPatient(models.Model):
 
     age = fields.Char(
         compute='_compute_age',
+        search='_search_age',
     )
     identification_code = fields.Char(
         string='Internal Identification',
@@ -107,3 +108,11 @@ class MedicalPatient(models.Model):
         return get_module_resource(
             'medical', 'static/src/img', 'patient-avatar.png',
         )
+
+    def _search_age(self, operator, value):
+        current_date = date.today()
+        first_possible_birthdate = (current_date -
+                                    relativedelta(years=int(value)+1))
+        possible_dates = [first_possible_birthdate + relativedelta(days=x)
+                          for x in range(0, 364)]
+        return [('birthdate_date', 'in', possible_dates)]
