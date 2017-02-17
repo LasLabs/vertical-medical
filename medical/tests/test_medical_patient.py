@@ -149,9 +149,10 @@ class TestMedicalPatient(TransactionCase):
         birthdate_date = fields.Date.from_string(
             self.patient_1.birthdate_date,
         )
-        years = relativedelta(now, birthdate_date).years
+        years = now.year - birthdate_date.year - 1
         result = self.patient_1._search_age('=', years)
-        possible_birthdates = result[0][2]
+        start_date = result[1][2]
+        end_date = result[2][2]
         self.assertTrue(
-            birthdate_date in possible_birthdates
+            birthdate_date >= start_date and birthdate_date <= end_date
         )

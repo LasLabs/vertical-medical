@@ -111,8 +111,14 @@ class MedicalPatient(models.Model):
 
     def _search_age(self, operator, value):
         current_date = date.today()
-        first_possible_birthdate = (current_date -
-                                    relativedelta(years=int(value)+1))
-        possible_dates = [first_possible_birthdate + relativedelta(days=x)
-                          for x in range(0, 364)]
-        return [('birthdate_date', 'in', possible_dates)]
+        current_year = current_date.year
+        current_day = current_date.day
+        first_possible_birthdate = current_date.replace(
+            year=current_year - (int(value) + 1)
+        )
+        last_possible_birthdate = first_possible_birthdate.replace(
+            year=current_year - int(value),
+            day=current_day - 1
+        )
+        return ['&', ('birthdate_date', '>=', first_possible_birthdate),
+                ('birthdate_date', '<=', last_possible_birthdate)]
