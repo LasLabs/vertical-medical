@@ -84,11 +84,11 @@ OeMedical at a glance:
 
     * Designed with industry standards in mind
 
-    * Open Source : Licensed under AGPL
+    * Open Source : Licensed under LGPL
 
 """,
     "website": "http://launchpad.net/oemedical",
-    "licence": "AGPL v3",
+    "licence": "LGPL v3",
     "data": [
         #'views/oemedical_lab_view.xml',  # view has errors, please correct before enabling....
         #'views/oemedical_lab_report.xml',  # not checked yet....

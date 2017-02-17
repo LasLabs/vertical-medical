@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # © 2016 LasLabs Inc.
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 {
     'name': 'Medical Pharmacy',
@@ -11,7 +11,7 @@
         'medical',
     ],
     'website': 'https://laslabs.com',
-    'license': 'AGPL-3',
+    'license': 'LGPL-3',
     'data': [
         'views/medical_pharmacy_view.xml',
         'views/medical_menu.xml',
