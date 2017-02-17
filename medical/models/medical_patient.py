@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # © 2004 Tech-Receptives
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 from openerp import models, fields, api, _
 from openerp.exceptions import ValidationError

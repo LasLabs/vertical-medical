@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # © 2016 LasLabs Inc.
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 {
     'name': 'Medical Prescription Sale Stock',
@@ -22,7 +22,7 @@
         'demo/medical_prescription_order_line_demo.xml',
     ],
     "website": "https://laslabs.com",
-    "license": "AGPL-3",
+    "license": "LGPL-3",
     'installable': True,
     'auto_install': False,
     'post_init_hook': 'post_init_hook_for_new_medicament_type',

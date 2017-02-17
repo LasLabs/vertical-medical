@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # © 2016 LasLabs Inc.
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 {
     'name': 'Medical Prescription Sale CRM',
@@ -13,7 +13,7 @@
         'medical_prescription_sale',
     ],
     "website": "https://laslabs.com",
-    "license": "AGPL-3",
+    "license": "LGPL-3",
     "data": [
         'wizards/medical_lead_wizard_view.xml',
         'views/crm_lead_view.xml',

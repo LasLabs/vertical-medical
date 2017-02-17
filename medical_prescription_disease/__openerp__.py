@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # © 2016 LasLabs Inc.
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 {
 
@@ -18,7 +18,7 @@
         'views/medical_patient_disease_view.xml',
     ],
     "website": "https://laslabs.com",
-    "license": "AGPL-3",
+    "license": "LGPL-3",
     'installable': True,
     'auto_install': False,
 }

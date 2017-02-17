@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # © 2004 Tiny SPRL
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 {
     'name': 'Odoo Medical',
     'version': '9.0.1.0.0',
@@ -11,7 +11,7 @@
     ],
     'author': 'LasLabs, Odoo Medical Team, Odoo Community Association (OCA)',
     'website': 'http://github.com/oca/vertical-medical',
-    'license': 'AGPL-3',
+    'license': 'LGPL-3',
     'data': [
         'data/ir_sequence_data.xml',
         'views/medical_patient_view.xml',

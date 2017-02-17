@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # © 2016 LasLabs Inc.
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 {
 
@@ -23,7 +23,7 @@
         'tests/medical_history.yml',
     ],
     'website': 'https://laslabs.com',
-    'licence': 'AGPL-3',
+    'licence': 'LGPL-3',
     'installable': True,
     'auto_install': False,
 }

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # Copyright 2016 LasLabs Inc.
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 {
     'name': 'Website Sale Medical Prescription',
@@ -9,7 +9,7 @@
     'category': 'Website',
     'website': 'https://laslabs.com/',
     'author': 'LasLabs',
-    'license': 'AGPL-3',
+    'license': 'LGPL-3',
     'application': False,
     'installable': True,
     'depends': [

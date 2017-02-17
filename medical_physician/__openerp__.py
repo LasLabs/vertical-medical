@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # © 2016 LasLabs Inc.
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 {
     'name': 'Medical Physician',
@@ -12,7 +12,7 @@
         'product',
     ],
     "website": "https://laslabs.com",
-    "licence": "AGPL-3",
+    "licence": "LGPL-3",
     "data": [
         'views/medical_physician_view.xml',
         'views/medical_specialty_view.xml',
