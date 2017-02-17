@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-# © 2016 LasLabs Inc.
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+# Copyright 2016-2017 LasLabs Inc.
+# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 from odoo.tests.common import TransactionCase
 from odoo.exceptions import ValidationError
@@ -62,7 +62,7 @@ class TestMedicalAppointment(TransactionCase):
 
     def test_default_stage_id(self):
         default_stage = self.appointment_id._default_stage_id()
-        self.assertEqual('default', default_stage.name)
+        self.assertEqual('Draft', default_stage.name)
 
     def test_compute_appointment_end_date(self, ):
         expect = '2016-01-01 12:00:00'

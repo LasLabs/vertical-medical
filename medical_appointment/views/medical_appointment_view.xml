@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-    Copyright (C) 2015-TODAY LasLabs [https://laslabs.com]
-    @author Dave Lasley <dave@laslabs.com>
-    @license AGPL-3
+    Copyright 2015-2017 LasLabs Inc.
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 -->
 
 <openerp>
@@ -68,36 +67,12 @@
                                         <field name="duration" widget="float_time" />
                                     </group>
                                 </group>
-                                <group string="Notes">
-                                    <field name="comments" nolabel="1" />
-                                </group>
                             </page>
-                            <page string="History">
-                                <field name="history_entry_ids" nolabel="1">
-                                    <tree string="History">
-                                        <field name="create_date" />
-                                        <field name="code" />
-                                        <field name="name" />
-                                        <field name="create_uid" />
-                                    </tree>
-                                    <form String="History">
-                                        <header>
-                                            <field name="entry_type_id" />
-                                        </header>
-                                        <sheet>
-                                            <group>
-                                                <group>
-                                                    <field name="name" />
-                                                    <field name="code" />
-                                                </group>
-                                                <group>
-                                                    <field name="create_date" />
-                                                    <field name="create_uid" />
-                                                </group>
-                                            </group>
-                                        </sheet>
-                                    </form>
-                                </field>
+                            <page string="Notes and Messages" name="messages">
+                                <div class="oe_chatter">
+                                    <field name="message_follower_ids" widget="mail_followers"/>
+                                    <field name="message_ids" widget="mail_thread"/>
+                                </div>
                             </page>
                         </notebook>
                     </sheet>
@@ -152,9 +127,6 @@
                         <filter string="Physician"
                                 domain="[]"
                                 context="{'group_by':'physician_id'}" />
-                        <filter string="Comments"
-                                domain="[]"
-                                context="{'group_by':'comments'}" />
                         <filter string="Health Center"
                                 domain="[]"
                                 context="{'group_by':'institution_id'}" />

@@ -93,7 +93,6 @@
     duration: 22
     physician_id: physician_1
     alias: Annual Checkup
-    comments: Testing new appointment
     appointment_type: outpatient
     institution_id: partner_2
     consultation_ids: 
