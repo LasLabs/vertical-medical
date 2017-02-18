@@ -35,7 +35,6 @@
                             <field name="mobile" data-inputmask="'mask': '9999-9999'"/>
                             <field name="fax" data-inputmask="'mask': '9999-9999'"/>
                             <field name="state_id"/>
-                            <field name="has_image"/>
                             <templates>
                                 <t t-name="kanban-box">
                                     <t t-set="color" t-value="kanban_color(record.color.raw_value)"/>
