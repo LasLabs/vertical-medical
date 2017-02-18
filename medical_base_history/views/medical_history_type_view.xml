@@ -6,8 +6,7 @@
     @license AGPL-3
 -->
 
-<openerp>
-    <data>
+<odoo>
         
         <record id="medical_history_type_view_form" model="ir.ui.view">
             <field name="name">medical.history.type.view.form</field>
@@ -83,5 +82,4 @@
             <field name="view_mode">tree,form</field>
         </record>
         
-    </data>
-</openerp>
+</odoo>

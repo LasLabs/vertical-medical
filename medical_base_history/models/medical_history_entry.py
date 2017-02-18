@@ -5,6 +5,7 @@
 from odoo import fields, models, api, _
 from odoo.exceptions import ValidationError
 
+# TODO: Don't use pickle, use json instead
 try:
     import cPickle as pickle
 except ImportError:
@@ -46,7 +47,7 @@ class MedicalHistoryEntry(models.Model):
         help='Copy of old record for history auditing',
         readonly=True,
         store=True,
-        select=False,
+        index=False,
         compute='_compute_old_record_dict',
         inverse='_write_old_record_dict',
     )
@@ -54,7 +55,7 @@ class MedicalHistoryEntry(models.Model):
         help='Copy of new record for history auditing',
         readonly=True,
         store=True,
-        select=False,
+        index=False,
         compute='_compute_old_record_dict',
         inverse='_write_old_record_dict',
     )

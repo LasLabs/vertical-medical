@@ -27,7 +27,7 @@ Known issues / Roadmap
 ======================
 
 * Deprecate for mail.tracking.value
-
+* Stop using PICKLE, use JSON.
 
 Bug Tracker
 ===========
