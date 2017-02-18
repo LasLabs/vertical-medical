@@ -118,6 +118,7 @@ class TestMedicalPrescriptionOrderLine(TransactionCase):
             'medical_prescription.medical_prescription_order_order_line_2'
         )
         self.rx_line_1.medical_medication_id = rx_line2.medical_medication_id
+        self.rx_line_1._onchange_medical_medication_id()
         self.assertEquals(
             self.dispense_uom_id,
             self.rx_line_1.medical_medication_id.medicament_id.uom_id.id,
