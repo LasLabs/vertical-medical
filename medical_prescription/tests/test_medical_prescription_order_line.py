@@ -20,6 +20,8 @@ class TestMedicalPrescriptionOrderLine(TransactionCase):
             'medical_prescription.'
             'medical_prescription_order_order_line_1'
         )
+        self.dispense_uom_id = \
+            self.rx_line_1.medical_medication_id.medicament_id.uom_id.id
 
     def test_default_name(self):
         """ Test name added to rx_line as default """
@@ -109,4 +111,14 @@ class TestMedicalPrescriptionOrderLine(TransactionCase):
         exp = sorted(set(exp))
         self.assertEquals(
             res, exp,
+        )
+
+    def test_onchange_medical_medication_id(self):
+        rx_line2 = self.env.ref(
+            'medical_prescription.medical_prescription_order_order_line_2'
+        )
+        self.rx_line_1.medical_medication_id = rx_line2.medical_medication_id
+        self.assertEquals(
+            self.dispense_uom_id,
+            self.rx_line_1.medical_medication_id.medicament_id.uom_id.id,
         )

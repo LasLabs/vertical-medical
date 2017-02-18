@@ -53,3 +53,8 @@ class MedicalPrescriptionOrderLine(models.Model):
 
         recs = self.search(domain + args, limit=limit)
         return recs.name_get()
+
+    @api.onchange('medical_medication_id')
+    def _onchange_medical_medication_id(self):
+        self.dispense_uom_id = \
+            self.medical_medication_id.medicament_id.uom_id.id
