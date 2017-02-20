@@ -145,14 +145,23 @@ class TestMedicalPatient(TransactionCase):
         When patients are searched by age,
         it should return patients with the corresponding birth dates
         """
-        now = date.today()
-        birthdate_date = fields.Date.from_string(
-            self.patient_1.birthdate_date,
+        birthdate = datetime.strptime(
+            self.patient_1.birthdate, "%Y-%m-%d"
+        ).date()
+        current_date = date.today()
+        current_year = current_date.year
+        years = current_year - birthdate.year
+        current_day = current_date.day
+        first_possible_birthdate = current_date.replace(
+            year=current_year - (int(years))
         )
-        years = now.year - birthdate_date.year - 1
-        result = self.patient_1._search_age('=', years)
-        start_date = result[1][2]
-        end_date = result[2][2]
+        last_possible_birthdate = first_possible_birthdate.replace(
+            year=current_year - int(years) + 1,
+            day=current_day - 1
+        )
+        result = self.env['medical.patient'].search(
+            ['&', ('birthdate_date', '>=', first_possible_birthdate),
+             ('birthdate_date', '<=', last_possible_birthdate)])
         self.assertTrue(
-            birthdate_date >= start_date and birthdate_date <= end_date
+            self.patient_1 in result
         )

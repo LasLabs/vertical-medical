@@ -18,7 +18,7 @@
 
     <record id="medical_patient_patient_1" model="medical.patient">
         <field name="partner_id" ref="medical.res_partner_patient_1" />
-        <field name="birthdate_date">1920-02-23</field>
+        <field name="birthdate">1920-02-23</field>
         <field name='gender'>female</field>
     </record>
     
