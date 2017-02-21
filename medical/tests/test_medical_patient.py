@@ -10,6 +10,9 @@ from odoo import fields
 from odoo.tests.common import TransactionCase
 from odoo.exceptions import ValidationError
 
+import logging
+_logger = logging.getLogger(__name__)
+
 
 MODULE_PATH = 'medical.models.medical_patient'
 
@@ -149,19 +152,11 @@ class TestMedicalPatient(TransactionCase):
             self.patient_1.birthdate, "%Y-%m-%d"
         ).date()
         current_date = date.today()
-        current_year = current_date.year
-        years = current_year - birthdate.year
-        current_day = current_date.day
-        first_possible_birthdate = current_date.replace(
-            year=current_year - (int(years))
-        )
-        last_possible_birthdate = first_possible_birthdate.replace(
-            year=current_year - int(years) + 1,
-            day=current_day - 1
-        )
+        delta = current_date - birthdate
+        years = delta.days/365 - 1
         result = self.env['medical.patient'].search(
-            ['&', ('birthdate_date', '>=', first_possible_birthdate),
-             ('birthdate_date', '<=', last_possible_birthdate)])
+            [('age', 'like', years)]
+        )
         self.assertTrue(
             self.patient_1 in result
         )
