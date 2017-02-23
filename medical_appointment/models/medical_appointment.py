@@ -84,7 +84,7 @@ class MedicalAppointment(models.Model):
         string='Medical Center',
         help='Medical center that appointment is located at',
         comodel_name='res.partner',
-        domain="[('is_institution', '=', True)]",
+        domain="[('type', '=', 'medical.center')]",
     )
     consultation_ids = fields.Many2one(
         string='Consultation Services',

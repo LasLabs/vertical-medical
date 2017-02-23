@@ -41,8 +41,8 @@ class TestMedicalAppointment(TransactionCase):
         }
         self.env['medical.appointment.stage'].create(vals)
         vals = {
-            'name': 'Test Institution',
-            'is_institution': True,
+            'name': 'Test Medical Center',
+            'type': 'medical.center',
         }
         self.institution_id = self.env['res.partner'].create(vals)
         self.appointment_id = self._new_appointment()
