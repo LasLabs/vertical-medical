@@ -41,7 +41,8 @@ class MedicalAppointment(models.Model):
     appointment_date = fields.Datetime(
         string='Date and Time',
         index=True,
-        help='Date and Time of Scheduled Appointment'
+        help='Date and Time of Scheduled Appointment',
+        required=True,
     )
     appointment_end_date = fields.Datetime(
         string='End Date and Time',
@@ -55,9 +56,10 @@ class MedicalAppointment(models.Model):
         help='When to stop displaying appointment',
     )
     duration = fields.Float(
-        string='Duration',
+        string='Duration (min)',
         help='Duration of appointment (in minutes)',
         default=30.0,
+        required=True,
     )
     physician_id = fields.Many2one(
         string='Physician',
