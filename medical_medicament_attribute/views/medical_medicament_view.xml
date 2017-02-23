@@ -6,22 +6,20 @@
     The license is in the file __openerp__.py
 -->
 
-<openerp>
-    <data>
+<odoo>
         
-        <record id="medical_medicament_view_form" model="ir.ui.view">
-            <field name="name">medical.medicament.form</field>
-            <field name="model">medical.medicament</field>
-            <field name='inherit_id' ref='medical_medicament.medical_medicament_view_form'/>
-            <field name="arch" type="xml">
-                <xpath expr="//page[@name='medicament']" position="inside">
-                    <group string="Physical Attributes">
-                        <field name="medicament_attribute_ids"
-                               context="{'default_medicament_ids': [(4, id)]}" />
-                    </group>
-                </xpath>
-            </field>
-        </record>
+    <record id="medical_medicament_view_form" model="ir.ui.view">
+        <field name="name">medical.medicament.form</field>
+        <field name="model">medical.medicament</field>
+        <field name='inherit_id' ref='medical_medicament.medical_medicament_view_form'/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='medicament']" position="inside">
+                <group string="Physical Attributes">
+                    <field name="medicament_attribute_ids"
+                           context="{'default_medicament_ids': [(4, id)]}" />
+                </group>
+            </xpath>
+        </field>
+    </record>
 
-    </data>
-</openerp>
+</odoo>
