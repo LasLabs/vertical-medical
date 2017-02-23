@@ -42,6 +42,20 @@
         </field>
     </record>
 
+    <record id="medical_prescription_order_line_form_view_stages" model="ir.ui.view">
+        <field name="name">medical.prescription.order.line.form</field>
+        <field name="model">medical.prescription.order.line</field>
+        <field name="inherit_id" ref="medical_prescription.medical_prescription_order_line_view_form" />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="before">
+                <header>
+                    <field name="stage_id" widget="statusbar" clickable="True" />
+                </header>
+            </xpath>
+        </field>
+    </record>
+
     <record id="medical_prescription.medical_prescription_order_line_action" model="ir.actions.act_window">
         <field name="view_mode">kanban,tree,form</field>
         <field name="view_id" ref="medical_prescription_order_line_kanban_view" />
