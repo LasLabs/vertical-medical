@@ -36,6 +36,7 @@
         <field name="description">These prescriptions have passed initial verification.</field>
         <field name="sequence" eval="4" />
         <field name="fold" eval="True" />
+        <field name="is_verified" eval="True" />
         <field name="res_model_id" ref="medical_prescription.model_medical_prescription_order" />
     </record>
 
@@ -44,6 +45,14 @@
         <field name="description">These prescriptions have been cancelled, or are otherwise invalid.</field>
         <field name="sequence" eval="5" />
         <field name="fold" eval="True" />
+        <field name="res_model_id" ref="medical_prescription.model_medical_prescription_order" />
+    </record>
+
+    <record id="prescription_order_state_exception" model="base.kanban.stage">
+        <field name="name">Exception</field>
+        <field name="description">Indicates that the Prescription has an issue that needs to be manually resolved.</field>
+        <field name="sequence" eval="6" />
+        <field name="fold" eval="False" />
         <field name="res_model_id" ref="medical_prescription.model_medical_prescription_order" />
     </record>
 
@@ -73,17 +82,17 @@
         <field name="res_model_id" ref="medical_prescription.model_medical_prescription_order_line" />
     </record>
 
+       <record id="prescription_order_state_exception" model="base.kanban.stage">
+        <field name="name">Exception</field>
+        <field name="description">Indicates that the Prescription has an issue that needs to be manually resolved.</field>
+        <field name="sequence" eval="4" />
+        <field name="fold" eval="False" />
+        <field name="res_model_id" ref="medical_prescription.model_medical_prescription_order" />
+    </record>
+
     <record id="prescription_order_line_state_pv2" model="base.kanban.stage">
         <field name="name">PV2</field>
         <field name="description">These prescription lines are ready for RPH verification for dispense.</field>
-        <field name="sequence" eval="4" />
-        <field name="fold" eval="False" />
-        <field name="res_model_id" ref="medical_prescription.model_medical_prescription_order_line" />
-    </record>
-
-    <record id="prescription_order_line_state_dur" model="base.kanban.stage">
-        <field name="name">DUR</field>
-        <field name="description">These prescription lines have failed DUR check and require additional review/action.</field>
         <field name="sequence" eval="5" />
         <field name="fold" eval="False" />
         <field name="res_model_id" ref="medical_prescription.model_medical_prescription_order_line" />
