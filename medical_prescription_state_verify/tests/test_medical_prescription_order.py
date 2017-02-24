@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# © 2016 LasLabs Inc.
+# Copyright 2016-2017 LasLabs Inc.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from odoo.tests.common import TransactionCase
@@ -65,3 +65,10 @@ class TestMedicalPrescriptionOrder(TransactionCase):
         record_id.write({'stage_id': 4, })  # verified
         record_id.refresh()
         self.assertEquals(4, record_id.stage_id.id)
+
+    def test_write_attrs_allowed_when_not_verified(self):
+        record_id = self._new_record()
+        record_id.stage_id = 2  # not verified
+        record_id.write({'name': 'Should be allowed'})
+        record_id.refresh()
+        self.assertEquals(record_id.name, 'Should be allowed')

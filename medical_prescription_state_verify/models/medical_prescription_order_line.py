@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
-# © 2016 LasLabs Inc.
+# Copyright 2016-2017 LasLabs Inc.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-from odoo import api, exceptions, models, _
+from odoo import _, api, models
+from odoo.exceptions import ValidationError
 
 
 class MedicalPrescriptionOrderLine(models.Model):
@@ -26,7 +27,7 @@ class MedicalPrescriptionOrderLine(models.Model):
                 protected state
         """
         if self.prescription_order_id.stage_id.name == 'Verified':
-            raise exceptions.ValidationError(_(
+            raise ValidationError(_(
                 'You cannot edit this value after its parent Rx has'
                 ' been verified. Please either cancel it, or mark it as'
                 ' an exception if manual reversals are required. [%s]' %

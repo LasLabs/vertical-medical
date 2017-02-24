@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--
-    Copyright (C) 2015-[Now] LasLabs [https://laslabs.com]
+    # Copyright 2016-2017 LasLabs Inc.
     @author Ken Mak <kmak@laslabs.com>
-    The license is in the file __openerp__.py
+    The license is in the file __manifest__.py
 -->
 
 <odoo>
