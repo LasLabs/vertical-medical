@@ -6,6 +6,7 @@
 -->
 
 <odoo>
+
     <template id="prescription_lines" name="Prescription Lines">
         <h3 class="page-header">
             Prescriptions
@@ -69,4 +70,5 @@
             </div>
         </t>
     </template>
+
 </odoo>

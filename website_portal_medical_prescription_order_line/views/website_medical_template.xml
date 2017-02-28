@@ -6,6 +6,7 @@
 -->
 
 <odoo>
+
     <template id="medical_prescription_line"
               name="Medical Prescription Line"
               inherit_id="website_portal_medical.medical_main">
@@ -15,4 +16,5 @@
             </div>
         </xpath>
     </template>
+
 </odoo>
