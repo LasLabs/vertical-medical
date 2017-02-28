@@ -6,6 +6,7 @@
 -->
 
 <odoo>
+
     <record id="medical_appointment_view_tree" model="ir.ui.view">
         <field name="name">medical.appointment.view.tree</field>
         <field name="model">medical.appointment</field>
@@ -192,4 +193,5 @@
         field name="domain">['|',('patient_id.user_id.id','=',uid),('doctor.user_id.id','=',uid)]</field>
         -->
     </record>
+
 </odoo>
