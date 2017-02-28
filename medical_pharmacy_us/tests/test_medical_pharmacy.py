@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# © 2016 LasLabs Inc.
+# Copyright 2016-2017 LasLabs Inc.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from odoo.tests.common import TransactionCase
@@ -52,3 +52,12 @@ class TestMedicalPharmacy(TransactionCase):
         for i in self.invalid:
             with self.assertRaises(ValidationError):
                 self._new_record(i)
+
+    def test_invalid_but_not_us(self):
+        country_id = self.env['res.country'].search([
+            ('code', '!=', 'US'),
+        ],
+            limit=1,
+        )
+        for i in self.invalid:
+            self.assertTrue(self._new_record(i, country_id))
