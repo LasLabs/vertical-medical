@@ -8,6 +8,20 @@ Odoo Medical Appointment
 Extension of medical_physician that provides appointment concepts
 
 
+
+Installation
+============
+To install this module, you need to:
+
+. nothing special to do, just insall from the Apps menu
+
+
+Configuration
+=============
+
+To configure this module, you need to:
+. no required configuration
+
 Usage
 =====
 

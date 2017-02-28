@@ -6,8 +6,7 @@
     @license AGPL-3
 -->
 
-<openerp>
-    <data noupdate="0">
+<odoo>
 
         <record id="medical_appointment_access_rule_physician" model="ir.rule">
             <field name="name">Appointment Entry</field>
@@ -31,5 +30,4 @@
             ] ]]></field>
         </record>
 
-    </data>
-</openerp>
+</odoo>
