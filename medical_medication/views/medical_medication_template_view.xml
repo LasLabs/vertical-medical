@@ -61,6 +61,8 @@
         <field name="model">medical.medication.template</field>
         <field name="arch" type="xml">
             <form string="Medical Medication Template">
+                <header>
+                </header>
                 <sheet>
                     <label for="medicament_id" class="oe_edit_only"/>
                     <h1><field name="medicament_id"/></h1>

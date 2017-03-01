@@ -47,10 +47,8 @@
         <field name="model">medical.prescription.order.line</field>
         <field name="inherit_id" ref="medical_prescription.medical_prescription_order_line_view_form" />
         <field name="arch" type="xml">
-            <xpath expr="//sheet" position="before">
-                <header>
-                    <field name="stage_id" widget="statusbar" clickable="True" />
-                </header>
+            <xpath expr="//header" position="inside">
+                <field name="stage_id" widget="statusbar" clickable="True" />
             </xpath>
         </field>
     </record>
