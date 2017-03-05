@@ -111,6 +111,9 @@ class MedicalPatient(models.Model):
 
     def _search_age(self, operator, value):
         current_date = date.today()
+        if operator not in ('like', '=', '>=', '>', '<', '<='):
+            operator = 'like'
+        assert operator in ('like', '=', '>=', '>', '<', '<=')
         current_year = current_date.year
         current_day = current_date.day
         first_possible_birthdate = current_date.replace(
@@ -120,5 +123,14 @@ class MedicalPatient(models.Model):
             year=current_year - int(value),
             day=current_day - 1
         )
-        return ['&', ('birthdate_date', '>=', first_possible_birthdate),
-                ('birthdate_date', '<=', last_possible_birthdate)]
+        if operator == '=' or operator == 'like':
+            return ['&', ('birthdate_date', '>=', first_possible_birthdate),
+                    ('birthdate_date', '<=', last_possible_birthdate)]
+        elif operator == '>=':
+            return [('birthdate_date', '>=', first_possible_birthdate)]
+        elif operator == '>':
+            return [('birthdate_date', '>', last_possible_birthdate)]
+        elif operator == '<=':
+            return [('birthdate_date', '<=', last_possible_birthdate)]
+        elif operator == '<':
+            return [('birthdate_date', '<', first_possible_birthdate)]

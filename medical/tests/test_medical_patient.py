@@ -153,9 +153,9 @@ class TestMedicalPatient(TransactionCase):
         ).date()
         current_date = date.today()
         delta = current_date - birthdate
-        years = delta.days/365 - 1
+        years = delta.days/365
         result = self.env['medical.patient'].search(
-            [('age', 'like', years)]
+            [('age', '=', years)]
         )
         self.assertTrue(
             self.patient_1 in result
