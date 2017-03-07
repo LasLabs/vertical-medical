@@ -85,4 +85,8 @@
 <p>Your appointment with Dr. ${object.physician_id.lastname} on ${ctx.get('appointment_date') or object.appointment_date[:10]} ${ctx.get('appointment_time') or object.appointment_date[11:]} has been confirmed.</p>
         ]]></field>
     </record>
+    <record forcecreate="True" id="decimal_appointment" model="decimal.precision">
+        <field name="name">Appointment</field>
+        <field name="digits">2</field>
+    </record>
 </odoo>
