@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
 <odoo>
 
-    <record forcecreate="True" id="decimal_appointment" model="decimal.precision">
+    <record id="decimal_precision_appointment" model="decimal.precision" forcecreate="True">
         <field name="name">Appointment</field>
         <field name="digits">2</field>
     </record>

@@ -19,6 +19,7 @@
         'security/ir.model.access.csv',
         'security/medical_security.xml',
         'data/auditlog_rule.xml',
+        'data/decimal_precision_data.xml',
         'data/medical_appointment_data.xml',
         'data/medical_appointment_sequence.xml',
     ],
