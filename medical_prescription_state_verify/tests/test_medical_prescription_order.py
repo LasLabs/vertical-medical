@@ -20,10 +20,15 @@ class TestMedicalPrescriptionOrder(TransactionCase):
             'name': 'Test Physician',
             'specialty_id': specialty_id.id,
         })
+        prescription_order_line_id = self.env.ref(
+            'medical_prescription.medical_prescription_order_order_line_1'
+        )
         self.model_obj = self.env['medical.prescription.order']
         self.vals = {
             'patient_id': patient_id.id,
             'physician_id': physician_id.id,
+            'prescription_order_line_ids':
+                [(4, prescription_order_line_id.id, 0)],
         }
 
     def _new_record(self):
@@ -63,3 +68,10 @@ class TestMedicalPrescriptionOrder(TransactionCase):
         record_id.write({'stage_id': 5})  # cancelled
         record_id.refresh()
         self.assertEquals('Cancelled', record_id.stage_id.name)
+
+    def test_prescription_lines_moved_to_hold_when_verified(self):
+        record_id = self._new_record()
+        record_id.write({'stage_id': 4})  # verified
+        self.assertEquals(
+            'Hold', record_id.prescription_order_line_ids[0].stage_id.name
+        )
