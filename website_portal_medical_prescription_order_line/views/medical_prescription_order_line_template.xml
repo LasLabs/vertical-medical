@@ -33,11 +33,19 @@
                                     <span t-field="line.name" />
                                 </p>
                                 <p>
-                                    <label class="label label-info">Remain</label>
-                                    <span t-field="line.can_dispense_qty" />
+                                    <t t-if="line.is_expired">
+                                        <label class="label label-danger">Expired</label>
+                                    </t>
+                                    <t t-if="line.can_dispense_qty &gt; 0 and not line.is_expired">
+                                        <label class="label label-info">Remain</label>
+                                        <span t-field="line.can_dispense_qty" />
+                                    </t>
+                                    <t t-if="line.can_dispense_qty &lt; 1 and not line.is_expired">
+                                        <label class="label label-danger">Out of Refills</label>
+                                    </t>
                                 </p>
 
-                                <t t-if="line.can_dispense_qty">
+                                <t t-if="line.can_dispense_qty > 0 and not line.is_expired">
                                     <t t-set="product" t-value="line.medicament_id.product_id" />
                                     <form action="/shop/cart/update" method="POST">
                                         <input type="hidden"
