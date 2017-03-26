@@ -19,6 +19,19 @@
                 If you would like to order a medication, please click the green
                 button to add to cart.
             </h5>
+            <div class="text-center">
+                <p>
+                    <form>
+                        <b>Filter by patient(s)</b>:
+                        <t t-foreach="patients" t-as="patient">
+                            <t t-set="id" t-value="patient.id"/>
+                            <input type="checkbox" t-att-name="'patient'+str(id)" t-att-value="id"/>
+                            <t t-esc="patient.name"/>
+                        </t>
+                        <input type="submit" class="btn btn-xs btn-primary"/>
+                    </form>
+                </p>
+            </div>
             <div class="container">
                 <div class="row">
                 <t t-foreach="prescription_order_lines" t-as="line">

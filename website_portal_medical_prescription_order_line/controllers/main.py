@@ -28,6 +28,15 @@ class WebsiteMedical(WebsiteMedical):
             ('patient_id.parent_id', 'child_of', [partner_id.id]),
         ])
 
+        params = http.request.params.items()
+        patient_ids = []
+        for p in params:
+            patient_ids.append(int(p[1]))
+        if len(patient_ids) > 0:
+            rx_line_ids = rx_line_ids.search([
+                ('patient_id', 'in', patient_ids),
+            ])
+
         pricelist = request.website.get_current_pricelist()
         pricelist_item_ids = pricelist.item_ids.ids
 
