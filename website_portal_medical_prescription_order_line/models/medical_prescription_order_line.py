@@ -15,15 +15,9 @@ class MedicalPrescriptionOrderLine(models.Model):
         compute='_compute_is_expired',
     )
 
-    @api.one
+    @api.multi
     def _compute_is_expired(self):
-        stop = self.date_stop_treatment
-        if stop and type(stop) is str:
-            stop = datetime.datetime.strptime(
-                stop, "%Y-%m-%d %H:%M:%S"
-            )
         for record in self:
-            if stop and stop < datetime.datetime.now():
-                record.is_expired = True
-            else:
-                record.is_expired = False
+            now = datetime.datetime.now()
+            stop = fields.Datetime.from_string(self.date_stop_treatment)
+            record.is_expired = stop and stop < now
