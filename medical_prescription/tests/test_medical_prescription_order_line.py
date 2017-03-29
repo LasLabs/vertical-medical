@@ -124,3 +124,25 @@ class TestMedicalPrescriptionOrderLine(TransactionCase):
             self.dispense_uom_id,
             self.rx_line_1.medical_medication_id.medicament_id.uom_id.id,
         )
+
+    def test_default_is_expired(self):
+        """Rx line should not be expired if there is no stop date"""
+        self.assertEquals(
+            self.rx_line_1.is_expired, False
+        )
+
+    def test_expired_rx_line(self):
+        """Rx line should be expired if stop date has passed"""
+        self.rx_line_1.write(
+            {'date_stop_treatment': "2000-01-01 12:00:00"}
+        )
+        self.assertTrue(self.rx_line_1.is_expired)
+
+    def test_not_expired_rx_line(self):
+        """Rx line should not be expired if stop date has not passed"""
+        self.rx_line_1.write(
+            {'date_stop_treatment': "3000-01-01 12:00:00"}
+        )
+        self.assertEquals(
+            self.rx_line_1.is_expired, False
+        )

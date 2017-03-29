@@ -4,6 +4,8 @@
 
 from odoo import api, fields, models
 
+import datetime
+
 
 class MedicalPrescriptionOrderLine(models.Model):
     _name = 'medical.prescription.order.line'
@@ -32,6 +34,11 @@ class MedicalPrescriptionOrderLine(models.Model):
         default=lambda s: s._default_name(),
     )
 
+    is_expired = fields.Boolean(
+        string='Expired?',
+        compute='_compute_is_expired',
+    )
+
     @api.model
     def _default_name(self):
         return self.env['ir.sequence'].next_by_code(
@@ -58,3 +65,10 @@ class MedicalPrescriptionOrderLine(models.Model):
     def _onchange_medical_medication_id(self):
         self.dispense_uom_id = \
             self.medical_medication_id.medicament_id.uom_id.id
+
+    @api.multi
+    def _compute_is_expired(self):
+        now = datetime.datetime.now()
+        for record in self:
+            stop = fields.Datetime.from_string(record.date_stop_treatment)
+            record.is_expired = stop and stop < now
