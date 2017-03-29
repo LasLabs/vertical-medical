@@ -11,6 +11,9 @@
         <xpath expr="//script[last()]" position="after">
             <link href="/website_portal_medical_prescription_order_line/static/src/css/prescription_order_line.css" rel="stylesheet" type="text/css" />
         </xpath>
+        <xpath expr=".">
+            <script src="website_portal_medical_prescription_order_line/static/src/js/prescription_order_line.js"/>
+        </xpath>
     </template>
 
 </odoo>

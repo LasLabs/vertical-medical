@@ -28,11 +28,17 @@ class WebsiteMedical(WebsiteMedical):
             ('patient_id.parent_id', 'child_of', [partner_id.id]),
         ])
 
-        params = http.request.params.items()
-        patient_ids = []
-        for p in params:
-            patient_ids.append(int(p[1]))
-        if len(patient_ids) > 0:
+        url = str(request.httprequest)
+        if url.find('?') != -1:
+            patient_ids = []
+            start = url.find('?') + 1
+            url = url[start:]
+            end = url.find("'")
+            url = url[:end]
+            params = url.split("&")
+            for p in params:
+                p = p.split("=")
+                patient_ids.append(int(p[1]))
             rx_line_ids = rx_line_ids.search([
                 ('patient_id', 'in', patient_ids),
             ])
