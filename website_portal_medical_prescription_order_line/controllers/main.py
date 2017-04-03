@@ -9,11 +9,6 @@ from odoo.addons.website_portal_medical.controllers.main import (
     WebsiteMedical
 )
 
-import logging
-
-
-_logger = logging.getLogger(__name__)
-
 
 class WebsiteMedical(WebsiteMedical):
 
@@ -33,19 +28,13 @@ class WebsiteMedical(WebsiteMedical):
             ('patient_id.parent_id', 'child_of', [partner_id.id]),
         ])
 
-        url = str(request.httprequest)
-        if url.find('?') != -1:
-            patient_ids = []
-            start = url.find('?') + 1
-            url = url[start:]
-            end = url.find("'")
-            url = url[:end]
-            params = url.split("&")
-            for p in params:
-                p = p.split("=")
-                patient_ids.append(int(p[1]))
+        patient_ids = request.httprequest.args.getlist("patients")
+        if len(patient_ids) > 0:
+            int_patient_ids = []
+            for id in patient_ids:
+                int_patient_ids.append(int(id))
             rx_line_ids = rx_line_ids.search([
-                ('patient_id', 'in', patient_ids),
+                ('patient_id', 'in', int_patient_ids),
             ])
 
         pricelist = request.website.get_current_pricelist()
