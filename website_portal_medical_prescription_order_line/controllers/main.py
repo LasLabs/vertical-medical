@@ -9,6 +9,11 @@ from odoo.addons.website_portal_medical.controllers.main import (
     WebsiteMedical
 )
 
+import logging
+
+
+_logger = logging.getLogger(__name__)
+
 
 class WebsiteMedical(WebsiteMedical):
 

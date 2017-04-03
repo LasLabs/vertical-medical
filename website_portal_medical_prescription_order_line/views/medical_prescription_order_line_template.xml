@@ -20,20 +20,19 @@
                 button to add to cart.
             </h5>
             <div class="text-center">
-                <form method="GET">
-                    <p>
-                        <select name="patients" t-att-size="len(patients)" class="js-example-basic-multiple js-states form-control" multiple="multiple">
+                <p>
+                    <form method="GET">
+                        <label>Filter</label>
+                        <select name="patients" t-att-size="len(patients)" class="js-example-basic-multiple js-states" multiple="multiple">
                             <t t-foreach="patients" t-as="patient">
                                 <option t-att-value="patient.id">
                                     <t t-esc="patient.name" />
                                 </option>
                             </t>
                         </select>
-                    </p>
-                    <p>
                         <input type="submit" class="btn btn-xs btn-default"/>
-                    </p>
-                </form>
+                    </form>
+                </p>
             </div>
             <div class="container">
                 <div class="row">
