@@ -18,14 +18,14 @@
                         Your Prescriptions
                     </h1>
                     <div class="row">
-                        <div class="col-lg-8 col-md-9 js_medical_prescription_checkout">
+                        <div class="col-lg-8 col-md-9">
                             <form method="POST"
                                   data-success_page="/shop/checkout/medical/prescription"
                                   class="form-horizontal container-fluid mt32 mb32 s_website_form"
                                   >
                                 <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
                                 <t t-foreach="sale_lines" t-as="sale_line">
-                                    <div class="panel panel-default">
+                                    <div class="panel panel-default js_medical_prescription_checkout">
                                         <div class="panel-heading">
                                             <h4>
                                                 <span t-esc="'%s %s of %s' % (sale_line.product_uom_qty, sale_line.product_uom.name, sale_line.name)" />
