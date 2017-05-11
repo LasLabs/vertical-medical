@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# © 2016 LasLabs Inc.
+# Copyright 2016-2017 LasLabs Inc.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 {
@@ -17,9 +17,9 @@
     "data": [
         'views/medical_physician_view.xml',
         'views/medical_specialty_view.xml',
+        'views/medical_physician_service_view.xml',
         'views/medical_menu.xml',
         'security/ir.model.access.csv',
-        'wizard/medical_physician_unavailable_view.xml',
         'data/ir_sequence_data.xml',
         'data/medical_specialties.xml',
     ],
