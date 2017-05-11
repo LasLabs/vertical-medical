@@ -19,6 +19,5 @@ class MedicalDrugForm(models.Model):
     )
 
     _sql_constraints = [
-        ('name_uniq', 'UNIQUE(name)', 'Drug form name must be unique!'),
         ('code_uniq', 'UNIQUE(code)', 'Code should be unique!'),
     ]

@@ -13,11 +13,6 @@ class TestMedicalDrugForm(TransactionCase):
         self.drug_form_bar = self.env.ref('medical_medicament.BAR')
         self.drug_form_capsule = self.env.ref('medical_medicament.CAP')
 
-    def test_name_unique(self):
-        """ Validate drug form unique name sql constraint """
-        with self.assertRaises(IntegrityError):
-            self.drug_form_bar.name = self.drug_form_capsule.name
-
     def test_code_unique(self):
         """ Validate drug form unique code sql constraint """
         with self.assertRaises(IntegrityError):
