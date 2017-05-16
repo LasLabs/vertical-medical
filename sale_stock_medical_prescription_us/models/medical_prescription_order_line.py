@@ -58,6 +58,10 @@ class MedicalPrescriptionOrderLine(models.Model):
             if not procurements:
                 record.dispense_remain_qty, record.dispense_remain_day = 0, 0
                 continue
+
+            if not record.qty:
+                continue
+
             first_proc = procurements[0]
 
             date_first_dispense = fields.Datetime.from_string(
@@ -74,14 +78,9 @@ class MedicalPrescriptionOrderLine(models.Model):
             else:
                 day_qty = record.duration
 
-            # @TODO
-            # What should happen if day_qty is 0?
             if not day_qty:
                 continue
 
-            # @TODO
-            # record.qty can be set to 0, causing total_qty to be 0
-            # and causing 0 division error for line 86
             total_qty = record.qty * (record.refill_qty_original + 1.0)
             daily_qty = total_qty / float(day_qty)
             estimated_use = days_passed * daily_qty
