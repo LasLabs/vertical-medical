@@ -56,7 +56,7 @@
         <field name="res_model_id" ref="medical_prescription.model_medical_prescription_order" />
     </record>
 
-    <!-- Prescription Order Line State -->
+    <!-- Prescription Order Line States -->
 
     <record id="prescription_order_line_state_unverified" model="base.kanban.stage">
         <field name="name">Unverified</field>
@@ -82,12 +82,12 @@
         <field name="res_model_id" ref="medical_prescription.model_medical_prescription_order_line" />
     </record>
 
-       <record id="prescription_order_state_exception" model="base.kanban.stage">
+       <record id="prescription_order_line_state_exception" model="base.kanban.stage">
         <field name="name">Exception</field>
-        <field name="description">Indicates that the Prescription has an issue that needs to be manually resolved.</field>
+        <field name="description">These prescription lines or their parent prescription have an issue that needs to be manually resolved.</field>
         <field name="sequence" eval="4" />
         <field name="fold" eval="False" />
-        <field name="res_model_id" ref="medical_prescription.model_medical_prescription_order" />
+        <field name="res_model_id" ref="medical_prescription.model_medical_prescription_order_line" />
     </record>
 
     <record id="prescription_order_line_state_pv2" model="base.kanban.stage">
