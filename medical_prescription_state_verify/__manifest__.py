@@ -8,7 +8,7 @@
     "author": "LasLabs, Odoo Community Association (OCA)",
     "category": "Medical",
     "website": "https://laslabs.com",
-    "license": "LGPL-3",
+    "license": "AGPL-3",
     "installable": True,
     "auto_install": False,
     "depends": [

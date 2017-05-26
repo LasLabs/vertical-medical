@@ -27,11 +27,18 @@ class MedicalPrescriptionOrderLine(models.Model):
                 protected state
         """
         if self.prescription_order_id.stage_id.is_verified:
+            if vals.get('stage_id'):
+                stage_id = self.env['base.kanban.stage'].browse(
+                    vals['stage_id']
+                )
+                if stage_id.name == "Hold":
+                    return super(
+                        MedicalPrescriptionOrderLine, self
+                    ).write(vals)
             raise ValidationError(_(
                 'You cannot edit this value after its parent Rx has'
                 ' been verified. Please either cancel it, or mark it as'
                 ' an exception if manual reversals are required. [%s]' %
                 self.prescription_order_id.name
             ))
-
         return super(MedicalPrescriptionOrderLine, self).write(vals)

@@ -59,4 +59,12 @@ class MedicalPrescriptionOrder(models.Model):
                             ' has been verified. [%s]' % rec_id.name
                         ))
 
-            return super(MedicalPrescriptionOrder, self).write(vals)
+            super(MedicalPrescriptionOrder, self).write(vals)
+            if rec_id.stage_id.is_verified:
+                stage_id = self.env['base.kanban.stage'].search(
+                    [("name", "=", "Hold")],
+                    limit=1
+                )
+                for prescription_order_line in \
+                        rec_id.prescription_order_line_ids:
+                    prescription_order_line.write({'stage_id': stage_id.id})
