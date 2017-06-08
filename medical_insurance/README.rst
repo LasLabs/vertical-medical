@@ -51,6 +51,7 @@ Contributors
 * Ruchir Shukla <ruchir@techreceptives.com>
 * Parthiv Patel <parthiv@techreceptives.com>
 * Nhomar Hernandéz <nhomar@vauxoo.com>
+* Gisela Mora <gisela.mora@eficent.com>
 
 
 Maintainer

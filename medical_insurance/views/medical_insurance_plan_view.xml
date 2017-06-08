@@ -42,8 +42,7 @@
                                 </group>
                             </page>
                             <page string="Additional">
-                                <field name="notes" readonly="1"
-                                       placeholder="Notes..." />
+                                <field name="notes" placeholder="Notes..." />
                             </page>
                         </notebook>
                     </sheet>
