@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 LasLabs Inc.
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+
+<odoo>
+    <record id="medical_physician_1_demo" model="medical.physician">
+        <field name="name">Portal Rx Lines - Demo Physician</field>
+    </record>
+</odoo>

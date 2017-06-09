@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 LasLabs Inc.
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+
+<odoo>
+    <record id="medical_medicament_1_demo" model="medical.medicament">
+        <field name="drug_form_id" ref="medical_medicament.AEM"/>
+        <field name="name">Portal Rx Lines - Demo Medicament</field>
+        <field name="uom_id" ref="medical_medication.product_uom_ml"/>
+        <field name="uom_po_id" ref="medical_medication.product_uom_ml"/>
+    </record>
+</odoo>

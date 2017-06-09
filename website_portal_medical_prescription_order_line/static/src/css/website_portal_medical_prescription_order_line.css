@@ -1,0 +1,12 @@
+/* Copyright 2017 LasLabs Inc.
+ * License LGPL-3 or later (http://www.gnu.org/licenses/lgpl.html) */
+
+.patient-filter-form {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.patient-filter-select {
+    min-width: 120px;
+    width: 50%;
+}

@@ -1,54 +1,51 @@
 .. image:: https://img.shields.io/badge/licence-LGPL--3-blue.svg
     :alt: License: LGPL-3
 
-=================================
-Website Sale Medical Prescription
-=================================
+==============================
+Medical Portal - Prescriptions
+==============================
 
-Extension providing prescription workflows in website_sale checkout process.
-
+This module adds prescription and prescription line info to the ``My Medical`` 
+portal. Prescriptions can be filtered by patient and added to the cart 
+directly from this page.
 
 Usage
 =====
 
-* Create a product that is Prescription Only ``medical.medicament.is_prescription``
-* Add it to cart in website
-* Note, prescriptions with medicaments that are not in the current pricelist cannot be added to the cart.
-* Refactor around requirement for pre-existing Sale Order for Add to Cart button.
-
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/159/8.0
+   :target: https://runbot.odoo-community.org/runbot/159/10.0
 
-For further information, please visit:
-
-* https://www.odoo.com/forum/help-1
-
-Known issues / Roadmap
+Known Issues / Roadmap
 ======================
 
-Medicaments that are not in any pricelist cannot be added to the cart.
-Make sure to select at least 'Different prices per customer segment' in
-Sales -> Settings -> Sale Price. Then add that medicament to a pricelist
-so it can be added to the cart when that pricelist is currently active.
+* Medicaments that are not in any pricelists cannot be added to the cart. Make 
+  sure to at least select ``Specific prices per customer segment, currency, 
+  etc.`` under ``Pricing`` in ``Sales > Settings``. Then add your medicament 
+  to a pricelist so it can be added to the cart when the pricelist is active.
 
 Bug Tracker
 ===========
 
-Bugs are tracked on `GitHub Issues <https://github.com/OCA/vertical-medical/issues>`_.
-In case of trouble, please check there if your issue has already been reported.
-If you spotted it first, help us smashing it by providing a detailed and welcomed feedback
-`here <https://github.com/OCA/vertical-medical/issues/new?body=module:%20website_sale_medical_prescription%0Aversion:%208.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
-
+Bugs are tracked on `GitHub Issues <https://github.com/OCA/vertical-medical/issues>`_. 
+In case of trouble, please check there if your issue has already been 
+reported. If you spotted it first, help us smash it by providing detailed and 
+welcomed feedback.
 
 Credits
 =======
+
+Images
+------
+
+* Odoo Community Association: `Icon <https://github.com/OCA/maintainer-tools/blob/master/template/module/static/description/icon.svg>`_.
 
 Contributors
 ------------
 
 * Dave Lasley <dave@laslabs.com>
 * Brett Wood <bwood@laslabs.com>
+* Oleg Bulkin <obulkin@laslabs.com>
 
 Maintainer
 ----------

@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<!--
-    Copyright (C) 2016-TODAY LasLabs [https://laslabs.com]
-    @license LGPL-3
--->
+<!-- Copyright 2016-2017 LasLabs Inc.
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl) -->
 
 <odoo>
-
     <template id="prescription_lines" name="Prescription Lines">
         <h3 class="page-header">
             Prescriptions
@@ -19,21 +15,21 @@
                 If you would like to order a medication, please click the green
                 button to add to cart.
             </h5>
-            <div class="text-center">
-                <p>
-                    <form method="GET">
-                        <label>Filter</label>
-                        <select name="patients" t-att-size="len(patients)" class="js-example-basic-multiple js-states" multiple="multiple">
-                            <t t-foreach="patients" t-as="patient">
-                                <option t-att-value="patient.id">
-                                    <t t-esc="patient.name" />
-                                </option>
-                            </t>
-                        </select>
-                        <input type="submit" class="btn btn-xs btn-default"/>
-                    </form>
-                </p>
-            </div>
+            <form method="GET" class="patient-filter-form">
+                <select name="patients" class="patient-filter-select" multiple="multiple">
+                    <t t-foreach="patients_filtered" t-as="patient">
+                        <option t-att-value="patient.id" selected="selected">
+                            <t t-esc="patient.name"/>
+                        </option>
+                    </t>
+                    <t t-foreach="patients_not_filtered" t-as="patient">
+                        <option t-att-value="patient.id">
+                            <t t-esc="patient.name"/>
+                        </option>
+                    </t>
+                </select>
+                <input type="submit" class="btn btn-default" value="Filter"/>
+            </form>
             <div class="container">
                 <div class="row">
                 <t t-foreach="prescription_order_lines" t-as="line">
@@ -60,7 +56,7 @@
                                     </t>
                                 </p>
 
-                                <t t-if="line.can_dispense_qty > 0 and not line.is_expired">
+                                <t t-if="line.can_dispense_qty &gt; 0 and not line.is_expired">
                                     <t t-set="product" t-value="line.medicament_id.product_id" />
                                     <form action="/shop/cart/update" method="POST">
                                         <input type="hidden"
@@ -94,4 +90,11 @@
         </t>
     </template>
 
+    <template id="medical_prescription_line" name="Medical Prescription Line" inherit_id="website_portal_medical.medical_main">
+        <xpath expr="//div[contains(@class,'o_website_medical_patient')]" position="after">
+            <div class="o_website_medical_container o_website_medical_prescription_order_line">
+                <t t-call="website_portal_medical_prescription_order_line.prescription_lines" />
+            </div>
+        </xpath>
+    </template>
 </odoo>

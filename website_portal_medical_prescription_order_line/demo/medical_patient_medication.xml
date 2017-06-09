@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 LasLabs Inc.
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+
+<odoo>
+    <record id="medical_patient_medication_1_demo" model="medical.patient.medication">
+        <field name="medicament_id" ref="medical_medicament_1_demo"/>
+        <field name="patient_id" ref="medical_patient_1_demo"/>
+    </record>
+
+    <record id="medical_patient_medication_2_demo" model="medical.patient.medication">
+        <field name="medicament_id" ref="medical_medicament_1_demo"/>
+        <field name="patient_id" ref="medical_patient_2_demo"/>
+    </record>
+</odoo>
