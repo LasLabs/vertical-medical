@@ -25,6 +25,8 @@ class MedicalInsurancePlan(models.Model):
     patient_id = fields.Many2one(
         'medical.patient',
         string='Patient',
+        required=True,
+        ondelete='restrict',
     )
     number = fields.Char(
         required=True,
