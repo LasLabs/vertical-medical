@@ -1,6 +1,6 @@
-.. image:: https://img.shields.io/badge/license-AGPL--3-blue.svg
-    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
-    :alt: License: AGPL-3
+.. image:: https://img.shields.io/badge/license-LGPL--3-blue.svg
+   :target: https://www.gnu.org/licenses/lgpl.html
+   :alt: License: LGPL-3
 
 ===============================
 Odoo Medical Pathology Importer
@@ -41,6 +41,7 @@ Contributors
 ------------
 
 * Dave Lasley <dave@laslabs.com>
+* Oleg Bulkin <obulkin@laslabs.com>
 
 Maintainer
 ----------

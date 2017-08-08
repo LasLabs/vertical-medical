@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-# Copyright 2016 LasLabs Inc.
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+# Copyright 2016-2017 LasLabs Inc.
+# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html)
 
 from odoo import api, fields, models
 
@@ -162,7 +162,7 @@ class MedicalPathologyImport(models.TransientModel):
         """ It creates an external reference record for the args """
         vals = {
             'name': name,
-            'model': record._model,
+            'model': record._name,
             'module': self.module_name,
             'res_id': record.id,
         }
