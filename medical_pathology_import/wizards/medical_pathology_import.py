@@ -12,21 +12,25 @@ class MedicalPathologyImport(models.TransientModel):
     _description = 'Medical Pathology Import'
 
     zip_uri = fields.Char(
-        help='URI to full Zip file.',
+        help='URI to full ZIP file',
+        string='ZIP File URI',
     )
     file_name = fields.Char(
-        help='Name of file (inside of zip) representing full tabular xml.',
+        help='Name of file (inside of ZIP) representing full tabular XML',
+        string='XML File Name',
     )
     code_type_id = fields.Many2one(
         string='Code Type',
         comodel_name='medical.pathology.code.type',
         required=True,
-        help='Defines what code type is being imported. Leave as default if '
-             'you do not know what you are doing.',
+        help='Identifies the code type that is being imported. If you are not'
+             ' sure what to choose, select an importer first and leave the'
+             ' resulting default',
     )
     importer_type = fields.Selection(
         selection=lambda s: s._get_importer_types(),
         required=True,
+        string='Importer Type',
     )
 
     @property
