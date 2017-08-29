@@ -4,62 +4,58 @@
 
 <odoo>
 
-    <template id="medical_main" name="Medical Main">
+    <template id="medical_layout" name="Medical Layout">
         <t t-call="website.layout">
-            <div id="wrap">
-                <div class="container mt16">
-                    <div class="navbar navbar-default">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#oe-help-navbar-collapse">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                            <a class="navbar-brand" href="/my/medical">
-                                My Medical
-                            </a>
-                        </div>
-                        <div class="collapse navbar-collapse" id="oe-help-navbar-collapse">
-                            <ul class="nav navbar-nav o_portal_submenu">
-                            </ul>
-                        </div>
+            <div class="container mt16">
+                <div class="navbar navbar-default">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#oe-help-navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/my/medical">
+                            My Medical
+                        </a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="oe-help-navbar-collapse">
+                        <ul class="nav navbar-nav o_portal_submenu">
+                        </ul>
                     </div>
                 </div>
+            </div>
+            <div id="wrap">
                 <div class="container mb64">
-                    <div class="col-md-8 o_my_medical">
-                        <div class="oe_structure" />
-                        <h1>My Medical</h1>
-                    </div>
-                    <div t-if="sales_rep" class="col-md-3">
-                      <t t-call="website_portal.contact" />
-                      <div class="oe_structure" />
+                    <div class="col-md-8">
+                        <t t-raw="0"/>
                     </div>
                     <div id="o_my_sidebar" class="col-md-3 col-md-offset-1 o_my_sidebar">
                         <div class="o_my_contact" t-if="sales_rep">
                             <t t-call="website_portal.contact"/>
                         </div>
                         <div class="o_my_details">
-                            <h3 class="page-header">
-                                Your Details
-                                <a href="/my/account" class="btn btn-default btn-xs">
-                                    Change
-                                </a>
-                            </h3>
-                            <div t-field="user.partner_id"
-                                 t-field-options='{"widget": "contact",
-                                                   "fields": ["email", "phone", "address", "name"]}' />
+                            <h3 class="page-header">Your Details <a href="/my/account" class="btn btn-default btn-xs">Change</a></h3>
+                            <div t-field="user.partner_id" t-options='{"widget": "contact", "fields": ["email", "phone", "address", "name"]}'/>
                         </div>
                         <div class="o_my_archives" t-if="archive_groups">
                             <t t-call="website_portal.portal_archive_groups"/>
                         </div>
                     </div>
-                    <div class="col-md-12 oe_structure" />
                 </div>
             </div>
         </t>
     </template>
 
-    <template id="custom_panel" inherit_id="medical_main" customize_show="True" name="Portal Editable Panel" active="False">
+    <template id="medical_my_home" name="My Medical">
+        <t t-call="website_portal_medical.medical_layout">
+            <div class="o_my_home_content">
+                <div class="oe_structure" />
+            </div>
+            <div class="col-md-12 oe_structure"/>
+        </t>
+    </template>
+
+    <template id="custom_panel" inherit_id="medical_layout" customize_show="True" name="Portal Editable Panel" active="False">
         <xpath expr="//div[@id='o_my_sidebar']" position="inside">
             <div class="oe_structure">
               <h3 class="page-header">Custom Panel</h3>
@@ -67,7 +63,7 @@
             </div>
         </xpath>
     </template>
-    
+
     <template id="my_medical_link" name="Link to medical portal" inherit_id="website.layout">
         <xpath expr="//li[@id='o_logout']" position="before">
             <li>
@@ -77,5 +73,5 @@
             </li>
         </xpath>
     </template>
-    
+
 </odoo>

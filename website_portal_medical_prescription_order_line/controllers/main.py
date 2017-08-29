@@ -16,21 +16,39 @@ class WebsiteMedical(WebsiteMedical):
         ['/my/medical', '/medical'],
         type='http',
         auth="user",
-        website=True
+        website=True,
     )
     def my_medical(self, **kw):
-        """ Add prescriptions to medical account page """
+        """ Add prescription counter to medical account page """
         response = super(WebsiteMedical, self).my_medical()
+        partner_id = request.env.user.partner_id
+        rx_obj = request.env['medical.prescription.order.line']
+        rx_line_count = rx_obj.search_count([
+            ('patient_id.parent_id', 'child_of', [partner_id.id]),
+        ])
+        response.qcontext.update({
+            'rx_line_count': rx_line_count,
+        })
+        return response
+
+    @http.route(
+        ['/medical/prescriptions'],
+        type='http',
+        auth="user",
+        website=True,
+    )
+    def medical_prescriptions(self, **kw):
         partner_id = request.env.user.partner_id
 
         rx_obj = request.env['medical.prescription.order.line']
+        patient_model = request.env['medical.patient']
+
         rx_line_ids = rx_obj.search([
             ('patient_id.parent_id', 'child_of', [partner_id.id]),
         ])
 
         patient_ids = request.httprequest.args.getlist('patients')
         int_patient_ids = [int(id) for id in patient_ids]
-        patient_model = request.env['medical.patient']
         filtered_patients = patient_model.browse(int_patient_ids)
         if filtered_patients:
             rx_line_ids = rx_line_ids.filtered(
@@ -39,17 +57,22 @@ class WebsiteMedical(WebsiteMedical):
 
         pricelist = request.website.get_current_pricelist()
         pricelist_item_ids = pricelist.item_ids.ids
-        rx_lines_filtered = rx_line_ids.filtered(
-            lambda r: any(
-                i in r.medicament_id.item_ids.ids for i in pricelist_item_ids
-            )
-        )
 
-        all_patients = response.qcontext.get('patients', patient_model)
-        response.qcontext.update({
+        rx_lines_filtered = rx_obj.sudo().search([
+            ('id', 'in', rx_line_ids.ids),
+            ('medicament_id.item_ids', 'in', pricelist_item_ids),
+        ])
+
+        all_patients = patient_model._search_related_patients()
+
+        values = ({
             'prescription_order_lines': rx_line_ids.sudo(),
             'order_lines_filtered': rx_lines_filtered,
             'patients_filtered': filtered_patients,
             'patients_not_filtered': all_patients - filtered_patients,
+            'user': request.env.user,
         })
-        return response
+        return request.render(
+            'website_portal_medical_prescription_order_line.'
+            'prescription_lines', values,
+        )

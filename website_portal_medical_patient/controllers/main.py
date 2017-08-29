@@ -18,22 +18,29 @@ class WebsiteMedical(WebsiteMedical):
         auth="user",
         website=True,
     )
-    def my_medical(self, **kw):
-        """ Add patients to medical account page """
+    def my_medical(self):
         response = super(WebsiteMedical, self).my_medical()
-        partner_id = request.env.user.partner_id
-
-        patient_obj = request.env['medical.patient']
-        patient_ids = patient_obj.search([
-            '|',
-            ('partner_id', '=', partner_id.id),
-            ('parent_id', '=', partner_id.id),
-        ])
-
+        patients = request.env['medical.patient']._search_related_patients()
         response.qcontext.update({
-            'patients': patient_ids,
+            'patient_count': len(patients),
         })
         return response
+
+    @http.route(
+        ['/medical/patients'],
+        type='http',
+        auth="user",
+        website=True,
+    )
+    def medical_patients(self):
+        patients = request.env['medical.patient']._search_related_patients()
+        values = {
+            'patients': patients,
+            'user': request.env.user,
+        }
+        return request.render(
+            'website_portal_medical_patient.medical_my_patients', values,
+        )
 
     def _inject_medical_detail_vals(self, patient_id=0, **kwargs):
         vals = super(WebsiteMedical, self)._inject_medical_detail_vals()
@@ -61,20 +68,20 @@ class WebsiteMedical(WebsiteMedical):
         return vals
 
     @http.route(
-        ['/medical/patients/<int:patient_id>'],
+        ['/medical/patients/<model("medical.patient"):patient>'],
         type='http',
         auth='user',
         website=True,
         methods=['GET'],
     )
-    def patient(self, patient_id=None, redirect=None, **kwargs):
+    def patient(self, patient, redirect=None, **kwargs):
         values = {
             'error': {},
             'error_message': [],
             'success_page': kwargs.get('success_page', '/my/medical')
         }
         values.update(
-            self._inject_medical_detail_vals(patient_id)
+            self._inject_medical_detail_vals(patient.id)
         )
         return request.render(
             'website_portal_medical_patient.patient', values,

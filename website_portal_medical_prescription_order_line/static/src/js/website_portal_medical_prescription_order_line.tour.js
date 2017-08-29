@@ -12,7 +12,7 @@ odoo.define('website_portal_medical_prescription_order_line.patient_filter_tour'
         'website_portal_medical_prescription_order_line.patient_filter_tour',
         {
             test: true,
-            url: '/my/medical',
+            url: '/medical/prescriptions',
             name: _t('Test patient filter for prescriptions on My Medical website page'),
             wait_for: base.ready(),
         },

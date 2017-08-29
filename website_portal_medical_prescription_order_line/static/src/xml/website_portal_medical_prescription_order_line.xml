@@ -3,98 +3,119 @@
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl) -->
 
 <odoo>
-    <template id="prescription_lines" name="Prescription Lines">
-        <h3 class="page-header">
-            Prescriptions
-        </h3>
-        <t t-if="not prescription_order_lines">
-            <p>There are currently no prescriptions associated with your account.</p>
-        </t>
-        <t t-if="prescription_order_lines">
-            <h5>
-                If you would like to order a medication, please click the green
-                button to add to cart.
-            </h5>
-            <form method="GET" class="patient-filter-form">
-                <select name="patients" class="patient-filter-select" multiple="multiple">
-                    <t t-foreach="patients_filtered" t-as="patient">
-                        <option t-att-value="patient.id" selected="selected">
-                            <t t-esc="patient.name"/>
-                        </option>
-                    </t>
-                    <t t-foreach="patients_not_filtered" t-as="patient">
-                        <option t-att-value="patient.id">
-                            <t t-esc="patient.name"/>
-                        </option>
-                    </t>
-                </select>
-                <input type="submit" class="btn btn-default" value="Filter"/>
-            </form>
-            <div class="container">
-                <div class="row">
-                <t t-foreach="prescription_order_lines" t-as="line">
-                    <div class="col-xs-12 col-sm-6">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <span t-field="line.patient_id.name" /> - <span t-field="line.medicament_id.display_name" />
-                            </div>
-                            <div class="panel-body">
-                                <p>
-                                    <label class="label label-info">Rx Number</label>
-                                    <span t-field="line.name" />
-                                </p>
-                                <p>
-                                    <t t-if="line.is_expired">
-                                        <label class="label label-danger">Expired</label>
-                                    </t>
-                                    <t t-if="line.can_dispense_qty &gt; 0 and not line.is_expired">
-                                        <label class="label label-info">Remain</label>
-                                        <span t-field="line.can_dispense_qty" />
-                                    </t>
-                                    <t t-if="line.can_dispense_qty &lt; 1 and not line.is_expired">
-                                        <label class="label label-danger">Out of Refills</label>
-                                    </t>
-                                </p>
 
-                                <t t-if="line.can_dispense_qty &gt; 0 and not line.is_expired">
-                                    <t t-set="product" t-value="line.medicament_id.product_id" />
-                                    <form action="/shop/cart/update" method="POST">
-                                        <input type="hidden"
-                                                name="csrf_token"
-                                                t-att-value="request.csrf_token()"
-                                                />
-                                        <input type="hidden"
-                                                class="product_id"
-                                                name="product_id"
-                                                t-att-value="int(product.product_variant_ids[0]) if len(product.product_variant_ids) == 1 else '0'"
-                                                />
-                                        <input type="hidden" name="set_qty" t-att-value="line.qty" />
-                                        <t t-if="line.id in order_lines_filtered.ids or [line.id] == order_lines_filtered.ids">
-                                            <button type="submit"
-                                                    class="btn btn-success btn-xs mt8 pull-right"
-                                                    >
-                                                <i class="fa fa-2x fa-cart-plus" />
-                                            </button>
-                                        </t>
-                                    </form>
-                                </t>
-                                <t t-if="not line.can_dispense_qty">
-                                    <i class="fa fa-2x fa-times" />
-                                </t>
-                            </div>
-                        </div>
-                    </div>
-                </t>
-                </div>
-            </div>
-        </t>
-    </template>
-
-    <template id="medical_prescription_line" name="Medical Prescription Line" inherit_id="website_portal_medical.medical_main">
-        <xpath expr="//div[contains(@class,'o_website_medical_patient')]" position="after">
-            <div class="o_website_medical_container o_website_medical_prescription_order_line">
-                <t t-call="website_portal_medical_prescription_order_line.prescription_lines" />
-            </div>
+    <template id="medical_layout_prescriptions" name="Medical Layout Prescriptions " inherit_id="website_portal_medical.medical_layout" priority="25">
+        <xpath expr="//ul[contains(@class,'o_portal_submenu')]" position="inside">
+            <li>
+                <a href="/medical/prescriptions">Prescriptions</a>
+            </li>
         </xpath>
     </template>
+
+    <template id="medical_my_home_prescriptions" name="Medical My Home Prescriptions " inherit_id="website_portal_medical.medical_my_home" priority="25">
+        <xpath expr="//div[contains(@class,'o_my_home_content')]" position="inside">
+            <h3 class="page-header">
+                <a href="/medical/prescriptions">Your Prescriptions
+                    <small class="ml8">
+                        <t t-if="rx_line_count">
+                            <span class='badge'><t t-esc="rx_line_count" /></span>
+                        </t>
+                        <t t-if="not rx_line_count">
+                            There are currently no prescriptions for your account.
+                        </t>
+                    </small>
+                </a>
+            </h3>
+        </xpath>
+    </template>
+
+    <template id="prescription_lines" name="Prescription Lines">
+        <t t-call="website_portal_medical.medical_layout">
+            <h3 class="page-header">
+                Prescriptions
+            </h3>
+            <t t-if="not prescription_order_lines">
+                <p>There are currently no prescriptions associated with your account.</p>
+            </t>
+            <t t-if="prescription_order_lines">
+                <h5>
+                    If you would like to order a medication, please click the green
+                    button to add to cart.
+                </h5>
+                <form method="GET" class="patient-filter-form">
+                    <select name="patients" class="patient-filter-select" multiple="multiple">
+                        <t t-foreach="patients_filtered" t-as="patient">
+                            <option t-att-value="patient.id" selected="selected">
+                                <t t-esc="patient.name"/>
+                            </option>
+                        </t>
+                        <t t-foreach="patients_not_filtered" t-as="patient">
+                            <option t-att-value="patient.id">
+                                <t t-esc="patient.name"/>
+                            </option>
+                        </t>
+                    </select>
+                    <input type="submit" class="btn btn-default" value="Filter"/>
+                </form>
+                <div class="container">
+                    <div class="row">
+                    <t t-foreach="prescription_order_lines" t-as="line">
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <span t-field="line.patient_id.name" /> - <span t-field="line.medicament_id.display_name" />
+                                </div>
+                                <div class="panel-body">
+                                    <p>
+                                        <label class="label label-info">Rx Number</label>
+                                        <span t-field="line.name" />
+                                    </p>
+                                    <p>
+                                        <t t-if="line.is_expired">
+                                            <label class="label label-danger">Expired</label>
+                                        </t>
+                                        <t t-if="line.can_dispense_qty &gt; 0 and not line.is_expired">
+                                            <label class="label label-info">Remain</label>
+                                            <span t-field="line.can_dispense_qty" />
+                                        </t>
+                                        <t t-if="line.can_dispense_qty &lt; 1 and not line.is_expired">
+                                            <label class="label label-danger">Out of Refills</label>
+                                        </t>
+                                    </p>
+
+                                    <t t-if="line.can_dispense_qty &gt; 0 and not line.is_expired">
+                                        <t t-set="product" t-value="line.medicament_id.product_id" />
+                                        <form action="/shop/cart/update" method="POST">
+                                            <input type="hidden"
+                                                    name="csrf_token"
+                                                    t-att-value="request.csrf_token()"
+                                                    />
+                                            <input type="hidden"
+                                                    class="product_id"
+                                                    name="product_id"
+                                                    t-att-value="int(product.product_variant_ids[0]) if len(product.product_variant_ids) == 1 else '0'"
+                                                    />
+                                            <input type="hidden" name="set_qty" t-att-value="line.qty" />
+                                            <t t-if="(line.id in order_lines_filtered.ids or [line.id] == order_lines_filtered.ids) and line.medicament_id.website_published">
+                                                <button type="submit"
+                                                        class="btn btn-success btn-xs mt8 pull-right"
+                                                        >
+                                                    <i class="fa fa-2x fa-cart-plus" />
+                                                </button>
+                                            </t>
+                                        </form>
+                                    </t>
+                                    <t t-if="not line.can_dispense_qty">
+                                        <i class="fa fa-2x fa-times" />
+                                    </t>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
 </odoo>

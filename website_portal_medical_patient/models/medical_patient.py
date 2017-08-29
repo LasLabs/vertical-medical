@@ -18,3 +18,13 @@ class MedicalPatient(models.Model):
     def _compute_website_url(self):
         for record in self:
             record.website_url = "/medical/patients/%s" % (record.id)
+
+    @api.model
+    def _search_related_patients(self):
+        """ Search patients current user is legal rep of """
+        partner_id = self.env.user.partner_id
+        return self.env['medical.patient'].search([
+            '|',
+            ('partner_id', '=', partner_id.id),
+            ('parent_id', '=', partner_id.id),
+        ])

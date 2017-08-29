@@ -4,32 +4,29 @@
 
 <odoo>
 
-    <template id="patients" name="Patients">
-        <h3 class="page-header medical-header">
-            Family
-            <a href="/medical/patients/0" class="pull-right btn-lg text-uppercase add-patient">
-                Add
-            </a>
-        </h3>
-        <t t-if="not patients">
-            <p>There are currently no patients associated with your account.</p>
-        </t>
-        <t t-if="patients">
-            <div class="row">
-                <t t-foreach="patients" t-as="patient">
-                    <div class="col-xs-6 col-sm-3">
-                        <div class="medical-patient-container">
-                            <a t-att-href="patient.website_url" class="patient-resets">
-                                <div t-field="patient.image"
-                                     t-field-options='{"widget": "image","class": "img-circle"}' />
-                                <h5>
-                                    <t t-esc="patient.name" />
-                                </h5>
-                            </a>
+    <template id="medical_my_patients" name="My Patients">
+        <t t-call="website_portal_medical.medical_layout">
+            <h3 class="page-header">Your Patients</h3>
+            <t t-if="not patients">
+                <p>There are currently no patients for your account.</p>
+            </t>
+            <t t-if="patients">
+                <div class="row">
+                    <t t-foreach="patients" t-as="patient">
+                        <div class="col-xs-6 col-sm-3">
+                            <div class="medical-patient-container">
+                                <a t-att-href="patient.website_url" class="patient-resets">
+                                    <div t-field="patient.image"
+                                        t-field-options='{"widget": "image","class": "img-circle"}' />
+                                    <h5>
+                                        <t t-esc="patient.name" />
+                                    </h5>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                </t>
-            </div>
+                    </t>
+                </div>
+            </t>
         </t>
     </template>
 
@@ -54,7 +51,7 @@
         <div class="medical-form-container">
             <div class="medical-form-header">
                 <h1>Patient Details</h1>
-                <a class="pull-right" href="/my/medical">
+                <a class="pull-right" href="/medical/patients">
                     <span class="fa fa-times" />
                 </a>
             </div>
@@ -181,7 +178,7 @@
                 <t t-call="website_portal_medical.object_delete">
                     <t t-set="object" t-value="patient" />
                     <t t-set="name" t-value="'patient'" />
-                    <t t-set="redirect_on_success" t-value="'/my/medical'" />
+                    <t t-set="redirect_on_success" t-value="'/medical/patients'" />
                 </t>
             </a>
         </div>

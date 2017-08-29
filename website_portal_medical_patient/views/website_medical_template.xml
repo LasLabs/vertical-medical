@@ -4,13 +4,28 @@
 
 <odoo>
 
-    <template id="medical_patient"
-              name="Medical Patient"
-              inherit_id="website_portal_medical.medical_main">
-        <xpath expr="//div[contains(@class,'o_my_medical')]" position="inside">
-            <div class="o_website_medical_container o_website_medical_patient">
-                <t t-call="website_portal_medical_patient.patients" />
-            </div>
+    <template id="medical_layout_patients" name="Medical Layout Patients " inherit_id="website_portal_medical.medical_layout" priority="25">
+        <xpath expr="//ul[contains(@class,'o_portal_submenu')]" position="inside">
+            <li>
+                <a href="/medical/patients">Patients</a>
+            </li>
+        </xpath>
+    </template>
+
+    <template id="medical_my_home_patients" name="Medical My Home Patients " inherit_id="website_portal_medical.medical_my_home" priority="25">
+        <xpath expr="//div[contains(@class,'o_my_home_content')]" position="inside">
+            <h3 class="page-header">
+                <a href="/medical/patients">Your Patients
+                    <small class="ml8">
+                        <t t-if="patient_count">
+                            <span class='badge'><t t-esc="patient_count" /></span>
+                        </t>
+                        <t t-if="not patient_count">
+                            There are currently no patients for your account.
+                        </t>
+                    </small>
+                </a>
+            </h3>
         </xpath>
     </template>
 
