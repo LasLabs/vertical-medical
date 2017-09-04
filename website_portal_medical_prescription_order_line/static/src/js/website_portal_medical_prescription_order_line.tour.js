@@ -12,11 +12,15 @@ odoo.define('website_portal_medical_prescription_order_line.patient_filter_tour'
         'website_portal_medical_prescription_order_line.patient_filter_tour',
         {
             test: true,
-            url: '/medical/prescriptions',
+            url: '/my/medical',
             name: _t('Test patient filter for prescriptions on My Medical website page'),
-            wait_for: base.ready(),
+            wait_for: base.ready()
         },
         [
+            {
+                content: _t('Click on Your Prescriptions'),
+                trigger: "a[href='/medical/prescriptions']"
+            },
             {
                 content: _t('Check that filter is empty at first'),
                 trigger: 'div.patient-filter-select',
@@ -29,7 +33,7 @@ odoo.define('website_portal_medical_prescription_order_line.patient_filter_tour'
                             'selected when it should have been empty'
                         );
                     }
-                },
+                }
             },
             {
                 content: _t('Check that both demo Rx lines are showing'),
@@ -42,7 +46,7 @@ odoo.define('website_portal_medical_prescription_order_line.patient_filter_tour'
                             'The filter is empty but the expected Rx lines are not showing'
                         );
                     }
-                },
+                }
             },
             {
                 content: _t('Select first demo patient and filter'),
@@ -52,7 +56,7 @@ odoo.define('website_portal_medical_prescription_order_line.patient_filter_tour'
                     var patient_option = $('option:contains("Portal Rx Lines - Demo Patient 1")');
                     filter.val(patient_option.val()).trigger('change');
                     actions.click(filter.siblings('input'));
-                },
+                }
             },
             {
                 content: _t('Check that Rx lines are now filtered'),
@@ -65,7 +69,7 @@ odoo.define('website_portal_medical_prescription_order_line.patient_filter_tour'
                             'The filter did not properly exclude the second demo Rx line'
                         );
                     }
-                },
+                }
             },
             {
                 content: _t('Check that filter still shows first demo patient'),
@@ -80,8 +84,8 @@ odoo.define('website_portal_medical_prescription_order_line.patient_filter_tour'
                             'not the only selected option'
                         );
                     }
-                },
-            },
+                }
+            }
         ]
     );
 });

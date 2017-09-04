@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright 2016 LasLabs Inc.
+<!-- Copyright 2017 LasLabs Inc.
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
 
 <odoo>
 
     <template id="assets_frontend" name="LasLabs.com Front End  Assets" inherit_id="website.assets_frontend">
         <xpath expr="." position="inside">
-            <script type="application/javascript" src="/website_portal_medical_patient/static/src/js/website_portal_medical_patient_tour.js" />
-            <link href="/website_portal_medical_patient/static/src/css/website_portal_medical_patient.less" rel="stylesheet" />
+            <script type="application/javascript" src="/website_portal_medical_patient_species/static/src/js/website_patient_form_tour.js" />
         </xpath>
     </template>
 

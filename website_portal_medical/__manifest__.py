@@ -22,4 +22,7 @@
         'views/medical_form_template.xml',
         'views/website_medical_template.xml',
     ],
+    'demo': [
+        'demo/medical_patient_demo.xml',
+    ],
 }

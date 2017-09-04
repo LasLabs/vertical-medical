@@ -8,7 +8,7 @@
     "version": "10.0.1.0.0",
     "category": "Medical",
     "website": "https://laslabs.com/",
-    "author": "LasLabs",
+    "author": "LasLabs, Odoo Community Association (OCA)",
     "license": "LGPL-3",
     "application": False,
     "installable": True,
@@ -19,6 +19,7 @@
     "data": [
         "data/ir_model_data.xml",
         "views/patients_template.xml",
+        "views/assets.xml",
         "security/ir.model.access.csv",
     ],
 }

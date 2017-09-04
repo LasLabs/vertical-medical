@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Copyright 2016 LasLabs Inc.
+# Copyright 2016-2017 LasLabs Inc.
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 from odoo.http import request
 
-from odoo.addons.website_portal_medical.controllers.main import (
+from odoo.addons.website_portal_medical_patient.controllers.main import (
     WebsiteMedical
 )
 
