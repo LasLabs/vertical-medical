@@ -24,6 +24,11 @@ class SaleOrder(models.Model):
         compute='_compute_prescription_order_ids',
         readonly=True,
     )
+    prescription_order_line_count = fields.Integer(
+        string='Prescription Line Count',
+        compute='_compute_prescription_order_ids',
+        readonly=True,
+    )
     prescription_order_line_ids = fields.Many2many(
         string='Prescription Lines',
         comodel_name='medical.prescription.order.line',
@@ -64,3 +69,4 @@ class SaleOrder(models.Model):
 
             record.prescription_order_ids = rx_orders
             record.prescription_order_line_ids = rx_lines
+            record.prescription_order_line_count = len(rx_lines)

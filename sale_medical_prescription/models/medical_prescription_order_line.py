@@ -18,6 +18,7 @@ class MedicalPrescriptionOrderLine(models.Model):
         string='Sale Orders',
         comodel_name='sale.order',
         compute='_compute_orders',
+        store=True,
         readonly=True,
     )
     verify_method = fields.Selection(
@@ -37,6 +38,7 @@ class MedicalPrescriptionOrderLine(models.Model):
     )
 
     @api.multi
+    @api.depends('sale_order_line_ids')
     def _compute_orders(self):
         for record in self:
             order_ids = []
