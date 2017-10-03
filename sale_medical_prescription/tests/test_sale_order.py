@@ -41,3 +41,12 @@ class TestSaleOrder(TransactionCase):
         self.assertEqual(
             res, exp,
         )
+
+    def test_compute_prescription_order_line_count(self):
+        """ Test rx line count properly computed """
+        exp = self.sale_7.order_line.mapped('prescription_order_line_id').ids
+        exp = len(exp)
+        res = len(self.sale_7.prescription_order_line_ids.ids)
+        self.assertEqual(
+            res, exp,
+        )
