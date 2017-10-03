@@ -11,7 +11,7 @@
         <field name="arch" type="xml">
             <xpath expr="//button[@name='action_view_invoice']" position="before">
                 <button type="action" class="oe_stat_button" icon="fa-list"
-                        name="%(medical_prescription.medical_prescription_order_line_action)d"
+                        name="medical_prescription.medical_prescription_order_line_action"
                         attrs="{'invisible': [('prescription_order_line_count', '=', 0)]}"
                         context="{'search_default_sale_order_ids': name}">
                     <field name="prescription_order_line_count"
