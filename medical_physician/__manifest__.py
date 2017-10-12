@@ -1,31 +1,21 @@
 # -*- coding: utf-8 -*-
-# © 2016 LasLabs Inc.
+# Copyright 2016-2017 LasLabs Inc.
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 {
-    'name': 'Medical Physician',
-    'version': '10.0.1.0.0',
-    'author': "LasLabs, Odoo Community Association (OCA)",
+    'name': 'Medical Physician - DEPRECATED',
+    'summary': 'Deprecated! Only use to update a prior install',
+    'version': '10.0.2.0.0',
+    'author': 'LasLabs, Odoo Community Association (OCA)',
     'category': 'Medical',
     'depends': [
-        'medical',
-        'medical_center',
-        'product',
+        'medical_practitioner',
     ],
-    "website": "https://laslabs.com",
-    "license": "LGPL-3",
-    "data": [
-        'views/medical_physician_view.xml',
-        'views/medical_specialty_view.xml',
-        'views/medical_menu.xml',
+    'website': 'https://laslabs.com',
+    'license': 'LGPL-3',
+    'data': [
         'security/ir.model.access.csv',
-        'wizard/medical_physician_unavailable_view.xml',
-        'data/ir_sequence_data.xml',
-        'data/medical_specialties.xml',
     ],
-    'demo': [
-        'demo/medical_physician.xml',
-    ],
-    "application": False,
+    'application': False,
     'installable': True,
 }

@@ -1,15 +1,17 @@
 # -*- coding: utf-8 -*-
-# © 2016 LasLabs Inc.
+# Copyright 2016-2017 LasLabs Inc.
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
+import logging
 from odoo import api, fields, models
-from odoo.modules import get_module_resource
+
+_logger = logging.getLogger(__name__)
 
 
 class MedicalPhysician(models.Model):
     _name = 'medical.physician'
     _inherit = 'medical.abstract.entity'
-    _description = 'Medical Physicians'
+    _description = 'Medical Physician (DEPRECATED)'
 
     code = fields.Char(
         string='ID',
@@ -19,7 +21,7 @@ class MedicalPhysician(models.Model):
         help='Specialty Code',
         comodel_name='medical.specialty',
         default=lambda self: self.env.ref(
-            'medical_physician.medical_specialty_gp',
+            'medical_practitioner.medical_specialty_general',
         ),
         required=True,
     )
@@ -32,34 +34,29 @@ class MedicalPhysician(models.Model):
              'removing it.',
         default=True,
     )
-    schedule_template_ids = fields.One2many(
-        string='Related schedules',
-        help='Schedule template of the physician',
-        comodel_name='medical.physician.schedule.template',
-        inverse_name='physician_id',
+    equiv_practitioner_id = fields.Many2one(
+        comodel_name='medical.practitioner',
     )
 
     @api.model
-    def _create_vals(self, vals):
-        vals['customer'] = False
-        if not vals.get('code'):
-            sequence = self.env['ir.sequence'].sudo().next_by_code(
-                self._name,
-            )
-            vals['code'] = sequence
-        return super(MedicalPhysician, self)._create_vals(vals)
-
-    @api.model
-    def _get_default_image_path(self, vals):
-        super(MedicalPhysician, self)._get_default_image_path(vals)
-        img_path = 'physician-%s-avatar.png' % vals.get('gender')
-        img_path = get_module_resource(
-            'medical_pharmacy', 'static/src/img', img_path,
+    @api.returns('self', lambda value: value.id)
+    def create(self, vals):
+        """Overload to prevent creation of new physicians"""
+        raise DeprecationWarning(
+            'You are trying to create a record using the deprecated model'
+            ' medical.physician, which will be removed in v11. Please create a'
+            ' medical.practitioner record instead.'
         )
-        if not img_path:
-            img_path = get_module_resource(
-                'medical_physician',
-                'static/src/img',
-                'physician-male-avatar.png',
-            )
-        return img_path
+
+    @api.multi
+    def write(self, vals):
+        """Overload to log error when physicians are modified"""
+        _logger.error(
+            'You are writing to the deprecated model medical.physician, which'
+            ' will be removed in v11. Please modify the equivalent'
+            ' medical.practitioner record instead. This can be found via the'
+            ' equiv_practitioner_id field.'
+        )
+
+        result = super(MedicalPhysician, self).write(vals)
+        return result
