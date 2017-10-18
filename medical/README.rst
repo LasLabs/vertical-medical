@@ -34,8 +34,8 @@ A Medical Entity is any partner that also requires a medical context. Examples:
 
 * MedicalCenter
 * MedicalPatient
-* MedicalPhysician
 * MedicalPharmacy
+* MedicalPractitioner
 
 Some base views are also provided in order to make it easy to create new medical
 entities & maintain uniformity between them:
