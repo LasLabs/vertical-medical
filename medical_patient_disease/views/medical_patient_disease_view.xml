@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright 2016 LasLabs Inc.
+<!-- Copyright 2016-2017 LasLabs Inc.
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
 
 <odoo>
-
     <record id="medical_patient_disease_view_search" model="ir.ui.view">
         <field name="name">medical.patient.disease.search</field>
         <field name="model">medical.patient.disease</field>
@@ -13,7 +12,7 @@
                 <field name="treatment_description" />
                 <field name="date_healed" />
                 <field name="pathology_id" />
-                <field name="physician_id" />
+                <field name="practitioner_id"/>
                 <field name="weeks_of_pregnancy" />
                 <field name="date_diagnosed" />
                 <field name="notes" />
@@ -55,9 +54,9 @@
                     <filter string="Allergic Disease"
                             domain="[]"
                             context="{'group_by':'is_allergy'}" />
-                    <filter string="Physician"
+                    <filter string="Practitioner"
                             domain="[]"
-                            context="{'group_by':'physician_id'}" />
+                            context="{'group_by':'practitioner_id'}" />
                     <filter string="Pregnancy warning"
                             domain="[]"
                             context="{'group_by':'is_pregnant'}" />
@@ -97,7 +96,7 @@
             <tree string="Medical Patient Disease">
                 <field name="name" />
                 <field name="patient_id" />
-                <field name="physician_id" />
+                <field name="practitioner_id" />
                 <field name="date_treatment_start" />
                 <field name="date_treatment_end" />
                 <field name="state" />
@@ -136,7 +135,7 @@
                             <field name="short_comment" />
                             <field name="treatment_description" />
                             <field name="pathology_id" />
-                            <field name="physician_id" />
+                            <field name="practitioner_id" />
                             <field name="allergy_type"
                                    attrs="{'invisible': [('is_allergy', '=', False)]}" />
                             <field name="weeks_of_pregnancy"
@@ -185,5 +184,4 @@
         <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
     </record>
-
 </odoo>

@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Copyright 2016 LasLabs Inc.
+# Copyright 2016-2017 LasLabs Inc.
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 {
     "name": "Medical Patient Disease",
     "summary": "Extend medical patients with the concept of diseases.",
-    "version": "10.0.1.0.0",
+    "version": "10.0.2.0.0",
     "category": "Medical",
     "website": "https://laslabs.com",
     "author": "LasLabs, ACSONE SA/NV, Odoo Community Association (OCA)",

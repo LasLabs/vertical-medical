@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Copyright 2016 LasLabs Inc.
+# Copyright 2016-2017 LasLabs Inc.
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 from odoo import api, fields, models
@@ -35,6 +35,12 @@ class MedicalPatientDisease(models.Model):
         comodel_name='medical.physician',
         index=True,
         help='Physician that diagnosed this disease.',
+    )
+    practitioner_id = fields.Many2one(
+        string='Practitioner',
+        comodel_name='medical.practitioner',
+        index=True,
+        help='Medical practitioner that diagnosed this disease',
     )
     patient_id = fields.Many2one(
         string='Patient',

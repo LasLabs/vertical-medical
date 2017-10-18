@@ -10,7 +10,7 @@ class TestMedicalPatient(TransactionCase):
     def setUp(self):
         super(TestMedicalPatient, self).setUp()
         self.disease_2 = self.env.ref(
-            'medical_patient_disease.medical_patient_disease_disease_2'
+            'medical_patient_disease.medical_patient_disease_2'
         )
         self.patient_4 = self.env.ref(
             'medical_patient_disease.medical_patient_patient_4'

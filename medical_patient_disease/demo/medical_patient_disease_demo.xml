@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright 2016 LasLabs Inc.
+<!-- Copyright 2016-2017 LasLabs Inc.
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
 
 <odoo>
-
-    <record id="medical_patient_disease_disease_1" model="medical.patient.disease">
+    <record id="medical_patient_disease_1" model="medical.patient.disease">
         <field name="short_comment">Cause of death</field>
         <field name="pathology_id" ref="medical_pathology.medical_pathology_medical_pathology_2" />
-        <field name="physician_id" ref="medical_physician.medical_physician_physician_1" />
         <field name="patient_id" ref="medical.medical_patient_patient_3" />
         <field name="disease_severity">3_sv</field>
         <field name="state">a</field>
@@ -19,12 +17,11 @@
         <field name="active" eval="False" />
     </record>
 
-    <record id="medical_patient_disease_disease_2" model="medical.patient.disease">
+    <record id="medical_patient_disease_2" model="medical.patient.disease">
         <field name="is_on_treatment" eval="True" />
         <field name="treatment_description">1 dose Truvada per day</field>
         <field name="patient_id" ref="medical_patient_disease.medical_patient_patient_4" />
         <field name="pathology_id" ref="medical_pathology.medical_pathology_medical_pathology_1" />
-        <field name="physician_id" ref="medical_physician.medical_physician_physician_2" />
         <field name="disease_severity">3_sv</field>
         <field name="state">u</field>
         <field name="age">23</field>
@@ -35,5 +32,4 @@
         <field name="weeks_of_pregnancy">12</field>
         <field name="active" eval="True" />
     </record>
-
 </odoo>
