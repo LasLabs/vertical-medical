@@ -17,6 +17,7 @@ env:
   global:
   - VERSION="10.0" TESTS="0" LINT_CHECK="0" TRANSIFEX="0"
   - TRANSIFEX_USER='transbot@odoo-community.org'
+  - EXCLUDE="medical_appointment"
   # This line contains the encrypted transifex password
   # To encrypt transifex password, install travis ruby utils with:
   #   $ gem install travis --user-install

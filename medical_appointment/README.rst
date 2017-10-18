@@ -2,40 +2,15 @@
    :target: http://www.gnu.org/licenses/lgpl-3.0-standalone.html
    :alt: License: LGPL-3
 
-========================
-Odoo Medical Appointment
-========================
+===================================
+Medical Appointment - NOT SUPPORTED
+===================================
 
-Extension of medical_physician that provides appointment concepts
-
-Installation
-============
-
-To install this module, simply follow the standard install process.
-
-Configuration
-=============
-
-No configuration is needed or possible.
-
-Usage
-=====
-
-#. Go to Medical -> Appointments -> Appointments
-#. Click "Create"
-#. Enter appointment information and click "Save"
-
-.. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
-   :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/159/10.0
-
-Known Issues / Roadmap
-======================
-
-* Improve and provide a full description for this module into the README.rst
-* Due to a bug in the ``auditlog`` module that should be fixed soon, duplicate 
-  appointment audit log entries will be produced after this module is first 
-  installed. Restarting the server after installing should fix this.
+This module is no longer supported and cannot be installed. If you have
+installed it previously, please remove it and consider switching to the more
+abstract solutions in
+`calendar_resource <https://github.com/OCA/crm/tree/10.0/calendar_resource>`_
+and `product_service_duration <https://github.com/OCA/product-attribute/tree/10.0/product_service_duration>`_.
 
 Bug Tracker
 ===========

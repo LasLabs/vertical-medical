@@ -3,9 +3,9 @@
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 {
-    'name': 'Medical Appointment',
-    'summary': 'Add Appointment concept to medical_physician',
-    'version': '10.0.1.0.0',
+    'name': 'Medical Appointment - NOT SUPPORTED',
+    'summary': 'Not supported! Remove if currently installed.',
+    'version': '10.0.2.0.0',
     'author': 'LasLabs, Odoo Community Association (OCA)',
     'category': 'Medical',
     'depends': [
@@ -24,7 +24,8 @@
         'data/medical_appointment_sequence.xml',
     ],
     'website': 'https://laslabs.com',
-    'licence': 'LGPL-3',
+    'license': 'LGPL-3',
     'installable': True,
     'auto_install': False,
+    'pre_init_hook': 'pre_init_hook_no_install',
 }
