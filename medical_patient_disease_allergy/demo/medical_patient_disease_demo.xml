@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright 2016 LasLabs Inc.
+<!-- Copyright 2016-2017 LasLabs Inc.
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
 
 <odoo>
-
     <record id="medical_patient_disease_disease_3" model="medical.patient.disease">
         <field name="pathology_id" ref="medical_patient_disease_allergy.medical_pathology_medical_pathology_3" />
-        <field name="physician_id" ref="medical_physician.medical_physician_physician_1" />
         <field name="patient_id" ref="medical_patient_disease_allergy.medical_patient_patient_5" />
         <field name="disease_severity">1_mi</field>
         <field name="state">i</field>
@@ -17,5 +15,4 @@
         <field name="allergy_type">ma</field>
         <field name="is_on_treatment">True</field>
     </record>
-
 </odoo>
