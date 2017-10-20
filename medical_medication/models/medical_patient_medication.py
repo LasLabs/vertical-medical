@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # Copyright 2004 Tech-Receptives
-# Copyright 2016 LasLabs Inc.
+# Copyright 2016-2017 LasLabs Inc.
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 from odoo import fields, models
@@ -30,6 +30,12 @@ class MedicalPatientMedication(models.Model):
         comodel_name='medical.physician',
         index=True,
         help='Physician who prescribed the medicament',
+    )
+    practitioner_id = fields.Many2one(
+        string='Practitioner',
+        comodel_name='medical.practitioner',
+        index=True,
+        help='Medical practitioner that prescribed the medicament',
     )
     active = fields.Boolean(
         help='Check if the patient is currently taking the medication',

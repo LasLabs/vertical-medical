@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright 2016 LasLabs Inc.
+<!-- Copyright 2016-2017 LasLabs Inc.
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
 
 <odoo>
-
     <record id="medical_patient_medication_view_search" model="ir.ui.view">
         <field name="name">medical.patient.medication.search</field>
         <field name="model">medical.patient.medication</field>
@@ -12,7 +11,7 @@
         <field name="arch" type="xml">
             <xpath expr="//field[@name='dose_uom_id']" position="after">
                 <field name="patient_id" />
-                <field name="physician_id" />
+                <field name="practitioner_id"/>
                 <field name="medication_template_id" />
                 <field name="adverse_reaction" />
                 <field name="notes" />
@@ -31,9 +30,9 @@
                 <filter string="Patient"
                         domain="[]"
                         context="{'group_by':'patient_id'}" />
-                <filter string="Physician"
+                <filter string="Practitioner"
                         domain="[]"
-                        context="{'group_by':'physician_id'}" />
+                        context="{'group_by':'practitioner_id'}"/>
                 <filter string="Extra Info"
                         domain="[]" context="{'group_by':'notes'}" />
                 <filter string="Medication Template"
@@ -50,7 +49,7 @@
         <field name="arch" type="xml">
             <xpath expr="//field[@name='pathology_id']" position="after">
                 <field name="patient_id" />
-                <field name="physician_id" />
+                <field name="practitioner_id"/>
                 <field name="date_start_treatment" />
                 <field name="date_stop_treatment" />
             </xpath>
@@ -68,7 +67,7 @@
                     <field name="medication_template_id"
                            domain="[('medicament_id','=', medicament_id)]" />
                     <field name="date_start_treatment" />
-                    <field name="physician_id" />
+                    <field name="practitioner_id"/>
                 </group>
                 <group>
                     <field name="patient_id" />
@@ -103,5 +102,4 @@
         <field name="search_view_id" ref="medical_patient_medication_view_search" />
         <field name="view_id" ref="medical_patient_medication_view_tree" />
     </record>
-
 </odoo>

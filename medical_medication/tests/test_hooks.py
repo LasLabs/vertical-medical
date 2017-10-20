@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Copyright 2016 LasLabs Inc.
+# Copyright 2016-2017 LasLabs Inc.
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 from odoo.tests.common import TransactionCase
@@ -10,7 +10,7 @@ class TestHooks(TransactionCase):
     def setUp(self):
         super(TestHooks, self).setUp()
         self.medication_6 = self.env.ref(
-            'medical_medication.medical_patient_medication_medication_6'
+            'medical_medication.medical_patient_medication_6'
         )
         self.medication_template_6 = self.env.ref(
             'medical_medication.medical_medication_template_template_6'

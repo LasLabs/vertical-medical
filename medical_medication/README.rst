@@ -48,6 +48,7 @@ Contributors
 * Ruchir Shukla <ruchir@techreceptives.com>
 * Nhomar Hernandéz <nhomar@vauxoo.com>
 * Brett Wood <bwood@laslabs.com>
+* Oleg Bulkin <obulkin@laslabs.com>
 
 Maintainer
 ----------
