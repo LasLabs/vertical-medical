@@ -46,6 +46,7 @@ Contributors
 ------------
 
 * James Foster <jfoster@laslabs.com>
+* Oleg Bulkin <obulkin@laslabs.com>
 
 Maintainer
 ----------
