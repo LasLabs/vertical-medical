@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# © 2016 LasLabs Inc.
+# Copyright 2016-2017 LasLabs Inc.
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 from odoo.tests.common import TransactionCase
@@ -12,8 +12,8 @@ class TestMedicalPrescriptionOrderLine(TransactionCase):
         self.patient_vals = {
             'name': 'Test Patient',
         }
-        self.physician_vals = {
-            'name': 'Test Physician',
+        self.practitioner_vals = {
+            'name': 'Test Practitioner',
         }
         self.pathology_vals = {
             'name': 'Pathology',
@@ -44,20 +44,20 @@ class TestMedicalPrescriptionOrderLine(TransactionCase):
         self.medicament_id = self.env['medical.medicament'].create(
             self.medicament_vals
         )
-        self.physician_vals.update({
-            'specialty_id': self.specialty_id.id,
+        self.practitioner_vals.update({
+            'specialty_ids': [(6, 0, [self.specialty_id.id])],
         })
-        self.physician_id = self.env['medical.physician'].create(
-            self.physician_vals,
+        self.practitioner_id = self.env['medical.practitioner'].create(
+            self.practitioner_vals,
         )
         self.disease_id = self.env['medical.patient.disease'].create({
             'patient_id': self.patient_id.id,
-            'physician_id': self.physician_id.id,
+            'practitioner_id': self.practitioner_id.id,
             'pathology_id': self.pathology_id.id,
         })
         self.order_vals.update({
             'patient_id': self.patient_id.id,
-            'physician_id': self.physician_id.id,
+            'practitioner_id': self.practitioner_id.id,
         })
         self.rx_id = self.env['medical.prescription.order'].create(
             self.order_vals,
@@ -67,7 +67,7 @@ class TestMedicalPrescriptionOrderLine(TransactionCase):
             'medicament_id': self.medicament_id.id,
             'prescription_order_id': self.rx_id.id,
             'patient_id': self.patient_id.id,
-            'physician_id': self.physician_id.id,
+            'practitioner_id': self.practitioner_id.id,
         })
         return self.env['medical.prescription.order.line'].create(
             self.vals
@@ -77,7 +77,7 @@ class TestMedicalPrescriptionOrderLine(TransactionCase):
         rec_id = self._new_record()
         disease_id = self.env['medical.patient.disease'].create({
             'patient_id': self.patient_id.id,
-            'physician_id': self.physician_id.id,
+            'practitioner_id': self.practitioner_id.id,
             'pathology_id': self.pathology_id.id,
         })
         rec_id.disease_id = disease_id.id
