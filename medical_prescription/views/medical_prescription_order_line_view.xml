@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright 2016 LasLabs Inc.
+<!-- Copyright 2016-2017 LasLabs Inc.
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
-<odoo>
 
+<odoo>
     <record id="medical_prescription_order_line_view_search" model="ir.ui.view">
         <field name="name">medical.prescription.order.line.search</field>
         <field name="model">medical.prescription.order.line</field>
@@ -60,7 +60,7 @@
                 <field name="qty" />
                 <field name="is_substitutable" />
             </xpath>
-            <xpath expr="//field[@name='physician_id']" position='attributes'>
+            <xpath expr="//field[@name='practitioner_id']" position='attributes'>
                 <attribute name="invisible">1</attribute>
             </xpath>
             <xpath expr="//page[@name='adverse_reaction']" position='attributes'>
@@ -78,7 +78,7 @@
                 <field name="display_name" />
                 <field name="prescription_order_id" />
                 <field name="patient_id" />
-                <field name="physician_id" />
+                <field name="practitioner_id"/>
                 <field name="medicament_id" />
                 <templates>
                     <t t-name="kanban-box">
@@ -95,9 +95,9 @@
                                             <strong>Patient:</strong>
                                             <field name="patient_id" />
                                         </li>
-                                        <li t-if="record.physician_id.raw_value">
-                                            <strong>Physician:</strong>
-                                            <field name="physician_id" />
+                                        <li t-if="record.practitioner_id.raw_value">
+                                            <strong>Practitioner:</strong>
+                                            <field name="practitioner_id"/>
                                         </li>
                                         <li t-if="record.medicament_id.raw_value">
                                             <strong>Medicament:</strong>
@@ -124,5 +124,4 @@
         <field name="domain">[]</field>
         <field name="context">{}</field>
     </record>
-
 </odoo>

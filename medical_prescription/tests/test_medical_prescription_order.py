@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Copyright 2016 LasLabs Inc.
+# Copyright 2016-2017 LasLabs Inc.
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 import mock
@@ -15,10 +15,10 @@ class TestMedicalPrescriptionOrder(TransactionCase):
     def setUp(self):
         super(TestMedicalPrescriptionOrder, self).setUp()
         self.rx_1 = self.env.ref(
-            'medical_prescription.medical_prescription_prescription_order_1'
+            'medical_prescription.medical_prescription_order_1',
         )
         self.rx_6 = self.env.ref(
-            'medical_prescription.medical_prescription_prescription_order_6'
+            'medical_prescription.medical_prescription_order_6',
         )
 
     def test_sequence_for_name(self):

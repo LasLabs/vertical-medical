@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Copyright 2016 LasLabs Inc.
+# Copyright 2016-2017 LasLabs Inc.
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 from odoo import api, fields, models, tools
@@ -22,8 +22,13 @@ class MedicalPrescriptionOrder(models.Model):
     physician_id = fields.Many2one(
         comodel_name='medical.physician',
         string='Physician',
-        required=True,
         help='Physician that issued prescription',
+    )
+    practitioner_id = fields.Many2one(
+        comodel_name='medical.practitioner',
+        string='Practitioner',
+        required=True,
+        help='Practitioner that issued prescription',
     )
     partner_id = fields.Many2one(
         comodel_name='medical.pharmacy',

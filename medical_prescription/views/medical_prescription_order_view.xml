@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright 2016 LasLabs Inc.
+<!-- Copyright 2016-2017 LasLabs Inc.
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
 
 <odoo>
-
     <record id="medical_prescription_order_view_search" model="ir.ui.view">
         <field name="name">medical.prescription.order.search</field>
         <field name="model">medical.prescription.order</field>
         <field name="arch" type="xml">
             <search string="Medical Prescription Order">
                 <field name="name" />
-                <field name="physician_id" />
+                <field name="practitioner_id"/>
                 <field name="patient_id" />
                 <field name="partner_id" />
                 <field name="date_prescription" />
@@ -34,7 +33,7 @@
                             context="{'group_by':'date_prescription'}" />
                     <filter string="Prescribing Doctor"
                             domain="[]"
-                            context="{'group_by':'physician_id'}" />
+                            context="{'group_by':'practitioner_id'}"/>
                 </group>
             </search>
         </field>
@@ -48,7 +47,7 @@
                 <field name="name" />
                 <field name="patient_id" />
                 <field name="date_prescription" />
-                <field name="physician_id" />
+                <field name="practitioner_id"/>
                 <field name="partner_id" />
             </tree>
         </field>
@@ -72,9 +71,7 @@
                             <field name="patient_id"
                                    domain="[('type', '=', 'medical.patient')]"
                                    context="{'default_is_patient': True}" />
-                            <field name="physician_id"
-                                   domain="[('type', '=', 'medical.physician')]"
-                                   context="{'default_is_doctor': True}" />
+                            <field name="practitioner_id"/>
                             <field name="date_prescription" />
                         </group>
                         <group>
@@ -89,7 +86,7 @@
                         <page string="Order Lines" name="order_lines">
                             <field name="prescription_order_line_ids" nolabel="1"
                                    context="{'default_patient_id': patient_id,
-                                             'default_physician_id': physician_id,
+                                             'default_practitioner_id': practitioner_id,
                                              'default_prescription_order_id': id,
                                              'default_date_start_treatment': date_prescription}">
                                 <tree>
@@ -136,8 +133,8 @@
                                         <li t-if="record.patient_id.raw_value">
                                             <b>Patient:</b> <field name="patient_id" />
                                         </li>
-                                        <li t-if="record.physician_id.raw_value">
-                                            <b>Physician:</b> <field name="physician_id" />
+                                        <li t-if="record.practitioner_id.raw_value">
+                                            <b>Practitioner:</b> <field name="practitioner_id"/>
                                         </li>
                                     </ul>
                                 </div>
@@ -160,5 +157,4 @@
         <field name="domain">[]</field>
         <field name="context">{}</field>
     </record>
-
 </odoo>

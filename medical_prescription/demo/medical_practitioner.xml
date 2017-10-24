@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 LasLabs Inc.
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+
+<odoo>
+    <record id="medical_practitioner_1" model="medical.practitioner">
+        <field name="partner_id" ref="res_partner_practitioner_4"/>
+        <field name="specialty_ids" eval="[(6, 0, [ref('medical_practitioner.medical_specialty_gp')])]"/>
+        <field name="role_ids" eval="[(6, 0, [ref('medical_practitioner.doctor')])]"/>
+    </record>
+</odoo>
