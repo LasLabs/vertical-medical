@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Copyright 2016 LasLabs Inc.
+# Copyright 2016-2017 LasLabs Inc.
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 import itertools
@@ -28,7 +28,7 @@ class MedicalPrescriptionOrderMerge(models.TransientModel):
     )
     skip_validation = fields.Boolean(
         help='Check this box to allow prescription orders issued by different'
-             ' physicians or for different dates to be merged',
+             ' practitioners or for different dates to be merged',
         string='Skip Validation?',
     )
 
@@ -76,12 +76,12 @@ class MedicalPrescriptionOrderMerge(models.TransientModel):
             ))
 
         if not self.skip_validation:
-            merge_physicians = set(self.merge_order_ids.mapped('physician_id'))
-            if len(merge_physicians) > 1:
+            merge_practs = set(self.merge_order_ids.mapped('practitioner_id'))
+            if len(merge_practs) > 1:
                 raise ValidationError(_(
                     'It can be dangerous to merge prescription orders issued'
-                    ' by different physicians! If you are sure that you want'
-                    ' to do this, please select the "Skip Validation?"'
+                    ' by different practitioners! If you are sure that you'
+                    ' want to do this, please select the "Skip Validation?"'
                     ' checkbox and try again.'
                 ))
 

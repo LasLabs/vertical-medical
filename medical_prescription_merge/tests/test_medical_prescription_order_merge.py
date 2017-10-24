@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Copyright 2016 LasLabs Inc.
+# Copyright 2016-2017 LasLabs Inc.
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 from odoo import api, models
@@ -58,8 +58,8 @@ class TestMedicalPrescriptionOrderMerge(SingleTransactionCase):
     def _new_rx_order(self, extra_values=None):
         base_values = {
             'patient_id': self.env.ref('medical.medical_patient_patient_1').id,
-            'physician_id': self.env.ref(
-                'medical_physician.medical_physician_physician_1'
+            'practitioner_id': self.env.ref(
+                'medical_prescription.medical_practitioner_1'
             ).id,
             'date_prescription': '2016-10-31 23:59:59',
         }
@@ -175,23 +175,22 @@ class TestMedicalPrescriptionOrderMerge(SingleTransactionCase):
         with self.assertRaisesRegexp(ValidationError, 'two orders'):
             test_wiz.action_merge()
 
-    def test_action_merge_different_physicians(self):
-        '''It should throw correct error when there are different physicians'''
+    def test_action_merge_different_practitioners(self):
+        '''It should throw correct error if practitioners are different'''
         test_rx_order_1 = self._new_rx_order()
-        test_physician_2 = self.env['medical.physician'].create({
-            'specialty_id': self.env.ref(
-                'medical_physician.medical_specialty_gp').id,
-            'name': 'Test Physician 2',
+        test_practitioner_2 = self.env['medical.practitioner'].create({
+            'name': 'Test Practitioner 2',
         })
         test_rx_order_2 = self._new_rx_order({
-            'physician_id': test_physician_2.id,
+            'practitioner_id': test_practitioner_2.id,
         })
         test_wiz = self.env['medical.prescription.order.merge'].with_context(
             active_model='medical.prescription.order',
             active_ids=[test_rx_order_1.id, test_rx_order_2.id],
         ).create({})
 
-        with self.assertRaisesRegexp(ValidationError, 'different physicians'):
+        expected_snippet = 'different practitioners'
+        with self.assertRaisesRegexp(ValidationError, expected_snippet):
             test_wiz.action_merge()
 
     def test_action_merge_different_rx_dates(self):
@@ -225,17 +224,15 @@ class TestMedicalPrescriptionOrderMerge(SingleTransactionCase):
             self.fail('A ValidationError was raised and should not have been.')
 
     def test_action_merge_skip_validation_flag(self):
-        '''It should skip date/physician validations when flag is active'''
+        '''It should skip date/practitioner validations when flag is active'''
         test_rx_order_1 = self._new_rx_order({
             'date_prescription': '2016-10-30 23:59:59',
         })
-        test_physician_2 = self.env['medical.physician'].create({
-            'specialty_id': self.env.ref(
-                'medical_physician.medical_specialty_gp').id,
-            'name': 'Test Physician 2',
+        test_practitioner_2 = self.env['medical.practitioner'].create({
+            'name': 'Test Practitioner 2',
         })
         test_rx_order_2 = self._new_rx_order({
-            'physician_id': test_physician_2.id,
+            'practitioner_id': test_practitioner_2.id,
         })
         test_wiz = self.env['medical.prescription.order.merge'].with_context(
             active_model='medical.prescription.order',
