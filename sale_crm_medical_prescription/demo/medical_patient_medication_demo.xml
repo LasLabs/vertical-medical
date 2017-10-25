@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright 2016 LasLabs Inc.
+<!-- Copyright 2016-2017 LasLabs Inc.
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
 
 <odoo>
-
     <record id="medical_medication_template_template_9" model="medical.medication.template">
         <field name="medicament_id" ref="sale_crm_medical_prescription.medical_medicament_penicillin_1" />
         <field name="quantity">1</field>
@@ -18,9 +17,8 @@
     <record id="medical_patient_medication_medication_9" model="medical.patient.medication">
         <field name="medication_template_id" ref="sale_crm_medical_prescription.medical_medication_template_template_9" />
         <field name="patient_id" ref="sale_crm_medical_prescription.medical_patient_patient_10" />
-        <field name="physician_id" ref="sale_crm_medical_prescription.medical_physician_physician_6" />
+        <field name="practitioner_id" ref="medical_practitioner_6_demo"/>
         <field name="date_start_treatment">1980-10-10</field>
         <field name="medicament_id" ref="sale_crm_medical_prescription.medical_medicament_penicillin_1" />
     </record>
-
 </odoo>

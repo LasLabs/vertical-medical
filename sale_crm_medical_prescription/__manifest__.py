@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Copyright 2016 LasLabs Inc.
+# Copyright 2016-2017 LasLabs Inc.
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 {
@@ -24,7 +24,7 @@
         "demo/medical_medicament_demo.xml",
         "demo/medical_patient_demo.xml",
         "demo/medical_pharmacy_demo.xml",
-        "demo/medical_physician_demo.xml",
+        "demo/medical_practitioner.xml",
         "demo/medical_patient_medication_demo.xml",
         "demo/medical_prescription_order_demo.xml",
         "demo/medical_prescription_order_line_demo.xml",

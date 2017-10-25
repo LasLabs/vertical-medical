@@ -47,6 +47,7 @@ Contributors
 
 * Dave Lasley <dave@laslabs.com>
 * Brett Wood <bwood@laslabs.com>
+* Oleg Bulkin <obulkin@laslabs.com>
 
 Maintainer
 ----------
