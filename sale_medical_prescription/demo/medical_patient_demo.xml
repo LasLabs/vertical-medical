@@ -1,47 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright 2016 LasLabs Inc.
+<!-- Copyright 2016-2017 LasLabs Inc.
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
 
 <odoo>
-
-    <record id="res_partner_patient_8" model="res.partner">
-        <field name="name">Slow Chase</field>
-        <field name="city">Las Vegas</field>
-        <field name="state_id" ref="base.state_us_23" />
-        <field name="country_id" ref="base.us" />
-        <field name="zip">89117</field>
-        <field name="street">1376 Example St.</field>
-        <field name="email">s.chase@example.com</field>
-        <field name="phone">+1 (702) 777-8746</field>
-        <field name="ref">680-06-9202</field>
-        <field name="parent_id" ref="base.partner_demo" />
-        <field name="type">invoice</field>
-        <field name="birthdate_date">1990-01-03</field>
-        <field name='gender'>male</field>
-    </record>
-
     <record id="medical_patient_patient_8" model="medical.patient">
-        <field name="partner_id" ref="res_partner_patient_8" />
-    </record>
-
-    <record id="res_partner_patient_9" model="res.partner">
-        <field name="name">Rebecca Francesca</field>
-        <field name="city">Las Vegas</field>
-        <field name="state_id" ref="base.state_us_23" />
-        <field name="country_id" ref="base.us" />
-        <field name="zip">89131</field>
-        <field name="street">1222 Example St.</field>
-        <field name="email">r.francesca@example.com</field>
-        <field name="phone">+1 (702) 765-1236</field>
-        <field name="ref">530-51-6010</field>
-        <field name="parent_id" ref="base.partner_demo" />
-        <field name="type">invoice</field>
-        <field name="birthdate_date">1950-01-03</field>
-        <field name='gender'>female</field>
+        <field name="partner_id" ref="res_partner_patient_8_demo"/>
     </record>
 
     <record id="medical_patient_patient_9" model="medical.patient">
-        <field name="partner_id" ref="res_partner_patient_9" />
+        <field name="partner_id" ref="res_partner_patient_9_demo"/>
     </record>
-
 </odoo>

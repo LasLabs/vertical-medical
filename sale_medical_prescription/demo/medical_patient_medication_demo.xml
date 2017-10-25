@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright 2016 LasLabs Inc.
+<!-- Copyright 2016-2017 LasLabs Inc.
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
 
 <odoo>
-
     <record id="medical_medication_template_template_7" model="medical.medication.template">
         <field name="medicament_id" ref="medical_medicament_simv_1" />
         <field name="quantity">2</field>
@@ -18,7 +17,7 @@
     <record id="medical_patient_medication_medication_7" model="medical.patient.medication">
         <field name="medication_template_id" ref="medical_medication_template_template_7" />
         <field name="patient_id" ref="medical_patient_patient_8" />
-        <field name="physician_id" ref="medical_physician_physician_5" />
+        <field name="practitioner_id" ref="medical_practitioner_5_demo"/>
         <field name="date_start_treatment">2015-01-01</field>
         <field name="medicament_id" ref="medical_medicament_simv_1" />
     </record>
@@ -37,9 +36,8 @@
     <record id="medical_patient_medication_medication_8" model="medical.patient.medication">
         <field name="medication_template_id" ref="medical_medication_template_template_8" />
         <field name="patient_id" ref="medical_patient_patient_8" />
-        <field name="physician_id" ref="medical_physician_physician_5" />
+        <field name="practitioner_id" ref="medical_practitioner_5_demo"/>
         <field name="date_start_treatment">2015-01-05</field>
         <field name="medicament_id" ref="medical_medicament_simv_2" />
     </record>
-
 </odoo>

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright 2016 LasLabs Inc.
+<!-- Copyright 2016-2017 LasLabs Inc.
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
 
 <odoo>
-
     <record id="medical_prescription_prescription_order_7" model="medical.prescription.order">
         <field name="patient_id" ref="medical_patient_patient_8" />
-        <field name="physician_id" ref="medical_physician_physician_5" />
+        <field name="practitioner_id" ref="medical_practitioner_5_demo"/>
         <field name="date_prescription">2014-12-10</field>
         <field name="partner_id" ref="medical_pharmacy_4" />
         <field name="is_verified" eval="False" />
@@ -19,7 +18,7 @@
 
     <record id="medical_prescription_prescription_order_8" model="medical.prescription.order">
         <field name="patient_id" ref="medical_patient_patient_9" />
-        <field name="physician_id" ref="medical_physician_physician_5" />
+        <field name="practitioner_id" ref="medical_practitioner_5_demo"/>
         <field name="date_prescription">2014-12-10</field>
         <field name="partner_id" ref="medical_pharmacy_5" />
         <field name="is_verified" eval="True" />
@@ -27,5 +26,4 @@
         <field name="verify_method">doctor_phone</field>
         <field name="receive_date">2014-12-01</field>
     </record>
-
 </odoo>

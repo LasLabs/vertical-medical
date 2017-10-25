@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2016-2017 LasLabs Inc.
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+
+<odoo>
+    <record id="medical_practitioner_view_form" model="ir.ui.view">
+        <field name="name">Practitioner Form View - Verification</field>
+        <field name="model">medical.practitioner</field>
+        <field name="inherit_id" ref="medical_practitioner.medical_practitioner_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='main_data']/group[@name='left']" position="inside">
+                <field name="is_verified" attrs="{'invisible': [('verified_by_id', '!=', False)]}"/>
+                <field name="verified_by_id" attrs="{'invisible': [('verified_by_id', '=', False)]}"/>
+                <field name="verified_date" attrs="{'invisible': [('verified_by_id', '=', False)]}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
