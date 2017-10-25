@@ -6,7 +6,7 @@
     <record id="medical_prescription_order_1_demo" model="medical.prescription.order">
         <field name="name">State Verify - Demo Rx</field>
         <field name="patient_id" ref="medical_patient_1_demo"/>
-        <field name="physician_id" ref="medical_physician_1_demo"/>
+        <field name="practitioner_id" ref="medical_practitioner_1_demo"/>
         <field name="stage_id" ref="medical_prescription_state.prescription_order_state_unverified"/>
     </record>
 </odoo>

@@ -3,7 +3,7 @@
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
 
 <odoo>
-    <record id="medical_physician_1_demo" model="medical.physician">
-        <field name="name">State Verify - Demo Physician</field>
+    <record id="medical_practitioner_1_demo" model="medical.practitioner">
+        <field name="name">State Verify - Demo Practitioner</field>
     </record>
 </odoo>
