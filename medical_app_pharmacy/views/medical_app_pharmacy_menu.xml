@@ -52,11 +52,11 @@
               action="medical_pharmacy.medical_pharmacist_action"
               />
 
-    <menuitem id="medical_physician_menu"
-              name="Physicians"
+    <menuitem id="medical_practitioner_menu"
+              name="Practitioners"
               parent="contacts_menu"
               sequence="40"
-              action="medical_physician.medical_physician_action"
+              action="medical_practitioner.medical_practitioner_action"
               />
 
     <!-- Dispensing -->
