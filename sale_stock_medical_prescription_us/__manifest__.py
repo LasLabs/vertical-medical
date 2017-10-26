@@ -27,7 +27,7 @@
         "demo/medical_medicament_demo.xml",
         "demo/medical_medicament_ndc_demo.xml",
         "demo/medical_pharmacy_demo.xml",
-        "demo/medical_physician_demo.xml",
+        "demo/medical_practitioner.xml",
         "demo/medical_patient_medication_demo.xml",
         "demo/medical_prescription_order_demo.xml",
         "demo/medical_prescription_order_line_demo.xml",

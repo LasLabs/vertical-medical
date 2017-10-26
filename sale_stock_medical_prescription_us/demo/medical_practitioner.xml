@@ -3,8 +3,7 @@
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 
 <odoo>
-
-    <record id="res_partner_physician_us_2" model="res.partner">
+    <record id="res_partner_practitioner_us_2_demo" model="res.partner">
         <field name="name">Janet Jeraldo</field>
         <field name="city">Las Vegas</field>
         <field name="state_id" ref="base.state_us_23" />
@@ -17,10 +16,8 @@
         <field name="parent_id" ref="partner_pharmacy_us_2" />
     </record>
 
-    <record id="medical_physician_physician_us_2" model="medical.physician">
-        <field name="partner_id" ref="res_partner_physician_us_2" />
-        <field name="specialty_id" ref="medical_physician.medical_specialty_gp" />
-        <field name="info">General practitioner, supplier</field>
+    <record id="medical_practitioner_us_2_demo" model="medical.practitioner">
+        <field name="partner_id" ref="res_partner_practitioner_us_2_demo"/>
+        <field name="specialty_ids" eval="[(6, 0, [ref('medical_practitioner.medical_specialty_gp')])]"/>
     </record>
-
 </odoo>
