@@ -88,6 +88,8 @@ class TestMedicalPrescriptionOrderLine(TransactionCase):
 
     def test_compute_can_dispense_false(self):
         """ Test can_dispense is False if not enough qty available """
+        self.rx_line_12.qty = 40
+
         self.assertFalse(
             self.rx_line_12.can_dispense,
         )
@@ -101,6 +103,8 @@ class TestMedicalPrescriptionOrderLine(TransactionCase):
 
     def test_compute_can_dispense_qty_false(self):
         """ Test can_dispense_qty is correct for can_dispense=False """
+        self.rx_line_12.qty = 40
+
         self.assertEquals(
             self.rx_line_12.can_dispense_qty,
             0,

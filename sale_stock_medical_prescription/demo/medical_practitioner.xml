@@ -3,8 +3,7 @@
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
 
 <odoo>
-
-    <record id="res_partner_physician_7" model="res.partner">
+    <record id="res_partner_practitioner_7_demo" model="res.partner">
         <field name="name">Andy Arnoldendit</field>
         <field name="city">Las Vegas</field>
         <field name="state_id" ref="base.state_us_23" />
@@ -16,10 +15,8 @@
         <field name="ref">680-02-8713</field>
     </record>
 
-    <record id="medical_physician_physician_7" model="medical.physician">
-        <field name="partner_id" ref="res_partner_physician_7" />
-        <field name="specialty_id" ref="medical_physician.medical_specialty_gp" />
-        <field name="info">General practitioner, supplier</field>
+    <record id="medical_practitioner_7_demo" model="medical.practitioner">
+        <field name="partner_id" ref="res_partner_practitioner_7_demo"/>
+        <field name="specialty_ids" eval="[(6, 0, [ref('medical_practitioner.medical_specialty_gp')])]"/>
     </record>
-
 </odoo>

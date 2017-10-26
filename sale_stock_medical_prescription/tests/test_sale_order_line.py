@@ -81,6 +81,8 @@ class TestSaleOrderLine(TransactionCase):
 
     def test_check_can_dispense_false(self):
         """ Test raise ValidationError if try to dispense but cannot """
+        self.rx_line_12.qty = 40
+
         with self.assertRaises(ValidationError):
             self.order_line_12._check_can_dispense()
 

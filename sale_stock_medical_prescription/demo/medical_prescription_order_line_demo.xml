@@ -8,7 +8,7 @@
         <field name="prescription_order_id" ref="medical_prescription_prescription_order_10" />
         <field name="medical_medication_id" ref="medical_patient_medication_medication_10" />
         <field name="is_substitutable" eval="False" />
-        <field name="qty">40</field>
+        <field name="qty">400</field>
         <field name="dispense_uom_id" ref="product.product_uom_categ_unit" />
     </record>
 
