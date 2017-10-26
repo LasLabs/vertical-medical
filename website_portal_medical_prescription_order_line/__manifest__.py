@@ -22,7 +22,7 @@
         'demo/medical_medicament.xml',
         'demo/medical_patient.xml',
         'demo/medical_patient_medication.xml',
-        'demo/medical_physician.xml',
+        'demo/medical_practitioner.xml',
         'demo/medical_prescription_order.xml',
         'demo/medical_prescription_order_line.xml',
     ],
