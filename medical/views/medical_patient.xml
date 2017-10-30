@@ -151,6 +151,9 @@
                 <filter string="DoB"
                         domain="[]"
                         context="{'group_by':'birthdate_date'}" />
+                <filter name="patient_ids_filter"
+                        string="Related Patients"
+                        domain="[('partner_id', 'child_of', active_id)]" />
             </xpath>
         </field>
     </record>
@@ -161,6 +164,15 @@
         <field name="res_model">medical.patient</field>
         <field name="view_type">form</field>
         <field name="view_mode">kanban,tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="medical_patient_action_button">
+        <field name="name">Patients</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">medical.patient</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="domain">[('partner_id', 'child_of', target_partner_id)]</field>
     </record>
 
 </odoo>
