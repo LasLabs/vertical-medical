@@ -1,6 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_medical_physician_portal,medical.physician.portal,medical_physician.model_medical_physician,base.group_portal,1,0,0,0
-access_medical_physician_public,medical.physician.public,medical_physician.model_medical_physician,base.group_public,1,0,0,0
+access_medical_practitioner_portal,medical.practitioner.portal,medical_practitioner.model_medical_practitioner,base.group_portal,1,0,0,0
+access_medical_practitioner_public,medical.practitioner.public,medical_practitioner.model_medical_practitioner,base.group_public,1,0,0,0
 access_medical_patient_public,medical.patient.public,medical.model_medical_patient,base.group_public,1,0,0,0
 access_medical_patient_portal,medical.patient.portal,medical.model_medical_patient,base.group_portal,1,1,0,0
 access_res_partner_portal,res.partner.portal,base.model_res_partner,base.group_portal,1,1,0,0

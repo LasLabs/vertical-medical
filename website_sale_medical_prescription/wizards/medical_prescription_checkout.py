@@ -115,30 +115,30 @@ class MedicalPrescriptionCheckout(models.TransientModel):
                 continue
 
             try:
-                physician_vals = rx_line_vals['physician_id']
+                practitioner_vals = rx_line_vals['practitioner_id']
             except KeyError:
                 res['errors'].append(_(
-                    'Did not include physician information'
+                    'Did not include practitioner information'
                 ))
                 continue
 
-            if int(physician_vals.get('id', 0)) == 0:
+            if int(practitioner_vals.get('id', 0)) == 0:
                 try:
-                    rx_line_vals['physician_id'] = self._write_or_create(
-                        'medical.physician', physician_vals, write=False
+                    rx_line_vals['practitioner_id'] = self._write_or_create(
+                        'medical.practitioner', practitioner_vals, write=False
                     ).id
                 except:
-                    _logger.exception("Could not edit/create physician")
+                    _logger.exception("Could not edit/create practitioner")
                     res['errors'].append(_(
-                        'Could not edit/create physician'
+                        'Could not edit/create practitioner'
                     ))
                     self._invalidate_all(
-                        physician_vals, error_fields,
-                        name_prefix='%s.physician_id' % name_prefix
+                        practitioner_vals, error_fields,
+                        name_prefix='%s.practitioner_id' % name_prefix
                     )
                     continue
             else:
-                rx_line_vals['physician_id'] = physician_vals['id']
+                rx_line_vals['practitioner_id'] = practitioner_vals['id']
 
             try:
                 rx_vals = line_vals['prescription_order_id']
@@ -175,7 +175,7 @@ class MedicalPrescriptionCheckout(models.TransientModel):
                 continue
 
             rx_vals['patient_id'] = rx_line_vals['patient_id']
-            rx_vals['physician_id'] = rx_line_vals['physician_id']
+            rx_vals['practitioner_id'] = rx_line_vals['practitioner_id']
 
             rx_line_vals['prescription_order_id'] = self._write_or_create(
                 'medical.prescription.order', rx_vals,

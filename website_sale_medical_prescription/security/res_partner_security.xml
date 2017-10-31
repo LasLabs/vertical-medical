@@ -9,7 +9,7 @@
         <field name="groups" eval="[(4, ref('base.group_portal'))]"/>
         <field name="domain_force">[
             '|', '|',
-            ('type', '=', 'medical.physician'),
+            ('type', '=', 'medical.practitioner'),
             ('type', '=', 'medical.pharmacy'),
             ('create_uid', '=', user.id),
         ]</field>
@@ -25,7 +25,7 @@
         <field name="groups" eval="[(4, ref('base.group_public'))]"/>
         <field name="domain_force">[
             '|', '|',
-            ('type', '=', 'medical.physician'),
+            ('type', '=', 'medical.practitioner'),
             ('type', '=', 'medical.pharmacy'),
             ('create_uid', '=', user.id),
         ]</field>

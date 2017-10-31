@@ -160,8 +160,8 @@
             <h4>Prescriber</h4>
             <h6>Search by Name or Phone</h6>
 
-            <t t-set="rel" t-value="'%d.prescription_order_line_id.physician_id' % sale_line.id" />
-            <t t-set="res_model" t-value="'medical.physician'" />
+            <t t-set="rel" t-value="'%d.prescription_order_line_id.practitioner_id' % sale_line.id"/>
+            <t t-set="res_model" t-value="'medical.practitioner'"/>
 
             <input type="hidden"
                    t-att-name="'%s.id' % rel"
