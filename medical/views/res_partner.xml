@@ -10,13 +10,13 @@
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
             <xpath expr="//div[@name='button_box']" position="inside">
-                <field name="patient_ids" invisible="True"/>
+                <field name="count_patients" invisible="True"/>
                 <button name="medical.medical_patient_action_button"
                         class="oe_inline oe_stat_button"
                         type="action"
                         icon="fa-list"
                         context="{'target_partner_id': active_id}"
-                        attrs="{'invisible': [('patient_ids', '=', [])]}">
+                        attrs="{'invisible': [('count_patients', '=', 0)]}">
                     <field string="Patients"
                            name="count_patients"
                            widget="statinfo" />
