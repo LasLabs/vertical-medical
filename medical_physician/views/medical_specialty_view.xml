@@ -6,7 +6,7 @@
     @license LGPL-3
 -->
 
-<openerp>
+<odoo>
     <data>
         <record id="medical_specialty_view_tree" model="ir.ui.view">
             <field name="name">medical.specialty.tree</field>
@@ -77,4 +77,4 @@
         </record>
 
     </data>
-</openerp>
+</odoo>
