@@ -32,6 +32,7 @@ class ResPartner(models.Model):
         ('male', 'Male'),
         ('female', 'Female'),
         ('other', 'Other'),
+        ('unknown', 'Unknown'),
     ])
     weight = fields.Float()
     weight_uom = fields.Many2one(
