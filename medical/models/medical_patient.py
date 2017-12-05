@@ -36,19 +36,20 @@ class MedicalPatient(models.Model):
         compute='_compute_is_deceased',
     )
     marital_status = fields.Selection([
+        ('s', 'Single'),
+        ('m', 'Married'),
+        ('w', 'Widowed'),
+        ('d', 'Divorced'),
+        ('x', 'Separated'),
+        ('z', 'law marriage'),
         ('S', 'Never Married'),
-        ('M', 'Married'),
-        ('W', 'Widowed'),
-        ('D', 'Divorced'),
-        # ('x', 'Separated'),
-        # ('z', 'law marriage'),
         ('A', 'Annulled'),
         ('I', 'Interlocutory'),
         ('L', 'Legally Separated'),
         ('P', 'Polygamous'),
         ('T', 'Domestic Partner'),
-        ('U', 'unmarried'),
-        ('UNK', 'unknown'),
+        ('U', 'Unmarried'),
+        ('UNK', 'Unknown'),
     ], )
     is_pregnant = fields.Boolean(
         help='Check this if the patient if pregnant',
