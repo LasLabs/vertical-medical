@@ -6,17 +6,21 @@
 Prescription Verification - States and Logic
 ============================================
 
-This module introduces the notion of verification to the prescription states 
-added in `medical_prescription_state`, which can now be either verified or 
-unverified. It also adds the following logic:
+This module introduces the notion of verification to the prescription states
+added in `medical_prescription_state`, which can now be either verified or
+unverified. It also modifies the notion of prescription verification added in
+`medical_prescription` to be automated based on these states.
 
-* Once a prescription order is in a verified state, it can be cancelled or 
-  marked as an exception, but no other changes to the order are allowed
-* When a prescription order moves from an unverified state to a verified one, 
-  its order lines automatically move to a hold state
-* When a prescription order is cancelled or marked as an exception, its order 
-  lines are automatically marked as exceptions
-* Once a prescription order line is in a verified state, it cannot be moved to 
+The key interactions and constraints are as follow:
+
+* Once a prescription order is in a verified state, it can be cancelled or
+  marked as an exception, but most other changes are no longer allowed
+* When a prescription order moves from an unverified state to a verified one,
+  its order lines automatically move to a hold state and the order becomes
+  verified (the date and user responsible are recorded)
+* When a prescription order is cancelled or marked as an exception, its order
+  lines are automatically marked as exceptions and it becomes unverified
+* Once a prescription order line is in a verified state, it cannot be moved to
   an unverified state other than the exception state
 
 Usage

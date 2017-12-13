@@ -2,12 +2,16 @@
 # Copyright 2016-2017 LasLabs Inc.
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
-from odoo import _, api, models
+from odoo import _, api, fields, models
 from odoo.exceptions import ValidationError
 
 
 class MedicalPrescriptionOrderLine(models.Model):
     _inherit = 'medical.prescription.order.line'
+
+    verify_method = fields.Selection(
+        related='prescription_order_id.verify_method',
+    )
 
     @api.multi
     def write(self, vals):

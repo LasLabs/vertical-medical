@@ -4,19 +4,19 @@
 
 {
     'name': 'Prescription Verification - States and Logic',
-    'summary': 'Introduces verified prescription states and related logic',
-    'version': '10.0.1.0.0',
+    'summary': 'Introduces prescription verification based on states',
+    'version': '10.0.2.0.0',
     'author': 'LasLabs, Odoo Community Association (OCA)',
     'category': 'Medical',
     'website': 'https://laslabs.com',
     'license': 'LGPL-3',
     'installable': True,
-    'auto_install': False,
     'depends': [
         'medical_prescription_state',
     ],
     'data': [
         'data/base_kanban_stage.xml',
+        'views/medical_prescription_order.xml',
     ],
     'demo': [
         'demo/medical_medicament.xml',
@@ -25,5 +25,6 @@
         'demo/medical_physician.xml',
         'demo/medical_prescription_order.xml',
         'demo/medical_prescription_order_line.xml',
-    ]
+    ],
+    'pre_init_hook': 'pre_init_hook',
 }
