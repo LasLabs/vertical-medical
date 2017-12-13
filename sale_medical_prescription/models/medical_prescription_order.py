@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# Copyright 2016 LasLabs Inc.
+# Copyright 2016-2017 LasLabs Inc.
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
-from odoo import api, fields, models
+from odoo import fields, models
 
 
 class MedicalPrescriptionOrder(models.Model):
@@ -20,38 +20,10 @@ class MedicalPrescriptionOrder(models.Model):
         default='fax',
         help='How the Rx was received',
     )
-    verify_method = fields.Selection(
-        string='Verification Method',
-        selection=[
-            ('none', 'Not Verified'),
-            ('doctor_phone', 'Called Doctor'),
-        ],
-        default='none',
-        help='Method of Rx verification',
-    )
     receive_date = fields.Datetime(
         string='Receive Date',
         default=fields.Datetime.now,
         help='When the Rx was received',
-    )
-    verify_user_id = fields.Many2one(
-        string='Verify User',
-        comodel_name='res.users',
-        store=True,
-        compute='_compute_verified',
-        help='User that verified the prescription',
-    )
-    verify_date = fields.Datetime(
-        string='Verification Date',
-        store=True,
-        compute='_compute_verified',
-        help='When the prescription was verified',
-    )
-    is_verified = fields.Boolean(
-        string='Verified',
-        store=True,
-        compute='_compute_verified',
-        help='If checked, this prescription has been confirmed as valid',
     )
     transfer_pharmacy_id = fields.Many2one(
         string='Transfer Pharmacy',
@@ -69,13 +41,3 @@ class MedicalPrescriptionOrder(models.Model):
     transfer_ref = fields.Char(
         string='Transfer Reference',
     )
-
-    @api.multi
-    @api.depends('verify_method')
-    def _compute_verified(self):
-        for record in self:
-            if record.verify_method != 'none':
-                if not record.is_verified:
-                    record.is_verified = True
-                    record.verify_user_id = self.env.user.id
-                    record.verify_date = fields.Datetime.now()

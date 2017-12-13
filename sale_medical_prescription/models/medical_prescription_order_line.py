@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Copyright 2016 LasLabs Inc.
+# Copyright 2016-2017 LasLabs Inc.
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 from odoo import api, fields, models
@@ -20,15 +20,6 @@ class MedicalPrescriptionOrderLine(models.Model):
         compute='_compute_orders',
         store=True,
         readonly=True,
-    )
-    verify_method = fields.Selection(
-        selection=[
-            ('none', 'Not Verified'),
-            ('doctor_phone', 'Called Doctor'),
-        ],
-        default='none',
-        help='Method of Rx verification',
-        related='prescription_order_id.verify_method',
     )
     receive_date = fields.Datetime(
         default=lambda s: fields.Datetime.now(),
