@@ -6,7 +6,7 @@
     @license AGPL-3
 -->
 
-<openerp>
+<odoo>
     <data>
         
         <record id="medical_medicament_view_form" model="ir.ui.view">
@@ -42,4 +42,4 @@
         </record>
         
     </data>
-</openerp>
+</odoo>

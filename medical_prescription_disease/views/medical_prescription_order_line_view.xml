@@ -6,7 +6,7 @@
     @license LGPL-3
 -->
 
-<openerp>
+<odoo>
     <data>
 
         <record id="medical_prescription_order_line_view_form" model="ir.ui.view">
@@ -37,4 +37,4 @@
         </record>
         
     </data>
-</openerp>
+</odoo>

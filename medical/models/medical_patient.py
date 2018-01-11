@@ -42,6 +42,14 @@ class MedicalPatient(models.Model):
         ('d', 'Divorced'),
         ('x', 'Separated'),
         ('z', 'law marriage'),
+        ('S', 'Never Married'),
+        ('A', 'Annulled'),
+        ('I', 'Interlocutory'),
+        ('L', 'Legally Separated'),
+        ('P', 'Polygamous'),
+        ('T', 'Domestic Partner'),
+        ('U', 'Unmarried'),
+        ('UNK', 'Unknown'),
     ], )
     is_pregnant = fields.Boolean(
         help='Check this if the patient if pregnant',

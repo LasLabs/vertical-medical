@@ -6,7 +6,7 @@
     @license LGPL-3
 -->
 
-<openerp>
+<odoo>
     <data>
 
         <record model="ir.ui.view" id="medical_physician_unavailable_wizard_form">
@@ -39,4 +39,4 @@
         </record>
 
     </data>
-</openerp>
+</odoo>

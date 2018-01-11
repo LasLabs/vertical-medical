@@ -6,7 +6,7 @@
     @license LGPL-3
 -->
 
-<openerp>
+<odoo>
     <data>
         
         <record model="ir.ui.view"
@@ -52,4 +52,4 @@
                     key2="client_action_multi"/>
         
     </data>
-</openerp>
+</odoo>
