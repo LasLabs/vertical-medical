@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 LasLabs Inc.
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+
+<odoo>
+    <record id="medical_prescription_order_line_1_demo" model="medical.prescription.order.line">
+        <field name="dispense_uom_id" ref="medical_medication.product_uom_ml"/>
+        <field name="medical_medication_id" ref="medical_patient_medication_1_demo"/>
+        <field name="name">Sale Rx Auto - Demo Rx Line</field>
+        <field name="patient_id" ref="medical_patient_1_demo"/>
+        <field name="prescription_order_id" ref="medical_prescription_order_1_demo"/>
+        <field name="stage_id" ref="medical_prescription_state.prescription_order_line_state_unverified"/>
+        <field name="qty">10</field>
+    </record>
+
+    <record id="medical_prescription_order_line_2_demo" model="medical.prescription.order.line">
+        <field name="dispense_uom_id" ref="medical_medication.product_uom_ml"/>
+        <field name="medical_medication_id" ref="medical_patient_medication_2_demo"/>
+        <field name="name">Sale Rx Auto - Demo Rx Line 2</field>
+        <field name="patient_id" ref="medical_patient_2_demo"/>
+        <field name="prescription_order_id" ref="medical_prescription_order_1_demo"/>
+        <field name="stage_id" ref="medical_prescription_state.prescription_order_line_state_unverified"/>
+        <field name="qty">10</field>
+    </record>
+</odoo>

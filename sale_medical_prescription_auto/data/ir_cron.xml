@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 LasLabs Inc.
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+
+<odoo>
+    <record id="ir_cron_split_medical_sale_orders" model="ir.cron">
+        <field name="name">Split medical sale orders with invalid order lines</field>
+        <field name="interval_number">30</field>
+        <field name="interval_type">minutes</field>
+        <field name="model">sale.order</field>
+        <field name="function">_sale_order_split</field>
+        <field name="numbercall">-1</field>
+    </record>
+</odoo>

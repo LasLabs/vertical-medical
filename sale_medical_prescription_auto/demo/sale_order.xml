@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 LasLabs Inc.
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+
+<odoo>
+    <record id="sale_order_1_demo" model="sale.order">
+        <field name="name">Sale Rx Auto - Demo Sale Order</field>
+        <field name="partner_id" ref="medical_patient_1_demo_res_partner"/>
+        <field name="partner_invoice_id" ref="medical_patient_1_demo_res_partner"/>
+        <field name="partner_shipping_id" ref="medical_patient_1_demo_res_partner"/>
+        <field name="pricelist_id" ref="product.list0"/>
+    </record>
+
+    <record id="sale_order_2_demo" model="sale.order">
+        <field name="name">Sale Rx Auto - Demo Sale Order 2</field>
+        <field name="partner_id" ref="medical_patient_1_demo_res_partner"/>
+        <field name="partner_invoice_id" ref="medical_patient_1_demo_res_partner"/>
+        <field name="partner_shipping_id" ref="medical_patient_1_demo_res_partner"/>
+        <field name="pricelist_id" ref="product.list0"/>
+    </record>
+</odoo>
