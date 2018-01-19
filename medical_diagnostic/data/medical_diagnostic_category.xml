@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017-2018 LasLabs Inc.
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html) -->
+
+<odoo noupdate="1">
+    <record id="medical_diagnostic_category_AU" model="medical.diagnostic.category">
+        <field name="code">AU</field>
+        <field name="name">Audiology</field>
+    </record>
+
+    <record id="medical_diagnostic_category_BG" model="medical.diagnostic.category">
+        <field name="code">BG</field>
+        <field name="name">Blood Gasses</field>
+    </record>
+
+    <record id="medical_diagnostic_category_BLB" model="medical.diagnostic.category">
+        <field name="code">BLB</field>
+        <field name="name">Blood Bank</field>
+    </record>
+
+    <record id="medical_diagnostic_category_CG" model="medical.diagnostic.category">
+        <field name="code">CG</field>
+        <field name="name">Cytogenetics</field>
+    </record>
+
+    <record id="medical_diagnostic_category_CH" model="medical.diagnostic.category">
+        <field name="code">CH</field>
+        <field name="name">Chemistry</field>
+    </record>
+
+    <record id="medical_diagnostic_category_CP" model="medical.diagnostic.category">
+        <field name="code">CP</field>
+        <field name="name">Cytopathology</field>
+    </record>
+
+    <record id="medical_diagnostic_category_CT" model="medical.diagnostic.category">
+        <field name="code">CT</field>
+        <field name="name">CAT Scan</field>
+    </record>
+
+    <record id="medical_diagnostic_category_CTH" model="medical.diagnostic.category">
+        <field name="code">CTH</field>
+        <field name="name">Cardiac Catheterization</field>
+    </record>
+
+    <record id="medical_diagnostic_category_CUS" model="medical.diagnostic.category">
+        <field name="code">CUS</field>
+        <field name="name">Cardiac Ultrasound</field>
+    </record>
+
+    <record id="medical_diagnostic_category_EC" model="medical.diagnostic.category">
+        <field name="code">EC</field>
+        <field name="name">Electrocardiac</field>
+    </record>
+
+    <record id="medical_diagnostic_category_EN" model="medical.diagnostic.category">
+        <field name="code">EN</field>
+        <field name="name">Electroneuro</field>
+    </record>
+
+    <record id="medical_diagnostic_category_GE" model="medical.diagnostic.category">
+        <field name="code">GE</field>
+        <field name="name">Genetics</field>
+    </record>
+
+    <record id="medical_diagnostic_category_HM" model="medical.diagnostic.category">
+        <field name="code">HM</field>
+        <field name="name">Hematology</field>
+    </record>
+
+    <record id="medical_diagnostic_category_ICU" model="medical.diagnostic.category">
+        <field name="code">ICU</field>
+        <field name="name">Bedside ICU Monitoring</field>
+    </record>
+
+    <record id="medical_diagnostic_category_IMG" model="medical.diagnostic.category">
+        <field name="code">IMG</field>
+        <field name="name">Diagnostic Imaging</field>
+    </record>
+
+    <record id="medical_diagnostic_category_IMM" model="medical.diagnostic.category">
+        <field name="code">IMM</field>
+        <field name="name">Immunology</field>
+    </record>
+
+    <record id="medical_diagnostic_category_LAB" model="medical.diagnostic.category">
+        <field name="code">LAB</field>
+        <field name="name">Laboratory</field>
+    </record>
+
+    <record id="medical_diagnostic_category_MB" model="medical.diagnostic.category">
+        <field name="code">MB</field>
+        <field name="name">Microbiology</field>
+    </record>
+
+    <record id="medical_diagnostic_category_MCB" model="medical.diagnostic.category">
+        <field name="code">MCB</field>
+        <field name="name">Mycobacteriology</field>
+    </record>
+
+    <record id="medical_diagnostic_category_MYC" model="medical.diagnostic.category">
+        <field name="code">MYC</field>
+        <field name="name">Mycology</field>
+    </record>
+
+    <record id="medical_diagnostic_category_NMR" model="medical.diagnostic.category">
+        <field name="code">NMR</field>
+        <field name="name">Nuclear Magnetic Resonance</field>
+    </record>
+
+    <record id="medical_diagnostic_category_NMS" model="medical.diagnostic.category">
+        <field name="code">NMS</field>
+        <field name="name">Nuclear Medicine Scan</field>
+    </record>
+
+    <record id="medical_diagnostic_category_NRS" model="medical.diagnostic.category">
+        <field name="code">NRS</field>
+        <field name="name">Nursing Service Measures</field>
+    </record>
+
+    <record id="medical_diagnostic_category_OSL" model="medical.diagnostic.category">
+        <field name="code">OSL</field>
+        <field name="name">Outside Lab</field>
+    </record>
+
+    <record id="medical_diagnostic_category_OT" model="medical.diagnostic.category">
+        <field name="code">OT</field>
+        <field name="name">Occupational Therapy</field>
+    </record>
+
+    <record id="medical_diagnostic_category_OTH" model="medical.diagnostic.category">
+        <field name="code">OTH</field>
+        <field name="name">Other</field>
+    </record>
+
+    <record id="medical_diagnostic_category_OUS" model="medical.diagnostic.category">
+        <field name="code">OUS</field>
+        <field name="name">OB Ultrasound</field>
+    </record>
+
+    <record id="medical_diagnostic_category_PAR" model="medical.diagnostic.category">
+        <field name="code">PAR</field>
+        <field name="name">Parasitology</field>
+    </record>
+
+    <record id="medical_diagnostic_category_PAT" model="medical.diagnostic.category">
+        <field name="code">PAT</field>
+        <field name="name">Pathology</field>
+    </record>
+
+    <record id="medical_diagnostic_category_PF" model="medical.diagnostic.category">
+        <field name="code">PF</field>
+        <field name="name">Pulmonary Function</field>
+    </record>
+
+    <record id="medical_diagnostic_category_PHR" model="medical.diagnostic.category">
+        <field name="code">PHR</field>
+        <field name="name">Pharmacy</field>
+    </record>
+
+    <record id="medical_diagnostic_category_PHY" model="medical.diagnostic.category">
+        <field name="code">PHY</field>
+        <field name="name">Physician</field>
+    </record>
+
+    <record id="medical_diagnostic_category_PT" model="medical.diagnostic.category">
+        <field name="code">PT</field>
+        <field name="name">Physical Therapy</field>
+    </record>
+
+    <record id="medical_diagnostic_category_RAD" model="medical.diagnostic.category">
+        <field name="code">RAD</field>
+        <field name="name">Radiology</field>
+    </record>
+
+    <record id="medical_diagnostic_category_RC" model="medical.diagnostic.category">
+        <field name="code">RC</field>
+        <field name="name">Respiratory Care</field>
+    </record>
+
+    <record id="medical_diagnostic_category_RT" model="medical.diagnostic.category">
+        <field name="code">RT</field>
+        <field name="name">Radiation Therapy</field>
+    </record>
+
+    <record id="medical_diagnostic_category_RUS" model="medical.diagnostic.category">
+        <field name="code">RUS</field>
+        <field name="name">Radiology Ultrasound</field>
+    </record>
+
+    <record id="medical_diagnostic_category_RX" model="medical.diagnostic.category">
+        <field name="code">RX</field>
+        <field name="name">Radiograph</field>
+    </record>
+
+    <record id="medical_diagnostic_category_SP" model="medical.diagnostic.category">
+        <field name="code">SP</field>
+        <field name="name">Surgical Pathology</field>
+    </record>
+
+    <record id="medical_diagnostic_category_SR" model="medical.diagnostic.category">
+        <field name="code">SR</field>
+        <field name="name">Serology</field>
+    </record>
+
+    <record id="medical_diagnostic_category_TX" model="medical.diagnostic.category">
+        <field name="code">TX</field>
+        <field name="name">Toxicology</field>
+    </record>
+
+    <record id="medical_diagnostic_category_URN" model="medical.diagnostic.category">
+        <field name="code">URN</field>
+        <field name="name">Urinalysis</field>
+    </record>
+
+    <record id="medical_diagnostic_category_VR" model="medical.diagnostic.category">
+        <field name="code">VR</field>
+        <field name="name">Virology</field>
+    </record>
+
+    <record id="medical_diagnostic_category_VUS" model="medical.diagnostic.category">
+        <field name="code">VUS</field>
+        <field name="name">Vascular Ultrasound</field>
+    </record>
+
+    <record id="medical_diagnostic_category_XRC" model="medical.diagnostic.category">
+        <field name="code">XRC</field>
+        <field name="name">Cineradiograph</field>
+    </record>
+</odoo>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2018 LasLabs Inc.
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html) -->
+
+<odoo noupdate="1">
+    <record id="ir_sequence_medical_diagnostic_report_name" model="ir.sequence">
+        <field name="code">medical.diagnostic.report</field>
+        <field name="name">Diagnostic Report - IDs</field>
+        <field name="padding">6</field>
+        <field name="prefix">DP</field>
+    </record>
+
+    <record id="ir_sequence_medical_diagnostic_request_name" model="ir.sequence">
+        <field name="code">medical.diagnostic.request</field>
+        <field name="name">Diagnostic Request - IDs</field>
+        <field name="padding">6</field>
+        <field name="prefix">DQ</field>
+    </record>
+</odoo>

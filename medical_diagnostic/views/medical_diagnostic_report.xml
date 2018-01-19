@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2016-2018 LasLabs Inc.
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html) -->
+
+<odoo>
+    <record id="medical_diagnostic_report_view_form" model="ir.ui.view">
+        <field name="name">Diagnostic Report - Form View</field>
+        <field name="model">medical.diagnostic.report</field>
+        <field name="arch" type="xml">
+            <form string="Diagnostic Report">
+                <header/>
+                <sheet>
+                    <group name="meta">
+                        <group name="general">
+                            <field name="name"/>
+                            <field name="category_id"/>
+                            <field name="date_analysis"/>
+                            <field name="date_report"/>
+                        </group>
+                        <group name="related_entities">
+                            <field name="request_id"/>
+                            <field name="patient_id"/>
+                            <field name="performer_id"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Results" name="page_results">
+                            <group>
+                                <field name="result_ids" nolabel="1" context="{'default_report_id': id}">
+                                    <tree>
+                                        <field name="criterion_id"/>
+                                        <field name="result_expect"/>
+                                        <field name="uom_id"/>
+                                        <field name="result_actual"/>
+                                        <field name="category_id"/>
+                                        <field name="report_category_id"/>
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+                        <page string="Diagnoses" name="page_diagnoses">
+                            <group>
+                                <field name="diagnosis_ids" nolabel="1">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="code"/>
+                                        <field name="category_id"/>
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+                        <page string="Notes" name="page_notes">
+                            <group>
+                                <field name="notes" nolabel="1"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="medical_diagnostic_report_view_tree" model="ir.ui.view">
+        <field name="name">Diagnostic Report - List View</field>
+        <field name="model">medical.diagnostic.report</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="category_id"/>
+                <field name="patient_id"/>
+                <field name="performer_id"/>
+                <field name="date_analysis"/>
+                <field name="date_report"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="medical_diagnostic_report_view_search" model="ir.ui.view">
+        <field name="name">Diagnostic Report - Search View</field>
+        <field name="model">medical.diagnostic.report</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="category_id"/>
+                <field name="patient_id"/>
+                <field name="performer_id"/>
+                <filter string="Drafts" domain="[('state', '=', 'draft')]"/>
+                <filter string="Completed Reports" domain="[('state', '=', 'done')]"/>
+                <filter string="Analysis Date" domain="[]" context="{'group_by': 'date_analysis'}"/>
+                <filter string="Report Date" domain="[]" context="{'group_by': 'date_report'}"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="medical_diagnostic_report_action" model="ir.actions.act_window">
+        <field name="name">Diagnostic Reports</field>
+        <field name="res_model">medical.diagnostic.report</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="medical_diagnostic_report_menu" name="Reports"
+        parent="medical_diagnostic_menu" sequence="20" 
+        action="medical_diagnostic_report_action"/>
+</odoo>

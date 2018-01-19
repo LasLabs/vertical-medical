@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2016-2018 LasLabs Inc.
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html) -->
+
+<odoo>
+    <record id="medical_diagnostic_criterion_view_form" model="ir.ui.view">
+        <field name="name">Diagnostic Criterion - Form View</field>
+        <field name="model">medical.diagnostic.criterion</field>
+        <field name="arch" type="xml">
+            <form string="Diagnostic Criterion">
+                <sheet>
+                    <div class="oe_title oe_left" name="title">
+                        <h1>
+                            <field name="name" placeholder="Name"/>
+                        </h1>
+                    </div>
+                    <div class="oe_button_box" name="buttons">
+                        <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                            <field name="active" widget="boolean_button" options="{'terminology': 'archive'}"/>
+                        </button>
+                    </div>
+                    <group name="data">
+                        <field name="category_id"/>
+                        <field name="result_expect"/>
+                        <field name="uom_id"/>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="medical_diagnostic_criterion_view_tree" model="ir.ui.view">
+        <field name="name">Diagnostic Criterion - List View</field>
+        <field name="model">medical.diagnostic.criterion</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="result_expect"/>
+                <field name="uom_id"/>
+                <field name="category_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="medical_diagnostic_criterion_view_search" model="ir.ui.view">
+        <field name="name">Diagnostic Criterion - Search View</field>
+        <field name="model">medical.diagnostic.criterion</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="uom_id"/>
+                <field name="category_id"/>
+                <filter string="Inactive" domain="[('active', '=', False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="medical_diagnostic_criterion_action" model="ir.actions.act_window">
+        <field name="name">Diagnostic Criteria</field>
+        <field name="res_model">medical.diagnostic.criterion</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="medical_diagnostic_criterion_menu" name="Criteria"
+        parent="medical_diagnostic_menu" sequence="30" 
+        action="medical_diagnostic_criterion_action"/>
+</odoo>

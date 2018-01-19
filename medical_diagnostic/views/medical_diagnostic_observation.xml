@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2016-2017 LasLabs Inc.
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html) -->
+
+<odoo>
+    <record id="medical_diagnostic_observation_view_form" model="ir.ui.view">
+        <field name="name">Diagnostic Observation - Form View</field>
+        <field name="model">medical.diagnostic.observation</field>
+        <field name="arch" type="xml">
+            <form string="Diagnostic Observation">
+                <sheet>
+                    <group name="data">
+                        <field name="criterion_id"/>
+                        <field name="category_id"/>
+                        <field name="result_expect"/>
+                        <field name="uom_id"/>
+                        <field name="result_actual"/>
+                        <field name="notes"/>
+                        <field name="report_id" invisible="1"/>
+                        <field name="report_category_id" invisible="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

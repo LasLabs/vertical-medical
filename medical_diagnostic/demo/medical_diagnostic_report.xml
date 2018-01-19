@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2018 LasLabs Inc.
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+
+<odoo>
+    <record id="medical_diagnostic_report_1_demo" model="medical.diagnostic.report">
+        <field name="request_id" ref="medical_diagnostic.medical_diagnostic_request_1_demo"/>
+    </record>
+</odoo>

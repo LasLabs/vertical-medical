@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2016-2018 LasLabs Inc.
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html) -->
+
+<odoo>
+    <record id="medical_patient_view_form" model="ir.ui.view">
+        <field name="name">Medical Patient - Diagnostic Buttons</field>
+        <field name="model">medical.patient</field>
+        <field name="inherit_id" ref="medical.medical_patient_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='group_medical_buttons']">
+                <button name="medical_diagnostic.medical_diagnostic_request_action" type="action" class="oe_stat_button"
+                        icon="fa-list" context="{'search_default_patient_id': active_id}">
+                    <field name="diagnostic_request_count" widget="statinfo" string="Requests"/>
+                </button>
+                <button name="medical_diagnostic.medical_diagnostic_report_action" type="action" class="oe_stat_button"
+                        icon="fa-list" context="{'search_default_patient_id': active_id}">
+                    <field name="diagnostic_report_count" widget="statinfo" string="Reports"/>
+                </button>
+            </xpath>
+        </field>
+    </record>
+</odoo>

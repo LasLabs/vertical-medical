@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2018 LasLabs Inc.
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+
+<odoo>
+    <record id="medical_patient_1_demo" model="medical.patient">
+        <field name="name">Medical Diagnostic - Demo Patient</field>
+    </record>
+
+    <record id="medical_patient_2_demo" model="medical.patient">
+        <field name="name">Medical Diagnostic - Demo Patient 2</field>
+    </record>
+</odoo>

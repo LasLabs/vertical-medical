@@ -1,0 +1,16 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+ir_model_access_diagnostic_category_user,Medical Diagnostic Category - User Access,model_medical_diagnostic_category,medical.group_medical_user,1,0,0,0
+ir_model_access_diagnostic_category_assistant,Medical Diagnostic Category - Assistant Access,model_medical_diagnostic_category,medical.group_medical_assistant,1,1,1,0
+ir_model_access_diagnostic_category_doctor,Medical Diagnostic Category - Doctor Access,model_medical_diagnostic_category,medical.group_medical_doctor,1,1,1,0
+ir_model_access_diagnostic_criterion_user,Medical Diagnostic Criterion - User Access,model_medical_diagnostic_criterion,medical.group_medical_user,1,0,0,0
+ir_model_access_diagnostic_criterion_assistant,Medical Diagnostic Criterion - Assistant Access,model_medical_diagnostic_criterion,medical.group_medical_assistant,1,1,1,0
+ir_model_access_diagnostic_criterion_doctor,Medical Diagnostic Criterion - Doctor Access,model_medical_diagnostic_criterion,medical.group_medical_doctor,1,1,1,0
+ir_model_access_diagnostic_observation_user,Medical Diagnostic Observation - User Access,model_medical_diagnostic_observation,medical.group_medical_user,1,0,0,0
+ir_model_access_diagnostic_observation_assistant,Medical Diagnostic Observation - Assistant Access,model_medical_diagnostic_observation,medical.group_medical_assistant,1,1,1,0
+ir_model_access_diagnostic_observation_doctor,Medical Diagnostic Observation - Doctor Access,model_medical_diagnostic_observation,medical.group_medical_doctor,1,1,1,0
+ir_model_access_diagnostic_report_user,Medical Diagnostic Report - User Access,model_medical_diagnostic_report,medical.group_medical_user,1,0,0,0
+ir_model_access_diagnostic_report_assistant,Medical Diagnostic Report - Assistant Access,model_medical_diagnostic_report,medical.group_medical_assistant,1,1,1,0
+ir_model_access_diagnostic_report_doctor,Medical Diagnostic Report - Doctor Access,model_medical_diagnostic_report,medical.group_medical_doctor,1,1,1,0
+ir_model_access_diagnostic_request_user,Medical Diagnostic Request - User Access,model_medical_diagnostic_request,medical.group_medical_user,1,0,0,0
+ir_model_access_diagnostic_request_assistant,Medical Diagnostic Request - Assistant Access,model_medical_diagnostic_request,medical.group_medical_assistant,1,1,1,0
+ir_model_access_diagnostic_request_doctor,Medical Diagnostic Request - Doctor Access,model_medical_diagnostic_request,medical.group_medical_doctor,1,1,1,0

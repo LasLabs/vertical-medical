@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2016-2018 LasLabs Inc.
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html) -->
+
+<odoo>
+    <record id="medical_diagnostic_request_view_form" model="ir.ui.view">
+        <field name="name">Diagnostic Request - Form View</field>
+        <field name="model">medical.diagnostic.request</field>
+        <field name="arch" type="xml">
+            <form string="Diagnostic Request">
+                <header/>
+                <sheet>
+                    <group name="meta">
+                        <group name="general">
+                            <field name="name"/>
+                            <field name="category_id"/>
+                            <field name="date_request"/>
+                        </group>
+                        <group name="related_entities">
+                            <field name="patient_id"/>
+                            <field name="requester_id"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Procedures" name="page_procedures">
+                            <group>
+                                <field name="procedure_ids" nolabel="1"/>
+                            </group>
+                        </page>
+                        <page string="Notes" name="page_notes">
+                            <group>
+                                <field name="notes" nolabel="1"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="medical_diagnostic_request_view_tree" model="ir.ui.view">
+        <field name="name">Diagnostic Request - List View</field>
+        <field name="model">medical.diagnostic.request</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="category_id"/>
+                <field name="patient_id"/>
+                <field name="requester_id"/>
+                <field name="date_request"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="medical_diagnostic_request_view_search" model="ir.ui.view">
+        <field name="name">Diagnostic Request - Search View</field>
+        <field name="model">medical.diagnostic.request</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="category_id"/>
+                <field name="patient_id"/>
+                <field name="requester_id"/>
+                <filter string="Drafts" domain="[('state', '=', 'draft')]"/>
+                <filter string="Active Requests" domain="[('state', '=', 'active')]"/>
+                <filter string="Completed Requests" domain="[('state', '=', 'done')]"/>
+                <filter string="Cancelled Requests" domain="[('state', '=', 'cancel')]"/>
+                <filter string="Request Date" domain="[]" context="{'group_by': 'date_request'}"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="medical_diagnostic_request_action" model="ir.actions.act_window">
+        <field name="name">Diagnostic Requests</field>
+        <field name="res_model">medical.diagnostic.request</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="medical_diagnostic_request_menu" name="Requests"
+        parent="medical_diagnostic_menu" sequence="10" 
+        action="medical_diagnostic_request_action"/>
+</odoo>
