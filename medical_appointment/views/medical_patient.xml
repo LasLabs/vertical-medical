@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 Mauro Estrella
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+     
+<odoo>
+
+    <record id="medical_patient_view_form" model="ir.ui.view">
+        <field name="name">medical.patient.inherent</field>
+        <field name="model">medical.patient</field>
+        <field name="inherit_id" ref="medical.medical_patient_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='group_medical_buttons']" position="inside">
+                <button
+                    name="medical_appointment.medical_appointment_action"
+                    type="action" class="oe_stat_button" icon="fa-calendar"
+                    context="{'search_default_patient_id': active_id}">
+                    <field name="count_appointment_ids"
+                       widget="statinfo" string="Appointments"/>
+                </button>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

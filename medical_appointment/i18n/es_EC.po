@@ -1,0 +1,490 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* medical_appointment
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-04 12:46+0000\n"
+"PO-Revision-Date: 2017-12-04 07:50-0500\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: en\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: medical_appointment
+#: model:mail.template,body_html:medical_appointment.email_template_appointment_confirmation
+msgid ""
+"\n"
+"            <div class=\"content-wrapper\" style=\"max-width:650px;\">\n"
+"                <div class=\"col-sm-12 highlight\">\n"
+"                    <p> <b>Dear ${object.patient_id.name}</b> </p>\n"
+"                    <p>The following appointment has been created successfully</p>\n"
+"                    <div class=\"row\"></div>\n"
+"\n"
+"                    <div class=\"col-sm-8 highlight\">\n"
+"                        <p>Doctor....: <b>${object.physician_id.name}</b></p>\n"
+"                        <p>Date.....: <b>${ctx.get('appointment_date') or object.appointment_date[:10]}</b><img class=\"img-responsive\" style=\"float:right;\" src=\"http://agendese.com/website/static/src/img/Agendese/Banners/calendar.png\"></p>\n"
+"                        <p>Time......: <b>${ctx.get('appointment_time') or object.appointment_date[11:]}</b></p>\n"
+"                        <p>Clinic...: <b>${object.institution_id.name}</b></p>\n"
+"                        <p>Phone..: <b>${object.institution_id.phone}</b></p>\n"
+"                        <p>Address.: <b>${object.institution_id.street} ${object.institution_id.street2}</b></p>\n"
+"                    </div>\n"
+"                </div>\n"
+"            </div>\n"
+"        "
+msgstr ""
+"\n"
+"            <div class=\"content-wrapper\" style=\"max-width:650px;\">\n"
+"                <div class=\"col-sm-12 highlight\">\n"
+"                    <p> <b>Dear ${object.patient_id.name}</b> </p>\n"
+"                    <p>The following appointment has been created successfully</p>\n"
+"                    <div class=\"row\"></div>\n"
+"\n"
+"                    <div class=\"col-sm-8 highlight\">\n"
+"                        <p>Doctor....: <b>${object.physician_id.name}</b></p>\n"
+"                        <p>Date.....: <b>${ctx.get('appointment_date') or object.appointment_date[:10]}</b><img class=\"img-responsive\" style=\"float:right;\" src=\"http://agendese.com/website/static/src/img/Agendese/Banners/calendar.png\"></p>\n"
+"                        <p>Time......: <b>${ctx.get('appointment_time') or object.appointment_date[11:]}</b></p>\n"
+"                        <p>Clinic...: <b>${object.institution_id.name}</b></p>\n"
+"                        <p>Phone..: <b>${object.institution_id.phone}</b></p>\n"
+"                        <p>Address.: <b>${object.institution_id.street} ${object.institution_id.street2}</b></p>\n"
+"                    </div>\n"
+"                </div>\n"
+"            </div>\n"
+"        "
+
+#. module: medical_appointment
+#: model:mail.template,body_html:medical_appointment.sms_template_appointment_confirmation
+msgid ""
+"\n"
+"<p>Your appointment with Dr. ${object.physician_id.lastname} on ${ctx.get('appointment_date') or object.appointment_date[:10]} ${ctx.get('appointment_time') or object.appointment_date[11:]} has been confirmed.</p>\n"
+"        "
+msgstr ""
+"\n"
+"<p>Your appointment with Dr. ${object.physician_id.lastname} on ${ctx.get('appointment_date') or object.appointment_date[:10]} ${ctx.get('appointment_time') or object.appointment_date[11:]} has been confirmed.</p>\n"
+"        "
+
+#. module: medical_appointment
+#: model:ir.ui.menu,name:medical_appointment.medical_appointment
+msgid " Appointments"
+msgstr "Citas"
+
+#. module: medical_appointment
+#: model:mail.template,subject:medical_appointment.sms_template_appointment_confirmation
+msgid "${object.institution_id.name}  -  Confirmación de Cita"
+msgstr "${object.institution_id.name}  -  Confirmación de Cita"
+
+#. module: medical_appointment
+#: model:mail.template,subject:medical_appointment.email_template_appointment_confirmation
+msgid "${object.institution_id.name} <${(object.institution_id.email or user.email)|safe}> - Appointment Confirmation"
+msgstr "${object.institution_id.name} <${(object.institution_id.email or user.email)|safe}> - Appointment Confirmation"
+
+#. module: medical_appointment
+#: model:ir.ui.view,arch_db:medical_appointment.medical_appointment_view_kanban
+msgid ""
+"<strong>\n"
+"                                                Patient:\n"
+"                                            </strong>"
+msgstr ""
+"<strong>\n"
+"                                                Patient:\n"
+"                                            </strong>"
+
+#. module: medical_appointment
+#: model:ir.ui.view,arch_db:medical_appointment.medical_appointment_view_kanban
+msgid ""
+"<strong>\n"
+"                                                Physician:\n"
+"                                            </strong>"
+msgstr ""
+"<strong>\n"
+"                                                Physician:\n"
+"                                            </strong>"
+
+#. module: medical_appointment
+#: model:ir.ui.view,arch_db:medical_appointment.medical_appointment_view_kanban
+msgid "<strong>Duration:</strong>"
+msgstr "<strong>Duration:</strong>"
+
+#. module: medical_appointment
+#: code:addons/medical_appointment/models/medical_appointment.py:37
+#, python-format
+msgid "AP001"
+msgstr "AP001"
+
+#. module: medical_appointment
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_alias
+msgid "Alias"
+msgstr "Alias"
+
+#. module: medical_appointment
+#: model:ir.model.fields,help:medical_appointment.field_medical_appointment_alias
+msgid "Alias for appointment"
+msgstr "Alias ​​para la cita"
+
+#. module: medical_appointment
+#: selection:medical.appointment,appointment_type:0
+msgid "Ambulatory"
+msgstr "Ambulatorio"
+
+#. module: medical_appointment
+#: model:ir.ui.menu,name:medical_appointment.medical_appointment_root
+#: model:ir.ui.view,arch_db:medical_appointment.medical_appointment_view_form
+msgid "Appointment"
+msgstr "Cita"
+
+#. module: medical_appointment
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_name
+#: model:ir.ui.view,arch_db:medical_appointment.medical_appointment_view_search
+msgid "Appointment ID"
+msgstr "Cita ID"
+
+#. module: medical_appointment
+#: model:ir.actions.act_window,name:medical_appointment.medical_appointment_action
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_patient_appointment_ids
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_patient_count_appointment_ids
+#: model:ir.ui.view,arch_db:medical_appointment.medical_patient_view_form
+msgid "Appointments"
+msgstr "Citas"
+
+#. module: medical_appointment
+#: model:medical.appointment.stage,name:medical_appointment.stage_appointment_cancelled
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: medical_appointment
+#: model:ir.model.fields,help:medical_appointment.field_medical_appointment_force_schedule
+msgid "Check this to ignore any double bookings and schedule anyways"
+msgstr "Marque esto para ignorar cualquier reserva doble y programar de todos modos"
+
+#. module: medical_appointment
+#: model:medical.appointment.stage,name:medical_appointment.stage_appointment_confirm
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: medical_appointment
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_consultation_id
+#: model:ir.ui.view,arch_db:medical_appointment.medical_appointment_view_search
+msgid "Consultation Services"
+msgstr "Servicios de Consulta"
+
+#. module: medical_appointment
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_create_uid
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_stage_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: medical_appointment
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_create_date
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_stage_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: medical_appointment
+#: model:ir.model.fields,help:medical_appointment.field_medical_appointment_stage_id
+msgid "Current appointment stage"
+msgstr "Etapa de la cita actual"
+
+#. module: medical_appointment
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_appointment_date
+#: model:ir.ui.view,arch_db:medical_appointment.medical_appointment_view_search
+msgid "Date and Time"
+msgstr "Fecha y hora"
+
+#. module: medical_appointment
+#: model:ir.model.fields,help:medical_appointment.field_medical_appointment_appointment_date
+msgid "Date and Time of Scheduled Appointment"
+msgstr "Fecha y hora de la cita programada"
+
+#. module: medical_appointment
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_stage_is_default
+msgid "Default?"
+msgstr "Defecto?"
+
+#. module: medical_appointment
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_display_name
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_stage_display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: medical_appointment
+#: model:medical.appointment.stage,name:medical_appointment.stage_appointment_done
+msgid "Done"
+msgstr "Realizado"
+
+#. module: medical_appointment
+#: model:medical.appointment.stage,name:medical_appointment.stage_appointment_new
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: medical_appointment
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_duration
+msgid "Duration"
+msgstr "Duración"
+
+#. module: medical_appointment
+#: model:ir.model.fields,help:medical_appointment.field_medical_appointment_duration
+msgid "Duration of appointment"
+msgstr "Duración de cita"
+
+#. module: medical_appointment
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_appointment_end_date
+msgid "End Date and Time"
+msgstr "Fin de Fecha y hora"
+
+#. module: medical_appointment
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_stage_fold
+msgid "Folded in KanBan view"
+msgstr "Plegado en la vista KanBan"
+
+#. module: medical_appointment
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_force_schedule
+msgid "Force schedule"
+msgstr "Forzar programación"
+
+#. module: medical_appointment
+#: model:ir.ui.view,arch_db:medical_appointment.medical_appointment_view_search
+msgid "Group By..."
+msgstr "Agrupar por..."
+
+#. module: medical_appointment
+#: model:ir.ui.view,arch_db:medical_appointment.medical_appointment_view_search
+msgid "Health Center"
+msgstr "Centros Médicos"
+
+#. module: medical_appointment
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_id
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_stage_id_4938
+msgid "ID"
+msgstr "ID (identificación)"
+
+#. module: medical_appointment
+#: model:ir.model.fields,help:medical_appointment.field_medical_appointment_stage_is_default
+msgid "If checked, this stage will be selected when creating new appointments."
+msgstr "Si está marcada, esta etapa se seleccionará al crear nuevas citas."
+
+#. module: medical_appointment
+#: model:medical.appointment.stage,name:medical_appointment.stage_appointment_in_consultation
+msgid "In Consultation"
+msgstr "En Consulta"
+
+#. module: medical_appointment
+#: selection:medical.appointment,appointment_type:0
+msgid "Inpatient"
+msgstr "Paciente interno"
+
+#. module: medical_appointment
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment___last_update
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_stage___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: medical_appointment
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_stage_write_uid
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización de"
+
+#. module: medical_appointment
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_stage_write_date
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: medical_appointment
+#: model:ir.ui.view,arch_db:medical_appointment.medical_appointment_view_form
+msgid "Main"
+msgstr "Main"
+
+#. module: medical_appointment
+#: model:ir.ui.view,arch_db:medical_appointment.medical_appointment_view_form
+#: model:ir.ui.view,arch_db:medical_appointment.medical_appointment_view_search
+msgid "Medical Appointment"
+msgstr "Cita"
+
+#. module: medical_appointment
+#: model:ir.model,name:medical_appointment.model_medical_appointment
+#: model:ir.ui.view,arch_db:medical_appointment.medical_appointment_view_calendar
+#: model:ir.ui.view,arch_db:medical_appointment.medical_appointment_view_tree
+msgid "Medical Appointments"
+msgstr "Citas"
+
+#. module: medical_appointment
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_institution_id
+msgid "Medical Center"
+msgstr "Centro Médico"
+
+#. module: medical_appointment
+#: selection:medical.appointment,urgency:0
+msgid "Medical Emergency"
+msgstr "Emergencia médica"
+
+#. module: medical_appointment
+#: model:ir.model,name:medical_appointment.model_medical_patient
+msgid "Medical Patient"
+msgstr "Paciente"
+
+#. module: medical_appointment
+#: model:ir.model.fields,help:medical_appointment.field_medical_appointment_specialty_id
+msgid "Medical Specialty / Sector"
+msgstr "Médico Especialista"
+
+#. module: medical_appointment
+#: model:ir.model.fields,help:medical_appointment.field_medical_appointment_institution_id
+msgid "Medical center that appointment is located at"
+msgstr "Centro médico donde se encuentra la cita"
+
+#. module: medical_appointment
+#: code:addons/medical_appointment/models/medical_appointment.py:300
+#, python-format
+msgid "No default stage defined for review"
+msgstr "No se definió etapa predeterminada para la revisión"
+
+#. module: medical_appointment
+#: selection:medical.appointment,urgency:0
+msgid "Normal"
+msgstr "Normal"
+
+#. module: medical_appointment
+#: model:ir.ui.view,arch_db:medical_appointment.medical_appointment_view_form
+msgid "Notes and Messages"
+msgstr "Notas y Mensajes"
+
+#. module: medical_appointment
+#: selection:medical.appointment,appointment_type:0
+msgid "Outpatient"
+msgstr "Paciente externo"
+
+#. module: medical_appointment
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_patient_id
+#: model:ir.ui.view,arch_db:medical_appointment.medical_appointment_view_search
+msgid "Patient"
+msgstr "Paciente"
+
+#. module: medical_appointment
+#: model:ir.model.fields,help:medical_appointment.field_medical_appointment_patient_id
+msgid "Patient Name"
+msgstr "Paciente"
+
+#. module: medical_appointment
+#: model:medical.appointment.stage,name:medical_appointment.stage_appointment_in_review
+msgid "Pending Review"
+msgstr "Revisión pendiente"
+
+#. module: medical_appointment
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_physician_id
+#: model:ir.ui.view,arch_db:medical_appointment.medical_appointment_view_search
+msgid "Physician"
+msgstr "Médico"
+
+#. module: medical_appointment
+#: code:addons/medical_appointment/models/medical_appointment.py:200
+#, python-format
+msgid "Physician is in an appointment during the selected time. Select `Force Schedule` if you would like to schedule anyways."
+msgstr "El médico está en una cita durante el tiempo seleccionado. Seleccione Forzar Calendario si desea programar de todos modos."
+
+#. module: medical_appointment
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_stage_requirements
+msgid "Requirements"
+msgstr "Requisitos"
+
+#. module: medical_appointment
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_user_id
+msgid "Responsible"
+msgstr "Responsable"
+
+#. module: medical_appointment
+#: model:ir.model.fields,help:medical_appointment.field_medical_appointment_physician_id
+msgid "Scheduled Physician"
+msgstr "Médico programado"
+
+#. module: medical_appointment
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_stage_sequence
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: medical_appointment
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_specialty_id
+#: model:ir.ui.view,arch_db:medical_appointment.medical_appointment_view_search
+msgid "Specialty"
+msgstr "Especialidad"
+
+#. module: medical_appointment
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_stage_id
+msgid "Stage"
+msgstr "Etapa"
+
+#. module: medical_appointment
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_stage_name
+msgid "Stage Name"
+msgstr "Nombre de etapa"
+
+#. module: medical_appointment
+#: model:ir.model,name:medical_appointment.model_medical_appointment_stage
+msgid "Stage of Appointment"
+msgstr "Etapa de cita"
+
+#. module: medical_appointment
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_date_end
+msgid "Stop Displaying On"
+msgstr "Dejar de mostrar"
+
+#. module: medical_appointment
+#: model:ir.model.fields,help:medical_appointment.field_medical_appointment_stage_fold
+msgid "This stage is folded in the KanBan view when there are no records in that stage to display."
+msgstr "Esta etapa se pliega en la vista KanBan cuando no hay registros en esa etapa para mostrar."
+
+#. module: medical_appointment
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_appointment_type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: medical_appointment
+#: model:ir.model.fields,help:medical_appointment.field_medical_appointment_appointment_type
+msgid "Type of appointment"
+msgstr "Tipo de cita"
+
+#. module: medical_appointment
+#: model:medical.appointment.stage,name:medical_appointment.stage_unavailable
+msgid "Unavailable"
+msgstr "Indisponible"
+
+#. module: medical_appointment
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_urgency
+msgid "Urgency Level"
+msgstr "Nivel de Urgencia"
+
+#. module: medical_appointment
+#: model:ir.model.fields,help:medical_appointment.field_medical_appointment_urgency
+msgid "Urgency level of this appointment"
+msgstr "NIvel de urgencia de esta cita"
+
+#. module: medical_appointment
+#: selection:medical.appointment,urgency:0
+msgid "Urgent"
+msgstr "Urgente"
+
+#. module: medical_appointment
+#: model:ir.model.fields,help:medical_appointment.field_medical_appointment_stage_sequence
+msgid "Used to order stages. Lower is better."
+msgstr "Usado para ordenar etapas. Más bajo es mejor."
+
+#. module: medical_appointment
+#: model:ir.model.fields,help:medical_appointment.field_medical_appointment_user_id
+msgid "User that created appointment"
+msgstr "Usuario que creó una cita"
+
+#. module: medical_appointment
+#: model:medical.appointment.stage,name:medical_appointment.stage_appointment_waiting
+msgid "Waiting"
+msgstr "Esperando"
+
+#. module: medical_appointment
+#: model:ir.model.fields,help:medical_appointment.field_medical_appointment_date_end
+msgid "When to stop displaying appointment"
+msgstr "Cuándo dejar de mostrar la cita"

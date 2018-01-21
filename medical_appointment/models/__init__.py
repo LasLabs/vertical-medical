@@ -4,3 +4,4 @@
 
 from . import medical_appointment
 from . import medical_appointment_stage
+from . import medical_patient

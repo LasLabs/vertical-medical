@@ -61,7 +61,7 @@
                                     <field name="specialty_id" />
                                 </group>
                                 <group name="appointment_data">
-                                    <field name="consultation_ids" />
+                                    <field name="consultation_id" />
                                     <field name="appointment_date" />
                                     <field name="duration" widget="float_time" />
                                 </group>
@@ -86,8 +86,9 @@
             <calendar string="Medical Appointments"
                       color="physician_id"
                       date_start="appointment_date"
-                      date_stop="date_end"
+                      date_stop="appointment_end_date"
                       mode="week">
+                <field name="name" />
                 <field name="patient_id" />
                 <field name="physician_id" />
                 <field name="duration" />
@@ -106,14 +107,14 @@
                 <field name="appointment_date" />
                 <field name="appointment_type" />
                 <field name="urgency" />
-                <field name="consultation_ids" />
+                <field name="consultation_id" />
                 <field name="institution_id" />
                 <field name="specialty_id" />
                 <newline />
                 <group expand="0" string="Group By...">
                     <filter string="Consultation Services"
                             domain="[]"
-                            context="{'group_by':'consultation_ids'}" />
+                            context="{'group_by':'consultation_id'}" />
                     <filter string="Patient"
                             domain="[]"
                             context="{'group_by':'patient_id'}" />
