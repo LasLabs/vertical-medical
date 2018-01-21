@@ -35,9 +35,11 @@
                 <h3>
                     <field name="parent_id"
                            placeholder="Medical Center"
-                           domain="[('type', '=', 'medical.center')]"
-                           context="{'default_type': 'medical.center'}"
+                           domain="[('is_company', '=', True)]"
+                           context="{'default_is_company': True}"
                            />
+                           <!-- domain="[('type', '=', 'medical.center')]"
+                           context="{'default_type': 'medical.center'}" -->
                     <field name="specialty_id"/>
                 </h3>
             </xpath>
@@ -46,7 +48,7 @@
                 <field name="info"/>
             </xpath>
             <xpath expr="//group[@name='main_data']/group[@name='right']" position="inside">
-                <field name="gender" />
+                <!-- <field name="gender" /> -->
                 <field name="employee" />
             </xpath>
             <xpath expr="//img[@name='kanban_image_default_person']" position="replace">
