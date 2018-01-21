@@ -100,7 +100,6 @@ class MedicalAppointment(models.Model):
     consultation_id = fields.Many2one(
         string='Consultation Services', 
         comodel_name='product.product', 
-        # required=True, 
         ondelete="cascade", 
         domain="[('type', '=', 'service')]"
     )
