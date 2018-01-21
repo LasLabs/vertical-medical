@@ -1,0 +1,1377 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* medical_physician
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-04 13:22+0000\n"
+"PO-Revision-Date: 2017-12-04 08:26-0500\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_product_variant_count
+msgid "# Product Variants"
+msgstr "# Variantes de producto"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_sales_count
+msgid "# Sales"
+msgstr "# Ventas"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_sale_order_count
+msgid "# of Sales Order"
+msgstr "# de Ordenes de Ventas"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_description_sale
+msgid "A description of the Product that you want to communicate to your customers. This description will be copied to every Sale Order, Delivery Order and Customer Invoice/Refund"
+msgstr "Una descripción del Producto que desea comunicar a sus clientes. Esta descripción se copiará en cada orden de venta, orden de entrega y factura / reembolso del cliente"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_description_purchase
+msgid "A description of the Product that you want to communicate to your vendors. This description will be copied to every Purchase Order, Receipt and Vendor Bill/Refund."
+msgstr "Una descripción del producto que desea comunicar a sus proveedores. Esta descripción se copiará en cada Pedido de Compra, Recibo y Factura / Reembolso del Vendedor."
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_description
+msgid "A precise description of the Product, used only for internal information purposes."
+msgstr "Una descripción precisa del producto, utilizada sólo con fines de información interna."
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_type
+msgid ""
+"A stockable product is a product for which you manage stock. The \"Inventory\" app has to be installed.\n"
+"A consumable product, on the other hand, is a product for which stock is not managed.\n"
+"A service is a non-material product you provide.\n"
+"A digital content is a non-material product you sell online. The files attached to the products are the one that are sold on the e-commerce such as e-books, music, pictures,... The \"Digital Product\" module has to be installed."
+msgstr ""
+"Un producto almacenable es un producto para el que gestiona el stock. La aplicación \"Inventario\" tiene que ser instalada.\n"
+"Por el contrario, un producto consumible es un producto para el que no se gestiona el stock.\n"
+"Un servicio es un producto no material que usted proporciona.\n"
+"Un contenido digital es un producto no material que vende en línea. Los archivos adjuntos a los productos son los que se venden en el comercio electrónico, tales como libros electrónicos, música, fotos, ... El módulo \"Producto Digital\" tiene que ser instalado."
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_property_account_payable_id
+msgid "Account Payable"
+msgstr "Cuenta a pagar"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_property_account_receivable_id
+msgid "Account Receivable"
+msgstr "Cuenta a cobrar"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_message_needaction
+msgid "Action Needed"
+msgstr "Necesaria acción"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_active
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_active
+msgid "Active"
+msgstr "Activo"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_alias
+msgid "Alias"
+msgstr "Alias"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_attribute_value_ids
+msgid "Attributes"
+msgstr "Atributos"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_bank_account_count
+msgid "Bank"
+msgstr "Banco"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_bank_ids
+msgid "Banks"
+msgstr "Bancos"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_barcode
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_barcode
+msgid "Barcode"
+msgstr "Codigo de Barras"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_list_price
+msgid "Base price to compute the customer price. Sometimes called the catalog price."
+msgstr "Precio base para calcular el precio del cliente. A veces llamado el precio de catálogo."
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_image
+msgid "Big-sized image"
+msgstr "Imagen de gran tamaño"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_birthdate_date
+msgid "Birthdate"
+msgstr "Fecha de nacimiento"
+
+#. module: medical_physician
+#: model:ir.actions.act_window,name:medical_physician.medical_physician_unavailable_wizard_act
+msgid "Block Off Schedule"
+msgstr "Bloquear horario"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_message_bounce
+msgid "Bounce"
+msgstr "Rebote"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_purchase_ok
+msgid "Can be Purchased"
+msgstr "Se pueden comprar"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_rental
+msgid "Can be Rent"
+msgstr "Se puede alquilar"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_sale_ok
+msgid "Can be Sold"
+msgstr "Puede ser vendido"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_channel_ids
+msgid "Channels"
+msgstr "Canales"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_is_company
+msgid "Check if the contact is a company, otherwise it is a person"
+msgstr "Marque esta casilla si el contacto es una compañía. En caso contrario, será una persona"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_is_medicament
+msgid "Check if the product is a medicament"
+msgstr "Compruebe si el producto es un medicamento"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_is_vaccine
+msgid "Check if the product is a vaccine"
+msgstr "Compruebe si el producto es una vacuna"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_customer
+msgid "Check this box if this contact is a customer."
+msgstr "Marque esta casilla si el contacto es un cliente."
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_supplier
+msgid "Check this box if this contact is a vendor. If it's not checked, purchase people will not see it when encoding a purchase order."
+msgstr "Marque esta casilla si el contacto es un proveedor. Si no está marcada, el equipo de compras no lo verá cuando esté haciendo una orden de compra."
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_employee
+msgid "Check this box if this contact is an Employee."
+msgstr "Marque si el contacto es un empleado."
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_city
+msgid "City"
+msgstr "Ciudad"
+
+#. module: medical_physician
+#: model:ir.ui.view,arch_db:medical_physician.medical_specialty_view_search
+msgid "Code"
+msgstr "Código"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_color
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_color
+msgid "Color Index"
+msgstr "Color del Indice"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_commercial_partner_id
+msgid "Commercial Entity"
+msgstr "Entidad comercial"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_alias
+msgid "Common name that the Party is referred"
+msgstr "Nombre común al que se hace referencia"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_ref_company_ids
+msgid "Companies that refers to partner"
+msgstr "Compañías que se refieren a la empresa"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_company_id
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_company_name
+msgid "Company Name"
+msgstr "Nombre de la compañía"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_commercial_company_name
+msgid "Company Name Entity"
+msgstr "Entidad del nombre de la compañía"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_company_type
+msgid "Company Type"
+msgstr "Tipo de Compañía"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_contact_address
+msgid "Complete Address"
+msgstr "Dirección completa"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_child_ids
+msgid "Contacts"
+msgstr "Contactos"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_contract_ids
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_contracts_count
+msgid "Contracts"
+msgstr "Contratos"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_standard_price
+msgid "Cost"
+msgstr "Costo"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_standard_price
+msgid "Cost of the product template used for standard stock valuation in accounting and used as a base price on purchase orders. Expressed in the default unit of measure of the product."
+msgstr "Costo de la plantilla de producto utilizada para la valoración de stock estándar en contabilidad y utilizado como precio base en órdenes de compra. Expresado en la unidad de medida predeterminada del producto."
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_payment_token_count
+msgid "Count Payment Token"
+msgstr "Cuenta Token de Pago"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_count_patients
+msgid "Count patients"
+msgstr "Cuente a los pacientes"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_message_bounce
+msgid "Counter of the number of bounced emails for this contact"
+msgstr "Contador del número de correos electrónicos rebotados de este contacto"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_country_id
+msgid "Country"
+msgstr "País"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_create_uid
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_schedule_template_create_uid
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_create_uid
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_unavailable_wizard_create_uid
+#: model:ir.model.fields,field_description:medical_physician.field_medical_specialty_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_create_date
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_schedule_template_create_date
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_create_date
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_unavailable_wizard_create_date
+#: model:ir.model.fields,field_description:medical_physician.field_medical_specialty_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_credit_limit
+msgid "Credit Limit"
+msgstr "Crédito concedido"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_currency_id
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_property_payment_term_id
+msgid "Customer Payment Terms"
+msgstr "Plazo de pago de cliente"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_partner_ref
+msgid "Customer Ref"
+msgstr "Referencia Cliente"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_taxes_id
+msgid "Customer Taxes"
+msgstr "Impuestos cliente"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_message_last_post
+msgid "Date of the last message posted on the record."
+msgstr "Fecha del último mensaje publicado en el registro."
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_uom_id
+msgid "Default Unit of Measure used for all stock operation."
+msgstr "Unidad de medida por defecto utilizada para todas las operaciones de stock."
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_uom_po_id
+msgid "Default Unit of Measure used for purchase orders. It must be in the same category than the default unit of measure."
+msgstr "Unidad de medida predeterminada utilizada para órdenes de compra. Debe estar en la misma categoría que la unidad de medida predeterminada."
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_trust
+msgid "Degree of trust you have in this debtor"
+msgstr "Grado de confianza para este deudor"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_display_name
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_schedule_template_display_name
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_display_name
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_unavailable_wizard_display_name
+#: model:ir.model.fields,field_description:medical_physician.field_medical_specialty_display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_partner_share
+msgid "Either customer (no user), either shared user. Indicated the current partner is a customer without access or with a limited access created for sharing data."
+msgstr "Ya sea cliente (no usuario), como usuario compartido. Indica si el socio actual es un cliente sin acceso o con un acceso limitado creado para compartir datos."
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_email
+msgid "Email"
+msgstr "Email"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_notify_email
+msgid "Email Messages and Notifications"
+msgstr "Enviar mensajes y notificaciones"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_employee
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_unavailable_wizard_date_end
+msgid "End"
+msgstr "Fin"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_property_account_expense_id
+msgid "Expense Account"
+msgstr "Cuenta de gastos"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_info
+msgid "Extra Info"
+msgstr "Información extra"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_info
+#: model:ir.ui.view,arch_db:medical_physician.medical_physician_view_search
+msgid "Extra info"
+msgstr "Información extra"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_fax
+msgid "Fax"
+msgstr "Fax"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_property_account_position_id
+msgid "Fiscal Position"
+msgstr "Posición fiscal"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores (Canales)"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Empresas)"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_email_formatted
+msgid "Format email address \"Name <email@domain>\""
+msgstr "Formato email \"Nombre <email@domain>\""
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_email_formatted
+msgid "Formatted Email"
+msgstr "Email con formato"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_gender
+msgid "Gender"
+msgstr "Género"
+
+#. module: medical_physician
+#: model:medical.specialty,name:medical_physician.medical_specialty_gp
+msgid "General Practitioner"
+msgstr "Médico General"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_packaging_ids
+msgid "Gives the different ways to package the same product. This has no impact on the picking order and is mainly used if you use the EDI module."
+msgstr "Ofrece las diferentes formas de empaquetar el mismo producto. Esto no tiene impacto en el orden de picking y se utiliza principalmente si se utiliza el módulo EDI."
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_sequence
+msgid "Gives the sequence order when displaying a product list"
+msgstr "Proporciona el orden de secuencia al mostrar una lista de productos"
+
+#. module: medical_physician
+#: model:ir.ui.view,arch_db:medical_physician.medical_specialty_view_search
+msgid "Group By..."
+msgstr "Agrupar por..."
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_has_unreconciled_entries
+msgid "Has unreconciled entries"
+msgstr "Contiene entradas irreconciliadas"
+
+#. module: medical_physician
+#: model:ir.ui.menu,name:medical_physician.health_professionals_menu
+#: model:ir.ui.menu,name:medical_physician.health_professionals_menu_conf
+msgid "Health Professionals"
+msgstr "Profesionales"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_code
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_id
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_schedule_template_id
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_id
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_unavailable_wizard_id
+#: model:ir.model.fields,field_description:medical_physician.field_medical_specialty_code
+#: model:ir.model.fields,field_description:medical_physician.field_medical_specialty_id
+#: model:ir.ui.view,arch_db:medical_physician.medical_physician_view_search
+msgid "ID"
+msgstr "ID"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_im_status
+msgid "IM Status"
+msgstr "Estado IM"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_message_unread
+msgid "If checked new messages require your attention."
+msgstr "Si está marcado, hay nuevos mensajes que requieren su atención."
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si está marcado, hay nuevos mensajes que requieren su atención."
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_opt_out
+msgid "If opt-out is checked, this contact has refused to receive emails for mass mailing and marketing campaign. Filter 'Available for Mass Mailing' allows users to filter the partners when performing mass mailing."
+msgstr "Si 'No acepta mensajes' está marcado, este contacto ha rehusado recibir correos electrónicos de envíos masivos y campañas de marketing. El filtro 'Disponible para envíos masivos' permite a los usuarios filtrar a las empresas cuando se realicen envíos masivos."
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_team_id
+msgid "If set, sale team used notably for sales and assignations related to this partner"
+msgstr "Si habilitado, representa al equipo de ventas usado para ventas y asignaciones relacionado con este tercero"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_lang
+msgid "If the selected language is loaded in the system, all documents related to this contact will be printed in this language. If not, it will be English."
+msgstr "Si el idioma seleccionado está cargado en el sistema, todos los documentos relacionados con el contacto se imprimirán en este idioma. Si no, se imprimirán en inglés."
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_active
+msgid "If unchecked, it will allow you to hide the physician without removing it."
+msgstr "If unchecked, it will allow you to hide the physician without removing it."
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_active
+msgid "If unchecked, it will allow you to hide the product without removing it."
+msgstr "Si no está marcada, le permitirá ocultar el producto sin eliminarlo."
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_image
+msgid "Image"
+msgstr "Imagen"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_image
+msgid "Image of the product variant (Big-sized image of product template if false). It is automatically resized as a 1024x1024px image, with aspect ratio preserved."
+msgstr "Imagen de la variante del producto (Imagen grande de la plantilla de producto si es falsa). Se redimensiona automáticamente como una imagen de 1024x1024px, con la relación de aspecto preservada."
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_image_medium
+msgid "Image of the product variant (Medium-sized image of product template if false)."
+msgstr "Imagen de la variante del producto (Imagen de tamaño mediano de la plantilla de producto si es falsa)."
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_image_small
+msgid "Image of the product variant (Small-sized image of product template if false)."
+msgstr "Imagen de la variante del producto (imagen de tamaño pequeño de la plantilla de producto si es falsa)."
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_property_account_income_id
+msgid "Income Account"
+msgstr "Cuenta de Ingreso"
+
+#. module: medical_physician
+#: model:ir.ui.view,arch_db:medical_physician.medical_physician_view_search
+msgid "Institution"
+msgstr "Institutión"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_categ_id
+msgid "Internal Category"
+msgstr "Categoría interna"
+
+#. module: medical_physician
+#: model:ir.ui.view,arch_db:medical_physician.medical_physician_view_form
+msgid "Internal ID"
+msgstr "Internal ID"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_ref
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_code
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_default_code
+msgid "Internal Reference"
+msgstr "Referencia Interna"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_barcode
+msgid "International Article Number used for product identification."
+msgstr "Número de artículo internacional utilizado para la identificación del producto."
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_invoice_warn
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_invoice_ids
+msgid "Invoices"
+msgstr "Facturas"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_invoice_policy
+msgid "Invoicing Policy"
+msgstr "Política de Facturación"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_message_is_follower
+msgid "Is Follower"
+msgstr "Es un seguidor"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_is_company
+msgid "Is a Company"
+msgstr "Es una Empresa"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_customer
+msgid "Is a Customer"
+msgstr "Es un Cliente"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_supplier
+msgid "Is a Vendor"
+msgstr "Es un Proveedor"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_is_medicament
+msgid "Is medicament"
+msgstr "Es medicamento"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_function
+msgid "Job Position"
+msgstr "Puesto de trabajo"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_issued_total
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_journal_item_count
+msgid "Journal Items"
+msgstr "Líneas de los Asientos Contables"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_lang
+msgid "Language"
+msgstr "Idioma"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_message_last_post
+msgid "Last Message Date"
+msgstr "Fecha del último mensaje"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician___last_update
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_schedule_template___last_update
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service___last_update
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_unavailable_wizard___last_update
+#: model:ir.model.fields,field_description:medical_physician.field_medical_specialty___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_schedule_template_write_uid
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_write_uid
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_unavailable_wizard_write_uid
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_write_uid
+#: model:ir.model.fields,field_description:medical_physician.field_medical_specialty_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización de"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_schedule_template_write_date
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_write_date
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_unavailable_wizard_write_date
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_write_date
+#: model:ir.model.fields,field_description:medical_physician.field_medical_specialty_write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_last_time_entries_checked
+msgid "Last time the invoices & payments matching was performed for this partner. It is set either if there's not at least an unreconciled debit and an unreconciled credit or if you click the \"Done\" button."
+msgstr "Última vez que se conciliaros facturas y pagos de esta Empresa. Se configura incluso si no hay ningún débito o crédito por conciliar, o si pulsa el botón \"Hecho\"."
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_last_time_entries_checked
+msgid "Latest Invoices & Payments Matching Date"
+msgstr "Fecha de la última conciliación de facturas y pagos"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_packaging_ids
+msgid "Logistical Units"
+msgstr "Unidades Logísticas"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_track_service
+msgid ""
+"Manually set quantities on order: Invoice based on the manually entered quantity, without creating an analytic account.\n"
+"Timesheets on contract: Invoice based on the tracked hours on the related timesheet.\n"
+"Create a task and track hours: Create a task on the sale order validation and track the work hours."
+msgstr ""
+"Establecer manualmente las cantidades en pedido: Factura basada en la cantidad introducida manualmente, sin crear una cuenta analítica.\n"
+"Hojas de tiempo en contrato: factura basada en las horas imputadas en la hoja de horas relacionada.\n"
+"Crear tarea y controlar horas: Crear una tarea en la validación de la orden de venta y realizar un seguimiento de las horas trabajadas."
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_unavailable_wizard_institution_id
+#: model:ir.ui.view,arch_db:medical_physician.medical_physician_view_form
+msgid "Medical Center"
+msgstr "Centro Médico"
+
+#. module: medical_physician
+#: model:ir.model,name:medical_physician.model_medical_physician
+msgid "Medical Physicians"
+msgstr "Médicos"
+
+#. module: medical_physician
+#: model:ir.model,name:medical_physician.model_medical_physician_schedule_template
+msgid "Medical Physicians Schedule Templates"
+msgstr "Plantillas de Planificación de Médicos"
+
+#. module: medical_physician
+#: model:ir.model,name:medical_physician.model_medical_physician_service
+msgid "Medical Physicians Services"
+msgstr "Servicios Médicos"
+
+#. module: medical_physician
+#: model:ir.model,name:medical_physician.model_medical_specialty
+#: model:ir.ui.menu,name:medical_physician.medical_specialty
+msgid "Medical Specialties"
+msgstr "Especialidades Médicas"
+
+#. module: medical_physician
+#: model:ir.ui.view,arch_db:medical_physician.medical_specialty_view_form
+#: model:ir.ui.view,arch_db:medical_physician.medical_specialty_view_search
+#: model:ir.ui.view,arch_db:medical_physician.medical_specialty_view_tree
+msgid "Medical Specialty"
+msgstr "Especialidad médica"
+
+#. module: medical_physician
+#: model:ir.model,name:medical_physician.model_medical_physician_unavailable_wizard
+msgid "Medical physicians unavailable wizard"
+msgstr "Asistente médico no disponible"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_image_medium
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_image_medium
+msgid "Medium-sized image"
+msgstr "Imagen de Tamaño Medio"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_image_medium
+msgid "Medium-sized image of this contact. It is automatically resized as a 128x128px image, with aspect ratio preserved. Use this field in form views or some kanban views."
+msgstr "Imagen mediana de este contacto. Se redimensiona automáticamente a 128x128 px, con el ratio de aspecto preservado. Se usa este campo en las vistas los formularios y en algunas vistas de kanban."
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_invoice_warn_msg
+msgid "Message for Invoice"
+msgstr "Mensaje para factura"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_sale_warn_msg
+msgid "Message for Sales Order"
+msgstr "Mensaje para el pedido de venta"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_sale_line_warn_msg
+msgid "Message for Sales Order Line"
+msgstr "Mensaje para la línea de pedido de venta"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_mobile
+msgid "Mobile"
+msgstr "Tel. Celular"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_name
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_name
+#: model:ir.ui.view,arch_db:medical_physician.medical_physician_view_search
+msgid "Name"
+msgstr "Nombre"
+
+#. module: medical_physician
+#: sql_constraint:medical.specialty:0
+msgid "Name must be unique!"
+msgstr "¡El nombre debe ser único!"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_specialty_name
+msgid "Name of the specialty"
+msgstr "Nombre de la especialidad"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_comment
+msgid "Notes"
+msgstr "Notas"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de acciones"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_message_unread_counter
+msgid "Number of unread messages"
+msgstr "Número de mensajes no leidos"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_opt_out
+msgid "Opt-Out"
+msgstr "No acepta recibir mensajes"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_invoice_policy
+msgid ""
+"Ordered Quantity: Invoice based on the quantity the customer ordered.\n"
+"Delivered Quantity: Invoiced based on the quantity the vendor delivered (time or deliveries)."
+msgstr ""
+"Cantidad ordenada: Factura basada en la cantidad pedida por el cliente.\n"
+"Cantidad entregada: Facturada en función de la cantidad entregada por el proveedor (tiempo o entregas)."
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_parent_name
+msgid "Parent name"
+msgstr "Nombre Representante"
+
+#. module: medical_physician
+#: model:ir.model,name:medical_physician.model_res_partner
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_debit_limit
+msgid "Payable Limit"
+msgstr "Límite a pagar"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_payment_token_ids
+msgid "Payment Tokens"
+msgstr "Tableros de pago"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_phone
+msgid "Phone"
+msgstr "Teléfono"
+
+#. module: medical_physician
+#: model:ir.actions.act_window,name:medical_physician.medical_physician_action
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_schedule_template_physician_id
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_physician_id
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_unavailable_wizard_physician_id
+msgid "Physician"
+msgstr "Médico"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_code
+msgid "Physician Code"
+msgstr "Código del médico"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_schedule_template_physician_id
+msgid "Physician for the schedule template"
+msgstr "Médico de la plantilla de programación"
+
+#. module: medical_physician
+#: model:ir.ui.menu,name:medical_physician.physicians_menu
+#: model:ir.ui.view,arch_db:medical_physician.medical_physician_view_form
+#: model:ir.ui.view,arch_db:medical_physician.medical_physician_view_kanban
+#: model:ir.ui.view,arch_db:medical_physician.medical_physician_view_search
+#: model:ir.ui.view,arch_db:medical_physician.medical_physician_view_tree
+msgid "Physicians"
+msgstr "Médicos"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_notify_email
+msgid ""
+"Policy to receive emails for new messages pushed to your personal Inbox:\n"
+"- Never: no emails are sent\n"
+"- All Messages: for every notification you receive in your Inbox"
+msgstr ""
+"Política para recibir correos electrónicos para los nuevos mensajes insertados en su bandeja de entrada personal\n"
+"- Nunca: No se enviará ningún correo\n"
+"- Todos los mensajes: Se enviará un correo para cada notificación que reciba en su bandeja de entrada"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_price
+msgid "Price"
+msgstr "Precio"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_pricelist_id
+msgid "Pricelist"
+msgstr "Lista de precios"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_item_ids
+msgid "Pricelist Items"
+msgstr "Líneas de la lista de precios"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_pricelist_item_ids
+msgid "Pricelist item ids"
+msgstr "Items ids de lista de precios"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_product_variant_id
+msgid "Product"
+msgstr "Producto"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_attribute_line_ids
+msgid "Product Attributes"
+msgstr "Atributos del producto"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_product_tmpl_id
+msgid "Product Template"
+msgstr "Plantilla de producto"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_type
+msgid "Product Type"
+msgstr "Tipo de producto"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_product_id
+msgid "Product related information for Appointment Type"
+msgstr "Información relacionada con el producto para el tipo de cita"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_product_variant_ids
+msgid "Products"
+msgstr "Productos"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_description_purchase
+msgid "Purchase Description"
+msgstr "Descripción de la compra"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_uom_po_id
+msgid "Purchase Unit of Measure"
+msgstr "Unidad de medida de compra"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_expense_policy
+msgid "Re-Invoice Expenses"
+msgstr "Gastos de Re-factura"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_parent_id
+msgid "Related Company"
+msgstr "Empresa relacionada"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_patient_ids
+msgid "Related Patients"
+msgstr "Pacientes Relacionados"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_product_id
+msgid "Related Product"
+msgstr "Producto relacionado"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_schedule_template_ids
+msgid "Related schedules"
+msgstr "Horarios relacionados"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_description_sale
+msgid "Sale Description"
+msgstr "Descripción de venta"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_list_price
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_lst_price
+msgid "Sale Price"
+msgstr "Precio de venta"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_property_product_pricelist
+msgid "Sale Pricelist"
+msgstr "Tarifa de venta"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_sale_order_ids
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_sale_warn
+msgid "Sales Order"
+msgstr "Pedido de Venta"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_sale_line_warn
+msgid "Sales Order Line"
+msgstr "Línea pedido de venta"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_team_id
+msgid "Sales Team"
+msgstr "Equipo de ventas"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_user_id
+msgid "Salesperson"
+msgstr "Comercial"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_schedule_template_ids
+msgid "Schedule template of the physician"
+msgstr "Plantilla de planificación del médico"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_categ_id
+msgid "Select category for the current product"
+msgstr "Seleccione categoría para el producto actual"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_invoice_warn
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_sale_warn
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_sale_line_warn
+msgid "Selecting the \"Warning\" option will notify user with the message, Selecting \"Blocking Message\" will throw an exception with the message and block the flow. The Message has to be written in the next field."
+msgstr "Si selecciona la opción \"Aviso\" se notificará a los usuarios con el mensaje, si selecciona \"Mensaje de bloqueo\" se lanzará una excepción con el mensaje y se bloqueará el flujo. El mensaje debe escribirse en el siguiente campo."
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_self
+msgid "Self"
+msgstr "Si mismo"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_sequence
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_partner_share
+msgid "Share Partner"
+msgstr "Compartir empresa"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_signup_type
+msgid "Signup Token Type"
+msgstr "Tipo de la palabra de ingreso"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_signup_valid
+msgid "Signup Token is Valid"
+msgstr "La palabra de ingreso es válida"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_signup_url
+msgid "Signup URL"
+msgstr "URL de ingreso"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_signup_expiration
+msgid "Signup expiration"
+msgstr "Vencimiento de registro"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_signup_token
+msgid "Signup token"
+msgstr "Token de Registro"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_image_small
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_image_small
+msgid "Small-sized image"
+msgstr "Tamaño pequeño de imagen"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_image_small
+msgid "Small-sized image of this contact. It is automatically resized as a 64x64px image, with aspect ratio preserved. Use this field anywhere a small image is required."
+msgstr "Imagen de tamaño pequeño de este contacto. Se redimensiona automáticamente a 64x64 px, con el ratio de aspecto preservado. Use este campo donde se requiera una imagen pequeña."
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_specialty_code
+msgid "Speciality Code"
+msgstr "Código de especialidad"
+
+#. module: medical_physician
+#: model:ir.actions.act_window,name:medical_physician.medical_specialty_action
+#: model:ir.model.fields,field_description:medical_physician.field_medical_specialty_name
+#: model:ir.ui.view,arch_db:medical_physician.medical_physician_view_search
+#: model:ir.ui.view,arch_db:medical_physician.medical_specialty_view_search
+msgid "Specialty"
+msgstr "Especialidad"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_specialty_id
+msgid "Specialty Code"
+msgstr "Código de especialidad"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_specialty_id
+msgid "Specialty id"
+msgstr "ID especialidad"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_sale_ok
+msgid "Specify if the product can be selected in a sales order line."
+msgstr "Especifique si el producto se puede seleccionar en una línea de pedido de cliente."
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_unavailable_wizard_date_start
+msgid "Start"
+msgstr "Inicio"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_state_id
+msgid "State"
+msgstr "Estado"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_street
+msgid "Street"
+msgstr "Calle"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_street2
+msgid "Street2"
+msgstr "Calle2"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_vat
+msgid "TIN"
+msgstr "Identificación"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_category_id
+msgid "Tags"
+msgstr "Etiquetas"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_vat
+msgid "Tax Identification Number. Fill it if the company is subjected to taxes. Used by the some of the legal statements."
+msgstr "Número de identificación fiscal. Marque la casilla si el contacto está sujeto a impuestos. Usado por algunos documentos legales."
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_pricelist_id
+msgid "Technical field. Used for searching on pricelists, not stored in database."
+msgstr "Campo técnico. Se utiliza para buscar en listas de precios, no almacenadas en la base de datos."
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_property_account_position_id
+msgid "The fiscal position will determine taxes and accounts used for the partner."
+msgstr "La posición fiscal determinará los impuestos y cuentas utilizados por la Empresa."
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_user_id
+msgid "The internal user that is in charge of communicating with this contact if any."
+msgstr "El usuario interno encargado de comunicarse con este contacto si lo hubiese."
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_has_unreconciled_entries
+msgid "The partner has at least one unreconciled debit and credit since last time the invoices & payments matching was performed."
+msgstr "La empresa tiene al menos un débito o crédito no conciliado desde la última vez que se realizó la conciliación de facturas y pagos."
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_tz
+msgid "The partner's timezone, used to output proper date and time values inside printed reports. It is important to set a value for this field. You should use the same timezone that is otherwise used to pick and render date and time values: your computer's timezone."
+msgstr "Zona horaria de la empresa, usada para mostrar la fecha y hora adecuadas en los informes impresos. Es importante establecer un valor para este campo. Debería usar la misma zona horaria que se coge en caso contrario para mostrar los valores de fecha y hora: la zona horaria de su ordenador."
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_physician_id
+msgid "The physician for the appointment"
+msgstr "El médico para la cita"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_lst_price
+msgid "The sale price is managed from the product template. Click on the 'Variant Prices' button to set the extra attribute prices."
+msgstr "El precio de venta se gestiona desde la plantilla del producto. Haga clic en el botón 'Variant Prices' para establecer los precios adicionales de los atributos."
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_volume
+msgid "The volume in m3."
+msgstr "El volumen en m3."
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_weight
+msgid "The weight of the contents in Kg, not including any packaging, etc."
+msgstr "El peso del contenido en Kg, sin incluir embalaje, etc."
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_property_account_expense_id
+msgid "This account will be used for invoices instead of the default one to value expenses for the current product."
+msgstr "Esta cuenta se utilizará en facturas, en lugar de la cuenta por defecto, para valorar gastos de este producto."
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_property_account_income_id
+msgid "This account will be used for invoices instead of the default one to value sales for the current product."
+msgstr "Esta cuenta se utilizará en facturas, en lugar de la cuenta por defecto, para valorar las ventas de este producto."
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_property_account_payable_id
+msgid "This account will be used instead of the default one as the payable account for the current partner"
+msgstr "Esta cuenta se utilizará en lugar de la cuenta por defecto como la cuenta pendiente de pago del asociado actual."
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_property_account_receivable_id
+msgid "This account will be used instead of the default one as the receivable account for the current partner"
+msgstr "Esta cuenta se utilizará en lugar de la cuenta por defecto como la cuenta pendiente de cobro del asociado actual."
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_image
+msgid "This field holds the image used as avatar for this contact, limited to 1024x1024px"
+msgstr "Este campo contiene la imagen utilizada como avatar para este contacto, limitada a 1024x1024 px"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_image_variant
+msgid "This field holds the image used as image for the product variant, limited to 1024x1024px."
+msgstr "Este campo contiene la imagen utilizada como imagen para la variante del producto, limitada a 1024x1024px."
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_service_price_extra
+msgid "This is the sum of the extra price of all attributes"
+msgstr "Esta es la suma del precio adicional de todos los atributos"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_property_supplier_payment_term_id
+msgid "This payment term will be used instead of the default one for purchase orders and vendor bills"
+msgstr "Se utilizará esta condición de pago, en lugar de la predeterminada, para los pedidos de compra y las facturas de proveedor."
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_property_payment_term_id
+msgid "This payment term will be used instead of the default one for sale orders and customer invoices"
+msgstr "Se utilizará esta condición de pago, en lugar de la predeterminada, para los pedidos de venta y facturas de clientes"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_property_product_pricelist
+msgid "This pricelist will be used, instead of the default one, for sales to the current partner"
+msgstr "Esta lista de precios será usada, en ves de la lista por defecto, para ventas al cliente actual"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_tz
+msgid "Timezone"
+msgstr "Zona horaria"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_tz_offset
+msgid "Timezone offset"
+msgstr "Zona horaria"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_title
+msgid "Title"
+msgstr "Título"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_total_invoiced
+msgid "Total Invoiced"
+msgstr "Total facturado"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_debit
+msgid "Total Payable"
+msgstr "Total a pagar"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_credit
+msgid "Total Receivable"
+msgstr "Total a cobrar"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_credit
+msgid "Total amount this customer owes you."
+msgstr "Valor total que debe el cliente."
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_debit
+msgid "Total amount you have to pay to this vendor."
+msgstr "Valor total a pagar a este proveedor."
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_track_service
+msgid "Track Service"
+msgstr "Servicio de Rastreo"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_uom_id
+msgid "Unit of Measure"
+msgstr "Unidad de Medida"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_message_unread
+msgid "Unread Messages"
+msgstr "Mensajes sin leer"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Contador de mensajes no leidos"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_user_ids
+msgid "Users"
+msgstr "Usuarios"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_currency_id
+msgid "Utility field to express amount currency"
+msgstr "Campo útil para expresar el valor en divisa."
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_is_vaccine
+msgid "Vaccine"
+msgstr "Vacuna"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_image_variant
+msgid "Variant Image"
+msgstr "Imagen Variante"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_price_extra
+msgid "Variant Price Extra"
+msgstr "Variante Precio Extra"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_property_supplier_payment_term_id
+msgid "Vendor Payment Terms"
+msgstr "Términos de Pago"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_supplier_taxes_id
+msgid "Vendor Taxes"
+msgstr "Impuestos de proveedor"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_seller_ids
+msgid "Vendors"
+msgstr "Vendedores"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_volume
+msgid "Volume"
+msgstr "Volumen"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_warranty
+msgid "Warranty"
+msgstr "Garantía"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_website
+msgid "Website"
+msgstr "Sitio web"
+
+#. module: medical_physician
+#: model:ir.model.fields,help:medical_physician.field_medical_physician_website
+msgid "Website of Partner or Company"
+msgstr "Sitio web de la empresa o compañía"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_service_weight
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_weight
+msgid "Weight"
+msgstr "Peso"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_weight_uom
+msgid "Weight UoM"
+msgstr "Peso UoM"
+
+#. module: medical_physician
+#: model:ir.model.fields,field_description:medical_physician.field_medical_physician_zip
+msgid "Zip"
+msgstr "C.P."
+
+#. module: medical_physician
+#: model:ir.ui.view,arch_db:medical_physician.medical_physician_unavailable_wizard_form
+msgid "_Apply"
+msgstr "_Aplicar"
+
+#. module: medical_physician
+#: model:ir.ui.view,arch_db:medical_physician.medical_physician_unavailable_wizard_form
+msgid "_Cancel"
+msgstr "_Cancelar"

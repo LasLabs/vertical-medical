@@ -151,9 +151,9 @@
                 <filter string="DoB"
                         domain="[]"
                         context="{'group_by':'birthdate_date'}" />
-                <filter name="patient_ids_filter"
+<!--                 <filter name="patient_ids_filter"
                         string="Related Patients"
-                        domain="[('partner_id', 'child_of', active_id)]" />
+                        domain="[('partner_id', 'child_of', active_id)]" /> -->
             </xpath>
         </field>
     </record>
