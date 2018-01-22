@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <!DOCTYPE xml> -->
+<odoo>
+    <template id="report_prescriptionorder_document">
+        <!-- <t t-set="doc" t-value="doc.with_context({'lang':doc.partner_id.lang})" /> -->
+        <!-- <t t-call="report.external_layout" t-lang="ec_EC"> -->
+        <t t-call="report.external_layout">
+            <t t-set="doc" t-value="doc.with_context({'lang':doc.partner_id.lang})" />
+            <div class="page">
+                <div class="oe_structure"/>
+                    <h4>
+                        <span>Prescripción #</span>
+                        <span t-field="doc.name"/>
+                    </h4>
+                <div class="row mt32 mb32" id="informations">
+
+                    <div class="col-xs-12">
+                        <div t-if="doc.date_prescription" class="col-xs-6">
+                            <strong>Fecha:</strong>
+                            <span t-field="doc.date_prescription"/>
+                        </div>
+
+                        <div t-if="doc.partner_id" class="col-xs-6">
+                            <strong>Farmacia:</strong>
+                            <span t-field="doc.partner_id"/>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div t-if="doc.patient_id" class="col-xs-6">
+                            <strong>Paciente:</strong>
+                            <span t-field="doc.patient_id"/>
+                        </div>
+                        
+                        <div t-if="doc.physician_id" class="col-xs-6">
+                            <strong>Médico:</strong>
+                            <span t-field="doc.physician_id"/>
+                        </div>
+                    </div>
+                    
+                    <table style="width:100%" class="table table-condensed">
+                        <thead>
+                            <tr>
+                                <th class="text-left">RECETA</th>
+                                <th class="text-left">INDICACIONES</th>
+     <!--                            <th class="text-right">U</th>
+                                <th class="text-right">Dosis comun</th>
+                                <th class="text-right">Frecuencia</th>
+                                <th class="text-right">U</th>
+                                <th class="text-right">Duracion</th>
+                                <th class="text-right">U</th>
+                                <th class="text-right">Nota</th> -->
+                            </tr>
+                        </thead>
+                        <tbody class="sale_tbody">
+                            <!-- Lines associated -->
+                            <t t-foreach="doc.prescription_order_line_ids" t-as="l">
+                                <tr>
+                                    <td class="text-left">
+                                        <p t-if="l.medicament_id"> 
+                                            <span t-field="l.medicament_id"/>
+                                            <strong>Cantidad</strong>
+                                            <span t-field="l.quantity"/>
+                                            <span t-field="l.dose_uom_id"/>
+                                        </p>
+                                    </td>
+                                    <!-- <td class="text-right">
+                                        <span t-field="l.quantity"/>
+                                    </td> -->
+                                <!--     <td class="text-right">
+                                        <span t-field="l.dose_uom_id"/>
+                                    </td> -->
+                                    <td class="text-left">
+                                        <p t-if="l.medication_dosage_id">
+                                            <strong>Dosis</strong>
+                                            <span t-field="l.medication_dosage_id"/><br/>
+                                            <strong>Frecuencia</strong>
+                                            <span t-field="l.frequency"/>
+                                            <span t-field="l.frequency_uom_id"/>
+                                            <strong>Duración</strong>
+                                            <span t-field="l.duration"/>
+                                            <span t-field="l.duration_uom_id"/>
+                                        </p>
+                                    </td>
+ <!--                                    <td class="text-right">
+                                        
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-field="l.frequency_uom_id"/>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-field="l.duration"/>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-field="l.duration_uom_id"/>
+                                    </td> -->
+<!--                                     <td class="text-right">
+                                        <span t-field="l.notes"/>
+                                    </td> -->
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+
+                    <div name="notes" t-if="doc.notes" class="col-xs-12">
+                        <strong>Notas:</strong>
+                        <p t-field="doc.notes"/>
+                    </div>    
+                </div>
+                <div class="oe_structure"/>
+            </div>
+        </t>
+    </template>
+
+
+    <template id="report_prescriptionorder">
+        <t t-call="report.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="medical_prescription.report_prescriptionorder_document" t-lang="doc.partner_id.lang"/>
+            </t>
+        </t>
+    </template>
+</odoo>

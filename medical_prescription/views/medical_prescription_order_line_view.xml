@@ -12,6 +12,7 @@
             <xpath expr="//field[@name='dose_uom_id']" position="after">
                 <field name="prescription_order_id" />
                 <field name="name" />
+                <field name="patient_id" />
             </xpath>
             <xpath expr="//filter[@name='frequency_prn']" position="after">
                 <filter name="is_substitutable"
@@ -120,7 +121,8 @@
         <field name="view_type">form</field>
         <field name="view_mode">kanban,tree,form</field>
         <field name="search_view_id" ref="medical_prescription_order_line_view_search" />
-        <field name="view_id" ref="medical_prescription_order_line_view_kanban" />
+        <!-- <field name="view_id" ref="medical_prescription_order_line_view_kanban" /> -->
+        <field name="view_id" ref="medical_prescription_order_line_view_tree" />
         <field name="domain">[]</field>
         <field name="context">{}</field>
     </record>
