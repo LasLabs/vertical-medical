@@ -59,7 +59,9 @@
         <field name="model">medical.prescription.order</field>
         <field name="arch" type="xml">
             <form string="Medical Prescription Order">
-                <header />
+                <header>
+                    <button name="action_print_prescription" string="Print Prescription" type="object" />
+                </header>
                 <sheet>
                     <div class="oe_title" name="title">
                         <label for="name" class="oe_edit_only" />
@@ -92,13 +94,25 @@
                                              'default_physician_id': physician_id,
                                              'default_prescription_order_id': id,
                                              'default_date_start_treatment': date_prescription}">
-                                <tree>
-                                    <field name="date_start_treatment" />
-                                    <field name="date_stop_treatment" />
-                                    <field name="pathology_id" />
+                                <tree editable="buttons">
+                                    <!-- <field name="medical_medication_id" /> -->
                                     <field name="medicament_id" />
+                                    <field name="medication_template_id" 
+                                        domain="[('medicament_id','=',medicament_id)]"/>
                                     <field name="quantity" />
                                     <field name="dose_uom_id" />
+                                    <field name="medication_dosage_id" />
+                                    <field name="frequency" />
+                                    <field name="frequency_uom_id" />
+                                    <field name="duration" />
+                                    <field name="duration_uom_id" />
+                                    <field name="notes" />
+                                    <field name="patient_id" invisible="1" readonly="1" />
+                                    
+<!--                                     <field name="date_start_treatment" />
+                                    <field name="date_stop_treatment" />
+ -->                                    <!-- <field name="pathology_id" /> -->
+                                    
                                 </tree>
                             </field>
                         </page>
@@ -159,6 +173,9 @@
         <field name="view_id" ref="medical_prescription_order_view_kanban" />
         <field name="domain">[]</field>
         <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create the first prescription</p>
+        </field>
     </record>
 
 </odoo>

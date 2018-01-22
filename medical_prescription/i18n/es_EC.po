@@ -1,0 +1,536 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* medical_prescription
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-04 13:03+0000\n"
+"PO-Revision-Date: 2017-12-04 08:07-0500\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: medical_prescription
+#: model:ir.ui.view,arch_db:medical_prescription.medical_prescription_order_view_kanban
+msgid "<b>Date:</b>"
+msgstr "<b>Fecha:</b>"
+
+#. module: medical_prescription
+#: model:ir.ui.view,arch_db:medical_prescription.medical_prescription_order_view_kanban
+msgid "<b>Patient:</b>"
+msgstr "<b>Paciente:</b>"
+
+#. module: medical_prescription
+#: model:ir.ui.view,arch_db:medical_prescription.medical_prescription_order_view_kanban
+msgid "<b>Physician:</b>"
+msgstr "<b>Médico:</b>"
+
+#. module: medical_prescription
+#: model:ir.ui.view,arch_db:medical_prescription.report_prescriptionorder_document
+msgid ""
+"<br/>\n"
+"                                            <strong>Frecuencia</strong>"
+msgstr ""
+"<br/>\n"
+"                                            <strong>Frecuencia</strong>"
+
+#. module: medical_prescription
+#: model:ir.ui.view,arch_db:medical_prescription.report_prescriptionorder_document
+msgid "<span>Prescripción #</span>"
+msgstr "<span>Prescripción #</span>"
+
+#. module: medical_prescription
+#: model:ir.ui.view,arch_db:medical_prescription.report_prescriptionorder_document
+msgid "<strong>Cantidad</strong>"
+msgstr "<strong>Cantidad</strong>"
+
+#. module: medical_prescription
+#: model:ir.ui.view,arch_db:medical_prescription.report_prescriptionorder_document
+msgid "<strong>Dosis</strong>"
+msgstr "<strong>Dosis</strong>"
+
+#. module: medical_prescription
+#: model:ir.ui.view,arch_db:medical_prescription.report_prescriptionorder_document
+msgid "<strong>Duración</strong>"
+msgstr "<strong>Duración</strong>"
+
+#. module: medical_prescription
+#: model:ir.ui.view,arch_db:medical_prescription.report_prescriptionorder_document
+msgid "<strong>Farmacia:</strong>"
+msgstr "<strong>Farmacia:</strong>"
+
+#. module: medical_prescription
+#: model:ir.ui.view,arch_db:medical_prescription.report_prescriptionorder_document
+msgid "<strong>Fecha:</strong>"
+msgstr "<strong>Fecha:</strong>"
+
+#. module: medical_prescription
+#: model:ir.ui.view,arch_db:medical_prescription.medical_prescription_order_line_view_kanban
+msgid "<strong>Medicament:</strong>"
+msgstr "<strong>Medicamento:</strong>"
+
+#. module: medical_prescription
+#: model:ir.ui.view,arch_db:medical_prescription.report_prescriptionorder_document
+msgid "<strong>Médico:</strong>"
+msgstr "<strong>Médico:</strong>"
+
+#. module: medical_prescription
+#: model:ir.ui.view,arch_db:medical_prescription.report_prescriptionorder_document
+msgid "<strong>Notas:</strong>"
+msgstr "<strong>Notas:</strong>"
+
+#. module: medical_prescription
+#: model:ir.ui.view,arch_db:medical_prescription.report_prescriptionorder_document
+msgid "<strong>Paciente:</strong>"
+msgstr "<strong>Paciente:</strong>"
+
+#. module: medical_prescription
+#: model:ir.ui.view,arch_db:medical_prescription.medical_prescription_order_line_view_kanban
+msgid "<strong>Patient:</strong>"
+msgstr "<strong>Paciente:</strong>"
+
+#. module: medical_prescription
+#: model:ir.ui.view,arch_db:medical_prescription.medical_prescription_order_line_view_kanban
+msgid "<strong>Physician:</strong>"
+msgstr "<strong>Médico:</strong>"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_active
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_line_active
+msgid "Active"
+msgstr "Activo"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_line_adverse_reaction
+msgid "Adverse reaction"
+msgstr "Reacción adversa"
+
+#. module: medical_prescription
+#: model:ir.model.fields,help:medical_prescription.field_medical_prescription_order_line_notes
+msgid "Any additional information regarding this treatment"
+msgstr "Cualquier información adicional sobre este tratamiento"
+
+#. module: medical_prescription
+#: model:ir.model.fields,help:medical_prescription.field_medical_prescription_order_line_active
+msgid "Check if the patient is currently taking the medication"
+msgstr "Compruebe si el paciente está tomando el medicamento"
+
+#. module: medical_prescription
+#: model:ir.model.fields,help:medical_prescription.field_medical_prescription_order_line_is_discontinued
+msgid "Check this if the medication has been discontinued"
+msgstr "Marque esto si el medicamento ha sido descontinuado"
+
+#. module: medical_prescription
+#: model:ir.model.fields,help:medical_prescription.field_medical_prescription_order_line_is_course_complete
+msgid "Check this if the patient is no longer taking this medication"
+msgstr "Marque esto si el paciente ya no está tomando este medicamento"
+
+#. module: medical_prescription
+#: model:ir.model.fields,help:medical_prescription.field_medical_prescription_order_is_pregnancy_warning
+msgid "Check this if the primary patient on prescription is pregnant"
+msgstr "Verifique esto si el paciente primario con receta está en gestación"
+
+#. module: medical_prescription
+#: model:ir.model.fields,help:medical_prescription.field_medical_prescription_order_is_verified
+msgid "Check this is the prescription has been confirmed as valid"
+msgstr "Verifique que la prescripción haya sido confirmada como válida"
+
+#. module: medical_prescription
+#: model:ir.model.fields,help:medical_prescription.field_medical_prescription_order_line_pathology_id
+msgid "Choose a disease for this medicament from the disease list. It can be an existing disease of the patient or a prophylactic."
+msgstr "Elija una enfermedad para este medicamento de la lista de enfermedades. Puede ser una enfermedad existente del paciente o un profiláctico."
+
+#. module: medical_prescription
+#: model:ir.model.fields,help:medical_prescription.field_medical_prescription_order_line_medication_dosage_id
+msgid "Common / standard dosage frequency for this medicament"
+msgstr "Frecuencia de dosis común / estándar para este medicamento"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_line_medication_dosage_id
+msgid "Common Dose"
+msgstr "Dosis común"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_line_is_course_complete
+msgid "Course Completed"
+msgstr "Curso terminado"
+
+#. module: medical_prescription
+#: model:ir.actions.act_window,help:medical_prescription.medical_prescription_order_action
+msgid "Create the first prescription"
+msgstr "Crea la primera prescripción médica"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_create_uid
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_line_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_create_date
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_line_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_line_date_start_treatment
+msgid "Date start treatment"
+msgstr "Fecha inicio tratamiento"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_line_date_stop_treatment
+msgid "Date stop treatment"
+msgstr "Fecha interrupción tratamiento"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_line_discontinued_reason
+msgid "Discontinued reason"
+msgstr "Razón interrupción"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_display_name
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_line_display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_line_quantity
+msgid "Dose Quantity"
+msgstr "Cantidad de dosis"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_line_dose_uom_id
+msgid "Dose Unit"
+msgstr "Unidad de dosis"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_line_duration
+msgid "Duration"
+msgstr "Duración"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_line_duration_uom_id
+msgid "Duration UoM"
+msgstr "Duración UoM"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_line_is_expired
+msgid "Expired?"
+msgstr "Muerto?"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_line_frequency
+msgid "Frequency"
+msgstr "Frecuencia"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_line_frequency_uom_id
+msgid "Frequency UoM"
+msgstr "Frecuencia UoM"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_line_frequency_prn
+msgid "Frequency prn"
+msgstr "Frecuencia prn"
+
+#. module: medical_prescription
+#: model:ir.ui.view,arch_db:medical_prescription.medical_prescription_order_view_search
+msgid "Group By..."
+msgstr "Agrupar por..."
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_id
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_line_id
+msgid "ID"
+msgstr "ID (identificación)"
+
+#. module: medical_prescription
+#: model:ir.ui.view,arch_db:medical_prescription.report_prescriptionorder_document
+msgid "INDICACIONES"
+msgstr "INDICACIONES"
+
+#. module: medical_prescription
+#: model:ir.ui.view,arch_db:medical_prescription.medical_prescription_order_view_search
+msgid "Is Pregnant"
+msgstr "En Gestación"
+
+#. module: medical_prescription
+#: model:ir.ui.view,arch_db:medical_prescription.medical_prescription_order_line_view_search
+msgid "Is Substitutable"
+msgstr "Es sustituible"
+
+#. module: medical_prescription
+#: model:ir.ui.view,arch_db:medical_prescription.medical_prescription_order_view_search
+msgid "Is Verified"
+msgstr "Está verificado"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_line_is_discontinued
+msgid "Is discontinued"
+msgstr "Se interrumpe"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_line_is_substitutable
+msgid "Is substitutable"
+msgstr "Es sustituible"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order___last_update
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_line___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_line_write_uid
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización de"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_line_write_date
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: medical_prescription
+#: model:ir.model.fields,help:medical_prescription.field_medical_prescription_order_line_dose_uom_id
+msgid "Measurement unit for dosage quantity"
+msgstr "Unidad de medida para la cantidad de dosificación"
+
+#. module: medical_prescription
+#: model:ir.model.fields,help:medical_prescription.field_medical_prescription_order_line_duration_uom_id
+msgid "Measurement unit for medication duration"
+msgstr "Unidad de medida para la duración de la medicación"
+
+#. module: medical_prescription
+#: model:ir.model.fields,help:medical_prescription.field_medical_prescription_order_line_frequency_uom_id
+msgid "Measurement unit for medication frequency"
+msgstr "Unidad de medida para la frecuencia de medicación"
+
+#. module: medical_prescription
+#: model:ir.model,name:medical_prescription.model_medical_prescription_order
+#: model:ir.ui.view,arch_db:medical_prescription.medical_prescription_order_view_form
+#: model:ir.ui.view,arch_db:medical_prescription.medical_prescription_order_view_search
+#: model:ir.ui.view,arch_db:medical_prescription.medical_prescription_order_view_tree
+msgid "Medical Prescription Order"
+msgstr "Pedido de prescripción médica"
+
+#. module: medical_prescription
+#: model:ir.model,name:medical_prescription.model_medical_prescription_order_line
+msgid "Medical Prescription Order Line"
+msgstr "Líneas de pedido de prescripción médica"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_line_medicament_id
+msgid "Medicament"
+msgstr "Medicamento"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_line_medical_medication_id
+#: model:ir.ui.view,arch_db:medical_prescription.medical_prescription_order_line_view_search
+msgid "Medication"
+msgstr "Medicación"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_line_medication_template_id
+msgid "Medication Template"
+msgstr "Plantilla de medicación"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_line_name
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_name
+#: model:ir.ui.view,arch_db:medical_prescription.medical_prescription_order_view_form
+msgid "Name"
+msgstr "Nombre"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_line_notes
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_notes
+#: model:ir.ui.view,arch_db:medical_prescription.medical_prescription_order_view_form
+msgid "Notes"
+msgstr "Notas"
+
+#. module: medical_prescription
+#: model:ir.ui.view,arch_db:medical_prescription.medical_prescription_order_view_form
+msgid "Order Lines"
+msgstr "Líneas de pedido"
+
+#. module: medical_prescription
+#: code:addons/medical_prescription/models/medical_prescription_order.py:22
+#, python-format
+msgid "PRO001"
+msgstr "PRO001"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_line_pathology_id
+msgid "Pathology"
+msgstr "Patología"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_line_patient_id
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_patient_id
+#: model:ir.ui.view,arch_db:medical_prescription.medical_prescription_order_view_search
+msgid "Patient"
+msgstr "Paciente"
+
+#. module: medical_prescription
+#: model:ir.model.fields,help:medical_prescription.field_medical_prescription_order_line_patient_id
+msgid "Patient that is taking this medication"
+msgstr "Paciente que está tomando este medicamento"
+
+#. module: medical_prescription
+#: model:ir.model.fields,help:medical_prescription.field_medical_prescription_order_line_duration
+msgid "Period that the patient must take the medication"
+msgstr "Período en que el paciente debe tomar el medicamento"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_partner_id
+#: model:ir.ui.view,arch_db:medical_prescription.medical_prescription_order_view_search
+msgid "Pharmacy"
+msgstr "Farmacia"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_line_physician_id
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_physician_id
+msgid "Physician"
+msgstr "Médico"
+
+#. module: medical_prescription
+#: model:ir.model.fields,help:medical_prescription.field_medical_prescription_order_physician_id
+msgid "Physician that issued prescription"
+msgstr "Médico que emitió receta"
+
+#. module: medical_prescription
+#: model:ir.model.fields,help:medical_prescription.field_medical_prescription_order_line_physician_id
+msgid "Physician who prescribed the medicament"
+msgstr "Médico que recetó el medicamento"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_is_pregnancy_warning
+msgid "Pregnant"
+msgstr "En Gestación"
+
+#. module: medical_prescription
+#: model:ir.ui.view,arch_db:medical_prescription.medical_prescription_order_view_search
+msgid "Prescribing Doctor"
+msgstr "Prescribing Doctor"
+
+#. module: medical_prescription
+#: model:ir.actions.report.xml,name:medical_prescription.medical_prescription_order_report
+msgid "Prescription"
+msgstr "Prescription"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_date_prescription
+#: model:ir.ui.view,arch_db:medical_prescription.medical_prescription_order_view_search
+msgid "Prescription Date"
+msgstr "Fecha de la prescripción"
+
+#. module: medical_prescription
+#: model:ir.ui.menu,name:medical_prescription.medical_prescription_order_line_menu
+msgid "Prescription Lines"
+msgstr "Líneas de prescripción"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_line_prescription_order_id
+#: model:ir.ui.view,arch_db:medical_prescription.medical_prescription_order_line_view_search
+msgid "Prescription Order"
+msgstr "Pedido de prescripción"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_prescription_order_line_ids
+msgid "Prescription Order Line"
+msgstr "Línea de pedido de prescripción"
+
+#. module: medical_prescription
+#: model:ir.actions.act_window,name:medical_prescription.medical_prescription_order_line_action
+msgid "Prescription Order Lines"
+msgstr "Líneas de pedido de prescripción"
+
+#. module: medical_prescription
+#: model:ir.actions.act_window,name:medical_prescription.medical_prescription_order_action
+#: model:ir.ui.menu,name:medical_prescription.medical_prescription_order_menu
+msgid "Prescription Orders"
+msgstr "Pedidos de prescripción"
+
+#. module: medical_prescription
+#: model:ir.model.fields,help:medical_prescription.field_medical_prescription_order_patient_id
+msgid "Primary patient that this is regarding"
+msgstr "Paciente primario que se trata de"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_line_qty
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: medical_prescription
+#: model:ir.model.fields,help:medical_prescription.field_medical_prescription_order_line_quantity
+msgid "Quantity of units (eg, 2 capsules) of the medicament"
+msgstr "Cantidad de unidades (por ejemplo, 2 cápsulas) del medicamento"
+
+#. module: medical_prescription
+#: model:ir.ui.view,arch_db:medical_prescription.report_prescriptionorder_document
+msgid "RECETA"
+msgstr "RECETA"
+
+#. module: medical_prescription
+#: model:ir.model.fields,help:medical_prescription.field_medical_prescription_order_line_discontinued_reason
+msgid "Short description explaining why the medication was discontinued"
+msgstr "Breve descripción explicando por qué se suspendió el medicamento"
+
+#. module: medical_prescription
+#: model:ir.model.fields,help:medical_prescription.field_medical_prescription_order_line_adverse_reaction
+msgid "Side effects or adverse reactions that patient experienced"
+msgstr "Efectos secundarios o reacciones adversas que experimentó el paciente"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_line_suggested_administration_hours
+msgid "Suggested administration hours"
+msgstr "Horas de administración sugeridas"
+
+#. module: medical_prescription
+#: model:ir.model.fields,help:medical_prescription.field_medical_prescription_order_line_medication_template_id
+msgid "Template to apply to this medication"
+msgstr "Plantilla para aplicar a este medicamento"
+
+#. module: medical_prescription
+#: model:ir.model.fields,help:medical_prescription.field_medical_prescription_order_line_frequency
+msgid "Time in between doses the patient must wait (ie, for 1 pill each 8 hours, put here 8 and select \"hours\" in the unit field"
+msgstr "Tiempo entre dosis que el paciente debe esperar (es decir, para 1 píldora cada 8 horas, ponga aquí 8 y seleccione \"horas\" en el campo de la unidad"
+
+#. module: medical_prescription
+#: model:ir.model.fields,help:medical_prescription.field_medical_prescription_order_line_suggested_administration_hours
+msgid "Time that medication should typically be administered"
+msgstr "Tiempo en que la medicación se debe administrar normalmente"
+
+#. module: medical_prescription
+#: model:ir.model.fields,help:medical_prescription.field_medical_prescription_order_name
+msgid "Unique identifier for prescription."
+msgstr "Identificador único para la prescripción"
+
+#. module: medical_prescription
+#: model:ir.model.fields,help:medical_prescription.field_medical_prescription_order_line_frequency_prn
+msgid "Use medication as needed (pro re nata)"
+msgstr "Use la medicación según sea necesario"
+
+#. module: medical_prescription
+#: model:ir.model.fields,field_description:medical_prescription.field_medical_prescription_order_is_verified
+msgid "Verified"
+msgstr "Verificado"
+
+#. module: medical_prescription
+#: model:ir.model.fields,help:medical_prescription.field_medical_prescription_order_line_date_start_treatment
+msgid "When the patient began taking this medication"
+msgstr "Cuando el paciente comenzó a tomar este medicamento"
+
+#. module: medical_prescription
+#: model:ir.model.fields,help:medical_prescription.field_medical_prescription_order_line_date_stop_treatment
+msgid "When the patient is scheduled to stop this medication"
+msgstr "Cuando el paciente está programado para parar este medicamento"

@@ -32,12 +32,12 @@ class MedicalPhysician(models.Model):
              'removing it.',
         default=True,
     )
-    schedule_template_ids = fields.One2many(
-        string='Related schedules',
-        help='Schedule template of the physician',
-        comodel_name='medical.physician.schedule.template',
-        inverse_name='physician_id',
-    )
+    # schedule_template_ids = fields.One2many(
+    #     string='Related schedules',
+    #     help='Schedule template of the physician',
+    #     comodel_name='medical.physician.schedule.template',
+    #     inverse_name='physician_id',
+    # )
 
     @api.model
     def _create_vals(self, vals):

@@ -10,8 +10,9 @@ class MedicalPrescriptionOrder(models.Model):
     _description = 'Medical Prescription Order'
 
     name = fields.Char(
-        required=True,
-        default=lambda s: s._default_name()
+        required=True, 
+        default=lambda self: _('New'), 
+        help='Unique identifier for prescription.'
     )
     patient_id = fields.Many2one(
         comodel_name='medical.patient',
@@ -80,10 +81,19 @@ class MedicalPrescriptionOrder(models.Model):
             )
 
     @api.model
-    def _default_name(self):
-        return self.env['ir.sequence'].sudo().next_by_code(
-            self._name,
-        )
+    def create(self, values, check=True):
+        """
+            Create a new record for a model ModelName
+            @param values: provides a data for new record
+    
+            @return: returns a id of new record
+        """
+        if values.get('name', 'PRO001') == 'PRO001' or values.get('name', 'PRO001') == 'Nuevo':
+            values['name'] = self.env['ir.sequence'].next_by_code('medical.prescription.order') or 'PRO001'
+    
+        result = super(MedicalPrescriptionOrder, self).create(values)
+    
+        return result
 
     @api.multi
     @api.depends('prescription_order_line_ids',
@@ -97,3 +107,11 @@ class MedicalPrescriptionOrder(models.Model):
             rec_id.active = any(
                 rec_id.prescription_order_line_ids.mapped('active')
             )
+
+    @api.multi
+    def action_print_prescription(self):
+        if self.prescription_order_line_ids:
+            return self.env['report'].get_action(self, 'medical_prescription.report_prescriptionorder')
+        else:
+            raise UserError(_("No prescription available for printing."))
+            

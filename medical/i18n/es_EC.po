@@ -1,0 +1,1173 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* medical
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-04 12:51+0000\n"
+"PO-Revision-Date: 2017-12-04 07:53-0500\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: medical
+#: code:addons/medical/models/medical_patient.py:67
+#, python-format
+msgid " (deceased)"
+msgstr "(fallecido)"
+
+#. module: medical
+#: model:ir.ui.view,arch_db:medical.medical_abstract_entity_view_form
+msgid "(edit)"
+msgstr "(editar)"
+
+#. module: medical
+#: model:ir.ui.view,arch_db:medical.view_res_partner_form
+msgid "<span class=\"o_stat_text\">Patient(s)</span>"
+msgstr "<span class=\"o_stat_text\">Paciente(s)</span>"
+
+#. module: medical
+#: model:ir.ui.view,arch_db:medical.medical_patient_view_kanban
+msgid "<strong>DOB:</strong>"
+msgstr "<strong>Fecha Nacimiento:</strong>"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_property_account_payable_id
+#: model:ir.model.fields,field_description:medical.field_medical_patient_property_account_payable_id
+msgid "Account Payable"
+msgstr "Cuenta a pagar"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_property_account_receivable_id
+#: model:ir.model.fields,field_description:medical.field_medical_patient_property_account_receivable_id
+msgid "Account Receivable"
+msgstr "Cuenta a cobrar"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_active
+#: model:ir.model.fields,field_description:medical.field_medical_center_active
+#: model:ir.model.fields,field_description:medical.field_medical_patient_active
+#: model:ir.model.fields,field_description:medical.field_medical_pharmacist_active
+#: model:ir.model.fields,field_description:medical.field_medical_pharmacy_active
+msgid "Active"
+msgstr "Activo"
+
+#. module: medical
+#: model:ir.ui.view,arch_db:medical.medical_abstract_entity_view_form
+msgid "Address"
+msgstr "Dirección"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_type
+#: model:ir.model.fields,field_description:medical.field_medical_center_type
+#: model:ir.model.fields,field_description:medical.field_medical_patient_type
+#: model:ir.model.fields,field_description:medical.field_medical_pharmacist_type
+#: model:ir.model.fields,field_description:medical.field_medical_pharmacy_type
+#: model:ir.model.fields,field_description:medical.field_medical_physician_type
+msgid "Address Type"
+msgstr "Tipo de dirección"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_patient_age
+msgid "Age"
+msgstr "Año"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_patient_age_years
+msgid "Age (years old)"
+msgstr "Edad (años)"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_alias
+#: model:ir.model.fields,field_description:medical.field_medical_patient_alias
+#: model:ir.model.fields,field_description:medical.field_res_partner_alias
+#: model:ir.model.fields,field_description:medical.field_res_users_alias
+msgid "Alias"
+msgstr "Alias"
+
+#. module: medical
+#: model:res.groups,name:medical.group_medical_assistant
+msgid "Assistant"
+msgstr "Asistente"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_bank_account_count
+#: model:ir.model.fields,field_description:medical.field_medical_patient_bank_account_count
+msgid "Bank"
+msgstr "Banco"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_bank_ids
+#: model:ir.model.fields,field_description:medical.field_medical_patient_bank_ids
+msgid "Banks"
+msgstr "Bancos"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_barcode
+#: model:ir.model.fields,field_description:medical.field_medical_patient_barcode
+msgid "Barcode"
+msgstr "Codigo de Barras"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_birthdate_date
+#: model:ir.model.fields,field_description:medical.field_medical_patient_birthdate_date
+#: model:ir.model.fields,field_description:medical.field_res_partner_birthdate_date
+#: model:ir.model.fields,field_description:medical.field_res_users_birthdate_date
+msgid "Birthdate"
+msgstr "Fecha de nacimiento"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_message_bounce
+#: model:ir.model.fields,field_description:medical.field_medical_patient_message_bounce
+msgid "Bounce"
+msgstr "Rebote"
+
+#. module: medical
+#: model:res.groups,name:medical.group_medical_center_manager
+msgid "Center Manager"
+msgstr "Gerente del Centro"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_channel_ids
+#: model:ir.model.fields,field_description:medical.field_medical_patient_channel_ids
+msgid "Channels"
+msgstr "Canales"
+
+#. module: medical
+#: model:ir.model.fields,help:medical.field_medical_abstract_entity_is_company
+#: model:ir.model.fields,help:medical.field_medical_patient_is_company
+msgid "Check if the contact is a company, otherwise it is a person"
+msgstr "Marque esta casilla si el contacto es una compañía. En caso contrario, será una persona"
+
+#. module: medical
+#: model:ir.model.fields,help:medical.field_medical_abstract_entity_customer
+#: model:ir.model.fields,help:medical.field_medical_patient_customer
+msgid "Check this box if this contact is a customer."
+msgstr "Marque esta casilla si el contacto es un cliente."
+
+#. module: medical
+#: model:ir.model.fields,help:medical.field_medical_abstract_entity_supplier
+#: model:ir.model.fields,help:medical.field_medical_patient_supplier
+msgid "Check this box if this contact is a vendor. If it's not checked, purchase people will not see it when encoding a purchase order."
+msgstr "Marque esta casilla si el contacto es un proveedor. Si no está marcada, el equipo de compras no lo verá cuando esté haciendo una orden de compra."
+
+#. module: medical
+#: model:ir.model.fields,help:medical.field_medical_abstract_entity_employee
+#: model:ir.model.fields,help:medical.field_medical_patient_employee
+msgid "Check this box if this contact is an Employee."
+msgstr "Marque si el contacto es un empleado."
+
+#. module: medical
+#: model:ir.model.fields,help:medical.field_medical_patient_is_pregnant
+msgid "Check this if the patient if pregnant"
+msgstr "Compruebe si la paciente está en gestación"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_city
+#: model:ir.model.fields,field_description:medical.field_medical_patient_city
+#: model:ir.ui.view,arch_db:medical.medical_abstract_entity_view_form
+msgid "City"
+msgstr "Ciudad"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_color
+#: model:ir.model.fields,field_description:medical.field_medical_patient_color
+msgid "Color Index"
+msgstr "Color del Indice"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_commercial_partner_id
+#: model:ir.model.fields,field_description:medical.field_medical_patient_commercial_partner_id
+msgid "Commercial Entity"
+msgstr "Entidad comercial"
+
+#. module: medical
+#: model:ir.model.fields,help:medical.field_medical_abstract_entity_alias
+#: model:ir.model.fields,help:medical.field_medical_patient_alias
+#: model:ir.model.fields,help:medical.field_res_partner_alias
+#: model:ir.model.fields,help:medical.field_res_users_alias
+msgid "Common name that the Party is referred"
+msgstr "Nombre común al que se hace referencia"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_ref_company_ids
+#: model:ir.model.fields,field_description:medical.field_medical_patient_ref_company_ids
+msgid "Companies that refers to partner"
+msgstr "Compañías que se refieren a la empresa"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_company_id
+#: model:ir.model.fields,field_description:medical.field_medical_patient_company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: medical
+#: model:res.groups,name:medical.group_medical_manager
+msgid "Company Manager"
+msgstr "Gerente de la compañía"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_company_name
+#: model:ir.model.fields,field_description:medical.field_medical_patient_company_name
+msgid "Company Name"
+msgstr "Nombre de la compañía"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_commercial_company_name
+#: model:ir.model.fields,field_description:medical.field_medical_patient_commercial_company_name
+msgid "Company Name Entity"
+msgstr "Entidad del nombre de la compañía"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_company_type
+#: model:ir.model.fields,field_description:medical.field_medical_patient_company_type
+msgid "Company Type"
+msgstr "Tipo de Compañía"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_contact_address
+#: model:ir.model.fields,field_description:medical.field_medical_patient_contact_address
+msgid "Complete Address"
+msgstr "Dirección completa"
+
+#. module: medical
+#: model:ir.ui.menu,name:medical.medical_root_sub
+msgid "Configuration"
+msgstr "Configuración"
+
+#. module: medical
+#: model:ir.ui.view,arch_db:medical.medical_abstract_entity_view_form
+msgid "Contact / Address"
+msgstr "Contacto/dirección"
+
+#. module: medical
+#: model:ir.ui.view,arch_db:medical.medical_abstract_entity_view_form
+msgid "Contact Information"
+msgstr "Contact Information"
+
+#. module: medical
+#: model:ir.ui.view,arch_db:medical.medical_abstract_entity_view_form
+msgid "Contact Name"
+msgstr "Nombre"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_child_ids
+#: model:ir.model.fields,field_description:medical.field_medical_patient_child_ids
+msgid "Contacts"
+msgstr "Contactos"
+
+#. module: medical
+#: model:ir.ui.view,arch_db:medical.medical_abstract_entity_view_form
+msgid "Contacts & Addresses"
+msgstr "Contactos y direcciones"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_contract_ids
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_contracts_count
+#: model:ir.model.fields,field_description:medical.field_medical_patient_contract_ids
+#: model:ir.model.fields,field_description:medical.field_medical_patient_contracts_count
+msgid "Contracts"
+msgstr "Contratos"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_count_patients
+#: model:ir.model.fields,field_description:medical.field_medical_patient_count_patients
+#: model:ir.model.fields,field_description:medical.field_res_partner_count_patients
+#: model:ir.model.fields,field_description:medical.field_res_users_count_patients
+msgid "Count patients"
+msgstr "Cuente a los pacientes"
+
+#. module: medical
+#: model:ir.model.fields,help:medical.field_medical_abstract_entity_message_bounce
+#: model:ir.model.fields,help:medical.field_medical_patient_message_bounce
+msgid "Counter of the number of bounced emails for this contact"
+msgstr "Contador del número de correos electrónicos rebotados de este contacto"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_country_id
+#: model:ir.model.fields,field_description:medical.field_medical_patient_country_id
+#: model:ir.ui.view,arch_db:medical.medical_abstract_entity_view_form
+msgid "Country"
+msgstr "País"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_create_uid
+#: model:ir.model.fields,field_description:medical.field_medical_patient_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_create_date
+#: model:ir.model.fields,field_description:medical.field_medical_patient_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_credit_limit
+#: model:ir.model.fields,field_description:medical.field_medical_patient_credit_limit
+msgid "Credit Limit"
+msgstr "Crédito concedido"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_currency_id
+#: model:ir.model.fields,field_description:medical.field_medical_patient_currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_property_payment_term_id
+#: model:ir.model.fields,field_description:medical.field_medical_patient_property_payment_term_id
+msgid "Customer Payment Terms"
+msgstr "Plazo de pago de cliente"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_date
+#: model:ir.model.fields,field_description:medical.field_medical_patient_date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_patient_date_death
+msgid "Deceased Date"
+msgstr "Fecha fallecimiento"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_trust
+#: model:ir.model.fields,field_description:medical.field_medical_patient_trust
+msgid "Degree of trust you have in this debtor"
+msgstr "Grado de confianza para este deudor"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_display_name
+#: model:ir.model.fields,field_description:medical.field_medical_patient_display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: medical
+#: selection:medical.patient,marital_status:0
+msgid "Divorced"
+msgstr "Divorciado"
+
+#. module: medical
+#: model:ir.ui.view,arch_db:medical.medical_patient_view_search
+msgid "DoB"
+msgstr "Fecha Facimiento"
+
+#. module: medical
+#: model:res.groups,name:medical.group_medical_doctor
+msgid "Doctor"
+msgstr "Doctor"
+
+#. module: medical
+#: model:ir.model.fields,help:medical.field_medical_abstract_entity_partner_share
+#: model:ir.model.fields,help:medical.field_medical_patient_partner_share
+msgid "Either customer (no user), either shared user. Indicated the current partner is a customer without access or with a limited access created for sharing data."
+msgstr "Ya sea cliente (no usuario), como usuario compartido. Indica si el socio actual es un cliente sin acceso o con un acceso limitado creado para compartir datos."
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_email
+#: model:ir.model.fields,field_description:medical.field_medical_patient_email
+msgid "Email"
+msgstr "Email"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_notify_email
+#: model:ir.model.fields,field_description:medical.field_medical_patient_notify_email
+msgid "Email Messages and Notifications"
+msgstr "Enviar mensajes y notificaciones"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_employee
+#: model:ir.model.fields,field_description:medical.field_medical_patient_employee
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_fax
+#: model:ir.model.fields,field_description:medical.field_medical_patient_fax
+msgid "Fax"
+msgstr "Fax"
+
+#. module: medical
+#: model:ir.ui.view,arch_db:medical.medical_abstract_entity_view_form
+msgid "Fax:"
+msgstr "Fax:"
+
+#. module: medical
+#: selection:res.partner,gender:0
+msgid "Female"
+msgstr "Femenino"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_property_account_position_id
+#: model:ir.model.fields,field_description:medical.field_medical_patient_property_account_position_id
+msgid "Fiscal Position"
+msgstr "Posición fiscal"
+
+#. module: medical
+#: model:ir.model.fields,help:medical.field_medical_abstract_entity_email_formatted
+#: model:ir.model.fields,help:medical.field_medical_patient_email_formatted
+msgid "Format email address \"Name <email@domain>\""
+msgstr "Formato email \"Nombre <email@domain>\""
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_email_formatted
+#: model:ir.model.fields,field_description:medical.field_medical_patient_email_formatted
+msgid "Formatted Email"
+msgstr "Email con formato"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_gender
+#: model:ir.model.fields,field_description:medical.field_medical_patient_gender
+#: model:ir.model.fields,field_description:medical.field_res_partner_gender
+#: model:ir.model.fields,field_description:medical.field_res_users_gender
+msgid "Gender"
+msgstr "Género"
+
+#. module: medical
+#: model:ir.ui.view,arch_db:medical.medical_patient_view_form
+msgid "General"
+msgstr "General"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_patient_general_info
+#: model:ir.ui.view,arch_db:medical.medical_abstract_entity_view_form
+msgid "General Information"
+msgstr "Información general"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_has_unreconciled_entries
+#: model:ir.model.fields,field_description:medical.field_medical_patient_has_unreconciled_entries
+msgid "Has unreconciled entries"
+msgstr "Contiene entradas irreconciliadas"
+
+#. module: medical
+#: model:ir.ui.menu,name:medical.medical_health_center_root
+msgid "Health Center"
+msgstr "Centros Médicos"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_id
+#: model:ir.model.fields,field_description:medical.field_medical_patient_id
+msgid "ID"
+msgstr "ID (identificación)"
+
+#. module: medical
+#: model:ir.ui.view,arch_db:medical.medical_abstract_entity_view_form
+msgid "ID & Notes"
+msgstr "Notas"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_im_status
+#: model:ir.model.fields,field_description:medical.field_medical_patient_im_status
+msgid "IM Status"
+msgstr "Estado IM"
+
+#. module: medical
+#: model:ir.model.fields,help:medical.field_medical_abstract_entity_opt_out
+#: model:ir.model.fields,help:medical.field_medical_patient_opt_out
+msgid "If opt-out is checked, this contact has refused to receive emails for mass mailing and marketing campaign. Filter 'Available for Mass Mailing' allows users to filter the partners when performing mass mailing."
+msgstr "Si 'No acepta mensajes' está marcado, este contacto ha rehusado recibir correos electrónicos de envíos masivos y campañas de marketing. El filtro 'Disponible para envíos masivos' permite a los usuarios filtrar a las empresas cuando se realicen envíos masivos."
+
+#. module: medical
+#: model:ir.model.fields,help:medical.field_medical_abstract_entity_team_id
+#: model:ir.model.fields,help:medical.field_medical_patient_team_id
+msgid "If set, sale team used notably for sales and assignations related to this partner"
+msgstr "Si habilitado, representa al equipo de ventas usado para ventas y asignaciones relacionado con este tercero"
+
+#. module: medical
+#: model:ir.model.fields,help:medical.field_medical_abstract_entity_lang
+#: model:ir.model.fields,help:medical.field_medical_patient_lang
+msgid "If the selected language is loaded in the system, all documents related to this contact will be printed in this language. If not, it will be English."
+msgstr "Si el idioma seleccionado está cargado en el sistema, todos los documentos relacionados con el contacto se imprimirán en este idioma. Si no, se imprimirán en inglés."
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_image
+#: model:ir.model.fields,field_description:medical.field_medical_patient_image
+msgid "Image"
+msgstr "Imagen"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_patient_identification_code
+msgid "Internal Identification"
+msgstr "Identificación interna"
+
+#. module: medical
+#: model:ir.ui.view,arch_db:medical.medical_abstract_entity_view_form
+msgid "Internal Note..."
+msgstr "Nota interna ..."
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_ref
+#: model:ir.model.fields,field_description:medical.field_medical_patient_ref
+msgid "Internal Reference"
+msgstr "Referencia Interna"
+
+#. module: medical
+#: code:addons/medical/models/medical_patient.py:118
+#, python-format
+msgid "Invalid operator: %s"
+msgstr "Operador no válido: %s"
+
+#. module: medical
+#: code:addons/medical/models/medical_patient.py:92
+#, python-format
+msgid "Invalid selection - Only a `Female` may be pregnant."
+msgstr "Selección no válida - Sólo una mujer puede estar embarazada."
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_invoice_warn
+#: model:ir.model.fields,field_description:medical.field_medical_patient_invoice_warn
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_invoice_ids
+#: model:ir.model.fields,field_description:medical.field_medical_patient_invoice_ids
+msgid "Invoices"
+msgstr "Facturas"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_is_company
+#: model:ir.model.fields,field_description:medical.field_medical_patient_is_company
+msgid "Is a Company"
+msgstr "Es una Empresa"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_customer
+#: model:ir.model.fields,field_description:medical.field_medical_patient_customer
+msgid "Is a Customer"
+msgstr "Es un Cliente"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_supplier
+#: model:ir.model.fields,field_description:medical.field_medical_patient_supplier
+msgid "Is a Vendor"
+msgstr "Es un Proveedor"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_patient_is_deceased
+msgid "Is deceased"
+msgstr "Ha fallecido"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_patient_is_pregnant
+msgid "Is pregnant"
+msgstr "En Gestación"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_function
+#: model:ir.model.fields,field_description:medical.field_medical_patient_function
+msgid "Job Position"
+msgstr "Puesto de trabajo"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_issued_total
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_journal_item_count
+#: model:ir.model.fields,field_description:medical.field_medical_patient_issued_total
+#: model:ir.model.fields,field_description:medical.field_medical_patient_journal_item_count
+msgid "Journal Items"
+msgstr "Líneas de los Asientos Contables"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_lang
+#: model:ir.model.fields,field_description:medical.field_medical_patient_lang
+msgid "Language"
+msgstr "Idioma"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity___last_update
+#: model:ir.model.fields,field_description:medical.field_medical_patient___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_write_uid
+#: model:ir.model.fields,field_description:medical.field_medical_patient_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización de"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_write_date
+#: model:ir.model.fields,field_description:medical.field_medical_patient_write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: medical
+#: model:ir.model.fields,help:medical.field_medical_abstract_entity_last_time_entries_checked
+#: model:ir.model.fields,help:medical.field_medical_patient_last_time_entries_checked
+msgid "Last time the invoices & payments matching was performed for this partner. It is set either if there's not at least an unreconciled debit and an unreconciled credit or if you click the \"Done\" button."
+msgstr "Última vez que se conciliaros facturas y pagos de esta Empresa. Se configura incluso si no hay ningún débito o crédito por conciliar, o si pulsa el botón \"Hecho\"."
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_last_time_entries_checked
+#: model:ir.model.fields,field_description:medical.field_medical_patient_last_time_entries_checked
+msgid "Latest Invoices & Payments Matching Date"
+msgstr "Fecha de la última conciliación de facturas y pagos"
+
+#. module: medical
+#: model:ir.ui.view,arch_db:medical.medical_patient_view_form
+msgid "Legal Representative"
+msgstr "Representante legal"
+
+#. module: medical
+#: selection:res.partner,gender:0
+msgid "Male"
+msgstr "Masculino"
+
+#. module: medical
+#. openerp-web
+#: code:addons/medical/static/src/js/medical.tour.js:16
+#, python-format
+msgid "Manage electronic medical records using the <b>Medical</b> app."
+msgstr "Administrar registros médicos electrónicos utilizando la aplicación <b>Clínica</b>."
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_patient_marital_status
+msgid "Marital status"
+msgstr "Estado civil"
+
+#. module: medical
+#: selection:medical.patient,marital_status:0
+msgid "Married"
+msgstr "Casado"
+
+#. module: medical
+#: model:ir.module.category,name:medical.ir_module_category_medical
+#: model:ir.ui.menu,name:medical.medical_root
+#: model:ir.ui.view,arch_db:medical.medical_patient_view_form
+msgid "Medical"
+msgstr "Clínica"
+
+#. module: medical
+#: model:ir.model,name:medical.model_medical_abstract_entity
+msgid "Medical Abstract Entity"
+msgstr "Entidad médica abstracta"
+
+#. module: medical
+#: model:ir.ui.view,arch_db:medical.medical_abstract_entity_view_search
+msgid "Medical Entities"
+msgstr "Entidades Médicas"
+
+#. module: medical
+#: model:ir.ui.view,arch_db:medical.medical_abstract_entity_view_form
+#: model:ir.ui.view,arch_db:medical.medical_abstract_entity_view_tree
+msgid "Medical Entity"
+msgstr "Entidad médica"
+
+#. module: medical
+#: model:ir.model,name:medical.model_medical_patient
+msgid "Medical Patient"
+msgstr "Paciente"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_image_medium
+#: model:ir.model.fields,field_description:medical.field_medical_patient_image_medium
+msgid "Medium-sized image"
+msgstr "Imagen de Tamaño Medio"
+
+#. module: medical
+#: model:ir.model.fields,help:medical.field_medical_abstract_entity_image_medium
+#: model:ir.model.fields,help:medical.field_medical_patient_image_medium
+msgid "Medium-sized image of this contact. It is automatically resized as a 128x128px image, with aspect ratio preserved. Use this field in form views or some kanban views."
+msgstr "Imagen mediana de este contacto. Se redimensiona automáticamente a 128x128 px, con el ratio de aspecto preservado. Se usa este campo en las vistas los formularios y en algunas vistas de kanban."
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_invoice_warn_msg
+#: model:ir.model.fields,field_description:medical.field_medical_patient_invoice_warn_msg
+msgid "Message for Invoice"
+msgstr "Mensaje para factura"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_mobile
+#: model:ir.model.fields,field_description:medical.field_medical_patient_mobile
+msgid "Mobile"
+msgstr "Tel. Celular"
+
+#. module: medical
+#: model:ir.ui.view,arch_db:medical.medical_abstract_entity_view_form
+msgid "Mobile:"
+msgstr "Tel. Celular:"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_name
+#: model:ir.model.fields,field_description:medical.field_medical_patient_name
+#: model:ir.ui.view,arch_db:medical.medical_abstract_entity_view_form
+msgid "Name"
+msgstr "Nombre"
+
+#. module: medical
+#: code:addons/medical/models/medical_patient.py:77
+#, python-format
+msgid "No DoB"
+msgstr "No Nacimiento"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_comment
+#: model:ir.model.fields,field_description:medical.field_medical_patient_comment
+msgid "Notes"
+msgstr "Notas"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_opt_out
+#: model:ir.model.fields,field_description:medical.field_medical_patient_opt_out
+msgid "Opt-Out"
+msgstr "No acepta recibir mensajes"
+
+#. module: medical
+#: selection:res.partner,gender:0
+msgid "Other"
+msgstr "Otras"
+
+#. module: medical
+#: model:ir.ui.view,arch_db:medical.medical_abstract_entity_view_search
+msgid "Parent"
+msgstr "Representante legal"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_parent_name
+#: model:ir.model.fields,field_description:medical.field_medical_patient_parent_name
+msgid "Parent name"
+msgstr "Nombre Representante"
+
+#. module: medical
+#: model:ir.model,name:medical.model_res_partner
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: medical
+#: code:addons/medical/models/res_partner.py:72
+#, python-format
+msgid "Partners cannot be born in the future."
+msgstr "Los pacinetes no pueden nacer en el futuro."
+
+#. module: medical
+#: model:ir.ui.menu,name:medical.medical_patient
+#: model:ir.ui.menu,name:medical.medical_patient_root
+#: model:ir.ui.view,arch_db:medical.medical_patient_view_form
+msgid "Patient"
+msgstr "Paciente"
+
+#. module: medical
+#: model:ir.model.fields,help:medical.field_medical_patient_identification_code
+msgid "Patient Identifier provided by the Health Center.(different from the Social Security Number)"
+msgstr "Identificador de paciente proporcionado por el Centro de Salud. (Diferente del Número de Seguridad Social)"
+
+#. module: medical
+#: model:ir.actions.act_window,name:medical.medical_patient_action
+#: model:ir.ui.view,arch_db:medical.medical_patient_view_kanban
+#: model:ir.ui.view,arch_db:medical.medical_patient_view_search
+#: model:ir.ui.view,arch_db:medical.medical_patient_view_tree
+msgid "Patients"
+msgstr "Pacientes"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_debit_limit
+#: model:ir.model.fields,field_description:medical.field_medical_patient_debit_limit
+msgid "Payable Limit"
+msgstr "Límite a pagar"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_phone
+#: model:ir.model.fields,field_description:medical.field_medical_patient_phone
+msgid "Phone"
+msgstr "Teléfono"
+
+#. module: medical
+#: model:ir.ui.view,arch_db:medical.medical_abstract_entity_view_form
+msgid "Phone:"
+msgstr "Teléfono:"
+
+#. module: medical
+#: model:ir.model.fields,help:medical.field_medical_abstract_entity_notify_email
+#: model:ir.model.fields,help:medical.field_medical_patient_notify_email
+msgid ""
+"Policy to receive emails for new messages pushed to your personal Inbox:\n"
+"- Never: no emails are sent\n"
+"- All Messages: for every notification you receive in your Inbox"
+msgstr ""
+"Política para recibir correos electrónicos para los nuevos mensajes insertados en su bandeja de entrada personal\n"
+"- Nunca: No se enviará ningún correo\n"
+"- Todos los mensajes: Se enviará un correo para cada notificación que reciba en su bandeja de entrada"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_parent_id
+#: model:ir.model.fields,field_description:medical.field_medical_patient_parent_id
+msgid "Related Company"
+msgstr "Empresa relacionada"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_partner_id
+#: model:ir.model.fields,field_description:medical.field_medical_center_partner_id
+#: model:ir.model.fields,field_description:medical.field_medical_patient_partner_id
+#: model:ir.model.fields,field_description:medical.field_medical_pharmacist_partner_id
+#: model:ir.model.fields,field_description:medical.field_medical_pharmacy_partner_id
+#: model:ir.model.fields,field_description:medical.field_medical_physician_partner_id
+#: model:ir.ui.view,arch_db:medical.medical_abstract_entity_view_search
+msgid "Related Partner"
+msgstr "Empresa relacionada"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_patient_ids
+#: model:ir.model.fields,field_description:medical.field_medical_patient_patient_ids
+#: model:ir.model.fields,field_description:medical.field_res_partner_patient_ids
+#: model:ir.model.fields,field_description:medical.field_res_users_patient_ids
+msgid "Related Patients"
+msgstr "Pacientes Relacionados"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_property_product_pricelist
+#: model:ir.model.fields,field_description:medical.field_medical_patient_property_product_pricelist
+msgid "Sale Pricelist"
+msgstr "Tarifa de venta"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_team_id
+#: model:ir.model.fields,field_description:medical.field_medical_patient_team_id
+msgid "Sales Team"
+msgstr "Equipo de ventas"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_user_id
+#: model:ir.model.fields,field_description:medical.field_medical_patient_user_id
+msgid "Salesperson"
+msgstr "Comercial"
+
+#. module: medical
+#: model:ir.model.fields,help:medical.field_medical_abstract_entity_invoice_warn
+#: model:ir.model.fields,help:medical.field_medical_patient_invoice_warn
+msgid "Selecting the \"Warning\" option will notify user with the message, Selecting \"Blocking Message\" will throw an exception with the message and block the flow. The Message has to be written in the next field."
+msgstr "Si selecciona la opción \"Aviso\" se notificará a los usuarios con el mensaje, si selecciona \"Mensaje de bloqueo\" se lanzará una excepción con el mensaje y se bloqueará el flujo. El mensaje debe escribirse en el siguiente campo."
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_self
+#: model:ir.model.fields,field_description:medical.field_medical_patient_self
+msgid "Self"
+msgstr "Si mismo"
+
+#. module: medical
+#: selection:medical.patient,marital_status:0
+msgid "Separated"
+msgstr "Apartado"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_partner_share
+#: model:ir.model.fields,field_description:medical.field_medical_patient_partner_share
+msgid "Share Partner"
+msgstr "Compartir empresa"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_signup_type
+#: model:ir.model.fields,field_description:medical.field_medical_patient_signup_type
+msgid "Signup Token Type"
+msgstr "Tipo de la palabra de ingreso"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_signup_valid
+#: model:ir.model.fields,field_description:medical.field_medical_patient_signup_valid
+msgid "Signup Token is Valid"
+msgstr "La palabra de ingreso es válida"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_signup_url
+#: model:ir.model.fields,field_description:medical.field_medical_patient_signup_url
+msgid "Signup URL"
+msgstr "URL de ingreso"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_signup_expiration
+#: model:ir.model.fields,field_description:medical.field_medical_patient_signup_expiration
+msgid "Signup expiration"
+msgstr "Vencimiento de registro"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_signup_token
+#: model:ir.model.fields,field_description:medical.field_medical_patient_signup_token
+msgid "Signup token"
+msgstr "Token de Registro"
+
+#. module: medical
+#: selection:medical.patient,marital_status:0
+msgid "Single"
+msgstr "Soltero"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_image_small
+#: model:ir.model.fields,field_description:medical.field_medical_patient_image_small
+msgid "Small-sized image"
+msgstr "Tamaño pequeño de imagen"
+
+#. module: medical
+#: model:ir.model.fields,help:medical.field_medical_abstract_entity_image_small
+#: model:ir.model.fields,help:medical.field_medical_patient_image_small
+msgid "Small-sized image of this contact. It is automatically resized as a 64x64px image, with aspect ratio preserved. Use this field anywhere a small image is required."
+msgstr "Imagen de tamaño pequeño de este contacto. Se redimensiona automáticamente a 64x64 px, con el ratio de aspecto preservado. Use este campo donde se requiera una imagen pequeña."
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_state_id
+#: model:ir.model.fields,field_description:medical.field_medical_patient_state_id
+#: model:ir.ui.view,arch_db:medical.medical_abstract_entity_view_form
+msgid "State"
+msgstr "Estado"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_street
+#: model:ir.model.fields,field_description:medical.field_medical_patient_street
+msgid "Street"
+msgstr "Calle"
+
+#. module: medical
+#: model:ir.ui.view,arch_db:medical.medical_abstract_entity_view_form
+msgid "Street 2..."
+msgstr "Calle..."
+
+#. module: medical
+#: model:ir.ui.view,arch_db:medical.medical_abstract_entity_view_form
+msgid "Street..."
+msgstr "Calle..."
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_street2
+#: model:ir.model.fields,field_description:medical.field_medical_patient_street2
+msgid "Street2"
+msgstr "Calle2"
+
+#. module: medical
+#: model:res.groups,name:medical.group_medical_configurator
+msgid "System Administrator"
+msgstr "Administrador de sistema"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_vat
+#: model:ir.model.fields,field_description:medical.field_medical_patient_vat
+msgid "TIN"
+msgstr "Identificación"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_category_id
+#: model:ir.model.fields,field_description:medical.field_medical_patient_category_id
+msgid "Tags"
+msgstr "Etiquetas"
+
+#. module: medical
+#: model:ir.ui.view,arch_db:medical.medical_abstract_entity_view_form
+msgid "Tags..."
+msgstr "Etiquetas..."
+
+#. module: medical
+#: model:ir.model.fields,help:medical.field_medical_abstract_entity_vat
+#: model:ir.model.fields,help:medical.field_medical_patient_vat
+msgid "Tax Identification Number. Fill it if the company is subjected to taxes. Used by the some of the legal statements."
+msgstr "Número de identificación fiscal. Marque la casilla si el contacto está sujeto a impuestos. Usado por algunos documentos legales."
+
+#. module: medical
+#: model:ir.model.fields,help:medical.field_medical_abstract_entity_property_account_position_id
+#: model:ir.model.fields,help:medical.field_medical_patient_property_account_position_id
+msgid "The fiscal position will determine taxes and accounts used for the partner."
+msgstr "La posición fiscal determinará los impuestos y cuentas utilizados por la Empresa."
+
+#. module: medical
+#: model:ir.model.fields,help:medical.field_medical_abstract_entity_user_id
+#: model:ir.model.fields,help:medical.field_medical_patient_user_id
+msgid "The internal user that is in charge of communicating with this contact if any."
+msgstr "El usuario interno encargado de comunicarse con este contacto si lo hubiese."
+
+#. module: medical
+#: model:ir.model.fields,help:medical.field_medical_abstract_entity_has_unreconciled_entries
+#: model:ir.model.fields,help:medical.field_medical_patient_has_unreconciled_entries
+msgid "The partner has at least one unreconciled debit and credit since last time the invoices & payments matching was performed."
+msgstr "La empresa tiene al menos un débito o crédito no conciliado desde la última vez que se realizó la conciliación de facturas y pagos."
+
+#. module: medical
+#: model:ir.model.fields,help:medical.field_medical_abstract_entity_tz
+#: model:ir.model.fields,help:medical.field_medical_patient_tz
+msgid "The partner's timezone, used to output proper date and time values inside printed reports. It is important to set a value for this field. You should use the same timezone that is otherwise used to pick and render date and time values: your computer's timezone."
+msgstr "Zona horaria de la empresa, usada para mostrar la fecha y hora adecuadas en los informes impresos. Es importante establecer un valor para este campo. Debería usar la misma zona horaria que se coge en caso contrario para mostrar los valores de fecha y hora: la zona horaria de su ordenador."
+
+#. module: medical
+#: model:ir.model.fields,help:medical.field_medical_abstract_entity_property_account_payable_id
+#: model:ir.model.fields,help:medical.field_medical_patient_property_account_payable_id
+msgid "This account will be used instead of the default one as the payable account for the current partner"
+msgstr "Esta cuenta se utilizará en lugar de la cuenta por defecto como la cuenta pendiente de pago del asociado actual."
+
+#. module: medical
+#: model:ir.model.fields,help:medical.field_medical_abstract_entity_property_account_receivable_id
+#: model:ir.model.fields,help:medical.field_medical_patient_property_account_receivable_id
+msgid "This account will be used instead of the default one as the receivable account for the current partner"
+msgstr "Esta cuenta se utilizará en lugar de la cuenta por defecto como la cuenta pendiente de cobro del asociado actual."
+
+#. module: medical
+#: model:ir.model.fields,help:medical.field_medical_abstract_entity_image
+#: model:ir.model.fields,help:medical.field_medical_patient_image
+msgid "This field holds the image used as avatar for this contact, limited to 1024x1024px"
+msgstr "Este campo contiene la imagen utilizada como avatar para este contacto, limitada a 1024x1024 px"
+
+#. module: medical
+#: model:ir.model.fields,help:medical.field_medical_abstract_entity_property_supplier_payment_term_id
+#: model:ir.model.fields,help:medical.field_medical_patient_property_supplier_payment_term_id
+msgid "This payment term will be used instead of the default one for purchase orders and vendor bills"
+msgstr "Se utilizará esta condición de pago, en lugar de la predeterminada, para los pedidos de compra y las facturas de proveedor."
+
+#. module: medical
+#: model:ir.model.fields,help:medical.field_medical_abstract_entity_property_payment_term_id
+#: model:ir.model.fields,help:medical.field_medical_patient_property_payment_term_id
+msgid "This payment term will be used instead of the default one for sale orders and customer invoices"
+msgstr "Se utilizará esta condición de pago, en lugar de la predeterminada, para los pedidos de venta y facturas de clientes"
+
+#. module: medical
+#: model:ir.model.fields,help:medical.field_medical_abstract_entity_property_product_pricelist
+#: model:ir.model.fields,help:medical.field_medical_patient_property_product_pricelist
+msgid "This pricelist will be used, instead of the default one, for sales to the current partner"
+msgstr "Esta lista de precios será usada, en ves de la lista por defecto, para ventas al cliente actual"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_tz
+#: model:ir.model.fields,field_description:medical.field_medical_patient_tz
+msgid "Timezone"
+msgstr "Zona horaria"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_tz_offset
+#: model:ir.model.fields,field_description:medical.field_medical_patient_tz_offset
+msgid "Timezone offset"
+msgstr "Zona horaria"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_title
+#: model:ir.model.fields,field_description:medical.field_medical_patient_title
+msgid "Title"
+msgstr "Título"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_total_invoiced
+#: model:ir.model.fields,field_description:medical.field_medical_patient_total_invoiced
+msgid "Total Invoiced"
+msgstr "Total facturado"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_debit
+#: model:ir.model.fields,field_description:medical.field_medical_patient_debit
+msgid "Total Payable"
+msgstr "Total a pagar"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_credit
+#: model:ir.model.fields,field_description:medical.field_medical_patient_credit
+msgid "Total Receivable"
+msgstr "Total a cobrar"
+
+#. module: medical
+#: model:ir.model.fields,help:medical.field_medical_abstract_entity_credit
+#: model:ir.model.fields,help:medical.field_medical_patient_credit
+msgid "Total amount this customer owes you."
+msgstr "Valor total que debe el cliente."
+
+#. module: medical
+#: model:ir.model.fields,help:medical.field_medical_abstract_entity_debit
+#: model:ir.model.fields,help:medical.field_medical_patient_debit
+msgid "Total amount you have to pay to this vendor."
+msgstr "Valor total a pagar a este proveedor."
+
+#. module: medical
+#: model:ir.ui.view,arch_db:medical.medical_patient_view_form
+msgid "UoM"
+msgstr "UoM"
+
+#. module: medical
+#: model:ir.model.fields,help:medical.field_medical_abstract_entity_type
+#: model:ir.model.fields,help:medical.field_medical_center_type
+#: model:ir.model.fields,help:medical.field_medical_patient_type
+#: model:ir.model.fields,help:medical.field_medical_pharmacist_type
+#: model:ir.model.fields,help:medical.field_medical_pharmacy_type
+#: model:ir.model.fields,help:medical.field_medical_physician_type
+msgid "Used to select automatically the right address according to the context in sales and purchases documents."
+msgstr "﻿Utilizado para seleccionar automáticamente la dirección correcta según el contexto en documentos de ventas y compras."
+
+#. module: medical
+#: model:res.groups,name:medical.group_medical_user
+msgid "User"
+msgstr "Usuario"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_user_ids
+#: model:ir.model.fields,field_description:medical.field_medical_patient_user_ids
+msgid "Users"
+msgstr "Usuarios"
+
+#. module: medical
+#: model:ir.model.fields,help:medical.field_medical_abstract_entity_currency_id
+#: model:ir.model.fields,help:medical.field_medical_patient_currency_id
+msgid "Utility field to express amount currency"
+msgstr "Campo útil para expresar el valor en divisa."
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_property_supplier_payment_term_id
+#: model:ir.model.fields,field_description:medical.field_medical_patient_property_supplier_payment_term_id
+msgid "Vendor Payment Terms"
+msgstr "Términos de Pago"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_website
+#: model:ir.model.fields,field_description:medical.field_medical_patient_website
+msgid "Website"
+msgstr "Sitio web"
+
+#. module: medical
+#: model:ir.model.fields,help:medical.field_medical_abstract_entity_website
+#: model:ir.model.fields,help:medical.field_medical_patient_website
+msgid "Website of Partner or Company"
+msgstr "Sitio web de la empresa o compañía"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_weight
+#: model:ir.model.fields,field_description:medical.field_medical_patient_weight
+#: model:ir.model.fields,field_description:medical.field_res_partner_weight
+#: model:ir.model.fields,field_description:medical.field_res_users_weight
+msgid "Weight"
+msgstr "Peso"
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_weight_uom
+#: model:ir.model.fields,field_description:medical.field_medical_patient_weight_uom
+#: model:ir.model.fields,field_description:medical.field_res_partner_weight_uom
+#: model:ir.model.fields,field_description:medical.field_res_users_weight_uom
+msgid "Weight UoM"
+msgstr "Peso UoM"
+
+#. module: medical
+#: selection:medical.patient,marital_status:0
+msgid "Widowed"
+msgstr "Viudo"
+
+#. module: medical
+#: model:ir.ui.view,arch_db:medical.medical_abstract_entity_view_form
+msgid "ZIP"
+msgstr "C.P."
+
+#. module: medical
+#: model:ir.model.fields,field_description:medical.field_medical_abstract_entity_zip
+#: model:ir.model.fields,field_description:medical.field_medical_patient_zip
+msgid "Zip"
+msgstr "C.P."
+
+#. module: medical
+#: model:ir.ui.view,arch_db:medical.medical_abstract_entity_view_form
+msgid "e.g. Mr."
+msgstr "ejemplo, Sr."
+
+#. module: medical
+#: model:ir.ui.view,arch_db:medical.medical_abstract_entity_view_form
+msgid "e.g. Sales Director"
+msgstr "ejemplo, Director de ventas"
+
+#. module: medical
+#: selection:medical.patient,marital_status:0
+msgid "law marriage"
+msgstr "Matrimonio"

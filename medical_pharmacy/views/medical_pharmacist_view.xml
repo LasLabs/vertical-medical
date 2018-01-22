@@ -31,12 +31,15 @@
             </xpath>
             <xpath expr="//h1" position="after">
                 <h3>
-                    <field name="parent_id" placeholder="Company" />
+                    <field name="parent_id" 
+                           placeholder="Company"
+                           domain="[('is_company', '=', True)]"
+                           context="{'default_is_company': True}" />
                 </h3>
             </xpath>
             <xpath expr="//group[@name='main_data']" position="replace">
                 <group name="main_data">
-                    <field name="gender" />
+                    <!-- <field name="gender" /> -->
                     <field name="employee" />
                 </group>
             </xpath>

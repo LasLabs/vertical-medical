@@ -19,8 +19,8 @@
         "medical_medicament",
     ],
     "data": [
-        "data/product_uom.xml",
-        "data/medical_medication_dosage.xml",
+        # "data/product_uom.xml",
+        # "data/medical_medication_dosage.xml",
         "security/ir.model.access.csv",
         "views/medical_medication_dosage_view.xml",
         "views/medical_medication_template_view.xml",

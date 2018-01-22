@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report 
+            id="medical_prescription_order_report"
+            string="Prescription"
+            model="medical.prescription.order" 
+            report_type="qweb-html"
+            file="medical_prescription.report_prescriptionorder" 
+            name="medical_prescription.report_prescriptionorder" 
+        />
+    </data>
+</odoo>

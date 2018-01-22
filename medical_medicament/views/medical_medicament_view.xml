@@ -81,6 +81,11 @@
         <field name="inherit_id" ref="product.product_template_form_view" />
         <field name="mode">primary</field>
         <field name="arch" type="xml">
+            <xpath expr="//field[@name='type']" position="after">
+                <field name="default_code"/>
+                <field name="barcode"/>
+            </xpath>
+
             <xpath expr="//notebook" position="inside">
                 <page name="medicament" string="Medicaments" autofocus="autofocus">
                     <group>

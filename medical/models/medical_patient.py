@@ -94,7 +94,7 @@ class MedicalPatient(models.Model):
                 ))
 
     @api.model
-    def _create_vals(self, vals):
+    def _create_vals(self, vals, check=True):
         vals = super(MedicalPatient, self)._create_vals(vals)
         if not vals.get('identification_code'):
             Seq = self.env['ir.sequence']
