@@ -1,0 +1,640 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* medical_pharmacy
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0-20170513\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-13 23:54+0000\n"
+"PO-Revision-Date: 2017-05-13 18:57-0500\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.0.1\n"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_alias
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_alias
+msgid "Alias"
+msgstr "Alias"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_bank_ids
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_bank_ids
+msgid "Banks"
+msgstr "Bancos"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_barcode
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_barcode
+msgid "Barcode"
+msgstr "Código de Barras"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_birthdate
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_birthdate_date
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_birthdate
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_birthdate_date
+msgid "Birthdate"
+msgstr "Fecha de nacimiento"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_message_bounce
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_message_bounce
+msgid "Bounce"
+msgstr "Rebote"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_channel_ids
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_channel_ids
+msgid "Channels"
+msgstr "Canales"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacist_is_company
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacy_is_company
+msgid "Check if the contact is a company, otherwise it is a person"
+msgstr "Marque esta casilla si el contacto es una compañía. En caso contrario, será una persona"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacist_customer
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacy_customer
+msgid "Check this box if this contact is a customer."
+msgstr "Marque esta casilla si el contacto es un cliente."
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacist_supplier
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacy_supplier
+msgid "Check this box if this contact is a vendor. If it's not checked, purchase people will not see it when encoding a purchase order."
+msgstr "Marque esta casilla si el contacto es un proveedor. Si no está marcada, el equipo de compras no lo verá cuando esté haciendo una orden de compra."
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacist_employee
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacy_employee
+msgid "Check this box if this contact is an Employee."
+msgstr "Marque si el contacto es un empleado."
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_city
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_city
+msgid "City"
+msgstr "Ciudad"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_color
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_color
+msgid "Color Index"
+msgstr "Color del Indice"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_commercial_partner_id
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_commercial_partner_id
+msgid "Commercial Entity"
+msgstr "Entidad comercial"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacist_alias
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacy_alias
+msgid "Common name that the Party is referred"
+msgstr "Nombre común al que se hace referencia"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_company_id
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_company_id
+#: model:ir.ui.view,arch_db:medical_pharmacy.medical_pharmacist_view_form
+#: model:ir.ui.view,arch_db:medical_pharmacy.medical_pharmacist_view_search
+#: model:ir.ui.view,arch_db:medical_pharmacy.medical_pharmacy_view_search
+msgid "Company"
+msgstr "Compañía"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_company_name
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_company_name
+msgid "Company Name"
+msgstr "Nombre de la compañía"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_commercial_company_name
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_commercial_company_name
+msgid "Company Name Entity"
+msgstr "Entidad del nombre de la compañía"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_company_type
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_company_type
+msgid "Company Type"
+msgstr "Tipo de Compañía"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_contact_address
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_contact_address
+msgid "Complete Address"
+msgstr "Dirección completa"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_child_ids
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_child_ids
+msgid "Contacts"
+msgstr "Contactos"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_count_patients
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_count_patients
+msgid "Count patients"
+msgstr "Cuente a los pacientes"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacist_message_bounce
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacy_message_bounce
+msgid "Counter of the number of bounced emails for this contact"
+msgstr "Contador del número de correos electrónicos rebotados de este contacto"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_country_id
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_country_id
+msgid "Country"
+msgstr "País"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_create_uid
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_create_date
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_credit_limit
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_credit_limit
+msgid "Credit Limit"
+msgstr "Crédito concedido"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_date
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_display_name
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_display_name
+msgid "Display Name"
+msgstr "Nombre a Mostrar"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacist_partner_share
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacy_partner_share
+msgid "Either customer (no user), either shared user. Indicated the current partner is a customer without access or with a limited access created for sharing data."
+msgstr "Ya sea cliente (no usuario), como usuario compartido. Indica si el socio actual es un cliente sin acceso o con un acceso limitado creado para compartir datos."
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_email
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_email
+msgid "Email"
+msgstr "Email"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_notify_email
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_notify_email
+msgid "Email Messages and Notifications"
+msgstr "Enviar mensajes y notificaciones"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_employee
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_employee
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_fax
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_fax
+msgid "Fax"
+msgstr "Fax"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_firstname
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_firstname
+msgid "First name"
+msgstr "Nombre"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacist_email_formatted
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacy_email_formatted
+msgid "Format email address \"Name <email@domain>\""
+msgstr "Formato email \"Nombre <email@domain>\""
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_email_formatted
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_email_formatted
+msgid "Formatted Email"
+msgstr "Email con formato"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_gender
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_gender
+msgid "Gender"
+msgstr "Género"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_id
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_id
+msgid "ID"
+msgstr "ID"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_im_status
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_im_status
+msgid "IM Status"
+msgstr "Estado IM"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_id_numbers
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_id_numbers
+msgid "Identification Numbers"
+msgstr "Números de identificación"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacist_opt_out
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacy_opt_out
+msgid "If opt-out is checked, this contact has refused to receive emails for mass mailing and marketing campaign. Filter 'Available for Mass Mailing' allows users to filter the partners when performing mass mailing."
+msgstr "Si 'No acepta mensajes' está marcado, este contacto ha rehusado recibir correos electrónicos de envíos masivos y campañas de marketing. El filtro 'Disponible para envíos masivos' permite a los usuarios filtrar a las empresas cuando se realicen envíos masivos."
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacist_team_id
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacy_team_id
+msgid "If set, sale team used notably for sales and assignations related to this partner"
+msgstr "Si habilitado, representa al equipo de ventas usado para ventas y asignaciones relacionado con este tercero"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacist_lang
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacy_lang
+msgid "If the selected language is loaded in the system, all documents related to this contact will be printed in this language. If not, it will be English."
+msgstr "Si el idioma seleccionado está cargado en el sistema, todos los documentos relacionados con el contacto se imprimirán en este idioma. Si no, se imprimirán en inglés."
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_image
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_image
+msgid "Image"
+msgstr "Imagen"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_ref
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_ref
+msgid "Internal Reference"
+msgstr "Referencia Interna"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_is_company
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_is_company
+msgid "Is a Company"
+msgstr "Es una Empresa"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_customer
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_customer
+msgid "Is a Customer"
+msgstr "Es un Cliente"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_supplier
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_supplier
+msgid "Is a Vendor"
+msgstr "Es un Proveedor"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_function
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_function
+msgid "Job Position"
+msgstr "Puesto de trabajo"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_lang
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_lang
+msgid "Language"
+msgstr "Idioma"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist___last_update
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_write_uid
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_write_uid
+msgid "Last Updated by"
+msgstr "Ultima Actualización por"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_write_date
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_lastname
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_lastname
+msgid "Last name"
+msgstr "Apellido"
+
+#. module: medical_pharmacy
+#: model:ir.model,name:medical_pharmacy.model_medical_pharmacist
+msgid "Medical Pharmacist"
+msgstr "Farmacéutico"
+
+#. module: medical_pharmacy
+#: model:ir.model,name:medical_pharmacy.model_medical_pharmacy
+msgid "Medical Pharmacy"
+msgstr "Farmacia"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_image_medium
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_image_medium
+msgid "Medium-sized image"
+msgstr "Imagen de Tamaño Medio"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacist_image_medium
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacy_image_medium
+msgid "Medium-sized image of this contact. It is automatically resized as a 128x128px image, with aspect ratio preserved. Use this field in form views or some kanban views."
+msgstr "Imagen mediana de este contacto. Se redimensiona automáticamente a 128x128 px, con el ratio de aspecto preservado. Se usa este campo en las vistas los formularios y en algunas vistas de kanban."
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_mobile
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_mobile
+msgid "Mobile"
+msgstr "Tel. Celular"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_name
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_comment
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_comment
+msgid "Notes"
+msgstr "Notas"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_opt_out
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_opt_out
+msgid "Opt-Out"
+msgstr "No acepta recibir mensajes"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_parent_name
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_parent_name
+msgid "Parent name"
+msgstr "Nombre Representante"
+
+#. module: medical_pharmacy
+#: model:ir.model,name:medical_pharmacy.model_res_partner
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: medical_pharmacy
+#: model:ir.ui.menu,name:medical_pharmacy.medical_pharmacy_menu
+#: model:ir.ui.view,arch_db:medical_pharmacy.medical_pharmacy_view_kanban
+#: model:ir.ui.view,arch_db:medical_pharmacy.medical_pharmacy_view_search
+#: model:ir.ui.view,arch_db:medical_pharmacy.medical_pharmacy_view_tree
+msgid "Pharmacies"
+msgstr "Farmacias"
+
+#. module: medical_pharmacy
+#: model:ir.actions.act_window,name:medical_pharmacy.medical_pharmacist_action
+#: model:ir.ui.view,arch_db:medical_pharmacy.medical_pharmacist_view_form
+msgid "Pharmacist"
+msgstr "Farmacéutico"
+
+#. module: medical_pharmacy
+#: model:ir.ui.menu,name:medical_pharmacy.medical_pharmacist_menu
+#: model:ir.ui.view,arch_db:medical_pharmacy.medical_pharmacist_view_kanban
+#: model:ir.ui.view,arch_db:medical_pharmacy.medical_pharmacist_view_search
+#: model:ir.ui.view,arch_db:medical_pharmacy.medical_pharmacist_view_tree
+msgid "Pharmacists"
+msgstr "Farmacéuticos"
+
+#. module: medical_pharmacy
+#: model:ir.actions.act_window,name:medical_pharmacy.medical_pharmacy_action
+#: model:ir.ui.view,arch_db:medical_pharmacy.medical_pharmacy_view_form
+msgid "Pharmacy"
+msgstr "Farmacia"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_phone
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_phone
+msgid "Phone"
+msgstr "Teléfono"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacist_notify_email
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacy_notify_email
+msgid ""
+"Policy to receive emails for new messages pushed to your personal Inbox:\n"
+"- Never: no emails are sent\n"
+"- All Messages: for every notification you receive in your Inbox"
+msgstr ""
+"Política para recibir correos electrónicos para los nuevos mensajes insertados en su bandeja de entrada personal\n"
+"- Nunca: No se enviará ningún correo\n"
+"- Todos los mensajes: Se enviará un correo para cada notificación que reciba en su bandeja de entrada"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_parent_id
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_parent_id
+msgid "Related Company"
+msgstr "Empresa relacionada"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_patient_ids
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_patient_ids
+msgid "Related Patients"
+msgstr "Pacientes Relacionados"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_property_product_pricelist
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_property_product_pricelist
+msgid "Sale Pricelist"
+msgstr "Tarifa de venta"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_team_id
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_team_id
+msgid "Sales Team"
+msgstr "Equipo de ventas"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_user_id
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_user_id
+msgid "Salesperson"
+msgstr "Comercial"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_self
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_self
+msgid "Self"
+msgstr "Si mismo"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_partner_share
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_partner_share
+msgid "Share Partner"
+msgstr "Compartir empresa"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_signup_type
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_signup_type
+msgid "Signup Token Type"
+msgstr "Tipo de la palabra de ingreso"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_signup_valid
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_signup_valid
+msgid "Signup Token is Valid"
+msgstr "La palabra de ingreso es válida"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_signup_url
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_signup_url
+msgid "Signup URL"
+msgstr "URL de ingreso"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_signup_expiration
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_signup_expiration
+msgid "Signup expiration"
+msgstr "Vencimiento de registro"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_signup_token
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_signup_token
+msgid "Signup token"
+msgstr "Token de Registro"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_image_small
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_image_small
+msgid "Small-sized image"
+msgstr "Tamaño pequeño de imagen"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacist_image_small
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacy_image_small
+msgid "Small-sized image of this contact. It is automatically resized as a 64x64px image, with aspect ratio preserved. Use this field anywhere a small image is required."
+msgstr "Imagen de tamaño pequeño de este contacto. Se redimensiona automáticamente a 64x64 px, con el ratio de aspecto preservado. Use este campo donde se requiera una imagen pequeña."
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_state_id
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_state_id
+#: model:ir.ui.view,arch_db:medical_pharmacy.medical_pharmacist_view_search
+#: model:ir.ui.view,arch_db:medical_pharmacy.medical_pharmacy_view_search
+msgid "State"
+msgstr "Estado"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_street
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_street
+msgid "Street"
+msgstr "Calle"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_street2
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_street2
+msgid "Street2"
+msgstr "Calle2"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_vat
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_vat
+msgid "TIN"
+msgstr "Identificación"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_category_id
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_category_id
+msgid "Tags"
+msgstr "Etiquetas"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacist_vat
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacy_vat
+msgid "Tax Identification Number. Fill it if the company is subjected to taxes. Used by the some of the legal statements."
+msgstr "Número de identificación fiscal. Marque la casilla si el contacto está sujeto a impuestos. Usado por algunos documentos legales."
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacist_user_id
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacy_user_id
+msgid "The internal user that is in charge of communicating with this contact if any."
+msgstr "El usuario interno encargado de comunicarse con este contacto si lo hubiese."
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacist_tz
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacy_tz
+msgid "The partner's timezone, used to output proper date and time values inside printed reports. It is important to set a value for this field. You should use the same timezone that is otherwise used to pick and render date and time values: your computer's timezone."
+msgstr "Zona horaria de la empresa, usada para mostrar la fecha y hora adecuadas en los informes impresos. Es importante establecer un valor para este campo. Debería usar la misma zona horaria que se coge en caso contrario para mostrar los valores de fecha y hora: la zona horaria de su ordenador."
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacist_image
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacy_image
+msgid "This field holds the image used as avatar for this contact, limited to 1024x1024px"
+msgstr "Este campo contiene la imagen utilizada como avatar para este contacto, limitada a 1024x1024 px"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacist_property_product_pricelist
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacy_property_product_pricelist
+msgid "This pricelist will be used, instead of the default one, for sales to the current partner"
+msgstr "Esta lista de precios será usada, en ves de la lista por defecto, para ventas al cliente actual"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_tz
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_tz
+msgid "Timezone"
+msgstr "Zona horaria"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_tz_offset
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_tz_offset
+msgid "Timezone offset"
+msgstr "Zona horaria"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_title
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_title
+msgid "Title"
+msgstr "Título"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_user_ids
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_user_ids
+msgid "Users"
+msgstr "Usuarios"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_website
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_website
+msgid "Website"
+msgstr "Sitio web"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacist_website
+#: model:ir.model.fields,help:medical_pharmacy.field_medical_pharmacy_website
+msgid "Website of Partner or Company"
+msgstr "Sitio web de la empresa o compañía"
+
+#. module: medical_pharmacy
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacist_zip
+#: model:ir.model.fields,field_description:medical_pharmacy.field_medical_pharmacy_zip
+#: model:ir.ui.view,arch_db:medical_pharmacy.medical_pharmacist_view_search
+#: model:ir.ui.view,arch_db:medical_pharmacy.medical_pharmacy_view_search
+msgid "Zip"
+msgstr "C.P"
