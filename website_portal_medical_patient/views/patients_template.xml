@@ -64,7 +64,7 @@
                   method="post"
                   enctype="multipart/form-data"
                   data-model_name="medical.patient"
-                  t-att-data-success_page="success_page or '/my/medical/'"
+                  data-success_page="/my/medical/"
                   class="s_website_form form-horizontal container-fluid mt32">
                 <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
                 <input type="hidden" name="parent_id" t-att-value="patient.parent_id.id or partner.id" />

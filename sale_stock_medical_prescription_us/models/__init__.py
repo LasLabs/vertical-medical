@@ -5,3 +5,4 @@
 from . import procurement_order
 from . import medical_prescription_order_line
 from . import res_company
+from . import sale_order_line

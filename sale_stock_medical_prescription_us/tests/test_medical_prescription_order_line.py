@@ -44,7 +44,7 @@ class TestMedicalPrescriptionOrderLine(TransactionCase):
         ).dispensed_ids[-1]
 
         self.uom_day = self.env.ref(
-            'medical_medication.product_uom_day'
+            'product.product_uom_day'
         )
         self.uom_dozen = self.env.ref(
             'product.product_uom_dozen'

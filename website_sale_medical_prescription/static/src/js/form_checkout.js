@@ -32,7 +32,7 @@ odoo.define('website_sale_medical_prescription.form_checkout', function(require)
       var $target = $(event.currentTarget);
       var $isPreg = $target.parents('.js_medical_prescription_patient')
         .find('.js_medical_prescription_is_pregnant');
-      if ($target.val() == 'f') {
+      if ($target.val() == 'female') {
         $isPreg.removeClass('hidden').prop('disabled', false);
       } else {
         $isPreg.addClass('hidden').prop('disabled', true).prop('checked', false);

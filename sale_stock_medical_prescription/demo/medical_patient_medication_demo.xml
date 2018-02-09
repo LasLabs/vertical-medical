@@ -11,7 +11,7 @@
         <field name="frequency">12</field>
         <field name="frequency_uom_id" ref="medical_medication.product_uom_hour" />
         <field name="duration">15</field>
-        <field name="duration_uom_id" ref="medical_medication.product_uom_day" />
+        <field name="duration_uom_id" ref="product.product_uom_day" />
         <field name="medication_dosage_id" ref="medical_medication.307470009" />
     </record>
 

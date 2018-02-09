@@ -28,7 +28,6 @@ class MedicalPatientDisease(models.Model):
         string='Pathology',
         comodel_name='medical.pathology',
         index=True,
-        required=True,
         help='Pathology (disease type) the patient was diagnosed with.',
     )
     physician_id = fields.Many2one(

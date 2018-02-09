@@ -22,3 +22,6 @@ class MedicalMedicamentNdc(models.Model):
         comodel_name='medical.medicament',
         required=True,
     )
+    active = fields.Boolean(
+        default=True,
+    )

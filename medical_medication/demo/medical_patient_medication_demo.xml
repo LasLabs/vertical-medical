@@ -28,7 +28,7 @@
         <field name="dose_uom_id" ref="product.product_uom_unit" />
         <field name="pathology_id" ref="medical_medication.medical_pathology_pathology_4" />
         <field name="duration">1</field>
-        <field name="duration_uom_id" ref="medical_medication.product_uom_day" />
+        <field name="duration_uom_id" ref="product.product_uom_day" />
     </record>
 
     <record id="medical_patient_medication_medication_2" model="medical.patient.medication">
@@ -64,7 +64,7 @@
         <field name="dose_uom_id" ref="product.product_uom_unit" />
         <field name="suggested_administration_hours">10</field>
         <field name="duration">1</field>
-        <field name="duration_uom_id" ref="medical_medication.product_uom_day" />
+        <field name="duration_uom_id" ref="product.product_uom_day" />
     </record>
 
     <record id="medical_patient_medication_medication_4" model="medical.patient.medication">
@@ -100,7 +100,7 @@
         <field name="medicament_id" ref="medical_medication.medical_medicament_aralen_1" />
         <field name="pathology_id" ref="medical_pathology.medical_pathology_medical_pathology_2" />
         <field name="duration">30</field>
-        <field name="duration_uom_id" ref="medical_medication.product_uom_day" />
+        <field name="duration_uom_id" ref="product.product_uom_day" />
         <field name="frequency">6</field>
         <field name="frequency_uom_id" ref="medical_medication.product_uom_hour" />
         <field name="medication_dosage_id" ref="medical_medication.420449005" />

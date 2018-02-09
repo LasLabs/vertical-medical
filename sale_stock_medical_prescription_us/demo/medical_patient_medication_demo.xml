@@ -9,7 +9,7 @@
         <field name="quantity">1</field>
         <field name="dose_uom_id" ref="product.product_uom_unit" />
         <field name="frequency">1</field>
-        <field name="frequency_uom_id" ref="medical_medication.product_uom_day" />
+        <field name="frequency_uom_id" ref="product.product_uom_day" />
         <field name="duration">1</field>
         <field name="duration_uom_id" ref="medical_medication.product_uom_year" />
     </record>
