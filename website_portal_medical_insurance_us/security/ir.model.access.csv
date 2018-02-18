@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_medical_insurance_template_portal,medical.insurance.template.portal,medical_insurance.model_medical_insurance_template,base.group_portal,1,1,1,0
+access_medical_insurance_plan_portal,medical.insurance.plan.portal,medical_insurance.model_medical_insurance_plan,base.group_portal,1,1,1,0
+access_medical_insurance_company_portal,medical.insurance.company.portal,medical_insurance.model_medical_insurance_company,base.group_portal,1,1,1,0

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Copyright (C) 2016-TODAY LasLabs [https://laslabs.com]
+    @license GPL-3
+-->
+
+<odoo>
+
+    <record model="ir.rule" id="medical_insurance_company_rule_portal">
+        <field name="name">medical.insurance.company.rule.portal</field>
+        <field name="model_id" ref="medical_insurance.model_medical_insurance_company"/>
+        <field name="groups" eval="[(4, ref('base.group_portal'))]"/>
+        <field name="domain_force">['|',
+            ('create_uid', '=', user.id),
+            ('is_verified', '=', True),
+        ]</field>
+    </record>
+    
+</odoo>

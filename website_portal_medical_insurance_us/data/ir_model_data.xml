@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 LasLabs Inc.
+     License GPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+
+<odoo>
+
+    <record id="model_website_medical_insurance_wizard" model="ir.model">
+        <field name="website_form_label">Create an Insurance Plan</field>
+        <field name="website_form_access">False</field>
+    </record>
+
+    <function model="ir.model.fields" name="formbuilder_whitelist">
+        <value>website.medical.insurance.wizard</value>
+        <value eval="[
+            'name',
+            'plan_number',
+            'group_number',
+            'rx_bin',
+            'rx_pcn',
+            'rx_group',
+            'insurance_type',
+            'insurance_affiliation',
+            'member_since',
+            'patient_id',
+            'person_num',
+            'number',
+            'insurance_template_id',
+            'plan_id',
+            'patient_name',
+            'insurance_company_name',
+            'create_uid'
+        ]"/>
+    </function>
+
+</odoo>

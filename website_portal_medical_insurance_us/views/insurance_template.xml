@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2016 LasLabs Inc.
+     License GPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+
+<odoo>
+
+    <template id="insurances" name="Insurance Plans">
+        <t t-call="website_portal_medical.medical_layout">
+            <h3 class="page-header medical-header">
+                Insurance Plans
+                <a href="/medical/insurance/plan" class="pull-right btn-lg text-uppercase add-plan">
+                    Add
+                </a>
+            </h3>
+            <t t-if="not insurance_plans">
+                <p>There are currently no insurance plans associated with your account.</p>
+            </t>
+            <t t-if="insurance_plans">
+                <div class="row">
+                    <t t-foreach="insurance_plans" t-as="plan">
+                        <div class="col-xs-12 col-sm-6 medical-insurance-plan">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <span class="h4 text-left" t-field="plan.patient_id.name" />
+                                    <a class="pull-right" t-att-href="plan.website_url">
+                                        <i class="fa fa-pencil" />
+                                    </a>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="h5"
+                                            t-field="plan.insurance_company_id.name" />
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 text-left">
+                                            <strong>Identification #</strong>
+                                        </div>
+                                        <div class="col-md-6 text-right"
+                                            t-field="plan.number" />
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 text-left">
+                                            <strong>Group #</strong>
+                                        </div>
+                                        <div class="col-md-6 text-right"
+                                            t-field="plan.insurance_template_id.group_number" />
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 text-left">
+                                            <strong>Rx Bin</strong>
+                                        </div>
+                                        <div class="col-md-6 text-right"
+                                            t-field="plan.insurance_template_id.rx_bin" />
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 text-left">
+                                            <strong>Rx PCN</strong>
+                                        </div>
+                                        <div class="col-md-6 text-right"
+                                            t-field="plan.insurance_template_id.rx_pcn" />
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 text-left">
+                                            <strong>Rx Group</strong>
+                                        </div>
+                                        <div class="col-md-6 text-right"
+                                            t-field="plan.insurance_template_id.rx_group" />
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 text-left">
+                                            <strong>Plan #</strong>
+                                        </div>
+                                        <div class="col-md-6 text-right"
+                                            t-field="plan.insurance_template_id.plan_number" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </div>
+            </t>
+        </t>
+    </template>
+
+    <template id="insurance_plan" name="Insurance Plan">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="oe_structure" />
+                <div class="container">
+                    <div class="row">
+                        <t t-call="website_portal_medical_insurance_us.insurance_plan_detail">
+                            <t t-set="insurance_plan" t-value="insurance_plan" />
+                        </t>
+                    </div>
+                </div>
+                <div class="oe_structure" />
+            </div>
+        </t>
+    </template>
+
+    <template id="insurance_plan_detail">
+        <div class="medical-form-container">
+            <div class="medical-form-header">
+                <h1>Insurance Plan Details</h1>
+                <a class="pull-right" href="/medical/insurance/plans">
+                    <span class="fa fa-times" />
+                </a>
+            </div>
+
+            <form action="/medical/website_form/"
+                  method="post"
+                  enctype="multipart/form-data"
+                  data-model_name="website.medical.insurance.wizard"
+                  t-att-data-success_page="success_page or '/my/medical/'"
+                  class="s_website_form form-horizontal container-fluid mt32">
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+                <input type="hidden" name="plan_id" t-att-value="insurance_plan and insurance_plan.id or 0" />
+
+                <div class="o_website_portal_details">
+                    <div class="medical-form-error-message">
+                        <span id="o_website_form_result" />
+                        <div t-if="error_message" class="alert alert-danger">
+                            <t t-foreach="error_message" t-as="err">
+                                <t t-esc="err"/><br />
+                            </t>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-field col-xs-12 #{error.get('patient_name') and 'has-error' or ''} o_website_form_required_custom">
+                            <label class="control-label"
+                                   for="patient_name">
+                                Name of Insured
+                            </label>
+                            <input type="text"
+                                   name="patient_name"
+                                   class="js_website_autocomplete form-control o_website_form_input"
+                                   data-model="medical.patient"
+                                   data-query-field="name"
+                                   data-limit="5"
+                                   autocomplete="off"
+                                   required="required"
+                                   t-att-value="request.params.get('patient_name') or
+                                                (insurance_plan.patient_id and insurance_plan.patient_id.name) or
+                                                ''" />
+                        </div>
+                        <div class="medical-form-component">
+                            <div class="form-field col-xs-12 #{error.get('insurance_company_id') and 'has-error' or ''} #{error.get('insurance_company_name') and 'has-error' or ''} o_website_form_required_custom">
+                                <label class="control-label"
+                                       for="insurance_company_name">
+                                    Insurance Company
+                                </label>
+                                <input type="text"
+                                       name="insurance_company_name"
+                                       class="js_website_autocomplete form-control o_website_form_input"
+                                       data-model="medical.insurance.company"
+                                       data-query-field="name"
+                                       data-limit="5"
+                                       autocomplete="off"
+                                       required="required"
+                                       t-att-value="request.params.get('insurance_company_name') or
+                                                    (insurance_plan.insurance_company_id and insurance_plan.insurance_company_id.name) or
+                                                    ''" />
+                            </div>
+                        </div>
+                        <div class="medical-form-component">
+                            <div class="form-field col-xs-12 #{error.get('number') and 'has-error' or ''} o_website_form_required_custom">
+                                <label class="control-label"
+                                       for="number">
+                                    Identification Number
+                                </label>
+                                <input type="text"
+                                       name="number"
+                                       class="js_website_autocomplete form-control o_website_form_input"
+                                       data-model="medical.insurance.plan"
+                                       data-query-field="number"
+                                       data-limit="5"
+                                       autocomplete="off"
+                                       required="required"
+                                       t-att-value="request.params.get('number') or
+                                                    insurance_plan.number or
+                                                    ''" />
+                            </div>
+                        </div>
+                        <div class="medical-form-component">
+                            <div class="form-field col-xs-12 #{error.get('group_number') and 'has-error' or ''} o_website_form_required_custom">
+                                <label class="control-label"
+                                       for="group_number">
+                                    Group Number
+                                </label>
+                                <input type="text"
+                                       name="group_number"
+                                       class="js_website_autocomplete form-control o_website_form_input"
+                                       data-model="medical.insurance.template"
+                                       data-query-field="group_number"
+                                       data-limit="5"
+                                       autocomplete="off"
+                                       required="required"
+                                       t-att-value="request.params.get('group_number') or
+                                                    insurance_plan.insurance_template_id.group_number or
+                                                    ''" />
+                            </div>
+                        </div>
+                        <div class="medical-form-component">
+                            <div class="form-field col-xs-12 #{error.get('rx_bin') and 'has-error' or ''} o_website_form_required_custom">
+                                <label class="control-label"
+                                       for="rx_bin">
+                                    Rx Bin
+                                </label>
+                                <input type="text"
+                                       name="rx_bin"
+                                       class="js_website_autocomplete form-control o_website_form_input"
+                                       data-model="medical.insurance.template"
+                                       data-query-field="rx_bin"
+                                       data-limit="5"
+                                       autocomplete="off"
+                                       required="required"
+                                       t-att-value="request.params.get('rx_bin') or
+                                                    insurance_plan.insurance_template_id.rx_bin or
+                                                    ''" />
+                            </div>
+                        </div>
+                        <div class="medical-form-component">
+                            <div class="form-field col-xs-12 #{error.get('rx_pcn') and 'has-error' or ''} o_website_form_required_custom">
+                                <label class="control-label"
+                                       for="rx_pcn">
+                                    Rx PCN
+                                </label>
+                                <input type="text"
+                                       name="rx_pcn"
+                                       class="js_website_autocomplete form-control o_website_form_input"
+                                       data-model="medical.insurance.template"
+                                       data-query-field="rx_pcn"
+                                       data-limit="5"
+                                       autocomplete="off"
+                                       required="required"
+                                       t-att-value="request.params.get('rx_pcn') or
+                                                    insurance_plan.insurance_template_id.rx_pcn or
+                                                    ''" />
+                            </div>
+                        </div>
+                        <div class="medical-form-component">
+                            <div class="form-field col-xs-12 #{error.get('rx_group') and 'has-error' or ''} o_website_form_required_custom">
+                                <label class="control-label"
+                                       for="rx_group">
+                                    Rx Group
+                                </label>
+                                <input type="text"
+                                       name="rx_group"
+                                       class="js_website_autocomplete form-control o_website_form_input"
+                                       data-model="medical.insurance.template"
+                                       data-query-field="rx_group"
+                                       data-limit="5"
+                                       autocomplete="off"
+                                       required="required"
+                                       t-att-value="request.params.get('rx_group') or
+                                                    insurance_plan.insurance_template_id.rx_group or
+                                                    ''" />
+                            </div>
+                        </div>
+                        <div class="medical-form-component">
+                            <div class="form-field col-xs-12 #{error.get('plan_number') and 'has-error' or ''} o_website_form_required_custom">
+                                <label class="control-label"
+                                       for="plan_number">
+                                    Plan Number
+                                </label>
+                                <input type="text"
+                                       name="plan_number"
+                                       class="js_website_autocomplete form-control o_website_form_input"
+                                       data-model="medical.insurance.template"
+                                       data-query-field="plan_number"
+                                       data-limit="5"
+                                       autocomplete="off"
+                                       required="required"
+                                       t-att-value="request.params.get('plan_number') or
+                                                    insurance_plan.insurance_template_id.plan_number or
+                                                    ''" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row medical-form-footer">
+                    <!--<div class="col-md-6 text-left">-->
+                        <!--<t t-call="website_portal_medical.object_delete">-->
+                            <!--<t t-set="object" t-value="insurance_plan" />-->
+                            <!--<t t-set="name" t-value="'insurance_plan'" />-->
+                            <!--<t t-set="redirect_on_success" t-value="'/my/medical'" />-->
+                        <!--</t>-->
+                    <!--</div>-->
+                    <div class="col-md-6 col-md-offset-6 text-right">
+                        <button class="btn btn-primary o_website_form_send">
+                            Save
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </template>
+
+</odoo>

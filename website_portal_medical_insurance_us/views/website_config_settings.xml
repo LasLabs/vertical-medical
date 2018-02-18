@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 LasLabs Inc.
+     License GPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+
+<odoo>
+
+    <record id="view_website_config_settings" model="ir.ui.view">
+        <field name="name">Website Insurance Portal Settings</field>
+        <field name="model">website.config.settings</field>
+        <field name="inherit_id" ref="website.view_website_config_settings"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='advanced']" position="inside">
+                <label for="default_insurance_product_id"/>
+                <div name="default_insurance_product_id">
+                    <div class="oe_inline">
+                        <field name="default_insurance_product_id"/>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

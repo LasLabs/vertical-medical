@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 LasLabs Inc.
+     License GPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+
+<odoo>
+
+    <record model="ir.rule" id="medical_insurance_plan_portal_rule">
+        <field name="name">medical.insurance.plan.portal.rule</field>
+        <field name="model_id" ref="medical_insurance.model_medical_insurance_plan"/>
+        <field name="groups" eval="[(4, ref('base.group_portal'))]"/>
+        <field name="domain_force">[
+            ('patient_id.partner_id', 'child_of', [user.commercial_partner_id.id]),
+        ]</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 LasLabs Inc.
+     License GPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+
+<odoo>
+
+    <template id="assets_frontend" inherit_id="website.assets_frontend" name="Website Portal Medical Insurance (Tour)">
+        <xpath expr=".">
+            <script type="application/javascript"
+                    src="/website_portal_medical_insurance_us/static/tests/js/website_portal_medical_insurance_us.tour.js"/>
+        </xpath>
+    </template>
+
+</odoo>
