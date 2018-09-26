@@ -36,8 +36,8 @@
                 <h3>
                     <field name="parent_id"
                            placeholder="Medical Center"
-                           domain="[('type', '=', 'medical.center')]"
-                           context="{'default_type': 'medical.center'}"
+                           domain="[('is_company', '=', True), ('type', '=', 'medical.center')]"
+                           context="{'default_is_company': True, 'default_type': 'medical.center'}"
                            />
                     <field name="specialty_id"/>
                 </h3>

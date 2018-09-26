@@ -25,7 +25,7 @@
         "views/medical_medication_dosage_view.xml",
         "views/medical_medication_template_view.xml",
         "views/medical_patient_medication_view.xml",
-        "views/medical_patient_view.xml",
+        # "views/medical_patient_view.xml",
         "views/medical_menu.xml",
     ],
     "demo": [

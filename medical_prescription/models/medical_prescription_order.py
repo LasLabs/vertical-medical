@@ -3,7 +3,8 @@
 # Copyright 2016 LasLabs Inc.
 # License GPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
-from odoo import api, fields, models, tools
+from odoo import api, fields, models, tools, _
+from odoo.exceptions import UserError
 
 
 class MedicalPrescriptionOrder(models.Model):
@@ -11,8 +12,9 @@ class MedicalPrescriptionOrder(models.Model):
     _description = 'Medical Prescription Order'
 
     name = fields.Char(
-        required=True,
-        default=lambda s: s._default_name()
+        required=True, 
+        default=lambda self: _('New'), 
+        help='Unique identifier for prescription.'
     )
     patient_id = fields.Many2one(
         comodel_name='medical.patient',
@@ -81,10 +83,19 @@ class MedicalPrescriptionOrder(models.Model):
             )
 
     @api.model
-    def _default_name(self):
-        return self.env['ir.sequence'].sudo().next_by_code(
-            self._name,
-        )
+    def create(self, values, check=True):
+        """
+            Create a new record for a model ModelName
+            @param values: provides a data for new record
+    
+            @return: returns a id of new record
+        """
+        if values.get('name', 'New') == 'New':
+            values['name'] = self.env['ir.sequence'].next_by_code('medical.prescription.order') or 'New'
+    
+        result = super(MedicalPrescriptionOrder, self).create(values)
+    
+        return result
 
     @api.multi
     @api.depends('prescription_order_line_ids',
@@ -98,3 +109,15 @@ class MedicalPrescriptionOrder(models.Model):
             rec_id.active = any(
                 rec_id.prescription_order_line_ids.mapped('active')
             )
+
+    @api.multi
+    def copy(self, default=None):
+        '''
+        @param self: object pointer
+        @param default: dict of default values to be set
+        '''
+        default = dict(default or {})
+        default.update(
+            name=('New'),
+            )
+        return super(MedicalPrescriptionOrder, self).copy(default=default)

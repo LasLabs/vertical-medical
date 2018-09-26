@@ -1,0 +1,408 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* medical_pathology
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0-20170513\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-13 22:02+0000\n"
+"PO-Revision-Date: 2017-05-14 12:59-0500\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es_EC\n"
+"X-Generator: Poedit 2.0.1\n"
+
+#. module: medical_pathology
+#: model:medical.pathology,notes:medical_pathology.medical_pathology_medical_pathology_A00_0
+msgid ""
+"* A00.0 is a billable/specific ICD-10-CM code that can be used to indicate a diagnosis for reimbursement purposes.\n"
+"* This is the American ICD-10-CM version of A00.0. Other international versions of ICD-10 A00.0 may differ.\n"
+"* Reimbursement claims with a date of service on or after October 1, 2015 require the use of ICD-10-CM codes."
+msgstr ""
+"* A00.0 es un código ICD-10-CM facturable / específico que se puede utilizar para indicar un diagnóstico con fines de reembolso.\n"
+"* Esta es la versión ICD-10-CM americana de A00.0. Otras versiones internacionales de ICD-10 A00.0 pueden diferir.\n"
+"* Las solicitudes de reembolso con fecha de servicio en o después del 1 de octubre de 2015 requieren el uso de los códigos de la CIE-10-CM."
+
+#. module: medical_pathology
+#: model:medical.pathology,notes:medical_pathology.medical_pathology_medical_pathology_A00_1
+msgid ""
+"* A00.1 is a billable/specific ICD-10-CM code that can be used to indicate a diagnosis for reimbursement purposes.\n"
+"* This is the American ICD-10-CM version of A00.1. Other international versions of ICD-10 A00.1 may differ.\n"
+"* Reimbursement claims with a date of service on or after October 1, 2015 require the use of ICD-10-CM codes."
+msgstr ""
+"* A00.1 es un código ICD-10-CM facturable / específico que se puede utilizar para indicar un diagnóstico con fines de reembolso.\n"
+"* Esta es la versión ICD-10-CM americana de A00.1. Otras versiones internacionales de ICD-10 A00.1 pueden diferir.\n"
+"* Las solicitudes de reembolso con fecha de servicio en o después del 1 de octubre de 2015 requieren el uso de los códigos de la CIE-10-CM."
+
+#. module: medical_pathology
+#: model:medical.pathology,notes:medical_pathology.medical_pathology_medical_pathology_A00_9
+msgid ""
+"* A00.9 is a billable/specific ICD-10-CM code that can be used to indicate a diagnosis for reimbursement purposes.\n"
+"* This is the American ICD-10-CM version of A00.9. Other international versions of ICD-10 A00.9 may differ.\n"
+"* Reimbursement claims with a date of service on or after October 1, 2015 require the use of ICD-10-CM codes."
+msgstr ""
+"* A00.9 es un código CIE-10-CM facturable / específico que se puede utilizar para indicar un diagnóstico con fines de reembolso.\n"
+"* Esta es la versión de la AIC-10-CM americana de A00.9. Otras versiones internacionales de ICD-10 A00.9 pueden diferir.\n"
+"* Las solicitudes de reembolso con fecha de servicio en o después del 1 de octubre de 2015 requieren el uso de los códigos de la CIE-10-CM."
+
+#. module: medical_pathology
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_chromosome
+#: model:ir.ui.view,arch_db:medical_pathology.medical_pathology_view_search
+msgid "Affected Chromosome"
+msgstr "Cromosoma afectado"
+
+#. module: medical_pathology
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_gene
+msgid "Affected Gene"
+msgstr "Gen afectado"
+
+#. module: medical_pathology
+#: model:ir.ui.view,arch_db:medical_pathology.medical_pathology_view_search
+msgid "Category"
+msgstr "Categoría"
+
+#. module: medical_pathology
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_category_id
+msgid "Category of Pathology"
+msgstr "Categoría de Patología"
+
+#. module: medical_pathology
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_category_child_ids
+msgid "Children Categories"
+msgstr "SubCategorías"
+
+#. module: medical_pathology
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_child_ids
+msgid "Children Pathologies"
+msgstr "Children Pathologies"
+
+#. module: medical_pathology
+#: model:medical.pathology.category,name:medical_pathology.medical_pathology_category_1
+msgid "Clinical Pathology"
+msgstr "Patología clínica"
+
+#. module: medical_pathology
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_code
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_group_code
+msgid "Code"
+msgstr "Código"
+
+#. module: medical_pathology
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_category_code_type_id
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_code_type_id
+#: model:ir.ui.view,arch_db:medical_pathology.medical_pathology_category_view_search
+#: model:ir.ui.view,arch_db:medical_pathology.medical_pathology_view_search
+msgid "Code Type"
+msgstr "Tipo de código"
+
+#. module: medical_pathology
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_category_create_uid
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_code_type_create_uid
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_create_uid
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_group_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: medical_pathology
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_category_create_date
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_code_type_create_date
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_create_date
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_group_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: medical_pathology
+#: model:ir.ui.view,arch_db:medical_pathology.medical_pathology_view_form
+msgid "Disease Groups"
+msgstr "Grupos de Enfermedades"
+
+#. module: medical_pathology
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_category_display_name
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_code_type_display_name
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_display_name
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_group_display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: medical_pathology
+#: code:addons/medical_pathology/models/medical_pathology_category.py:43
+#, python-format
+msgid "Error! You are attempting to create a recursive category."
+msgstr "¡Error! Está intentando crear una categoría recursiva."
+
+#. module: medical_pathology
+#: code:addons/medical_pathology/models/medical_pathology.py:74
+#, python-format
+msgid "Error! You are attempting to create a recursive pathology."
+msgstr "Error! Está intentando crear una patología recursiva."
+
+#. module: medical_pathology
+#: model:ir.model.fields,help:medical_pathology.field_medical_pathology_group_code
+msgid "For example MDG6 code will contain the Millennium Development Goals #6 diseases: Tuberculosis, Malaria and HIV/AIDS"
+msgstr "Por ejemplo, el código del ODM6 contendrá las Metas de Desarrollo del Milenio # 6: Tuberculosis, Malaria y VIH / SIDA"
+
+#. module: medical_pathology
+#: model:ir.ui.view,arch_db:medical_pathology.medical_pathology_view_search
+msgid "Gene"
+msgstr "Gene"
+
+#. module: medical_pathology
+#: model:ir.ui.view,arch_db:medical_pathology.medical_pathology_category_view_search
+#: model:ir.ui.view,arch_db:medical_pathology.medical_pathology_view_search
+msgid "Group By..."
+msgstr "Agrupar por..."
+
+#. module: medical_pathology
+#: model:medical.pathology,name:medical_pathology.medical_pathology_medical_pathology_1
+msgid "HIV/AIDS"
+msgstr "HIV/AIDS"
+
+#. module: medical_pathology
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_category_id_2876
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_code_type_id_2884
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_group_id
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_id
+msgid "ID"
+msgstr "ID"
+
+#. module: medical_pathology
+#: model:medical.pathology.group,description:medical_pathology.medical_pathology_group_1
+msgid "Improve child mortality rates, HIV/AIDS, etc."
+msgstr "Mejorar las tasas de mortalidad infantil, el VIH / SIDA, etc."
+
+#. module: medical_pathology
+#: model:medical.pathology.category,name:medical_pathology.medical_pathology_category_3
+msgid "Infectious Diseases"
+msgstr "Enfermedades infecciosas"
+
+#. module: medical_pathology
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology___last_update
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_category___last_update
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_code_type___last_update
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_group___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: medical_pathology
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_category_write_uid
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_code_type_write_uid
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_group_write_uid
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización de"
+
+#. module: medical_pathology
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_category_write_date
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_code_type_write_date
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_group_write_date
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: medical_pathology
+#: model:medical.pathology,name:medical_pathology.medical_pathology_medical_pathology_2
+msgid "Malaria"
+msgstr "Malaria"
+
+#. module: medical_pathology
+#: model:medical.pathology.group,description:medical_pathology.medical_pathology_group_2
+msgid "Malaria, HIV/AIDS, etc."
+msgstr "Malaria, HIV/AIDS, etc."
+
+#. module: medical_pathology
+#: model:ir.model,name:medical_pathology.model_medical_pathology
+#: model:ir.ui.view,arch_db:medical_pathology.medical_pathology_view_form
+#: model:ir.ui.view,arch_db:medical_pathology.medical_pathology_view_search
+#: model:ir.ui.view,arch_db:medical_pathology.medical_pathology_view_tree
+msgid "Medical Pathology"
+msgstr "Patología Médica"
+
+#. module: medical_pathology
+#: model:ir.model,name:medical_pathology.model_medical_pathology_category
+#: model:ir.ui.view,arch_db:medical_pathology.medical_pathology_category_view_form
+#: model:ir.ui.view,arch_db:medical_pathology.medical_pathology_category_view_search
+#: model:ir.ui.view,arch_db:medical_pathology.medical_pathology_category_view_tree
+msgid "Medical Pathology Category"
+msgstr "Categoría de Patología Médica"
+
+#. module: medical_pathology
+#: model:ir.model,name:medical_pathology.model_medical_pathology_code_type
+msgid "Medical Pathology Code Type"
+msgstr "Tipo de código de patología médica"
+
+#. module: medical_pathology
+#: model:ir.model,name:medical_pathology.model_medical_pathology_group
+#: model:ir.ui.view,arch_db:medical_pathology.medical_pathology_group_view_form
+#: model:ir.ui.view,arch_db:medical_pathology.medical_pathology_group_view_search
+#: model:ir.ui.view,arch_db:medical_pathology.medical_pathology_group_view_tree
+msgid "Medical Pathology Group"
+msgstr "Grupo de Patología Médica"
+
+#. module: medical_pathology
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_medical_pathology_group_ids
+msgid "Medical Pathology Groups"
+msgstr "Grupos de Patología Médica"
+
+#. module: medical_pathology
+#: model:medical.pathology.category,name:medical_pathology.medical_pathology_category_2
+msgid "Microbiology"
+msgstr "Microbiología"
+
+#. module: medical_pathology
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_category_name
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_code_type_name
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_group_name
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: medical_pathology
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_category_notes
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_group_notes
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_notes
+#: model:ir.ui.view,arch_db:medical_pathology.medical_pathology_group_view_form
+#: model:ir.ui.view,arch_db:medical_pathology.medical_pathology_view_form
+msgid "Notes"
+msgstr "Notas"
+
+#. module: medical_pathology
+#: model:ir.ui.view,arch_db:medical_pathology.medical_pathology_group_view_form
+#: model:ir.ui.view,arch_db:medical_pathology.medical_pathology_view_form
+msgid "Others"
+msgstr "Otros"
+
+#. module: medical_pathology
+#: model:medical.pathology.category,name:medical_pathology.medical_pathology_category_5
+msgid "Parasitic Diseases"
+msgstr "Enfermedades Parasitarias"
+
+#. module: medical_pathology
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_category_parent_id
+#: model:ir.ui.view,arch_db:medical_pathology.medical_pathology_category_view_search
+msgid "Parent Category"
+msgstr "Categoría padre"
+
+#. module: medical_pathology
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_parent_id
+msgid "Parent Pathology"
+msgstr "Patología padre"
+
+#. module: medical_pathology
+#: model:ir.actions.act_window,name:medical_pathology.medical_pathology_action
+#: model:ir.ui.menu,name:medical_pathology.medical_pathology
+msgid "Pathologies"
+msgstr "Patologías"
+
+#. module: medical_pathology
+#: model:ir.ui.menu,name:medical_pathology.medical_root_pathology
+msgid "Pathology"
+msgstr "Patología"
+
+#. module: medical_pathology
+#: model:ir.actions.act_window,name:medical_pathology.medical_pathology_category_action
+#: model:ir.ui.menu,name:medical_pathology.medical_pathology_category
+msgid "Pathology Categories"
+msgstr "Categorías de Patología"
+
+#. module: medical_pathology
+#: model:ir.actions.act_window,name:medical_pathology.medical_pathology_group_action
+#: model:ir.ui.menu,name:medical_pathology.medical_pathology_group
+msgid "Pathology Group"
+msgstr "Grupo de Patología"
+
+#. module: medical_pathology
+#: sql_constraint:medical.pathology:0
+msgid "Pathology codes must be unique per Code Type."
+msgstr "Los códigos de patología deben ser únicos por tipo de código."
+
+#. module: medical_pathology
+#: sql_constraint:medical.pathology.group:0
+msgid "Pathology group codes must be unique."
+msgstr "Los códigos de grupo de patología deben ser únicos."
+
+#. module: medical_pathology
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_protein
+msgid "Protein Involved"
+msgstr "Proteína implicada"
+
+#. module: medical_pathology
+#: model:ir.ui.view,arch_db:medical_pathology.medical_pathology_view_search
+msgid "Protein involved"
+msgstr "Proteína implicada"
+
+#. module: medical_pathology
+#: model:medical.pathology.category,name:medical_pathology.medical_pathology_category_6
+msgid "Protozoal Diseases"
+msgstr "Enfermedades Protozoarias"
+
+#. module: medical_pathology
+#: model:medical.pathology.category,name:medical_pathology.medical_pathology_category_4
+msgid "STIs & STDs"
+msgstr "STIs & STDs"
+
+#. module: medical_pathology
+#: model:ir.model.fields,field_description:medical_pathology.field_medical_pathology_group_description
+msgid "Short Description"
+msgstr "Descripción breve"
+
+#. module: medical_pathology
+#: model:medical.pathology.category,notes:medical_pathology.medical_pathology_category_7
+msgid ""
+"Use Additional \n"
+"* code to identify resistance to antimicrobial drugs (Z16.-)\n"
+"Type 1 Excludes \n"
+"* certain localized infections - see body system-related chapters\n"
+"Type 2 Excludes \n"
+"* carrier or suspected carrier of infectious disease (Z22.-)\n"
+"* infectious and parasitic diseases complicating pregnancy, childbirth and the puerperium (O98.-)\n"
+"* infectious and parasitic diseases specific to the perinatal period (P35-P39)\n"
+"* influenza and other acute respiratory infections (J00-J22)"
+msgstr ""
+"Use Additional \n"
+"* code to identify resistance to antimicrobial drugs (Z16.-)\n"
+"Type 1 Excludes \n"
+"* certain localized infections - see body system-related chapters\n"
+"Type 2 Excludes \n"
+"* carrier or suspected carrier of infectious disease (Z22.-)\n"
+"* infectious and parasitic diseases complicating pregnancy, childbirth and the puerperium (O98.-)\n"
+"* infectious and parasitic diseases specific to the perinatal period (P35-P39)\n"
+"* influenza and other acute respiratory infections (J00-J22)"
+
+#. module: medical_pathology
+#: model:medical.pathology.category,name:medical_pathology.medical_pathology_category_7
+msgid "[DEMO] Certain infectious and parasitic diseases (A00-B99)"
+msgstr "[DEMO] Certain infectious and parasitic diseases (A00-B99)"
+
+#. module: medical_pathology
+#: model:medical.pathology,name:medical_pathology.medical_pathology_medical_pathology_A00
+msgid "[DEMO] Cholera"
+msgstr "[DEMO] Cholera"
+
+#. module: medical_pathology
+#: model:medical.pathology,name:medical_pathology.medical_pathology_medical_pathology_A00_0
+msgid "[DEMO] Cholera due to Vibrio cholerae 01, biovar cholerae"
+msgstr "[DEMO] Cholera due to Vibrio cholerae 01, biovar cholerae"
+
+#. module: medical_pathology
+#: model:medical.pathology,name:medical_pathology.medical_pathology_medical_pathology_A00_1
+msgid "[DEMO] Cholera due to Vibrio cholerae 01, biovar eltor"
+msgstr "[DEMO] Cholera due to Vibrio cholerae 01, biovar eltor"
+
+#. module: medical_pathology
+#: model:medical.pathology,name:medical_pathology.medical_pathology_medical_pathology_A00_9
+msgid "[DEMO] Cholera, unspecified"
+msgstr "[DEMO] Cholera, unspecified"
+
+#. module: medical_pathology
+#: model:medical.pathology.group,name:medical_pathology.medical_pathology_group_1
+msgid "[DEMO] Millenium Development Goals 5"
+msgstr "[DEMO] Millenium Development Goals 5"
+
+#. module: medical_pathology
+#: model:medical.pathology.group,name:medical_pathology.medical_pathology_group_2
+msgid "[DEMO] Millenium Development Goals 6"
+msgstr "[DEMO] Millenium Development Goals 6"

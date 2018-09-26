@@ -74,3 +74,23 @@ class MedicalPrescriptionOrderLine(models.Model):
         for record in self:
             stop = fields.Datetime.from_string(record.date_stop_treatment)
             record.is_expired = stop and stop < now
+            
+    # Borrar registro en medical.medication
+    @api.multi
+    def unlink(self):
+        unlink_lines = self.env['medical.prescription.order.line']
+        unlink_medication = self.env['medical.patient.medication']
+        for line in self:
+            # Check if line still exists, in case it has been unlinked by unlinking its template
+            if not line.exists():
+                continue
+            # Check if the line is last line of this template
+            other_lines = self.search([('medical_medication_id', '=', line.medical_medication_id.id), ('id', '!=', line.id)])
+            if not other_lines:
+                unlink_medication |= line.medical_medication_id
+            unlink_lines |= line
+        res = super(MedicalPrescriptionOrderLine, unlink_lines).unlink()
+        # delete templates after calling super, as deleting template could lead to deleting
+        # lines due to ondelete='cascade'
+        unlink_medication.unlink()
+        return res

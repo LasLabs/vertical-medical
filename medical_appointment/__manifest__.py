@@ -16,8 +16,9 @@
     'data': [
         'views/medical_appointment_view.xml',
         'views/medical_menu.xml',
+        'views/medical_patient.xml',
         'security/ir.model.access.csv',
-        'security/medical_security.xml',
+        # 'security/medical_security.xml',
         'data/auditlog_rule.xml',
         'data/decimal_precision_data.xml',
         'data/medical_appointment_data.xml',

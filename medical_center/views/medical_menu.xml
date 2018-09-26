@@ -7,7 +7,7 @@
     <menuitem id="medical_facilities_menu"
               name="Medical Facilities"
               sequence="20"
-              parent="medical.medical_root"
+              parent="medical.medical_root_sub"
               />
 
     <menuitem id="medical_center_menu"

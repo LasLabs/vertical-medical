@@ -3,8 +3,8 @@
 # Copyright 2016 LasLabs Inc.
 # License GPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
-from openerp import _, api, fields, models
-from openerp.exceptions import ValidationError
+from odoo import _, api, fields, models
+from odoo.exceptions import ValidationError
 
 
 class MedicalPathology(models.Model):

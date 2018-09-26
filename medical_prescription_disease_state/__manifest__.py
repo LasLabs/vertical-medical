@@ -16,7 +16,7 @@
         'views/medical_patient_disease_view.xml',
     ],
     "website": "https://laslabs.com",
-    "license": "GPL-3",
-    'installable': True,
+    "license": "LGPL-3",
+    'installable': False,
     'auto_install': False,
 }
